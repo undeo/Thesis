@@ -1,0 +1,330 @@
+\documentclass{article}
+\usepackage{feynmp-auto}
+\begin{document}
+
+\begin{enumerate}
+\item aTGC WW\\
+
+\begin{fmffile}{aTGCWW}
+\setlength{\unitlength}{0.75cm}
+\begin{fmfgraph*}(8,4)
+	\fmfleft{q2,q1}
+	\fmfright{ojet1,ojet2,onu,olep}
+		\fmf{quark}{w1,q2}
+		\fmf{quark}{q1,w1}
+		
+		\fmf{boson,label=$Z$,,$\gamma$}{w1,w2}
+		
+		\fmf{boson,label=$W^-$}{w2,jet}
+		\fmf{quark}{ojet1,jet}
+		\fmf{quark}{jet,ojet2}
+				
+		\fmf{boson,label=$W^+$}{w2,lep}
+		\fmf{fermion}{lep,onu}
+		\fmf{fermion}{olep,lep}
+	
+	\fmfdot{w2}	
+	
+	\fmflabel{$q$}{q1}
+	\fmflabel{$\bar{q}$}{q2}
+	\fmflabel{$\bar{q}'$}{ojet1}
+	\fmflabel{$q$}{ojet2}
+	\fmflabel{$\ell^+$}{olep}
+	\fmflabel{$\nu$}{onu}
+		
+\end{fmfgraph*}
+\end{fmffile}
+
+\quad \\
+
+\item aTGC WZ\\
+
+\begin{fmffile}{aTGCWZ}
+\setlength{\unitlength}{0.75cm}
+\begin{fmfgraph*}(8,4)
+	\fmfleft{q2,q1}
+	\fmfright{ojet1,ojet2,onu,olep}
+		\fmf{quark}{w1,q2}
+		\fmf{quark}{q1,w1}
+		
+		\fmf{boson,label=$W^+$}{w1,w2}
+		
+		\fmf{boson,label=$Z$}{w2,jet}
+		\fmf{quark}{ojet1,jet}
+		\fmf{quark}{jet,ojet2}
+				
+		\fmf{boson,label=$W^+$}{w2,lep}
+		\fmf{fermion}{lep,onu}
+		\fmf{fermion}{olep,lep}
+		
+	\fmfdot{w2}	
+	
+	\fmflabel{$q$}{q1}
+	\fmflabel{$\bar{q}'$}{q2}
+	\fmflabel{$\bar{q}$}{ojet1}
+	\fmflabel{$q$}{ojet2}
+	\fmflabel{$\ell^+$}{olep}
+	\fmflabel{$\nu$}{onu}
+		
+\end{fmfgraph*}
+\end{fmffile}
+
+\quad \\
+
+\item SM WW\\
+
+\begin{fmffile}{aTGCSMWW}
+\setlength{\unitlength}{0.75cm}
+\begin{fmfgraph*}(8,4)
+	\fmfleft{i_q2,i_q1}
+	\fmfright{ojet2,ojet1,onu,olep}
+	
+	\fmf{quark}{i_q1,b1}
+	\fmf{quark}{b1,b2}
+	\fmf{quark}{b2,i_q2}
+	
+	\fmf{boson,label=$W^+$,label.side=left}{b1,lep}
+		\fmf{fermion}{olep,lep}
+		\fmf{fermion}{lep,onu}
+	\fmf{boson,label=$W^-$}{b2,jet}
+		\fmf{quark}{ojet2,jet}
+		\fmf{quark}{jet,ojet1}
+		
+	\fmflabel{$q$}{i_q1}
+	\fmflabel{$\bar{q}$}{i_q2}
+	\fmflabel{$\ell^+$}{olep}
+	\fmflabel{$\nu$}{onu}
+	\fmflabel{$q$}{ojet1}
+	\fmflabel{$\bar{q}'$}{ojet2}
+\end{fmfgraph*}
+\end{fmffile}
+
+\quad \\
+
+\item SM WZ\\
+
+\begin{fmffile}{aTGCSMWZ}
+\setlength{\unitlength}{0.75cm}
+\begin{fmfgraph*}(8,4)
+	\fmfleft{i_q2,i_q1}
+	\fmfright{ojet2,ojet1,onu,olep}
+	
+	\fmf{quark}{i_q1,b1}
+	\fmf{quark}{b1,b2}
+	\fmf{quark}{b2,i_q2}
+	
+	\fmf{boson,label=$W^+$,label.side=left}{b1,lep}
+		\fmf{fermion}{olep,lep}
+		\fmf{fermion}{lep,onu}
+	\fmf{boson,label=$Z$}{b2,jet}
+		\fmf{quark}{ojet2,jet}
+		\fmf{quark}{jet,ojet1}
+		
+	\fmflabel{$q$}{i_q1}
+	\fmflabel{$\bar{q}'$}{i_q2}
+	\fmflabel{$\ell^+$}{olep}
+	\fmflabel{$\nu$}{onu}
+	\fmflabel{$q$}{ojet1}
+	\fmflabel{$\bar{q}$}{ojet2}
+\end{fmfgraph*}
+\end{fmffile}
+\quad \\
+
+\item ttbar\\
+%ttbar
+\begin{fmffile}{ttbar}
+\setlength{\unitlength}{0.75cm}
+\begin{fmfgraph*}(8,6)
+	\fmfleft{g3,g2,g1,g0}
+	\fmfright{b2,ojet1,ojet2,onu,olep,b1}
+
+		\fmf{gluon,tension=2}{g1,gv1}
+		\fmf{gluon,tension=2}{g2,gv1}
+		\fmf{gluon,tension=4}{gv1,gv2}
+		
+		\fmf{quark,label=$t$,label.side=left,tension=2}{gv2,t}
+		\fmf{quark,label=$\bar{t}$,label.side=left,tension=2}{tbar,gv2}
+		
+		\fmf{quark}{t,b1}
+		\fmf{boson,label=$W^+$,label.side=right}{t,lep}
+			\fmf{fermion}{lep,onu}
+			\fmf{fermion}{olep,lep}
+			
+		\fmf{quark}{b2,tbar}
+		\fmf{boson,label=$W^-$,label.side=left}{tbar,jet}
+			\fmf{quark}{ojet2,jet}
+			\fmf{quark}{jet,ojet1}
+			
+		\fmflabel{$b$}{b1}
+		\fmflabel{$\bar{b}$}{b2}
+		\fmflabel{$\ell^+$}{olep}
+		\fmflabel{$\nu$}{onu}
+		\fmflabel{$q$}{ojet1}
+		\fmflabel{$\bar{q}'$}{ojet2}
+				
+\end{fmfgraph*}
+\end{fmffile}
+
+\quad \\
+
+\item W+jets1\\
+\quad \\
+\begin{fmffile}{wjets1}
+\setlength{\unitlength}{1cm}
+\fbox{
+\begin{fmfgraph*}(8,4)
+	\fmfleft{i_gl,i_q}
+	\fmfright{o_q2,o_q1,o_nu,o_lep}
+	
+	\fmf{quark}{i_q,gl1}
+	\fmf{boson,label=$W^+$}{gl1,W}
+		\fmf{fermion}{W,o_nu}
+		\fmf{fermion}{o_lep,W}
+		
+	\fmf{quark}{gl1,gl2}
+	\fmf{gluon}{i_gl,gl2}
+	\fmf{quark}{gl2,glsplit}
+		\fmf{gluon}{o_q1,glsplit}
+		\fmf{quark}{glsplit,o_q2}
+	
+	\fmflabel{$q$}{i_q}
+	\fmflabel{$\ell^+$}{o_lep}
+	\fmflabel{$\nu$}{o_nu}
+	\fmflabel{$q'$}{o_q2}
+
+\end{fmfgraph*}
+}
+\end{fmffile}
+
+\quad \\
+
+\item W+jets2\\
+\quad \\
+\begin{fmffile}{wjets2}
+\setlength{\unitlength}{0.75cm}
+\begin{fmfgraph*}(8,4)
+	\fmfleft{i_q2,i_q1}
+	\fmfright{o_q2,o_q1,o_nu,o_lep}
+	
+	\fmf{quark}{i_q1,gl1}
+	\fmf{boson,label=$W^+$}{gl1,W}
+		\fmf{fermion}{W,o_nu}
+		\fmf{fermion}{o_lep,W}
+		
+	\fmf{quark}{gl2,i_q2}		
+	\fmf{quark}{gl1,gl2}
+	\fmf{gluon}{gl2,gl_split}
+	
+	\fmf{quark}{gl_split,o_q1}
+	\fmf{quark}{o_q2,gl_split}
+	
+	\fmflabel{$q$}{i_q1}
+	\fmflabel{$\ell^+$}{o_lep}
+	\fmflabel{$\nu$}{o_nu}
+	\fmflabel{$\bar{q}'$}{i_q2}
+	\fmflabel{$q$}{o_q1}
+	\fmflabel{$\bar{q}$}{o_q2}
+
+\end{fmfgraph*}
+\end{fmffile}
+
+\quad \\
+
+\item STop t\\
+\begin{fmffile}{STopt}
+\setlength{\unitlength}{0.75cm}
+\begin{fmfgraph*}(8,6)
+	\fmfleft{i_gl,i_q}
+	\fmfright{ob2,onu,olep,ob1,oq}
+	
+	\fmf{quark,tension=3}{i_q,w1}
+		\fmf{quark}{w1,oq}
+		\fmf{boson,label=$W^+$,tension=2}{w1,wg}
+		
+	
+	\fmf{gluon,tension=3}{i_gl,gsplit}
+		\fmf{quark}{ob2,gsplit}
+		\fmf{quark,label=$b$,tension=2}{gsplit,wg}
+	
+	\fmf{quark,label=$t$,tension=2}{wg,tsplit}
+		\fmf{boson,label=$W^+$,label.side=right}{tsplit,wsplit}
+			\fmf{fermion}{olep,wsplit}
+			\fmf{fermion}{wsplit,onu}
+		\fmf{quark}{tsplit,ob1}
+		
+	\fmflabel{$q$}{i_q}
+	\fmflabel{$q'$}{oq}
+	\fmflabel{$b$}{ob1}
+	\fmflabel{$\ell^+$}{olep}
+	\fmflabel{$\nu$}{onu}
+	\fmflabel{$\bar{b}$}{ob2}
+\end{fmfgraph*}
+\end{fmffile}
+
+\quad \\
+
+\item STop s\\
+\quad \\
+\begin{fmffile}{STops}
+\setlength{\unitlength}{0.75cm}
+\begin{fmfgraph*}(8,4)
+	\fmfleft{iq2,iq1}
+	\fmfright{ob2,onu,olep,ob1}
+	
+	\fmf{quark}{iq1,w1}
+	\fmf{quark}{w1,iq2}
+	
+	\fmf{boson,label=$W^+$,tension=2}{w1,w2}
+	
+	\fmf{quark,tension=0.5}{ob2,w2}
+	\fmf{quark,label=$t$,tension=2}{w2,t}
+		\fmf{boson,label=$W^+$}{t,wsplit}
+			\fmf{fermion}{olep,wsplit}
+			\fmf{fermion}{wsplit,onu}
+		\fmf{quark}{t,ob1}
+		
+	\fmflabel{$q$}{iq1}
+	\fmflabel{$\bar{q}'$}{iq2}
+	\fmflabel{$b$}{ob1}
+	\fmflabel{$\ell^+$}{olep}
+	\fmflabel{$\nu$}{onu}
+	\fmflabel{$\bar{b}$}{ob2}
+\end{fmfgraph*}
+\end{fmffile}
+
+\quad \\
+
+\item STop tW\\
+\quad \\
+\begin{fmffile}{SToptW}
+\setlength{\unitlength}{0.75cm}
+\begin{fmfgraph*}(8,4)
+	\fmfleft{igl,ib}
+	\fmfright{ob,onu,olep,oq2,oq1}
+	
+	\fmf{gluon,tension=2}{igl,w1}
+	\fmf{quark,tension=2}{ib,w1}
+	\fmf{quark,tension=4}{w1,w2}
+	
+	\fmf{quark,label=$t$,label.side=right,tension=2}{w2,tsplit}
+	\fmf{boson,label=$W^-$,label.side=left,tension=2}{w2,w1split}
+	
+	\fmf{quark}{tsplit,ob}
+	\fmf{boson,label=$W^+$,label.side=left}{tsplit,w2split}
+		\fmf{fermion}{olep,w2split}
+		\fmf{fermion}{w2split,onu}
+	\fmf{quark}{oq2,w1split}
+	\fmf{quark}{w1split,oq1}
+	
+	\fmflabel{$b$}{ib}
+	\fmflabel{$b$}{ob}
+	\fmflabel{$q$}{oq1}
+	\fmflabel{$\bar{q}$}{oq2}
+	\fmflabel{$\ell^+$}{olep}
+	\fmflabel{$\nu$}{onu}
+	
+\end{fmfgraph*}
+\end{fmffile}
+
+\end{enumerate}
+\end{document}

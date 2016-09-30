@@ -1,0 +1,32 @@
+\documentclass{standalone}
+\usepackage{feynmp-auto}
+
+\begin{document}
+
+\begin{fmffile}{fy_SMWZ}
+\setlength{\unitlength}{0.75cm}
+
+\fmfframe(0,1)(1,1){
+\begin{fmfgraph*}(8,4)
+	\fmfleft{q2,q1}
+	\fmfright{ojet1,ojet2,onu,olep}
+		\fmf{quark}{w1,q2}
+		\fmf{quark}{q1,w1}
+		\fmf{boson,label=$W^+$}{w1,w2}		
+		\fmf{boson,label=$Z$}{w2,jet}
+		\fmf{quark}{ojet1,jet}
+		\fmf{quark}{jet,ojet2}				
+		\fmf{boson,label=$W^+$}{w2,lep}
+		\fmf{fermion}{lep,onu}
+		\fmf{fermion}{olep,lep}		
+	\fmfdot{w2}		
+	\fmflabel{$q$}{q1}
+	\fmflabel{$\bar{q}'$}{q2}
+	\fmflabel{$\bar{q}$}{ojet1}
+	\fmflabel{$q$}{ojet2}
+	\fmflabel{$\ell^+$}{olep}
+	\fmflabel{$\nu$}{onu}
+\end{fmfgraph*}
+}
+\end{fmffile}
+\end{document}

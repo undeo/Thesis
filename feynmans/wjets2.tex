@@ -1,0 +1,31 @@
+\documentclass{standalone}
+\usepackage{feynmp-auto}
+
+\begin{document}
+
+\begin{fmffile}{fy_wjets2}
+\setlength{\unitlength}{0.75cm}
+
+\fmfframe(0,1)(1,1){
+\begin{fmfgraph*}(8,4)
+	\fmfleft{i_q2,i_q1}
+	\fmfright{o_q2,o_q1,o_nu,o_lep}	
+	\fmf{quark}{i_q1,gl1}
+	\fmf{boson,label=$W^+$}{gl1,W}
+		\fmf{fermion}{W,o_nu}
+		\fmf{fermion}{o_lep,W}		
+	\fmf{quark}{gl2,i_q2}		
+	\fmf{quark}{gl1,gl2}
+	\fmf{gluon}{gl2,gl_split}	
+	\fmf{quark}{gl_split,o_q1}
+	\fmf{quark}{o_q2,gl_split}	
+	\fmflabel{$q$}{i_q1}
+	\fmflabel{$\ell^+$}{o_lep}
+	\fmflabel{$\nu$}{o_nu}
+	\fmflabel{$\bar{q}'$}{i_q2}
+	\fmflabel{$q$}{o_q1}
+	\fmflabel{$\bar{q}$}{o_q2}		
+\end{fmfgraph*}
+}
+\end{fmffile}
+\end{document}

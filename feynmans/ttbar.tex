@@ -1,0 +1,35 @@
+\documentclass{standalone}
+\usepackage{feynmp-auto}
+
+\begin{document}
+
+\begin{fmffile}{fy_ttbar}
+\setlength{\unitlength}{0.75cm}
+
+\fmfframe(0,1)(1,1){
+\begin{fmfgraph*}(8,6)
+	\fmfleft{g3,g2,g1,g0}
+	\fmfright{b2,ojet1,ojet2,onu,olep,b1}
+		\fmf{gluon,tension=2}{g1,gv1}
+		\fmf{gluon,tension=2}{g2,gv1}
+		\fmf{gluon,tension=4}{gv1,gv2}		
+		\fmf{quark,label=$t$,label.side=left,tension=2}{gv2,t}
+		\fmf{quark,label=$\bar{t}$,label.side=left,tension=2}{tbar,gv2}		
+		\fmf{quark}{t,b1}
+		\fmf{boson,label=$W^+$,label.side=right}{t,lep}
+			\fmf{fermion}{lep,onu}
+			\fmf{fermion}{olep,lep}			
+		\fmf{quark}{b2,tbar}
+		\fmf{boson,label=$W^-$,label.side=left}{tbar,jet}
+			\fmf{quark}{ojet2,jet}
+			\fmf{quark}{jet,ojet1}			
+		\fmflabel{$b$}{b1}
+		\fmflabel{$\bar{b}$}{b2}
+		\fmflabel{$\ell^+$}{olep}
+		\fmflabel{$\nu$}{onu}
+		\fmflabel{$q$}{ojet1}
+		\fmflabel{$\bar{q}'$}{ojet2}			
+\end{fmfgraph*}
+}
+\end{fmffile}
+\end{document}

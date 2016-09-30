@@ -1,0 +1,31 @@
+\documentclass{standalone}
+\usepackage{feynmp-auto}
+
+\begin{document}
+
+\begin{fmffile}{fy_stops}
+\setlength{\unitlength}{0.75cm}
+
+\fmfframe(0,1)(1,1){
+\begin{fmfgraph*}(8,4)
+	\fmfleft{iq2,iq1}
+	\fmfright{ob2,onu,olep,ob1}	
+	\fmf{quark}{iq1,w1}
+	\fmf{quark}{w1,iq2}	
+	\fmf{boson,label=$W^+$,tension=2}{w1,w2}	
+	\fmf{quark,tension=0.5}{ob2,w2}
+	\fmf{quark,label=$t$,tension=2}{w2,t}
+		\fmf{boson,label=$W^+$}{t,wsplit}
+			\fmf{fermion}{olep,wsplit}
+			\fmf{fermion}{wsplit,onu}
+		\fmf{quark}{t,ob1}		
+	\fmflabel{$q$}{iq1}
+	\fmflabel{$\bar{q}'$}{iq2}
+	\fmflabel{$b$}{ob1}
+	\fmflabel{$\ell^+$}{olep}
+	\fmflabel{$\nu$}{onu}
+	\fmflabel{$\bar{b}$}{ob2}	
+\end{fmfgraph*}
+}
+\end{fmffile}
+\end{document}
