@@ -259,6 +259,8 @@
 % CUSTOMs
 \RequirePackage{feynmp-auto}
 \RequirePackage{subcaption}
+\RequirePackage{nicefrac}
+
 \newcommand{\MET}{\ensuremath{{E\!\!\!/}_{\!\mathrm{T}}}\xspace}
 \newcommand{\PZ}{\ensuremath{\cmsSymbolFace{Z}}\xspace} % generic Z
 \newcommand{\pp}{\ensuremath{\mathrm{pp}}}%

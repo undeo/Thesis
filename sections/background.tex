@@ -1,6 +1,6 @@
 \chapter{Determination of the Background Contributions}
 \label{chap:DeterminationoftheBackgroundContributions}
-\begin{figure}[H!b]
+\begin{figure}[Hb]
 	\centering
 	\begin{subfigure}{0.4\textwidth}
 		\includegraphics[width=\textwidth]{plots/bkg/wjets2.pdf}
@@ -19,8 +19,8 @@
 	\end{subfigure}
 	\caption[Feynman diagrams of the main background processes.]{\textbf{Feynman diagrams of the main background processes.} The dominant background contribution is given by W+jets production with quark (a) or quark-gluon final state (b) where the resulting jet is misidentified as originating from a W- or Z-boson. The second main background process is given by top pair production (c) with two real boosted W-bosons.}
 \end{figure}
-There are several processes with the same or similar final states as the diboson process which contribute to the overall background. The main contribution originates from W+jets production, where the W-boson decays leptonically and the quarks (or quark and gluon) in the final state are falsely reconstructed as W- or Z-boson-jets. Two example processes are shown in Fig.~\ref{fig:bkg:fy_wjets1} and Fig.~\ref{fig:bkg:fy_wjets2}. The second main contribution comes from top-pair (\ttbar) production with one leptonically and one hadronically decaying real W-boson as shown in Fig.~\ref{fig:bkg:fy_ttbar}. Additionaly, Standard Model diboson production which includes processes with and without triple gauge coupling (Fig.~\ref{fig:bkg:fy_WWtgc}-\ref{fig:bkg:fy_WZSM}) are taken into account as minor backgrounds. The last minor contribution comes from single top production in association with a W-boson (Fig.~\ref{fig:bkg:fy_stoptw}) as well as in the s- (Fig.~\ref{fig:bkg:fy_stops}) and t-channel (Fig.~\ref{fig:bkg:fy_stopt}).\\
-In this chapter, the analysis strategy for the determination of the background contributions is illustrated.  First, the procedure of extracting the background normalizations from the \Mpr -specturm is described. Then the extraction of the background shapes in the \MWV -spectrum and the final background estimations for the sideband and signal region are presented.
+There are several processes with the same or similar final states as the diboson process which contribute to the overall background. The main contribution originates from W+jets production, where the W-boson decays leptonically and the quarks (or quark and gluon) in the final state are falsely reconstructed as W- or Z-boson-jets. Two example processes are shown in Fig.~\ref{fig:bkg:fy_wjets1} and Fig.~\ref{fig:bkg:fy_wjets2}. The second main contribution comes from top-pair (\ttbar) production with one leptonically and one hadronically decaying real W-boson as shown in Fig.~\ref{fig:bkg:fy_ttbar}. Additionaly, Standard Model diboson production, which includes processes with and without triple gauge coupling (Fig.~\ref{fig:bkg:fy_WWtgc}-\ref{fig:bkg:fy_WZSM}), are taken into account as minor backgrounds. The last minor contribution comes from single top production in association with a W-boson (Fig.~\ref{fig:bkg:fy_stoptw}) as well as in the s- (Fig.~\ref{fig:bkg:fy_stops}) and t-channel (Fig.~\ref{fig:bkg:fy_stopt}).\\
+In this chapter, the analysis strategy for the determination of the background contributions is illustrated.  First, the procedure of extracting the background normalizations from the \Mpr -spectrum is described. Then the extraction of the background shapes in the \MWV -spectrum and the final background estimations for the sideband and signal region using the alpha-ratio-method are presented.
 
 \begin{figure}
 	\centering
@@ -62,23 +62,52 @@ In this chapter, the analysis strategy for the determination of the background c
 	\end{subfigure}
 
 	
-	\caption[Feynman diagrams of the minor background processes.]{\textbf{Feynman diagrams of the minor background processes.} Additional background contributions that are taken into account are WW-/WZ-production with (a/b) and without (c/d) triple gauge couling as well as single top production in association with a W-boson (e), in the s-channel (f) and in the t-channel (g).}
+	\caption[Feynman diagrams of the minor background processes.]{\textbf{Feynman diagrams of the minor background processes.} Additional background contributions that are taken into account are WW-/WZ-production with (a/b) and without (c/d) triple gauge coupling as well as single top production in association with a W-boson (e), in the s-channel (f) and in the t-channel (g).}
 \end{figure}
 
 \clearpage
 \section{Background Estimation Strategy}
-The background estimation strategy orientates on a previous diboson resonance described in \cite{resonancepas} with minor modifications. The normalizations of the main backgrounds, W+jets and \ttbar \ , are extracted from the The shape of the main background (W+jet production) is taken from data in the sideband region using the alpha-ratio-method described in section~\ref{sec:Al[haRatioMethod}. The shapes of \ttbar \ and single top production are taken from simulation. The shape of the Standard Model diboson process is taken from the signal model with all aTGC-parameters set to zero.
+The background estimation strategy orientates on a previous diboson resonance search described in \cite{resonancepas} with minor modifications. The basic idea is to use two observables, \Mpr \ and \MWV, to perform a data driven background extraction. The normalizations of the main backgrounds, W+jets and \ttbar \ , are extracted from a fit in the \Mpr -distribution, while the minor backgrounds, single top and SM-diboson, are normalised to their cross section. The shape of the W+jets background is taken from data in the sideband region using the alpha-ratio-method described in section~\ref{sec:AlphaRatioMethod}. The shapes of \ttbar \ and single top production are taken from fits to MC simulation while the shape of the SM-diboson process is given by the signal model with all aTGC-parameters set to zero (see section \ref{sec:NormalizationandShapeoftheaTGCContribution}).
 
 \section{Normalizations of the Background Distributions}
-The normalizations of the background contributions are extracted from the \Mpr -spectrum. In this spectrum, the main backgrounds W+jets and top pair production have a considerably different shape. While the W+jets production [...]\\
-The shapes in the \Mpr -spectrum are extracted from fits of predefined functions to Monte Carlo simulations. 
+The normalizations of the background contributions are extracted from the \Mpr -spectrum. The shapes in the this spectrum are extracted from fits of predefined functions to MC simulations. The main backgrounds W+jets and \ttbar \ production have a considerably different shape. The W+jets production shows a broad peak coming from QCD-jets, which is functionally described by
+\begin{align}
+F_{\rm W+jets}(\MWV) &= e^{-a_0(\MWV-a_1)/\left(a_2+a_0\right)} \cdot \frac{1 + {\rm Erf}\left((\MWV-a_1)/(a_2-a_0) \right)}{2} \, , \\
+{\rm Erf(x)} &= \frac{2}{\sqrt{\pi}}\int_0^x e^{-t^2}{\rm dt} \, .
+\end{align}
+The \ttbar \ distribution has a peaking contribution coming from real boosted hadronically decaying W-bosons as well as a continuous contribution coming from events where some of the b-quark decay products are falsely reconstructed as part of the W-boson jet. The continuous part is modelled by a function similar to $F_{\rm W+jets}$, while the peaking distribution is given by a Gaussian function $G(x,\mu,\sigma)$
+\begin{align}
+F_{\ttbar}(\MWV) &= b_0 \cdot e^{b_1\MWV} \cdot \frac{1 + {\rm Erf}((\MWV-b_2)/b_3)}{2} + (1-b_0)\cdot G(\MWV,\mu,\sigma) \, .
+\end{align}
+The function describing the single top distribution is similar to $F_{\ttbar}$ with the continuous part being represented by a simple exponential function
+\begin{align}
+F_{\rm singletop}(\MWV) &= c_0\cdot e^{c_1\MWV} + (1-c_0)\cdot G(\MWV,\mu,\sigma) \, ,
+\end{align}
+Finally, the functional form for diboson production consists of a sum of two double Gaussians, corresponding to WW and WZ events
+\begin{align}
+F_{\rm diboson}(\MWV) =& \ \ 0,74 \cdot F_{WW} + 0,26 \cdot F_{WZ} \\
+=& \ \ 0,74 \cdot \left(
+\delta \cdot G(\MWV,\mu_W,\sigma) + (1-\delta) \cdot G(\MWV,\mu_W+\Delta_\mu,\sigma\cdot\Delta_\sigma)
+\right)  \\
+&+ 0,26 \cdot \left(
+\delta \cdot G(\MWV,\mu_Z,\sigma) + (1-\delta) \cdot G(\MWV,\mu_Z+\Delta_\mu,\sigma\cdot\Delta_\sigma)
+\right)\, .
+\end{align}
+
 
 \section{Shapes in the Sensitive Variable}
+The final limit extraction is done in the invariant mass spectrum of the diboson system, \MWV \ . This variable is equal to the hard scale of the signal process. By applying a cut to this variable ($<3,5$\, TeV), a reference point for the scale of the new physics $\Lambda^2$ ($\gg 3,5^2$\, TeV$^2$) is obtained.
 
 \subsection{Alpha-Ratio-Method}
-\label{sec:Al[haRatioMethod}
-The alpha-ratio-method provides a way to determine a background shape in a signal region from data in a sideband region \cite{missing}.
+\label{sec:AlphaRatioMethod}
+The shape of the W+jets contribution in the signal region is estimated using a technique developed for diboson resonance searches (see e.g. \cite{resonancepas}), the so-called alpha-ratio-method. This method provides a way to determine a background shape in a signal region (SR) from data in a sideband region (SB) using a transfer function, the so-called alpha function. The main assumption is that there is a correlation between the SR- and SB-shapes that is modelled by the MC simulation.  This function is defined as
+\begin{align}
+\alpha^{MC}(M_{WV})=F_{SR}^{MC}/F_{SB}^{MC} \, ,
+\end{align}
+where $F_{SR}^{MC}$ and $F_{SB}^{MC}$ are the shapes extracted from MC simulation in the sideband and signal region, respectively.
 
 \subsection{Sideband Region}
 
 \subsection{Signal Region}
+
+\subsection{Closure Test of the Alpha-Ratio-Method}
