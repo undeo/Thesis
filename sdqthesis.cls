@@ -282,6 +282,7 @@
 \newcommand{\MLL}{\ensuremath{m_{\ell\ell}}}%
 \newcommand{\nunubar}{\ensuremath{\mathrm{nu}\bar{\mathrm{nu}}}}%
 \newcommand{\qqbar}{\ensuremath{\mathrm{q}\bar{\mathrm{q}}}}%
+\newcommand{\ttbar}{\ensuremath{\mathrm{t}\bar{\mathrm{t}}}}%
 \newcommand{\HZZ}{\ensuremath{\Ho\ra\Zo\Zo}}%
 \newcommand{\HZZllqq}{\ensuremath{\HZZ\ra\LL\, \qqbar}}%
 \newcommand{\Hllqq}{\ensuremath{\Ho\ra\LL\qqbar}}%

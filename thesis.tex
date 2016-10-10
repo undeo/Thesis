@@ -57,8 +57,9 @@ Second Title Line}
 %% --------------------------------
 
 %% Use biber instead of BibTeX, see README
-\usepackage[citestyle=numeric,style=numeric,backend=biber]{biblatex}
+\usepackage[citestyle=numeric,style=numeric,backend=bibtex]{biblatex}
 \addbibresource{thesis.bib}
+%\bibliography{thesis}
 
 %% ====================================
 %% ====================================
@@ -73,7 +74,7 @@ Second Title Line}
 \setpdf
 
 %% Set the title
-%\maketitle
+\maketitle
 
 %% The Preamble begins here
 \frontmatter
@@ -92,10 +93,10 @@ Second Title Line}
 %% ------------------------
 %% |   Table of Contents  |
 %% ------------------------
-%\tableofcontents
+\tableofcontents
 
-%\listoffigures
-%\listoftables
+\listoffigures
+\listoftables
 
 %% -----------------
 %% |   Main part   |
@@ -103,13 +104,13 @@ Second Title Line}
 
 \mainmatter
 
-%\include{sections/TheoIntro}
-%\include{sections/ExperimentalSetup}
-%\include{sections/EventReco}
-%\include{sections/Signal}
+\include{sections/TheoIntro}
+\include{sections/ExperimentalSetup}
+\include{sections/EventReco}
+\include{sections/Signal}
 \include{sections/background}
-%\include{sections/limits}
-%\include{sections/conclusion}
+\include{sections/limits}
+\include{sections/conclusion}
 
 
 %% --------------------
@@ -123,7 +124,7 @@ Second Title Line}
 %% ----------------
 %% |   Appendix   |
 %% ----------------
-\appendix
-\include{sections/appendix}
+%\appendix
+%\include{sections/appendix}
 
 \end{document}

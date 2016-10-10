@@ -1,10 +1,6 @@
-\begin{fmffile}{all_feynmans}
-\setlength{\unitlength}{1mm}
 \chapter{Determination of the Background Contributions}
 \label{chap:DeterminationoftheBackgroundContributions}
-There are several processes with the same or similar final states as the diboson process which contribute to the overall background. The main contribution originates from W+jets production, where the W-boson decays leptonically and the quarks (or quark and gluon) in the final state are falsely reconstructed as W- or Z-boson-jets. Two example processes are shown in Fig.~\ref{fig:bkg:fy_wjets1} and Fig.~\ref{fig:bkg:fy_wjets2}. The second main contribution comes from top-pair production with one leptonically and one hadronically decaying W-boson as shown in Fig.~\ref{fig:bkg:fy_ttbar}. Additionaly, single top production in association with a W-boson (Fig.~\ref{fig:bkg:fy_stoptw}) as well as in the s- (Fig.~\ref{fig:bkg:fy_stops}) and t-channel (Fig.~\ref{fig:bkg:fy_stopt}) are taken into account as minor backgrounds. The last minor contribution comes from Standard Model diboson production which includes processes without triple gauge coupling (Fig.~\ref{fig:bkg:fy_SMdiboson}).
-
-\begin{figure}[hb]
+\begin{figure}[H!b]
 	\centering
 	\begin{subfigure}{0.4\textwidth}
 		\includegraphics[width=\textwidth]{plots/bkg/wjets2.pdf}
@@ -21,28 +17,34 @@ There are several processes with the same or similar final states as the diboson
 		\caption{}
 		\label{fig:bkg:fy_ttbar}
 	\end{subfigure}
-	\caption[Feynman diagrams of the main background processes.]{Feynman diagrams of the main background processes. Shown are W+jets production with quark (a) and quark-gluon final state (b) as well as top pair production (c).}
+	\caption[Feynman diagrams of the main background processes.]{\textbf{Feynman diagrams of the main background processes.} The dominant background contribution is given by W+jets production with quark (a) or quark-gluon final state (b) where the resulting jet is misidentified as originating from a W- or Z-boson. The second main background process is given by top pair production (c) with two real boosted W-bosons.}
 \end{figure}
+There are several processes with the same or similar final states as the diboson process which contribute to the overall background. The main contribution originates from W+jets production, where the W-boson decays leptonically and the quarks (or quark and gluon) in the final state are falsely reconstructed as W- or Z-boson-jets. Two example processes are shown in Fig.~\ref{fig:bkg:fy_wjets1} and Fig.~\ref{fig:bkg:fy_wjets2}. The second main contribution comes from top-pair (\ttbar) production with one leptonically and one hadronically decaying real W-boson as shown in Fig.~\ref{fig:bkg:fy_ttbar}. Additionaly, Standard Model diboson production which includes processes with and without triple gauge coupling (Fig.~\ref{fig:bkg:fy_WWtgc}-\ref{fig:bkg:fy_WZSM}) are taken into account as minor backgrounds. The last minor contribution comes from single top production in association with a W-boson (Fig.~\ref{fig:bkg:fy_stoptw}) as well as in the s- (Fig.~\ref{fig:bkg:fy_stops}) and t-channel (Fig.~\ref{fig:bkg:fy_stopt}).\\
+In this chapter, the analysis strategy for the determination of the background contributions is illustrated.  First, the procedure of extracting the background normalizations from the \Mpr -specturm is described. Then the extraction of the background shapes in the \MWV -spectrum and the final background estimations for the sideband and signal region are presented.
 
 \begin{figure}
 	\centering
 	\begin{subfigure}{0.4\textwidth}
 		\includegraphics[width=\textwidth]{plots/bkg/SMWW.pdf}
 		\caption{}
+		\label{fig:bkg:fy_WWtgc}
 	\end{subfigure}
 	\begin{subfigure}{0.4\textwidth}
 		\includegraphics[width=\textwidth]{plots/bkg/SMWZ.pdf}
 		\caption{}
+		\label{fig:bkg:fy_WZtgc}
 	\end{subfigure}
 	\begin{subfigure}{0.4\textwidth}
 		\includegraphics[width=\textwidth]{plots/bkg/SMWW2.pdf}
 		\caption{}
+		\label{fig:bkg:fy_WWSM}
 	\end{subfigure}
 	\begin{subfigure}{0.4\textwidth}
 		\includegraphics[width=\textwidth]{plots/bkg/SMWZ2.pdf}
 		\caption{}
+		\label{fig:bkg:fy_WZSM}
 	\end{subfigure}
-	\begin{subfigure}{0.4\textwidth}
+	\begin{subfigure}{0.3\textwidth}
 		\includegraphics[width=\textwidth]{plots/bkg/stoptW.pdf}
 		\caption{}
 		\label{fig:bkg:fy_stoptw}
@@ -54,27 +56,29 @@ There are several processes with the same or similar final states as the diboson
 	\end{subfigure}
 	\begin{subfigure}{\textwidth}
 		\centering
-		\includegraphics[width=0.35\textwidth]{plots/bkg/stopt.pdf}
+		\includegraphics[width=0.4\textwidth]{plots/bkg/stopt.pdf}
 		\caption{}
 		\label{fig:bkg:fy_stopt}
 	\end{subfigure}
 
 	
-	\caption[Feynman diagrams of the minor background processes.]{Feynman diagrams of the minor background processes.single top production in association with a W-boson (a), in the s-channel (b) and in the t-channel (c).}
+	\caption[Feynman diagrams of the minor background processes.]{\textbf{Feynman diagrams of the minor background processes.} Additional background contributions that are taken into account are WW-/WZ-production with (a/b) and without (c/d) triple gauge couling as well as single top production in association with a W-boson (e), in the s-channel (f) and in the t-channel (g).}
 \end{figure}
 
+\clearpage
 \section{Background Estimation Strategy}
-
+The background estimation strategy orientates on a previous diboson resonance described in \cite{resonancepas} with minor modifications. The normalizations of the main backgrounds, W+jets and \ttbar \ , are extracted from the The shape of the main background (W+jet production) is taken from data in the sideband region using the alpha-ratio-method described in section~\ref{sec:Al[haRatioMethod}. The shapes of \ttbar \ and single top production are taken from simulation. The shape of the Standard Model diboson process is taken from the signal model with all aTGC-parameters set to zero.
 
 \section{Normalizations of the Background Distributions}
-
+The normalizations of the background contributions are extracted from the \Mpr -spectrum. In this spectrum, the main backgrounds W+jets and top pair production have a considerably different shape. While the W+jets production [...]\\
+The shapes in the \Mpr -spectrum are extracted from fits of predefined functions to Monte Carlo simulations. 
 
 \section{Shapes in the Sensitive Variable}
 
 \subsection{Alpha-Ratio-Method}
+\label{sec:Al[haRatioMethod}
+The alpha-ratio-method provides a way to determine a background shape in a signal region from data in a sideband region \cite{missing}.
 
 \subsection{Sideband Region}
 
 \subsection{Signal Region}
-
-\end{fmffile}
