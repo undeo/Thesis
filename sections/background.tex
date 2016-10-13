@@ -67,47 +67,102 @@ In this chapter, the analysis strategy for the determination of the background c
 
 \clearpage
 \section{Background Estimation Strategy}
-The background estimation strategy orientates on a previous diboson resonance search described in \cite{resonancepas} with minor modifications. The basic idea is to use two observables, \Mpr \ and \MWV, to perform a data driven background extraction. The normalizations of the main backgrounds, W+jets and \ttbar \ , are extracted from a fit in the \Mpr -distribution, while the minor backgrounds, single top and SM-diboson, are normalised to their cross section. The shape of the W+jets background is taken from data in the sideband region using the alpha-ratio-method described in section~\ref{sec:AlphaRatioMethod}. The shapes of \ttbar \ and single top production are taken from fits to MC simulation while the shape of the SM-diboson process is given by the signal model with all aTGC-parameters set to zero (see section \ref{sec:NormalizationandShapeoftheaTGCContribution}).
+The background estimation strategy orientates on a previous diboson resonance search described in \cite{resonancepas} with minor modifications. The basic idea is to use two observables, the pruned jet mass of the hadronically decaying boson \Mpr \ and the invariant mass of the diboson system \MWV, to perform a data driven background extraction. The normalizations of the main backgrounds, W+jets and \ttbar \ , are extracted from a fit in the \Mpr -distribution, while the minor backgrounds, single top and SM-diboson, are normalised to their cross section. The shape of the W+jets background is taken from data in the sideband region using the alpha-ratio-method described in section~\ref{sec:AlphaRatioMethod}. The shapes of \ttbar \ and single top production are taken from fits to MC simulation while the shape of the SM-diboson process is given by the signal model with all aTGC-parameters set to zero (see section \ref{sec:NormalizationandShapeoftheaTGCContribution}).
 
 \section{Normalizations of the Background Distributions}
-The normalizations of the background contributions are extracted from the \Mpr -spectrum. The shapes in the this spectrum are extracted from fits of predefined functions to MC simulations. The main backgrounds W+jets and \ttbar \ production have a considerably different shape. The W+jets production shows a broad peak coming from QCD-jets, which is functionally described by
+\label{sec:bkgnorms}
+The normalizations of the main background contributions are extracted from the pruned jet mass. The shapes in this spectrum are extracted from fits of predefined functions to MC simulations. The main backgrounds W+jets and \ttbar \ production have a considerably different shape. The W+jets production shows a broad peak coming from QCD-jets, which is functionally described by
 \begin{align}
-F_{\rm W+jets}(\MWV) &= e^{-a_0(\MWV-a_1)/\left(a_2+a_0\right)} \cdot \frac{1 + {\rm Erf}\left((\MWV-a_1)/(a_2-a_0) \right)}{2} \, , \\
-{\rm Erf(x)} &= \frac{2}{\sqrt{\pi}}\int_0^x e^{-t^2}{\rm dt} \, .
+F_{\rm W+jets}(x) &= e^{-a_0(x-a_1)/\left(a_2+a_0\right)} \cdot \frac{1 + {\rm Erf}\left((x-a_1)/(a_2-a_0) \right)}{2} ~ , \\
+{\rm Erf(x)} &= \frac{2}{\sqrt{\pi}}\int_0^x e^{-t^2}{\rm dt} ~ .
 \end{align}
-The \ttbar \ distribution has a peaking contribution coming from real boosted hadronically decaying W-bosons as well as a continuous contribution coming from events where some of the b-quark decay products are falsely reconstructed as part of the W-boson jet. The continuous part is modelled by a function similar to $F_{\rm W+jets}$, while the peaking distribution is given by a Gaussian function $G(x,\mu,\sigma)$
+The \ttbar \ distribution, however, has a peaking contribution coming from real boosted hadronically decaying W-bosons as well as a continuous contribution coming from events where some of the b-quark decay products are falsely reconstructed as part of the W-boson jet. The continuous part is modelled by a function similar to $F_{\rm W+jets}$, while the peaking distribution is given by a Gaussian function $G(x,\mu,\sigma)$
 \begin{align}
-F_{\ttbar}(\MWV) &= b_0 \cdot e^{b_1\MWV} \cdot \frac{1 + {\rm Erf}((\MWV-b_2)/b_3)}{2} + (1-b_0)\cdot G(\MWV,\mu,\sigma) \, .
+F_{\ttbar}(x) &= b_0 \cdot e^{b_1 x} \cdot \frac{1 + {\rm Erf}((x-b_2)/b_3)}{2} + (1-b_0)\cdot G(x,\mu,\sigma) ~ , ~ b_0 \in [0,1] ~ .
 \end{align}
-The function describing the single top distribution is similar to $F_{\ttbar}$ with the continuous part being represented by a simple exponential function
+The function describing the single top distribution is similar to $F_{\ttbar}$ with the continuous part being represented by a simple exponential function representing the tW-channel and the peaking contribution representing the t-channel
 \begin{align}
-F_{\rm singletop}(\MWV) &= c_0\cdot e^{c_1\MWV} + (1-c_0)\cdot G(\MWV,\mu,\sigma) \, ,
+F_{\rm singletop}(x) &= c_0\cdot e^{c_1 x} + (1-c_0)\cdot G(x,\mu,\sigma) ~ , ~ c_0 \in [0,1] ~ .
 \end{align}
-Finally, the functional form for diboson production consists of a sum of two double Gaussians, corresponding to WW and WZ events
+Finally, the functional form for diboson production consists of a sum of two double Gaussians, corresponding to WW and WZ events, which only differ in their mean values $\mu_{\rm W}$ and $\mu_{\rm Z}$. The numeric values defining the proportion of WW and WZ are estimated from the respective cross sections (\cite{WWxsec},\cite{WZxsec})
 \begin{align}
-F_{\rm diboson}(\MWV) =& \ \ 0,74 \cdot F_{WW} + 0,26 \cdot F_{WZ} \\
-=& \ \ 0,74 \cdot \left(
-\delta \cdot G(\MWV,\mu_W,\sigma) + (1-\delta) \cdot G(\MWV,\mu_W+\Delta_\mu,\sigma\cdot\Delta_\sigma)
-\right)  \\
-&+ 0,26 \cdot \left(
-\delta \cdot G(\MWV,\mu_Z,\sigma) + (1-\delta) \cdot G(\MWV,\mu_Z+\Delta_\mu,\sigma\cdot\Delta_\sigma)
-\right)\, .
+F_{\rm diboson}(x) =& \ \ 0.74 \cdot F_{\rm WW}\left(x,\delta,\mu_{\rm W},\sigma,\Delta_\mu,\Delta_\sigma\right) + 0.26 \cdot F_{\rm WZ}\left(x,\delta,\mu_{\rm Z},\sigma,\Delta_\mu,\Delta_\sigma\right) \\
+=& \ \ 0.74 \cdot \left(
+\delta \cdot G(x,\mu_{\rm W},\sigma) + (1-\delta) \cdot G(x,\mu_{\rm W}+\Delta_\mu,\sigma\cdot\Delta_\sigma)
+\right)  \nonumber \\
+&+ 0.26 \cdot \left(
+\delta \cdot G(x,\mu_{\rm Z},\sigma) + (1-\delta) \cdot G(x,\mu_{\rm Z}+\Delta_\mu,\sigma\cdot\Delta_\sigma)
+\right) ~ , ~ \delta \in [0,1] ~ . 
 \end{align}
+These functions are now fitted to the corresponding MC simulation to obtain a template for each background contribution. The resulting fits to the MC simulations are shown in Fig.~\ref{fig:bkg:mjMC} for the electron and muon channel.
+
+\begin{figure}
+	\centering
+	\begin{subfigure}{0.45\textwidth}
+		\includegraphics[width=\textwidth]{plots/bkg/WJets_mj_el_ErfExp_with_pull.pdf}
+	\end{subfigure}
+	\begin{subfigure}{0.45\textwidth}
+		\includegraphics[width=\textwidth]{plots/bkg/WJets_mj_mu_ErfExp_with_pull.pdf}
+	\end{subfigure}
+	\begin{subfigure}{0.45\textwidth}
+		\includegraphics[width=\textwidth]{plots/bkg/TTbar_mj_el_2Gaus_ErfExp_with_pull.pdf}
+	\end{subfigure}
+	\begin{subfigure}{0.45\textwidth}
+		\includegraphics[width=\textwidth]{plots/bkg/TTbar_mj_mu_2Gaus_ErfExp_with_pull.pdf}
+	\end{subfigure}
+	\begin{subfigure}{0.45\textwidth}
+		\includegraphics[width=\textwidth]{plots/bkg/STop_mj_el_ExpGaus_with_pull.pdf}
+	\end{subfigure}
+	\begin{subfigure}{0.45\textwidth}
+		\includegraphics[width=\textwidth]{plots/bkg/STop_mj_mu_ExpGaus_with_pull.pdf}
+	\end{subfigure}
+	\begin{subfigure}{0.45\textwidth}
+		\includegraphics[width=\textwidth]{plots/bkg/VV_mj_el_2_2Gaus_with_pull.pdf}
+	\end{subfigure}
+	\begin{subfigure}{0.45\textwidth}
+		\includegraphics[width=\textwidth]{plots/bkg/VV_mj_mu_2_2Gaus_with_pull.pdf}
+	\end{subfigure}
+	\caption[Background shapes in the pruned jet mass spectrum]{Background shapes in the pruned jet mass spectrum extracted from fit to MC simulation. The ratio plot shows the difference of the data and the fitted function normalised to the data uncertainty.}
+	\label{fig:bkg:mjMC}
+\end{figure}
+
 
 
 \section{Shapes in the Sensitive Variable}
-The final limit extraction is done in the invariant mass spectrum of the diboson system, \MWV \ . This variable is equal to the hard scale of the signal process. By applying a cut to this variable ($<3,5$\, TeV), a reference point for the scale of the new physics $\Lambda^2$ ($\gg 3,5^2$\, TeV$^2$) is obtained.
+The final limit extraction is done in the invariant mass spectrum of the diboson system, \MWV \ . This variable is equal to the hard scale of the signal process. By applying a cut to this variable ($<3.5$\,TeV), a reference point for the scale of the new physics $\Lambda^2$ ($\gg3.5^2$\,TeV$^2$) is obtained. \\
+The following section describes the background extraction for \MWV .
 
 \subsection{Alpha-Ratio-Method}
 \label{sec:AlphaRatioMethod}
-The shape of the W+jets contribution in the signal region is estimated using a technique developed for diboson resonance searches (see e.g. \cite{resonancepas}), the so-called alpha-ratio-method. This method provides a way to determine a background shape in a signal region (SR) from data in a sideband region (SB) using a transfer function, the so-called alpha function. The main assumption is that there is a correlation between the SR- and SB-shapes that is modelled by the MC simulation.  This function is defined as
+The shape of the W+jets contribution in the signal region is estimated using a technique developed for diboson resonance searches, the so-called alpha-ratio-method (see e.g. \cite{resonancepas}). This method provides a way to determine a background shape in a signal region (SR) from data in a sideband region (SB) using a transfer function, the so-called alpha function. The main assumption is that there is a correlation between the SR- and SB-shapes that is modelled by the MC simulation. The alpha function is defined as
 \begin{align}
-\alpha^{MC}(M_{WV})=F_{SR}^{MC}/F_{SB}^{MC} \, ,
+\alpha_{\rm MC}(M_{WV})=F_{\rm MC}^{\rm SR}(M_{WV})/F_{\rm MC}^{\rm SB}(M_{WV}) \, ,
 \end{align}
-where $F_{SR}^{MC}$ and $F_{SB}^{MC}$ are the shapes extracted from MC simulation in the sideband and signal region, respectively.
+where $F_{\rm SR}^{\rm MC}$ and $F_{\rm SB}^{\rm MC}$ are the shapes extracted from MC simulation in the sideband and signal region, respectively. The background prediction in the signal region is then given by
+\begin{equation}
+F_{\rm prediction}^{\rm SR}(M_{WV})=\alpha_{\rm MC}(M_{WV})\cdot F_{\rm Data}^{\rm SB}(M_{WV}) \, ,
+\end{equation}
+where $F_{\rm Data}^{\rm SB}$ is the shape extracted from the sideband data.
 
-\subsection{Sideband Region}
+\subsection{Shapes of the Minor Background Contributions}
+To be able to apply the alpha-ratio-method for the background estimation of W+jets production, a fit to the data in the sideband region ($\Mpr \in [40,65]\cap[105,150]\,{\rm GeV}$) has to be done. Therefore, the shapes of the \ttbar , single top and diboson production have to be estimated, which is done by fitting predefined functions to the MC simulation. The used functions are given by
+\begin{equation}
+F_{\ttbar}^{\rm SB}(x) = e^{b_1x+\frac{b_2}{x}} \quad , \quad
+F_{\rm singletop}^{\rm SB}(x) = e^{c_1x} \quad , \quad 
+F_{\rm diboson}^{\rm SB}(x) = e^{d_1x} \, .
+\end{equation}
+The fit results are shown in Fig~\ref{fig:bkg:mwv_sb_minor}.
+\dots
+The shapes in the signal region are determined similarly using following functions
+\begin{equation}
+F_{\ttbar}^{\rm SB}(x) = e^{b_1x+\frac{b_2}{x}} \quad , \quad
+F_{\rm singletop}^{\rm SB}(x) = e^{c_1x} \quad , \quad 
+F_{\rm diboson}^{\rm SB}(x) = e^{d_1x+\frac{d_2}{x}} \, .
+\end{equation}
 
-\subsection{Signal Region}
+
+\subsection{Shape of the W+jets Production}
+
+%\subsection{Decorellation of the Main Background Functions}
 
 \subsection{Closure Test of the Alpha-Ratio-Method}
