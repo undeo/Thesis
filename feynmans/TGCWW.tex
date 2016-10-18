@@ -1,0 +1,21 @@
+\documentclass{standalone}
+\usepackage{feynmp-auto}
+
+\begin{document}
+
+\begin{fmffile}{fy_SMWW}
+\setlength{\unitlength}{0.75cm}
+
+\fmfframe(0,1)(1,1){
+\begin{fmfgraph*}(8,4)
+	\fmfleft{med}
+	\fmfright{bos2,bos1}
+		\fmf{boson,label=$Z$,,$\gamma$}{med,tmp}
+		\fmf{boson}{tmp,bos1}
+		\fmf{boson}{tmp,bos2}
+	\fmflabel{$W^\pm$}{bos1}
+	\fmflabel{$W\^\mp$}{bos2}
+\end{fmfgraph*}
+}
+\end{fmffile}
+\end{document}
