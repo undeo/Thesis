@@ -9,13 +9,14 @@
 \fmfframe(0,1)(1,1){
 \begin{fmfgraph*}(8,4)
 	\fmfleft{i_q2,i_q1}
-	\fmfright{ojet2,ojet1,onu,olep}	
+	\fmfright{ojet2,ojet1,onu,olep}
+		
 	\fmf{quark}{i_q1,b1}
 	\fmf{quark}{b1,b2}
 	\fmf{quark}{b2,i_q2}	
 	\fmf{boson,label=$W^+$,label.side=left}{b1,lep}
 		\fmf{fermion}{olep,lep}
-		\fmf{fermion}{lep,onu}
+		\fmf{fermion}{lonep,u}
 	\fmf{boson,label=$W^-$}{b2,jet}
 		\fmf{quark}{ojet2,jet}
 		\fmf{quark}{jet,ojet1}		
