@@ -260,6 +260,7 @@
 \RequirePackage{feynmp-auto}
 \RequirePackage{subcaption}
 \RequirePackage{nicefrac}
+\RequirePackage{multirow}
 
 \newcommand{\MET}{\ensuremath{{E\!\!\!/}_{\!\mathrm{T}}}\xspace}
 \newcommand{\PZ}{\ensuremath{\cmsSymbolFace{Z}}\xspace} % generic Z

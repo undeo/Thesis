@@ -1,5 +1,5 @@
-\chapter{Determination of the Background Contributions}
-\label{chap:DeterminationoftheBackgroundContributions}
+\chapter{Determination of the Background Distributions}
+\label{chap:bkg}
 \begin{figure}[H!b]
 	\centering
 	\begin{subfigure}{0.4\textwidth}
@@ -62,7 +62,7 @@ In this chapter, the analysis strategy for the determination of the background c
 
 \clearpage
 \section{Background Estimation Strategy}
-The background estimation strategy orientates on a previous diboson resonance search described in \cite{resonancepas} with minor modifications. The basic idea is to extract the normalizations of the main background contributions, the W+jets and \ttbar production, from a fit to the data in the pruned jet mass spectrum of the hadronically decaying boson, \Mpr . The shape of the W+jets production in the \MWV -spectrum, which is ultimatley used for the limit extraction in section \ref{limits}, is extracted from the data in the sideband region ($\Mpr \in [40,65] \cap [105,150]$\, GeV) via the alpha-ratio-method, while the shapes of the \ttbar and single top contrubutions are take from fits to the MC simulation. The shape of the SM diboson process is taken from the signal model with all aTGC-parameters set to zero (see section \ref{sec:NormalizationandShapeoftheaTGCContribution}).
+The background estimation strategy orientates on a previous diboson resonance search described in \cite{resonancepas} with minor modifications. The basic idea is to extract the normalizations of the main background contributions, the W+jets and \ttbar \ production, from a fit to the data in the jet mass spectrum of the hadronically decaying boson. A grooming algorithm is used to suppress jets coming from QCD events, the so-called pruning algorithm (section \ref{sec:pruning}), which leads to the new observable of the pruned jet mass, \Mpr . The shape of the W+jets production in the \MWV -spectrum, which is ultimately used for the limit extraction in section \ref{limits}, is extracted from the data in the sideband region ($\Mpr \in [40,65] \cap [105,150]$\, GeV) via the alpha-ratio-method, while the shapes of the \ttbar \ and single top contributions are take from fits to the MC simulation. The shape of the SM diboson process is taken from the signal model with all aTGC-parameters set to zero (see section \ref{sec:NormalizationandShapeoftheaTGCContribution}).
 
 \section{Normalizations of the Background Distributions}
 \label{sec:bkgnorms}
@@ -89,7 +89,7 @@ F_{\rm diboson}(x) =& \ \ 0.74 \cdot F_{\rm WW}\left(x\right) + 0.26 \cdot F_{\r
 \delta \cdot G(x,\mu_{\rm Z},\sigma) + (1-\delta) \cdot G(x,\mu_{\rm Z}+\Delta_\mu,\sigma\cdot\Delta_\sigma)
 \right) ~ , ~ \delta \in [0,1] ~ . 
 \end{align}
-These functions are now fitted to the corresponding MC simulation to obtain a template for each background contribution. The resulting fits to the MC simulations are shown in Fig.~\ref{fig:bkg:mjMC} for the electron and muon channel. 
+These functions are now fitted to the corresponding MC simulation to obtain a template for each background contribution. The resulting fits to the MC simulations are shown in Fig.~\ref{fig:bkg:mjMC} for both the electron and muon channel. 
 
 \begin{figure}
 	\centering
@@ -145,7 +145,7 @@ The fit results as well as the resulting scale factors are summarized in Tab.~\r
 		\includegraphics[width=0.5\textwidth]{plots/bkg/mj/bkg_alt_mu_mj.pdf}
 		\caption{}
 	\end{subfigure}	
-	\caption[Comparison of pre- and post-fit functions and the alternative function in the \Mpr -spectrum]{Comparison of pre- (a) and post-fit functions (b) as well as the alternative function (c) in the \Mpr -spectrum. The fit is done in the whole \Mpr -spectrum ($\Mpr \in [40,65] $ GeV). The W+jets normalization as well as one shape parameter are freely floating while the \ttbar \ normalization is constraint according to its uncertainty and the diboson contribution is constraint by a factor of two to catch any  aTGC-induced events in the signal regions. The single top contribution is fixed to its cross section.}
+	\caption[Comparison of pre- and post-fit functions and the alternative function in the \Mpr -spectrum]{Comparison of pre- (a) and post-fit functions (b) as well as the alternative function (c) in the \Mpr -spectrum. The fit is done in the whole \Mpr -spectrum ($\Mpr \in [40,150] $ GeV). The W+jets normalization as well as one shape parameter are freely floating while the \ttbar \ normalization is constraint according to its uncertainty and the diboson contribution is constraint by a factor of two to catch any  aTGC-induced events in the signal regions. The single top contribution is fixed to its cross section.}
 	\label{fig:bkg:mjdata}
 \end{figure}
 
@@ -165,7 +165,7 @@ The fit results as well as the resulting scale factors are summarized in Tab.~\r
 	\end{tabular}
 \end{table}
 
-The final uncertainty for the W+jets normalization is taken from the fits as shown in eq.~\ref{eq:bkg:wjetsunc}. For all other background contributions the uncertainty is derived in section \ref{sec:systematics}.
+The final uncertainty for the W+jets normalization used in the limit extraction is taken from the fits as shown in eq.~\ref{eq:bkg:wjetsunc}. For all other background contributions the uncertainty is derived in section \ref{sec:systematics}.
 
 
 \section{Shapes in the Invariant Mass of the Diboson System}
