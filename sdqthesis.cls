@@ -261,6 +261,7 @@
 \RequirePackage{subcaption}
 \RequirePackage{nicefrac}
 \RequirePackage{multirow}
+\RequirePackage{slashed}
 
 \newcommand{\MET}{\ensuremath{{E\!\!\!/}_{\!\mathrm{T}}}\xspace}
 \newcommand{\PZ}{\ensuremath{\cmsSymbolFace{Z}}\xspace} % generic Z

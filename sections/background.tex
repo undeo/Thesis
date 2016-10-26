@@ -55,8 +55,6 @@ In this chapter, the analysis strategy for the determination of the background c
 		\caption{}
 		\label{fig:bkg:fy_stopt}
 	\end{subfigure}
-
-	
 	\caption[Feynman diagrams of the minor background processes.]{Feynman diagrams of the minor background processes. Additional background contributions that are taken into account are WW-/WZ-production with (a/b) and without (c/d) triple gauge coupling as well as single top production in association with a W-boson (e), in the s-channel (f) and in the t-channel (g).}
 \end{figure}
 
@@ -89,7 +87,7 @@ F_{\rm diboson}(x) =& \ \ 0.74 \cdot F_{\rm WW}\left(x\right) + 0.26 \cdot F_{\r
 \delta \cdot G(x,\mu_{\rm Z},\sigma) + (1-\delta) \cdot G(x,\mu_{\rm Z}+\Delta_\mu,\sigma\cdot\Delta_\sigma)
 \right) ~ , ~ \delta \in [0,1] ~ . 
 \end{align}
-These functions are now fitted to the corresponding MC simulation to obtain a template for each background contribution. The resulting fits to the MC simulations are shown in Fig.~\ref{fig:bkg:mjMC} for both the electron and muon channel. 
+These functions are now fitted to the corresponding MC simulation to obtain a template for each background contribution. The resulting fits to the MC simulations are presented in Fig.~\ref{fig:bkg:mjMC} for both the electron and muon channel. The shown errorbands are estimated by evaluated the fitted function 2000 times at 100 points with the function parameters varied according to their fit uncertainty. The error estimate at each point is then given as the 68\% quantile of the resulting function values. 
 
 \begin{figure}
 	\centering
@@ -184,7 +182,7 @@ F_{\rm prediction}^{\rm SR}(M_{WV})=\alpha_{\rm MC}(M_{WV})\cdot F_{\rm Data}^{\
 \end{equation}
 where $F_{\rm Data}^{\rm SB}$ is the shape extracted from the sideband data.
 
-\subsection{Shapes of the Minor Backgrounds and \ttbar Contribution}
+\subsection{Shapes of the Minor Backgrounds and \ttbar \ Contribution}
 \label{sec:minbkgshapes}
 To be able to apply the alpha-ratio-method for the background estimation of W+jets production, a fit to the data in the sideband region ($\Mpr \in [40,65]\cap[105,150]\,{\rm GeV}$) has to be done. Therefore, the shapes of the \ttbar , single top and diboson processes have to be estimated, which is done by fitting predefined functions to the MC simulation. The used functions are given by
 \begin{equation}
@@ -231,12 +229,17 @@ The resulting alpha-function is also plotted in Fig.~\ref{fig:bkg:mwvmc_alpha_mu
 		\includegraphics[width=0.5\textwidth]{plots/bkg/mlvj/mu_WJets_mlvj_signal_regionHPZ_with_pull_log.pdf}	
 		\caption{}
 	\end{subfigure}
-	\begin{subfigure}{\textwidth}
+	\caption[Shape of W+jets production in the sideband and signal regions.]{Shape of W+jets production in the sideband (a) and signal regions (b) in the muon channel for the WW- (left) and WZ-category (right) extracted from MC simulation.}
+	\label{fig:bkg:mwvmc_mu}
+\end{figure}	
+	
+\begin{figure}
+	\centering	
+	\begin{subfigure}{\textwidth}	
 		\includegraphics[width=0.5\textwidth]{plots/bkg/alpha/alpha_mu_HPW.pdf}
 		\includegraphics[width=0.5\textwidth]{plots/bkg/alpha/alpha_mu_HPZ.pdf}
-		\caption{}
-	\end{subfigure}	
-	\caption[Shape of W+jets production in the sideband and signal regions as well as alpha-function in the muon channel.]{Shape of W+jets production in the sideband (a) and signal regions (b) as well as alpha-function (c) in the muon channel for the WW- (left) and WZ-category (right). The left axis of the alpha-function plot shows the values of the W+jets function in the signal and sideband region in arbitrary units. The right axis shows the values of the alpha-function.}
+	\end{subfigure}
+	\caption[Resulting alpha-function in the muon channel.]{Resulting alpha-function in the muon channel for the WW- (left) and WZ-category (right). The black line shows the fit result with the one and two sigma errorbands. The yellow dashed line shows the result using a different parametrization. The left axis represents the values of the W+jets function in the signal and sideband region in arbitrary units. The right axis shows the values of the alpha-function.}
 	\label{fig:bkg:mwvmc_alpha_mu}
 \end{figure}
 
