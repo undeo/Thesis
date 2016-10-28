@@ -262,6 +262,9 @@
 \RequirePackage{nicefrac}
 \RequirePackage{multirow}
 \RequirePackage{slashed}
+\newcommand{\cwww}{\ensuremath{\frac{c_{WWW}}{\Lambda^2}}}
+\newcommand{\ccw}{\ensuremath{\frac{c_{W}}{\Lambda^2}}}
+\newcommand{\cb}{\ensuremath{\frac{c_{B}}{\Lambda^2}}}
 
 \newcommand{\MET}{\ensuremath{{E\!\!\!/}_{\!\mathrm{T}}}\xspace}
 \newcommand{\PZ}{\ensuremath{\cmsSymbolFace{Z}}\xspace} % generic Z
