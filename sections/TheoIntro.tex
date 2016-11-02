@@ -1,9 +1,9 @@
 \chapter{Theoretical Introduction}
 \label{chap::TheoreticalIntroduction}
-The following chapter gives an introduction into the theoretical background relevant for this analysis. First, the Standard Model of particle physics is described. Then, physics beyond the Standard Model as well as two approaches to describe these new physics are presented.
+The following chapter gives an introduction into the theoretical background relevant for this analysis. All derivations are taken from \cite{peskin},\cite{povh} or \cite{mandl}, if not stated otherwise. In the first section, the main properties of the Standard Model of particle physics is described. The second section focusses on physics beyond the Standard Model as well an approach to describe these new physics.
 
 \section{The Standard Model of Particle Physics}
-The Standard Model of particle physics (SM) describes the fundamental forces of nature (except for gravity) and their interactions with elementary particles: the strong force, the electromagnetic force and the weak force. Each force is represented by a quantum field theory, while the particles are excitation of these fields. The underlying symmetries of the interactions between particles are described by the symmetry groups SU(3)$\otimes$SU(2)$\otimes$U(1). According to Noether's theorem \cite{noether}, every symmetry leads to a conserved charge. In the SM, these charges are given by the electrical charge, the colour charge and the weak isospin. Each symmetry leads to one or more gauge bosons, which couple to these charges and are the mediators of the forces. \\
+The Standard Model of particle physics (SM) describes the fundamental forces of nature (except for gravity) and their interactions with elementary particles: the strong force, the electromagnetic force and the weak force. Each force is represented by a quantum field theory, while the particles are excitation of quantum fields. The underlying symmetries of the interactions between particles are described by the symmetry groups SU(3)$\otimes$SU(2)$\otimes$U(1). According to Noether's theorem \cite{noether}, every symmetry leads to a conserved charge. In the SM, these charges are given by the electrical charge, the colour charge and the weak isospin. Each symmetry leads to one or more gauge bosons, which couple to these charges and are the mediators of the forces. \\
 To understand the concept of quantum field theories, the Lagrangian formalism is needed, which was originally introduced to describe Newtonian mechanics. For every physical system a Lagrangian can be defined, which is given by
 \begin{equation}
 L(q,\dot{q},t) = T(\dot{q},t) - V(q,\dot{q},t) ~,
@@ -81,12 +81,12 @@ A summary of the fermions in the SM is shown in Tab.~\ref{tab:theo:fermions}.\\
 	\hline
 	\end{tabular}
 \end{table}
-Any interaction in the SM is mediated by bosons with spin $J=1$, the so-called vector bosons. These bosons arise from gauge symmetries inherent to the quantum field theory describing the interactions. As an example, the derivation of the photon is portrayed in this section. A summary of all vector boson can be found in Tab.~\ref{tab:theo:bosons}.\\
+The three fundamental forces in the SM are mediated by bosons with spin $J=1$, the so-called vector bosons. These bosons arise from gauge symmetries inherent to the quantum field theories describing the interactions. As an example, the derivation of the photon is portrayed in this section. A summary of all vector boson can be found in Tab.~\ref{tab:theo:bosons}.\\
 The Lagrangian describing the fermions, i.e. the Dirac Lagrangian in equation~\ref{eq:theo:diraclag}, is required to be invariant under gauge transformations. Global gauge transformations, which transform the Dirac spinor according to
 \begin{equation}
 \psi\rightarrow e^{i\phi}\psi ~,
 \end{equation}
-trivially leave the equations of motion resulting from the Lagrangian unchanged. Due to causality, the Lagrangian is also required to be invariant under local gauge transformations, which can be written as
+trivially leave the equations of motion resulting from the Lagrangian unchanged and lead to charge conservation. Due to causality, the Lagrangian is also required to be invariant under local gauge transformations, which can be written as
 \begin{equation}
 \psi\rightarrow e^{i\phi(x)}\psi ~.
 \end{equation} 
@@ -94,14 +94,11 @@ This transformation alters the Dirac Lagrangian
 \begin{equation}
 \mathcal{L}_{\rm Dirac} \rightarrow \mathcal{L}_{\rm Dirac} + \overline{\psi}\gamma^\mu\psi\partial_\mu \phi(x) 
 \end{equation}
-\dots\\ 
-
-
-
-The electromagnetic force is mediated by photons ($\gamma$), which are massless particles. Therefore, the range of the electromagnetic force is infinite. The photon couples to the electric charge.\\
-
-
-
+Invariance can be restored by replacing the ordinary derivative by the covariant derivative
+\begin{equation}
+\partial_\mu \rightarrow D_\mu = [\partial_\mu + iqA_\mu(x)] ~,
+\end{equation}
+with the charge $q$ and the gauge field $A_\mu$, which represents the massless photon.\\
 The bosons transporting the strong force are given by the gluons, which are massless and couple to the colour charge. The theory describing gluons and their interaction with colour-charged particles is called quantum chromodynamics (QCD). Gluons can be introduced similarly to the photons by requiring the QCD-Lagrangian to be locally gauge invariant. Since gluons themselves carry a colour and an anti-colour, they can couple to each other as shown in Fig.~\ref{fig:theo:gluoncoupling}. There are three colour charges (red, green and blue) leading to eight different gluons.\\
 \begin{figure}
 	\centering
@@ -110,22 +107,20 @@ The bosons transporting the strong force are given by the gluons, which are mass
 	\caption[Feynman diagram of gluon self-interaction at tree-level]{Feynman diagram of gluon self-interaction at tree-level.}
 	\label{fig:theo:gluoncoupling}
 \end{figure}
-The potential for QCD interactions is given by
-\begin{equation}
-\dots ~,
-\end{equation}
-with \dots . The Coulomb-like term dominates at small distances, while the linear term takes over at $x>x$, which leads to the so-called confinement. The energy stored in the field between two quarks grows linearly with increasing distance. When the energy exceeds the rest mass of  
 For the weak force there are two different interactions. The neutral current interaction is mediated by the $Z$ boson and describes non-flavour-changing processes. The $Z$ boson has a mass of $M_Z=91.1976 \pm 0.0021$\,GeV \cite{SMmasses} and carries no electric charge. The charged current interactions are transported by the $W^\pm$ bosons, which carry an electric charge of $\pm e$. The $W$ boson has a mass of $80.385 \pm 0.015$\,GeV \cite{SMmasses}. These interactions can change the quark or lepton flavours. Since both the $Z$ and the $W$ boson are massive, they have a non-zero decay width which leads to a limited life time of $\tau_Z=2.6\cdot 10^{-25}$\,s and $\tau_W=3.2\cdot 10^{-25}$\,s, respectively. This causes a limited range and is the reason for the small strength of the weak force compared to the electromagnetic and strong force.\\ 
-The SM also contains a scalar boson ($J=0$), the Higgs boson, which was recently discovered at the LHC \cite{cms_higgsdiscov},\cite{atlas_higgsdiscov}. The Higgs boson has a mass of $125.09 \pm 0.24$\,GeV and is responsible for the particle masses.\\
-
-
-
-
-
+The SM also contains a scalar boson ($J=0$), the Higgs boson, which was recently discovered at the LHC \cite{cms_higgsdiscov},\cite{atlas_higgsdiscov}. The Higgs boson has a mass of $125.09 \pm 0.24$\,GeV and is responsible for the particle masses. The underlying theory is outlined in section~\ref{subsec:theo:EWK}.\\
 
 \subsection{Electroweak Theory and Symmetry Breaking}
 \label{subsec:theo:EWK}
-Similar to the combination of the magnetic and electric forces to the electromagnetic force, the electromagnetic and the weak force can be combined at high scales to the electroweak force \cite{EWK} with the four gauge bosons $\gamma , Z$ and $W^\pm$. The underlying symmetry is given by SU(2)$_I\otimes$U(1)$_Y$. The SU(2)$_I$ group corresponds to the weak isospin, which is mediated by three bosons, $W^1,W^2$ and $W^3$. The $W^\pm$ bosons of the weak force are combinations of $W^1$ and $W^2$ and given by
+Similar to the combination of the magnetic and electric forces to the electromagnetic force, the electromagnetic and the weak force can be combined at high scales to the electroweak force \cite{EWK} with the four gauge bosons $\gamma , Z$ and $W^\pm$. The underlying symmetry is given by SU(2)$_I\otimes$U(1)$_Y$. The SU(2)$_I$ group corresponds to the weak isospin. The $W^\pm$ bosons carry an isospin of $I=1$, with $I_3=+1$ for the $W^+$ and $I_3=-1$ for the $W^-$, respectively. Two new uncharged boson, the $W^0$ with $I=1,I_3=0$ and the $B^0$ with $I=0,I_3=0$, are introduced. The $\gamma$ and the $Z$ are orthogonal combinations of the $W^0$ and $B^0$ and are described as rotation by the Weinberg-angle $\theta_W$
+\begin{equation}
+\left( \begin{array}{c} \gamma \\ Z \end{array} \right) = \left( \begin{array}{c} \cos \theta_W ~  \sin \theta_W \\ -\sin \theta_W ~  \cos \theta_W \end{array} \right) \left( \begin{array}{c} B \\ W^3 \end{array} \right) ~,
+\end{equation}
+with $\theta_W=\arccos M_W/M_Z$.
+
+
+
+, which is mediated by three bosons, $W^1,W^2$ and $W^3$. The $W^\pm$ bosons of the weak force are combinations of $W^1$ and $W^2$, given by
 \begin{equation}
 W^\pm=\frac{1}{\sqrt{2}}\left( W^1 \mp iW^2 \right) ~.
 \end{equation}  
@@ -133,7 +128,10 @@ The U(1)$_Y$ group corresponds to the weak hypercharge, which is defined as
 \begin{equation}
 Y=2(Q-I_3) ~,
 \end{equation}
-with the third component of the weak isospin $I_3$. The hypercharge is mediated by the $B$ boson. The $Z$ and $\gamma$ are  
+with the third component of the weak isospin $I_3$ and the electrical charge $Q$. The hypercharge is mediated by the $B$ boson. The $Z$ and $\gamma$ are orthogonal mixtures of the $B$ and the $W^3$
+
+
+
 
 The simplest form of gauge boson self-interaction is the triple gauge coupling as portrayed in Fig.~\ref{fig:theo:tgc}. Neglecting C- and/or P-violating terms, the Lagrangian for this interaction is given by \cite{EFT}
 \begin{align}
@@ -159,7 +157,7 @@ Another phenomenon that is not described by the SM is the so-called dark matter,
 \begin{figure}
 	\centering
 	\includegraphics[width=0.6\textwidth]{plots/theoIntro/rotcurvesfig.png}
-	\caption[Rotation curve of stars around the galaxy NGC 2198.]{Rotation curve of stars around the galaxy NGC 2198. Shown are the measured rotation speeds (dots) with a fitted function (straight line). Also shown are the components of the fitted function: visible matter (dashed line), gaseous matter (dotted line) and dark matter (dash-dotted line). In contrast to expectations, the rotation speeds stay constant at high distances.}
+	\caption[Rotation curve of stars around the galaxy NGC 2198.]{Rotation curve of stars around the galaxy NGC 2198. Shown are the measured rotation speeds of stars and gas clouds (dots) with a fitted function (straight line). Also shown are the components of the fitted function: visible matter (dashed line), gaseous matter (dotted line) and dark matter (dash-dotted line). In contrast to expectations, the rotation speeds stay constant at high distances.}
 	\label{fig:theo:rotcurves}
 \end{figure}
 
@@ -171,7 +169,7 @@ There are several attempts of new theories describing dark matter, e.g. supersym
 
 A model-independent approach of describing physics beyond the standard model that is currently not in experimental reach is the so-called effective field theory (EFT) \cite{EFT}. In this approach it is assumed that new physics exists at a scale $\Lambda$ which is much larger than the accessible energy. However, possible effects of new physics might affect processes at lower scales. These effects are described by integrating out the degrees of freedom of new heavy particles, leading to an effective Lagrangian with additional operators $\mathcal{O}^{(d)}$ of dimension $d\geq 5$
 \begin{equation}
-\mathcal{L}_{\rm eff} = \sum_{n=1}^{\infty} \sum_i \frac{c_i^{(n)}}{\Lambda^{n}}\mathcal{O}_i^{(n+4)} ~,
+\mathcal{L}_{\rm eff} = \sum_{n=1}^{\infty} \sum_i \frac{c_i^{(n)}}{\Lambda^{n}}\mathcal{O}_i^{(n+4)} ~, \label{eq:theo:operators}
 \end{equation}
 where $c_i$ parametrizes the coupling strength of the new physics. Operators of dimension five are responsible for the majorana masses of neutrinos \cite{nu_majorana} and are of no interest for this analysis. There are many [HOW MANY?] dimensions six operators of which five introduce anomalous triple gauge couplings. Two of them are not C- and/or P-conserving and are not considered in this analysis. This leaves three operators, which can be chosen according to \cite{EFTparam} as
 \begin{align}
@@ -189,8 +187,13 @@ g_1^Z &= 1 + c_W\frac{M_Z^2}{2\Lambda^2} ~, \\
 where $g$ denotes the weak coupling constant. The strength of the aTGC's can now be parametrized by the three aTGC-parameters
 \begin{align}
 \frac{c_{WWW}}{\Lambda^2} \quad , \quad \frac{c_W}{\Lambda^2} \quad , \quad \frac{c_B}{\Lambda^2} ~.
-\end{align} 
-In contrast to the Lagrangian approach presented in section~\ref{sec:aTGC}, the EFT approach is valid up to a scale $\Lambda$, which is (by definition) higher than the scale of the considered processes.\\
-
+\end{align}
+The anomalous couplings introduced by these parameters add terms of the order $s^2/\Lambda^4$ to the diboson cross section \cite{EFT}, leading to an increased cross section at high scales. In Fig.~\ref{fig:theo:unitarity} the differential cross section for the SM WW process as well as the aTGC process corresponding to $\Tcwww = 1/(400 \, {\rm GeV})^{2}$ is shown in the invariant mass spectrum of the diboson system, which is equal to the scale of the process. Also shown is the unitarity bound, which is eventually violated by the aTGC process at high invariant masses. However, at this scale the approach is not valid anymore, since there is no justification to ignore the dimension eight operators in eq.~\ref{eq:theo:operators} at energies of the order of $\Lambda$. Arbitrarily many operators of even higher dimension would have to be taken into account, making the approach useless.\\
+\begin{figure}
+	\centering
+	\includegraphics[width=\textwidth]{plots/theoIntro/unitarity.png}
+	\caption[Comparison of the differential cross section of the SM and aTGC process.]{Comparison of the differential cross section of the SM and aTGC process for $\cwww=\frac{1}{(400\,{\rm GeV})}$. The cross section increases dominantly at high invariant masses. Also shown is the unitarity bound, which is violated by the aTGC process at energies $~\Lambda$. The picture is taken from \cite{EFT}.}
+	\label{fig:theo:unitarity}
+\end{figure}
 
 %\section{Probability Density Functions (PDFs)}
