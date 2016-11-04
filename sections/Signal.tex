@@ -1,6 +1,23 @@
 \chapter{Modelling of the Signal Process}
 \label{chap:signal}
-In this chapter 
+In this chapter \\
+Examples of two signal events are shown in figure~\ref{fig:signal:fy_atgc}
+
+\begin{figure}
+	\centering
+	\begin{subfigure}{0.49\textwidth}
+		\includegraphics[width=\textwidth]{plots/signal/aTGC_WW.pdf}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}{0.49\textwidth}
+		\includegraphics[width=\textwidth]{plots/signal/aTGC_WZ.pdf}
+		\caption{}
+	\end{subfigure}	
+	\caption[Feynman diagrams of two exemplary signal events]{Feynman diagrams of exemplary WW (a) and WZ events (b). The shaded area indicates the anomalous coupling, which increases the cross section.}
+	\label{fig:signal:fy_atgc}
+\end{figure}
+
+
 \section{Monte Carlo Samples}
 \dots \\
 For each aTGC parameter two working points are defined at about the expected sensitivity of the Analysis (table~\ref{tab:signal:aTGCpoints}). The MC samples for these working points are obtained by reweighting the originally created samples.
@@ -24,7 +41,7 @@ For each aTGC parameter two working points are defined at about the expected sen
 \section{Division of the Signal Region into WW- and WZ-category}
 The signal process under consideration contains both WW and WZ events, which are expected to have a peaking distribution in the \Mpr -spectrum at the W or the Z mass, respectively. Due to the limited resolution of the hadronic calorimeter, those two peaks cannot be easily distinguished. However, if the signal region is divided into a low-mass- ($\Mpr \in [65,85]\,{\rm GeV}$) and a high-mass-region ($\Mpr \in [85,105]\,{\rm GeV}$), their compositions differ significantly, as can be seen in figure~\ref{fig:signal:wwwz_comp}. While the low-mass-region contains most of the WW-events and some WZ-events with low \Mpr \ , the high-mass-region contains most of the WZ-events and some WW-events with high \Mpr .\\
 The division of the signal region provides some sensitivity to different aTGC scenarios. Two of the aTGC parameters, $c_{WWW}$ and $c_W$, enhance the WW and WZ production roughly equally. However, $c_B$ almost exclusively contributes to WW-events. This leads to differentiation power between two scenarios. In the first one, only $c_B$ is unequal to zero, which would result in a larger enhancement and thus in looser limits in the WW-category. In the second scenario, only $c_{WWW}$ and $c_W$ are unequal to zero, leading to roughly similar limits in both categories.
-\begin{figure}
+\begin{figure}[hb]
 	\centering
 	\begin{subfigure}{0.45\textwidth}
 		\includegraphics[width=\textwidth]{plots/signal/wwwz_SM_mu.pdf}
@@ -190,6 +207,21 @@ The interference effects between \Tcwww \ and \Tcb \ are found to be negligible.
 	\end{tabular}
 \end{table}
 The contribution of the interference between \Tcwww \ and \Tcb \ is found to be less than 1\% throughout the channels, which is why it is neglected for the further analysis. 
-The other contribution are taken into account as small correction relevant for the two-dimensional limits.
+The other contributions are taken into account as small corrections relevant for the two-dimensional limits.
 \subsection{Standard Model Interference at Low aTGC Values}
-The additionally generated samples can be used to verify the treatment of the SM interference effect at low aTGC parameter values. As mentioned in section~\ref{sec:aTGC}, the cross section of the aTGC increases with increasing energy. The SM interference, however, is constant, thus having larger effects at low energies (i.e. low values of \MWV). 
+The additionally generated samples are used to verify the treatment of the SM interference effect at low aTGC parameter values. As mentioned in section~\ref{sec:aTGC}, the cross section of the aTGC increases with increasing energy. The SM interference, however, is constant, thus having larger effects at low energies (i.e. low values of \MWV).\\
+A comparison of the MC samples for different aTGC parameter values is shown in figure~\ref{fig:signal:smintverif_WZ_mu} for the muon channel for WZ events, where the effects of the SM interference are most visible. Only the SM sample (shown in black) and the sample with the highest aTGC value ($\Tccw = \pm 20$\,TeV$^{-2}$ or $\Tcb = \pm 60$\,TeV$^{-2}$, respectively, shown in blue) are used to extract the signal model. The other shown MC samples correspond to the additionally generated aTGC points. 
+
+\begin{figure}[b]
+	\centering
+	\begin{subfigure}{0.49\textwidth}
+		\includegraphics[width=\textwidth]{plots/signal/ccw_SMint_pos_WZ_mu.pdf}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}{0.49\textwidth}
+		\includegraphics[width=\textwidth]{plots/signal/ccw_SMint_neg_WZ_mu.pdf}
+		\caption{}
+	\end{subfigure}
+	\caption{}
+	\label{smintverif_WZ_mu}
+\end{figure}
