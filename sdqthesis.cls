@@ -237,7 +237,7 @@
 
 % PDF specific packages
 \RequirePackage[hyphens]{url}
-\RequirePackage[breaklinks,colorlinks=false]{hyperref}
+\RequirePackage[colorlinks=true,linktoc=all]{hyperref}
 \newcommand\setpdf{\hypersetup{%
     pdftitle={\thethesistype},%
     pdfsubject={\@title},%
@@ -262,6 +262,8 @@
 \RequirePackage{nicefrac}
 \RequirePackage{multirow}
 \RequirePackage{slashed}
+
+
 \newcommand{\cwww}{\ensuremath{\frac{c_{WWW}}{\Lambda^2}}}
 \newcommand{\ccw}{\ensuremath{\frac{c_{W}}{\Lambda^2}}}
 \newcommand{\cb}{\ensuremath{\frac{c_{B}}{\Lambda^2}}}

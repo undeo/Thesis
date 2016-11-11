@@ -12,9 +12,9 @@
 		\caption{}
 		\label{fig:bkg:fy_ttbar}
 	\end{subfigure}
-	\caption[Feynman diagrams of the main background processes]{Feynman diagrams of the main background processes. The dominant background contribution is given by W+jets production with quark-gluon final state (a) where the resulting jet is misidentified as originating from a hadronically decaying W- or Z-boson. The second main background process is given by top pair production (b) with two real boosted W-bosons.}
+	\caption[Feynman diagrams of the main background processes]{Feynman diagrams of the main background processes. The dominant background contribution is given by W+jets production with quark-gluon final state (a) where the resulting jet is misidentified as originating from a hadronically decaying W- or Z-boson. The second main background process is given by top pair production (b) with a hadronically decaying real W-bosons.}
 \end{figure}
-There are several processes with the same or similar final states as the diboson process which contribute to the overall background. The main contribution originates from W+jets production, where the W-boson decays leptonically and the quark and gluon in the final state are falsely reconstructed as W- or Z-boson-jets. An example processes is shown in figure~\ref{fig:bkg:fy_wjets1}. The second main contribution comes from top-pair (\ttbar) production with one leptonically and one hadronically decaying real W-boson as shown in figure.~\ref{fig:bkg:fy_ttbar}. Additionaly, Standard Model diboson production, which includes processes with and without triple gauge coupling (figure~\ref{fig:bkg:fy_WWtgc}-\ref{fig:bkg:fy_WZSM}), is taken into account as minor background. The last minor contribution comes from single top production in association with a W-boson (figure~\ref{fig:bkg:fy_stoptw}) as well as in the s- (figure~\ref{fig:bkg:fy_stops}) and t-channel (figure~\ref{fig:bkg:fy_stopt}).\\
+There are several processes with the same or similar final states as the diboson process contributing to the overall background. A correct modelling of these process is essential for the final limit extraction. The main background contribution originates from W+jets production, where the W-boson decays leptonically and the quark and gluon in the final state are falsely reconstructed as W- or Z-boson-jets. An example process is shown in figure~\ref{fig:bkg:fy_wjets1}. The second main contribution comes from top-pair (\ttbar) production with one leptonically and one hadronically decaying real W-boson as shown in figure~\ref{fig:bkg:fy_ttbar}. Additionally, SM diboson production, which includes processes with and without triple gauge coupling (figure~\ref{fig:bkg:fy_WWtgc}-\ref{fig:bkg:fy_WZSM}), is taken into account as minor background. The last minor contribution comes from single top production in association with a W-boson (figure~\ref{fig:bkg:fy_stoptw}) as well as in the $s$- (figure~\ref{fig:bkg:fy_stops}) and $t$-channel (figure~\ref{fig:bkg:fy_stopt}).\\
 \begin{figure}
 	\centering
 	\begin{subfigure}{0.4\textwidth}
@@ -53,15 +53,17 @@ There are several processes with the same or similar final states as the diboson
 		\caption{}
 		\label{fig:bkg:fy_stopt}
 	\end{subfigure}
-	\caption[Feynman diagrams of the minor background processes]{Feynman diagrams of the minor background processes. Additional background contributions that are taken into account are WW-/WZ-production with (a/b) and without (c/d) triple gauge coupling as well as single top production in association with a W-boson (e), in the s-channel (f) and in the t-channel (g).}
+	\caption[Feynman diagrams of the minor background processes]{Feynman diagrams of the minor background processes. Additional background contributions that are taken into account are WW-/WZ-production with (a/b) and without (c/d) triple gauge coupling as well as single top production in association with a W-boson (e), in the $s$-channel (f) and in the $t$-channel (g).}
 \end{figure}
-The background estimation strategy orientates on a previous diboson resonance search described in \cite{resonancepas} with minor modifications. The basic idea is to extract the normalizations of the main background contributions, the W+jets and \ttbar \ production, from a fit to the data in the jet mass spectrum of the hadronically decaying boson. A grooming algorithm is used to suppress jets coming from QCD events, the so-called pruning algorithm (section \ref{sec:pruning}), which leads to the new observable of the pruned jet mass, \Mpr . The shape of the W+jets production in the \MWV -spectrum, which is ultimately used for the limit extraction in section \ref{limits}, is extracted from the data in the sideband region ($\Mpr \in [40,65] \cap [105,150]$\,GeV) via the alpha-ratio-method, while the shapes of the \ttbar \ and single top contributions are taken from fits to the MC simulation. The shape of the SM diboson process is taken from the signal model with all aTGC-parameters set to zero (see section \ref{sec:NormalizationandShapeoftheaTGCContribution}).\\
-In this chapter, the analysis strategy for the determination of the background contributions is illustrated. First, the procedure of extracting the background normalizations from the \Mpr -spectrum is described. Then the extraction of the background shapes in the \MWV -spectrum and the final background estimations for the sideband and signal region using the alpha-ratio-method are presented.
+
+\noindent The background estimation strategy orientates on a previous diboson resonance search described in \cite{resonancepas} with minor modifications. The basic idea is to extract the normalizations of the main background contributions, the W+jets and \ttbar \ production, from a fit to the data in the jet mass spectrum of the hadronically decaying boson. A grooming algorithm is used to suppress jets coming from QCD events, the so-called pruning algorithm (section \ref{sec:pruning}), which leads to the new observable of the pruned jet mass, \Mpr . The shape of the W+jets production in the \MWV -spectrum, which is ultimately used for the limit extraction in chapter \ref{chap:LimitsonATGCs}, is extracted from the data in the sideband region ($\Mpr \in [40,65] \cap [105,150]$\,GeV) via the alpha-ratio-method, while the shapes of the \ttbar \ and single top contributions are taken from fits to the MC simulation. The shape of the SM diboson process is taken from the signal model with all aTGC-parameters set to zero (see section \ref{sec:NormalizationandShapeoftheaTGCContributions}).\\
+
+\noindent In this chapter, the analysis strategy for the determination of the background contributions is illustrated. First, the procedure of extracting the background normalizations from the \Mpr -spectrum is described. Then the extraction of the background shapes in the \MWV -spectrum and the final background estimations for the sideband and signal region using the alpha-ratio-method are presented.
 
 
 \section{Normalizations of the Background Distributions}
 \label{sec:bkgnorms}
-The main backgrounds, W+jets and \ttbar \ production, have a considerably different shape in the \Mpr -spectrum. This allows for a extraction of their normalizations from a template fit to the pruned jet mass spectrum. The templates are extracted from fits of predefined functions to MC simulations for all four background components. The W+jets production shows a broad peak coming from QCD-jets, which is functionally described by
+The main backgrounds, W+jets and \ttbar \ production, have a considerably different shape in the \Mpr -spectrum. This allows for an extraction of their normalizations from a template fit to this spectrum. The templates are extracted from fits of predefined functions to MC simulations for all four background components. The used functional forms are chosen empirically depending on the characteristics of each process. The W+jets production shows a broad peak coming from QCD-jets, which is functionally described by
 \begin{align}
 F_{\rm W+jets}(x) &= e^{-(x-a_1)/\left(a_2+a_0\right)} \cdot \frac{1 + {\rm Erf}\left((x-a_1)/(a_2-a_0) \right)}{2} ~ , \\
 {\rm Erf(x)} &= \frac{2}{\sqrt{\pi}}\int_0^x \! e^{-t^2}{\rm dt} ~ .
@@ -70,48 +72,48 @@ The \ttbar \ distribution, however, has a peaking contribution coming from real 
 \begin{align}
 F_{\ttbar}(x) &= b_0 \cdot e^{b_1 x} \cdot \frac{1 + {\rm Erf}((x-b_2)/b_3)}{2} + (1-b_0)\cdot G(x,\mu,\sigma) ~ , ~ b_0 \in [0,1] ~ .
 \end{align}
-The function describing the single top distribution is similar to $F_{\ttbar}$. The continuous part coming from the t- and s-channel is represented by a simple exponential function. The tW-channel has a peaking contribution coming from the hadronic decay of one of the W bosons 
+The function describing the single top distribution is similar to $F_{\ttbar}$. The continuous part coming from the $t$- and $s$-channel is represented by a simple exponential function. The tW-channel has a peaking contribution coming from the hadronic decay of one of the W bosons, again modelled with a Gaussian function 
 \begin{align}
 F_{\rm singletop}(x) &= c_0\cdot e^{c_1 x} + (1-c_0)\cdot G(x,\mu,\sigma) ~ , ~ c_0 \in [0,1] ~ .
 \end{align}
-Finally, the functional form for diboson production consists of a sum of two double Gaussians, corresponding to WW and WZ events, which only differ in their mean values $\mu_{\rm W}$ and $\mu_{\rm Z}$. The numeric values defining the proportion of WW and WZ are estimated from the respective cross sections (\cite{WWxsec,WZxsec})
+Finally, the functional form for diboson production consists of a sum of two double Gaussians, corresponding to WW and WZ events, which only differ in their mean values $\mu_{\rm W}$ and $\mu_{\rm Z}$. The numeric values defining the proportion of WW and WZ are estimated from the respective cross sections at 13\,TeV \cite{WWxsec,WZxsec}
 \begin{align}
-F_{\rm diboson}(x) =& \ \ 0.74 \cdot F_{\rm WW}\left(x\right) + 0.26 \cdot F_{\rm WZ}\left(x\right) \\
-=& \ \ 0.74 \cdot \left(
-\delta \cdot G(x,\mu_{\rm W},\sigma) + (1-\delta) \cdot G(x,\mu_{\rm W}+\Delta_\mu,\sigma\cdot\Delta_\sigma)
-\right)  \nonumber \\
-&+ 0.26 \cdot \left(
-\delta \cdot G(x,\mu_{\rm Z},\sigma) + (1-\delta) \cdot G(x,\mu_{\rm Z}+\Delta_\mu,\sigma\cdot\Delta_\sigma)
-\right) ~ , ~ \delta \in [0,1] ~ . 
+F_{\rm diboson}(x) &=  0.74 \cdot F_{\rm WW}\left(x\right) + 0.26 \cdot F_{\rm WZ}\left(x\right) \\
+F_{\rm WV}\left(x\right) &=  d_0 \cdot G(x,\mu_{\rm V},\sigma) + (1-d_0) \cdot G(x,\mu_{\rm V}+\Delta_\mu,\sigma\cdot\Delta_\sigma) ~ , ~ d_0 \in [0,1] ~ . 
 \end{align}
-These functions are now fitted to the corresponding MC simulation to obtain a template for each background contribution. The resulting fits to the MC simulations are presented in figure~\ref{fig:bkg:mjMC} for both the electron and muon channel. The shown errorbands are estimated by evaluated the fitted function 2000 times at 100 points with the function parameters varied according to their fit uncertainty. The error estimate at each point is then given as the 68\% quantile of the resulting function values. 
-
+%\begin{align}
+%F_{\rm diboson}(x) =& \ \ 0.74 \cdot F_{\rm WW}\left(x\right) + 0.26 \cdot F_{\rm WZ}\left(x\right) \\
+%=& \ \ 0.74 \cdot \left(
+%d_0 \cdot G(x,\mu_{\rm W},\sigma) + (1-d_0) \cdot G(x,\mu_{\rm W}+\Delta_\mu,\sigma\cdot\Delta_\sigma)
+%\right)  \nonumber \\
+%&+ 0.26 \cdot \left(
+%d_0 \cdot G(x,\mu_{\rm Z},\sigma) + (1-d_0) \cdot G(x,\mu_{\rm Z}+\Delta_\mu,\sigma\cdot\Delta_\sigma)
+%\right) ~ , ~ d_0 \in [0,1] ~ . 
+%\end{align}
+These functions are now fitted to the corresponding MC sample to obtain a template for each background contribution. The resulting fits are presented in figure~\ref{fig:bkg:mjMC} for both the electron and muon channel. The shown errorbands are estimated by evaluating the fitted function 2000 times at 100 points with the function parameters varied according to their fit uncertainty. The error estimate at each point is then given as the 68\% quantile of the resulting function values.\\
 \begin{figure}
 	\centering
-	\begin{subfigure}{0.8\textwidth}
+	\begin{subfigure}{\textwidth}
 		\includegraphics[width=0.5\textwidth]{plots/bkg/mj/WJets_mj_el_ErfExp_with_pull.pdf}
 		\includegraphics[width=0.5\textwidth]{plots/bkg/mj/WJets_mj_mu_ErfExp_with_pull.pdf}
-		\caption{}
 	\end{subfigure}
-	\begin{subfigure}{0.8\textwidth}
+	\begin{subfigure}{\textwidth}
 		\includegraphics[width=0.5\textwidth]{plots/bkg/mj/TTbar_mj_el_2Gaus_ErfExp_with_pull.pdf}
 		\includegraphics[width=0.5\textwidth]{plots/bkg/mj/TTbar_mj_mu_2Gaus_ErfExp_with_pull.pdf}
-		\caption{}
 	\end{subfigure}
-	\begin{subfigure}{0.8\textwidth}
+	\begin{subfigure}{\textwidth}
 		\includegraphics[width=0.5\textwidth]{plots/bkg/mj/STop_mj_el_ExpGaus_with_pull.pdf}
 		\includegraphics[width=0.5\textwidth]{plots/bkg/mj/STop_mj_mu_ExpGaus_with_pull.pdf}
-		\caption{}
 	\end{subfigure}
-	\begin{subfigure}{0.8\textwidth}
+	\begin{subfigure}{\textwidth}
 		\includegraphics[width=0.5\textwidth]{plots/bkg/mj/VV_mj_el_2_2Gaus_with_pull.pdf}
 		\includegraphics[width=0.5\textwidth]{plots/bkg/mj/VV_mj_mu_2_2Gaus_with_pull.pdf}
-		\caption{}
 	\end{subfigure}
-	\caption[Background shapes in the pruned jet mass spectrum]{Background shapes in the pruned jet mass spectrum extracted from a fit to MC simulation for W+jets (a), \ttbar \ (b), single top (c) and diboson (d) in the electron (left) and muon channel (right). The ratio plot shows the difference of the data and the fitted function normalised to the data uncertainty.}
+	\caption[Background shapes in the pruned jet mass spectrum]{Background shapes in the pruned jet mass spectrum extracted from a fit to MC simulation in the electron (left) and muon channel (right). From top to bottom: W+jets, \ttbar \ , single top and diboson. The ratio plots show the difference of the data and the fitted function normalized to the data uncertainty.}
 	\label{fig:bkg:mjMC}
 \end{figure}
-Keeping the shape parameters fixed, these templates are fitted to the data in the whole \Mpr -spectrum ($\Mpr \in [40,150]\,{\rm GeV}$) with the single top normalization fixed. The W+jets normalization is kept freely floating while the normalization of the \ttbar \ contribution is floating with a Gaussian constraint corresponding to its uncertainty described in section \ref{sec:systematics}. Additionally, one of the W+jets shape parameters ($a_0$) is allowed to float. Since the fitted region includes the signal region, any events arising from anomalous couplings would be absorbed into the background estimation. To avoid that, the diboson distribution is allowed to float within a factor of two to catch any possible aTGC events. For the final limit extraction the diboson contribution is normalised to its cross section.\\
+
+\noindent Keeping the shape parameters fixed, these templates are fitted to the data in the whole \Mpr -spectrum ($\Mpr \in [40,150]\,{\rm GeV}$) with the single top normalization fixed. The W+jets normalization is kept freely floating while the normalization of the \ttbar \ contribution is floating with a Gaussian constraint corresponding to its uncertainty described in section \ref{sec:systematics}. Additionally, one of the W+jets shape parameters ($a_0$) is allowed to float. Since the fitted region includes the signal region, any events arising from anomalous couplings would be absorbed into the background estimation. To avoid that, the diboson distribution is allowed to float within a factor of two to catch any possible aTGC events. For the final limit extraction the diboson contribution is normalised to its cross section.\\
 To counter any bias from the choice of parametrization of the W+jets background, the fit is redone using a different functional form given by
 \begin{equation}
 F_{\rm W+jets}^{\rm alt}(x)=\frac{\left(1-\frac{x}{500}\right)^{p_0}}{\left(\frac{x}{500}\right)^{p_1}} \, ,
@@ -122,99 +124,105 @@ where $p_0$ is floating in the fit. The difference in the resulting normalizatio
 \label{eq:bkg:wjetsunc}
 \end{equation}
 where $\sigma_{\rm W+jets}$ and $N_{\rm W+jets}$ are the uncertainty and normalization from the actual fit and $N_{\rm W+jets}^{\rm alt}$ is the extracted normalization using the alternative function. \\
-The fit results as well as the resulting scale factors are summarized in table~\ref{tab:bkg:mjresults}. A comparison of the pre- and post-fit results as well as the results using the alternative function are shown in figure~\ref{fig:bkg:mjdata}.
+
+\noindent The fit results as well as the resulting scale factors are summarized in table~\ref{tab:bkg:mjresults}. A comparison of the pre- and post-fit functions as well as the results using the alternative function are shown in figure~\ref{fig:bkg:mjdata}. The final uncertainty for the W+jets normalization used in the limit extraction is taken from the fits as shown in eq.~\ref{eq:bkg:wjetsunc}. For all other background contributions the uncertainty is derived in section \ref{sec:systematics}.
 \begin{figure}
 	\centering
-	\begin{subfigure}{0.8\textwidth}
+	\begin{subfigure}{\textwidth}
 		\includegraphics[width=0.5\textwidth]{plots/bkg/mj/mj_prefit_el.pdf}		
 		\includegraphics[width=0.5\textwidth]{plots/bkg/mj/mj_prefit_mu.pdf}
-		\caption{}		
 	\end{subfigure}
-	\begin{subfigure}{0.8\textwidth}
+	\begin{subfigure}{\textwidth}
 		\includegraphics[width=0.5\textwidth]{plots/bkg/mj/bkg_el_mj.pdf}
 		\includegraphics[width=0.5\textwidth]{plots/bkg/mj/bkg_mu_mj.pdf}	
-		\caption{}
 	\end{subfigure}
-	\begin{subfigure}{0.8\textwidth}
+	\begin{subfigure}{\textwidth}
 		\includegraphics[width=0.5\textwidth]{plots/bkg/mj/bkg_alt_el_mj.pdf}
 		\includegraphics[width=0.5\textwidth]{plots/bkg/mj/bkg_alt_mu_mj.pdf}
-		\caption{}
 	\end{subfigure}	
-	\caption[Comparison of pre- and post-fit functions and the alternative function in the \Mpr -spectrum]{Comparison of pre- (a) and post-fit functions (b) as well as the alternative function (c) in the \Mpr -spectrum. The fit is done in the whole \Mpr -spectrum ($\Mpr \in [40,150] $ GeV). The W+jets normalization as well as one shape parameter are freely floating while the \ttbar \ normalization is constraint according to its uncertainty and the diboson contribution is constraint by a factor of two to catch any  aTGC-induced events in the signal regions. The single top contribution is fixed to its cross section.}
+	\caption[Comparison of pre- and post-fit functions and the alternative function in the \Mpr -spectrum]{Comparison of pre- (top) and post-fit functions (middle) as well as the alternative function (bottom) in the \Mpr -spectrum in the electron (left) and muon channel (right). The fit is done in the whole \Mpr -spectrum ($\Mpr \in [40,150] $ GeV). The W+jets normalization as well as one shape parameter are freely floating while the \ttbar \ normalization is constraint according to its uncertainty and the diboson contribution is constraint by a factor of two to catch any  aTGC-induced events in the signal regions. The normalization of the single top contribution is fixed to its cross section. The shown error bands contain statistical uncertainties only.}
 	\label{fig:bkg:mjdata}
 \end{figure}
 
-\begin{table}[]
+\begin{table}
 	\centering
-	\caption[Fit results of the background normalization estimation]{Fit results of the background normalization estimation. The pre-fit values are shown with the constraint applied in the fit. The post-fit values are given with the uncertainty resulting from the fit.}
+	\caption[Fit results of the background normalization estimation]{Fit results of the background normalization estimation and comparison with the observed data. The pre-fit values are shown with the constraint applied in the fit. The post-fit values are given with the uncertainty resulting from the fit.\cite{PAS}}
 	\label{tab:bkg:mjresults}
 	\begin{tabular}{cr@{\,}c@{\,}lr@{\,}c@{\,}lr@{\,}c@{\,}lr@{\,}c@{\,}lr@{\,}c@{\,}lr@{\,}c@{\,}l}
 		\hline
         & \multicolumn{9}{c}{electron channel} & \multicolumn{9}{c}{muon channel} \\
 		& \multicolumn{3}{c}{pre-fit} & \multicolumn{3}{c}{post-fit} & \multicolumn{3}{c}{scale factor} & \multicolumn{3}{c}{pre-fit} & \multicolumn{3}{c}{post-fit} & \multicolumn{3}{c}{scale-factor} \\
 		\hline
-		W+jets     & 584 &     &    & 538 &$\pm$& 56 & 0.92 &$\pm$& 0.10 & 767 &     &    & 814 &$\pm$& 72  & 1.06 &$\pm$& 0.09 \\
-		\ttbar     & 243 &$\pm$& 49 & 256 &$\pm$& 46 & 1.1  &$\pm$& 0.2  & 318 &$\pm$& 64 & 313 &$\pm$& 60  & 1.0  &$\pm$& 0.2 \\
-		diboson    & 34  &$\pm$& 34 & 41  &$\pm$& 27 &1.2   &$\pm$& 0.8  & 45  &$\pm$& 45 &  61 &$\pm$& 35  &  1.4 &$\pm$& 0.8 \\
+		W+jets             & 584 &     &    & 538 &$\pm$& 56 & 0.92 &$\pm$& 0.10 &  767 &     &    &  814 &$\pm$& 72 & 1.06 &$\pm$& 0.09 \\
+		\ttbar             & 243 &$\pm$& 49 & 256 &$\pm$& 46 & 1.1  &$\pm$& 0.2  &  318 &$\pm$& 64 &  313 &$\pm$& 60 &  1.0 &$\pm$& 0.2  \\
+		diboson            & 34  &$\pm$& 34 &  41 &$\pm$& 27 & 1.2  &$\pm$& 0.8  &   45 &$\pm$& 45 &   61 &$\pm$& 35 &  1.4 &$\pm$& 0.8  \\
+		single top (fixed) & 37  &     &    &  37 &     &    & 1    &     &      &   52 &     &    &   52 &     &    &  1   &     &      \\
+		\hline
+		Total expected     & 898 &     &    & 872 &$\pm$& 30 & 0.97 &$\pm$& 0.03 & 1182 &     &    & 1240 &$\pm$& 35 & 1.05 &$\pm$& 0.03 \\
+		Data               & \multicolumn{9}{c}{874} & \multicolumn{9}{c}{1241} \\
 		\hline
 	\end{tabular}
 \end{table}
 
-The final uncertainty for the W+jets normalization used in the limit extraction is taken from the fits as shown in eq.~\ref{eq:bkg:wjetsunc}. For all other background contributions the uncertainty is derived in section \ref{sec:systematics}.
 
 
+\newpage
 \section{Shapes in the Invariant Mass of the Diboson System}
-The final limit extraction is done in the invariant mass spectrum of the diboson system, \MWV \ , with the normalizations set to the values extracted from the \Mpr -spectrum described in section \ref{sec:bkgnorms}. \\ %\MWV \ is equal to the hard scale of the signal process. By applying a cut to this variable ($<3.5$\,TeV), a reference point for the scale of the new physics $\Lambda^2$ ($\gg3.5^2$\,TeV$^2$) is obtained. \\
-The following section describes the background extraction for the \MWV -spectrum. The shape of the W+jets contribution is estimated using data from the sideband region ($\Mpr \in [40,65]\cap[105,150]\,{\rm GeV}$) via the alpha-ratio-method described in section \ref{sec:AlphaRatioMethod}. The shapes of the other background contributions are extracted from fits to MC-simulation as described in section \ref{sec:minbkgshapes}.
+The final limit extraction is done in the invariant mass (\MWV) spectrum of the diboson system with the normalizations set to the values extracted from the \Mpr -spectrum described in section \ref{sec:bkgnorms}. The following section describes the background extraction for the \MWV -spectrum. The shape of the W+jets contribution is estimated using data from the sideband region ($\Mpr \in [40,65]\cap[105,150]\,{\rm GeV}$) via the alpha-ratio-method described in section \ref{sec:AlphaRatioMethod}. The shapes of the other background contributions are extracted from fits to MC-simulation as described in section \ref{sec:minbkgshapes}.
 
 \subsection{Alpha-Ratio-Method}
 \label{sec:AlphaRatioMethod}
-The shape of the W+jets contribution in the signal region is estimated using a technique developed for diboson resonance searches, the so-called alpha-ratio-method (see e.g. \cite{resonancepas}). This method provides a way to determine a background shape in a signal region (SR) from data in a sideband region (SB) using a transfer function, the so-called alpha-function. The main assumption is that there is a correlation between the SR- and SB-shapes that is modelled by the MC simulation and can be described by the alpha-function, which is defined as
+The shape of the W+jets contribution in the signal region is estimated using a technique developed for diboson resonance searches, the so-called alpha-ratio-method (see e.g. \cite{resonancepas}). This method provides a way to determine a background shape in a signal region (SR) from data in a sideband region (SB). The SR is designed to contain most of the signal events, while the SB is signal-depleted. The main assumption is that there is a correlation between the SR- and SB-shapes that is modelled by the MC simulation and can be described by the alpha-function, which is defined as
 \begin{align}
-\alpha_{\rm MC}(M_{WV})=F_{\rm MC}^{\rm SR}(M_{WV})/F_{\rm MC}^{\rm SB}(M_{WV}) \, ,
+\alpha_{\rm MC}(M_{WV})=F_{\rm W+jets}^{\rm SR,MC}(M_{WV})/F_{\rm W+jets}^{\rm SB,MC}(M_{WV}) \, ,
 \end{align}
-where $F_{\rm SR}^{\rm MC}$ and $F_{\rm SB}^{\rm MC}$ are the shapes extracted from the MC simulation in the signal and sideband region, respectively. The background prediction in the signal region is then given by
+where $F_{\rm W+jets}^{\rm SR,MC}$ and $F_{\rm W+jets}^{\rm SB,MC}$ are the shapes extracted from the MC simulation in the signal and sideband region, respectively. The background prediction in the signal region is then given by
 \begin{equation}
-F_{\rm prediction}^{\rm SR}(M_{WV})=\alpha_{\rm MC}(M_{WV})\cdot F_{\rm Data}^{\rm SB}(M_{WV}) \, ,
+F_{\rm W+jets}^{\rm SR,pred}(M_{WV})=\alpha_{\rm MC}(M_{WV})\cdot F_{\rm W+jets}^{\rm SB,Data}(M_{WV}) \, ,
 \end{equation}
-where $F_{\rm Data}^{\rm SB}$ is the shape extracted from the sideband data.
+where $F_{\rm W+jets}^{\rm SB,Data}$ is the shape extracted from the sideband data. In this analysis, the SB consists of a lower ($\Mpr \in [40,65]$\,GeV) and an upper SB ($\Mpr \in [105,150]$\,GeV). For each of the signal regions (WW-category $\Mpr \in [65,85]$\,GeV and WZ-category $\Mpr \in [85,105]$\,GeV) a separate alpha-function is estimated.
 
 \subsection{Shapes of the Minor Backgrounds and \ttbar \ Contribution}
 \label{sec:minbkgshapes}
-To be able to apply the alpha-ratio-method for the background estimation of W+jets production, a fit to the data in the sideband region ($\Mpr \in [40,65]\cap[105,150]\,{\rm GeV}$) has to be done. Therefore, the shapes of the \ttbar , single top and diboson processes have to be estimated, which is done by fitting predefined functions to the MC simulation. The used functions are given by
+To be able to apply the alpha-ratio-method for the background estimation of W+jets production, a fit to the data in the sideband region has to be done. Therefore, the shapes of the \ttbar , single top and diboson processes have to be estimated, which is done by fitting predefined functions to the MC samples. The used functions are given by
 \begin{equation}
 F_{\ttbar}^{\rm SB}(x) = e^{b_1x+\frac{b_2}{x}} \quad , \quad
 F_{\rm singletop}^{\rm SB}(x) = e^{c_1x} \quad , \quad 
 F_{\rm diboson}^{\rm SB}(x) = e^{d_1x} \, .
 \end{equation}
 The fit results are shown in the appendix in Fig~\ref{fig:app:mwv_sb_minor}.\\
-The background estimation in the signal regions are also extracted from MC simulation using following functions
+
+\noindent The background estimation in the signal regions are also extracted from MC samples using following functions
 \begin{equation}
 F_{\ttbar}^{\rm SR}(x) = e^{b_1x+\frac{b_2}{x}} \quad , \quad \label{eq:bkg:ttbarshape}
 F_{\rm singletop}^{\rm SR}(x) = e^{c_1x} \quad , \quad 
 F_{\rm diboson}^{\rm SR}(x) = e^{d_1x+\frac{d_2}{x}} \, .
 \end{equation}
-The resulting plots are also shown in the appendix in figure~\ref{fig:app:mwv_sig_minor_WW} for the WW-category and in figure~\ref{fig:app:mwv_sig_minor_WZ} for the WZ-category.\\
-Since the \ttbar -production is one of the main background contributions, the resulting fit uncertainties on the shape parameters in eq. \ref{eq:bkg:ttbarshape} are propagated to the final signal extraction. Uncertainties on the diboson shape parameters are estimated in section~\ref{sec:uncslopesig}.
+The resulting plots are also shown in the appendix in figure~\ref{fig:app:mwv_sig_minor_WW} for the WW-category and in figure~\ref{fig:app:mwv_sig_minor_WZ} for the WZ-category. Since the \ttbar -production is one of the main background contributions, the fit uncertainties on the shape parameters in eq. \ref{eq:bkg:ttbarshape} that result from the fit are propagated to the final signal extraction. Uncertainties on the diboson shape parameters are estimated in section~\ref{sec:uncslopesig}.
 
 \subsection{Shape of the W+jets Production}
 
-The largest background contribution relevant for this analysis is the W+jets production. Therefore, its shape is extracted with a data driven method using the data in the sideband region and the alpha-ratio-method described in section \ref{sec:AlphaRatioMethod}. First the alpha-function has to be determined. Therefore, a fit to the MC simulation in the sideband and signal regions is done. For both regions the same functional form is used
+The largest background contribution relevant for this analysis is the W+jets production. Since the used MC sample is only generated in LO, its shape is extracted with a data driven method using the data in the sideband region and the alpha-ratio-method described in section \ref{sec:AlphaRatioMethod}. First, the alpha-function has to be determined. Therefore, a fit to the MC simulation in the sideband and signal regions is done. For both regions the same functional form is used
 \begin{align}
 F_{\rm W+jets}^{\rm SB}(x)=e^{a_1x+\frac{a_2}{x}} \, , \\
 F_{\rm W+jets}^{\rm SR}(x)=e^{a_3x+\frac{a_4}{x}} \, . \label{eq:bkg:wjetssig}
 \end{align}
 The corresponding alpha-function is given by the ratio of these functions
-\begin{align}
-\alpha_{\rm W+jets}(x)&=e^{(a_1-a_3)x+\frac{(a_2-a_4)}{x}} \\
-&\equiv e^{a_1'x+\frac{a_2'}{x}} \, .
-\end{align}
+\begin{equation}
+\alpha_{\rm W+jets}(x) = e^{(a_1-a_3)x+\frac{(a_2-a_4)}{x}} \equiv e^{a_1'x+\frac{a_2'}{x}} \, .
+\end{equation}
 The results of the fit to the MC simulation in the sideband for the muon channel is shown in figure~\ref{fig:bkg:mwvmc_alpha_mu} (a), while the result for the WW- and WZ-category are shown in figure~\ref{fig:bkg:mwvmc_alpha_mu} (b),(c) and the corresponding alpha-functions are shown in figure~\ref{fig:bkg:mwvmc_alpha_mu} (d),(e). Similarly to the fit of the W+jets distribution in the \Mpr -spectrum, the parametrization of the shape is rather ambiguous. Therefore, the fit is redone using a different functional form (for SR and SB) given by
 \begin{equation}
 F_{\rm W+jets}^{\rm alt.}(x)=e^{-\frac{x}{a_5+a_6x}} \, .
 \end{equation}
-The resulting alpha-function is also plotted in figure~\ref{fig:bkg:mwvmc_alpha_mu} (d),(e) and is well covered by the 1-$\sigma$-band of the original function. Corresponding plots for the electron channel can be found in figure~\ref{fig:app:mwvmc_alpha_el}.
-
+The resulting alpha-function is also plotted in figure~\ref{fig:bkg:mwvmc_alpha_mu} (d),(e) and is well covered by the 1-$\sigma$-band of the original function. Corresponding plots for the electron channel can be found in figure~\ref{fig:app:mwvmc_alpha_el}.\\
+\begin{figure}
+	\centering
+	\includegraphics[width=0.49\textwidth]{plots/bkg/mlvj/m_lvj_sb_lo_WJets0_xww_el__with_pull_log.pdf}
+	\includegraphics[width=0.49\textwidth]{plots/bkg/mlvj/m_lvj_sb_lo_WJets0_xww_mu__with_pull_log.pdf}
+	\caption[Resulting background estimation in the \MWV -spectrum in the sideband region]{Resulting background estimation in the \MWV -spectrum in the sideband region for the electron (left) and muon channel (right). In this fit the shape of the W+jets production was extracted while all other shapes as well as the normalizations were fixed. The shown uncertainty includes statistical uncertainties only.}	
+	\label{fig:bkg:data_sb}
+\end{figure}
 \begin{figure}
 	\centering
 	\begin{subfigure}{\textwidth}
@@ -232,34 +240,24 @@ The resulting alpha-function is also plotted in figure~\ref{fig:bkg:mwvmc_alpha_
 		\includegraphics[width=0.5\textwidth]{plots/bkg/alpha/alpha_mu_HPZ.pdf}
 		\caption{}
 	\end{subfigure}
-	\caption[Shape of W+jets production in the sideband and signal regions as well as the resulting alpha-function]{Shape of W+jets production in the sideband (a) and signal regions (b) in the muon channel for the WW- (left) and WZ-category (right) extracted from MC simulation. Also shown are the resulting alpha-functions in the muon channel (c) for the WW- (left) and WZ-category (right). The black line shows the fit result with the one and two sigma errorbands. The yellow dashed line shows the result using a different parametrization. The left axis represents the values of the W+jets function in the signal and sideband region in arbitrary units while the right axis shows the values of the alpha-function.}
+	\caption[Shape of W+jets production in the sideband and signal regions as well as the resulting alpha-function]{Shape of W+jets production in the sideband (a) and signal regions (b) in the muon channel for the WW- (left) and WZ-category (right) extracted from MC simulation. Also shown are the resulting alpha-functions (black line) in the muon channel (c) for the WW- (left) and WZ-category (right) with the one and two sigma errorbands. The orange dashed line shows the result using a different parametrization. The left axis represents the values of the W+jets function in the signal and sideband region in arbitrary units while the right axis shows the values of the alpha-function.}
 	\label{fig:bkg:mwvmc_alpha_mu}
 \end{figure}	
-	
 
-
-For the fit to the data in the sideband region, all normalizations are fixed to the values extracted from the \Mpr -spectrum, as well as the shapes of the minor backgrounds and the \ttbar -production. The only floating parameters are the shape parameters of the function describing the W+jets shape (eq. \ref{eq:bkg:wjetssig}). The resulting shapes in the sideband region for both the electron and muon channel are shown in figure~\ref{fig:bkg:data_sb}.  
-\begin{figure}
-	\centering
-	\includegraphics[width=0.49\textwidth]{plots/bkg/mlvj/m_lvj_sb_lo_WJets0_xww_el__with_pull_log.pdf}
-	\includegraphics[width=0.49\textwidth]{plots/bkg/mlvj/m_lvj_sb_lo_WJets0_xww_mu__with_pull_log.pdf}
-	\caption[Resulting background estimation in the \MWV -spectrum in the sideband region]{Resulting background estimation in the \MWV -spectrum in the sideband region for the electron (left) and muon channel. In this fit the shape of the W+jets production was extracted while all other shapes as well as the normalizations were fixed.}	
-	\label{fig:bkg:data_sb}
-\end{figure}
-The shape of the W+jets production in the signal regions is now obtained by multiplying the shape in the sideband region by the corresponding alpha-function. Due to the lack of events in the sideband region at high invariant masses a cut of $\MWV > 3.5$~TeV is applied to ensure a data driven background estimation. The final background prediction in the signal regions is shown in figure~\ref{fig:bkg:mwv_final}. The diboson contribution is taken as the signal function given in section \ref{chap:signal} with all aTGC-parameters set to zero.
+\noindent For the fit to the data in the sideband region, all normalizations are fixed to the values extracted from the \Mpr -spectrum, as well as the shapes of the minor backgrounds and the \ttbar -production. The only floating parameters are the shape parameters of the function describing the W+jets shape (eq. \ref{eq:bkg:wjetssig}). The resulting shapes in the sideband region for both the electron and muon channel are shown in figure~\ref{fig:bkg:data_sb}. The shape of the W+jets production in the signal regions is now obtained by multiplying the shape in the sideband region with the corresponding alpha-function. Due to the lack of events in the sideband region at high invariant masses a cut of $\MWV > 3.5$\,TeV is applied to ensure a data driven background estimation. \MWV \ is equal to the hard scale of the signal process. By applying a cut to this variable , a lower reference point for the scale of the new physics $\Lambda$ ($\gg3.5$\,TeV) is obtained. The final background prediction in the signal regions is shown in figure~\ref{fig:bkg:mwv_final}. The diboson contribution is taken as the signal function given in chapter~\ref{chap:signal} with all aTGC-parameters set to zero. Also shown is the signal model for $\Tcwww = 0$\,TeV$^{-2}$, which significantly increases the event yield hat high invariant masses.
  \begin{figure}
 	\centering
 	\begin{subfigure}{\textwidth}
-		\includegraphics[width=0.5\textwidth]{plots/bkg/mlvj/WW_el.pdf}
-		\includegraphics[width=0.5\textwidth]{plots/bkg/mlvj/WZ_el.pdf}	
+		\includegraphics[width=0.5\textwidth]{plots/bkg/mlvj/WW_el_cwww.pdf}
+		\includegraphics[width=0.5\textwidth]{plots/bkg/mlvj/WZ_el_cwww.pdf}	
 		\caption{}
 	\end{subfigure}
 	\begin{subfigure}{\textwidth}
-		\includegraphics[width=0.5\textwidth]{plots/bkg/mlvj/WW_mu.pdf}
-		\includegraphics[width=0.5\textwidth]{plots/bkg/mlvj/WZ_mu.pdf}
+		\includegraphics[width=0.5\textwidth]{plots/bkg/mlvj/WW_mu_cwww.pdf}
+		\includegraphics[width=0.5\textwidth]{plots/bkg/mlvj/WZ_mu_cwww.pdf}
 		\caption{}
 	\end{subfigure}	
-	\caption[Final background estimation in the WW- and WZ-category for the electron and muon channel]{Final background estimation in the WW- (a) and WZ-category (b) for the electron (left) and muon channel (right). The shape of the W+jets contribution is estimated by multiplying the shape extracted from the sideband data with the alpha-function extracted from MC simulation. The diboson contribution is taken from the signal model with all aTGC-parameters set to zero.}
+	\caption[Final background estimation in the WW- and WZ-category for the electron and muon channel]{Final background estimation in the WW- (a) and WZ-category (b) for the electron (left) and muon channel (right) (taken from \cite{PAS}). The shape of the W+jets contribution is estimated by multiplying the shape extracted from the sideband data with the alpha-function extracted from MC simulation. The diboson contribution is taken from the signal model with all aTGC-parameters set to zero. The shown uncertainty includes the statistical uncertainties resulting from the fit and the systematic uncertainties that are derived in section~\ref{sec:systematics}.}
 	\label{fig:bkg:mwv_final}
 \end{figure}
 
