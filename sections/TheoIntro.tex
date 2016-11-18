@@ -1,23 +1,28 @@
 \chapter{Theoretical Introduction}
 \label{chap::TheoreticalIntroduction}
-The following chapter gives an introduction into the theoretical background relevant for this analysis. In the first section, the main properties of the Standard Model of particle physics is described. The second section focusses on physics beyond the Standard Model as well an approach to describe these new physics. All derivations are taken from \cite{peskin,povh,mandl} if not stated otherwise.
+The following chapter gives an introduction into the theoretical background relevant for this analysis. In the first section, the main properties of the Standard Model of particle physics is described. The second section focusses on physics beyond the Standard Model as well as an approach to describe these new physics via anomalous couplings, the so-called effective field theory approach. All derivations are taken from \cite{peskin,mandl} if not stated otherwise.
 
 \section{The Standard Model of Particle Physics}
-The Standard Model of particle physics (SM) describes the fundamental forces of nature (except for gravity) and their interactions with elementary particles. It was formulated in the late 1970s and combines the theory of the strong force, the electromagnetic force and the weak force into a consistent model. Each force is represented by a quantum field theory, while the particles are excitations of quantum fields. The underlying symmetries of the interactions between particles are described by the symmetry groups SU(3)$\otimes$SU(2)$\otimes$U(1). According to Noether's theorem \cite{noether}, every symmetry leads to a conserved charge. In the SM, these charges are given by the electrical charge, the colour charge and the weak isospin. Each symmetry leads to one or more gauge bosons, which couple to these charges and are the mediators of the forces. With the recent detection of the Higgs boson in 2012 \cite{cms_higgsdiscov,atlas_higgsdiscov}, the last missing particle of the Standard Model has been observed.\\
+The Standard Model of particle physics (SM) describes the fundamental forces of nature and their interactions with elementary particles. It was developed in the late 1970s and combines the theory of the strong force, the electromagnetic force and the weak force into a consistent model, while gravity is not yet included. Each force is represented by a quantum field theory with the particles being excitations of quantum fields. The underlying symmetries of the interactions between particles are described by the symmetry groups SU(3)$\otimes$SU(2)$\otimes$U(1). According to Noether's theorem \cite{noether}, every symmetry leads to a conserved charge. In the SM, these charges are given by the electrical charge, the colour charge and the weak isospin. Demanding the formalisms to be gauge invariant leads to one or more gauge bosons for each force. The bosons couple to the charges and are the mediators of the interactions between particles. 
 
-\noindent To understand the concept of quantum field theories, the Lagrangian formalism is needed, which was originally introduced to describe Newtonian mechanics. For every physical system a Lagrangian can be defined, which is given by
+
+With the recent detection of the Higgs boson in 2012 \cite{cms_higgsdiscov,atlas_higgsdiscov}, the last missing particle of the SM has been observed.\\
+
+\noindent The underlying formalism of the SM including particles and their interactions is based on quantum field theories. To understand the concept of quantum field theories, the Lagrangian formalism is needed, which was originally introduced to describe Newtonian mechanics. For every physical system a Lagrangian can be defined, which is given by
 \begin{equation}
 L(q,\dot{q},t) = T(\dot{q},t) - V(q,\dot{q},t) ~,
 \end{equation}
-where $T$ denotes the kinetic energy, $V$ the potential energy, $t$ the time, $q$ a generalized coordinate and $\dot{q}$ its derivative. The action $S$ is then defined as the time integral over the Lagrangian
+where $T$ denotes the kinetic energy, $V$ the potential energy, $t$ the time, $q$ a generalized coordinate and $\dot{q}$ its time derivative. The action $S$ is then defined as the time integral over the Lagrangian
 \begin{equation}
 S = \int \! L(q,\dot{q},t) \, \rm{dt} ~.
 \end{equation}
-Using the principle of least action, which states that in a stationary case the variation of the action $\delta S$ vanishes, one can derive the equations of motion from the Euler-Lagrange-equation
+Using the principle of least action, which states that in a stationary case the variation of the action $\delta S$ vanishes, one can derive the Euler-Lagrange-equation
 \begin{equation}
-\frac{\rm{d}}{\rm{dt}}\frac{\partial L}{\partial \dot{q}} - \frac{\partial L}{\partial q} = 0 ~.
+\frac{\rm{d}}{\rm{dt}}\frac{\partial L}{\partial \dot{q}} - \frac{\partial L}{\partial q} = 0 ~,
 \end{equation}
-To be able to apply the Lagrangian formalism in particle physics, the Lagrangian is replaced by the Lagrangian density $\mathcal{L}$, which is related to $L$ via
+which can be used to derive the the equations of motion.\\
+
+\noindent To be able to apply the Lagrangian formalism in particle physics, the Lagrangian is replaced by the Lagrangian density $\mathcal{L}$, which is related to $L$ via
 \begin{equation}
 L=\int \! \mathcal{L} \, \mathrm{d}^3x ~.
 \end{equation}
@@ -38,7 +43,7 @@ with the gamma matrices $\gamma^\mu$, the Dirac-spinor $\psi$ and its Dirac adjo
 \begin{equation}
 \left(i\gamma^\mu\partial_\mu-m\right)\psi(x)=0 ~.
 \end{equation}
-This equation does not include any interactions. These are introduced by taking the gauge bosons (see section~\ref{subsec:theo:bosons}) into account.\\
+This equation only describes free particles without any interactions. These are introduced by taking the gauge bosons (see section~\ref{subsec:theo:bosons}) into account.
 
 \subsection{Fermions}
 A fermion is a particle with half-integer spin that therefore follows the Pauli exclusion principle \cite{pauli}, which states that two fermions with the same quantum number cannot exist in the same quantum state. The SM contains twelve elementary fermions with spin $J=1/2$. They are organized in two groups of six colour-neutral particles, the leptons, and six colour-charged particles, the quarks. They can be arranged in three generations, each containing one electrically charged massive lepton, one neutral massless lepton (neutrino), one up-type quark with an electrical charge of $2e/3$ and one down-type quark with an electrical charge of $-e/3$. For each of these particles there exists an anti-particle with the same quantum numbers but opposite electrical charge.\\
@@ -93,21 +98,21 @@ The three fundamental forces in the SM are mediated by bosons with spin $J=1$, t
 
 \noindent The Lagrangian describing the fermions, i.e. the Dirac Lagrangian in equation~\ref{eq:theo:diraclag}, is required to be invariant under gauge transformations. Global gauge transformations, which transform the Dirac spinor according to
 \begin{equation}
-\psi\rightarrow e^{i\phi}\psi ~,
+\psi\rightarrow e^{i\theta}\psi ~,
 \end{equation}
-trivially leave the equations of motion resulting from the Lagrangian unchanged and lead to conservation of the electrical charge. Due to causality, the Lagrangian is also required to be invariant under local gauge transformations, which can be written as
+where $\theta$ is a arbitrary real phase factor, trivially leave the equations of motion resulting from the Lagrangian unchanged and lead to conservation of the electrical charge. Due to causality, the Lagrangian is also required to be invariant under local gauge transformations, which can be written as
 \begin{equation}
-\psi\rightarrow e^{ie\phi(x)}\psi ~.
+\psi\rightarrow e^{ie\theta(x)}\psi
 \end{equation} 
-This transformation alters the Dirac Lagrangian
+with the charge $e$. This transformation alters the Dirac Lagrangian
 \begin{equation}
-\mathcal{L}_{\rm Dirac} \rightarrow \mathcal{L}_{\rm Dirac}' = \mathcal{L}_{\rm Dirac} + e\overline{\psi}\gamma^\mu\psi\partial_\mu \phi(x) ~.
+\mathcal{L}_{\rm Dirac} \rightarrow \mathcal{L}_{\rm Dirac}' = \mathcal{L}_{\rm Dirac} + e\overline{\psi}\gamma^\mu\psi\partial_\mu \theta(x) ~.
 \end{equation}
 Invariance can be restored by replacing the ordinary derivative with the covariant derivative
 \begin{equation}
 \partial_\mu \rightarrow D_\mu = [\partial_\mu + ie\gamma_\mu(x)] ~,
 \end{equation}
-with the charge $q$ and the gauge field $\gamma_\mu$, which represents the photon. The photon has to be massless to avoid additional mass terms, which would break the invariance of the Lagrangian. The new invariant Lagrangian is then given as
+with the gauge field $\gamma_\mu$ representing the photon. The photon has to be massless to avoid additional mass terms, which would break the invariance of the Lagrangian. The new invariant Lagrangian is then given as
 \begin{equation}
 \mathcal{L} = \mathcal{L}_{\rm Dirac} - q\overline{\psi}\gamma^\mu\psi \gamma_\mu ~,
 \end{equation}
@@ -122,7 +127,7 @@ where the additional term describes the interaction of the fermion field $\psi$ 
 	\label{fig:theo:gluoncoupling}
 \end{figure}
 
-\noindent For the weak force there are two different interactions. The neutral current interaction is mediated by the $Z$ boson and describes non-flavour-changing processes. The $Z$ boson has a mass of $M_Z=91.1976 \pm 0.0021$\,GeV \cite{SMmasses} and carries no electric charge. The charged current interactions are transported by the $W^\pm$ bosons, which carry an electric charge of $\pm e$. The $W$ boson has a mass of $80.385 \pm 0.015$\,GeV \cite{SMmasses}. These interactions can change the quark or lepton flavours. Since both the $Z$ and the $W$ boson are massive, they have a non-zero decay width which leads to a limited life time of $\tau_Z=2.6\cdot 10^{-25}$\,s and $\tau_W=3.2\cdot 10^{-25}$\,s, respectively. This causes a limited range and is the reason for the small strength of the weak force compared to the electromagnetic and strong force. A more detailed description of the weak force can be found in the next section.\\ 
+\noindent For the weak force there are two different interactions. The neutral current interaction is mediated by the Z boson and describes non-flavour-changing processes. The Z boson has a mass of $M_Z=91.1976 \pm 0.0021$\,GeV \cite{SMmasses} and carries no electric charge. The charged current interactions are transported by the W$^\pm$ bosons, which carry an electric charge of $\pm e$. These interactions can change the quark or lepton flavours. The W boson has a mass of $80.385 \pm 0.015$\,GeV \cite{SMmasses}. Since both the Z and the W boson are massive, they have a non-zero decay width leading to a limited mean life time of $\tau_Z=2.6\cdot 10^{-25}$\,s and $\tau_W=3.2\cdot 10^{-25}$\,s, respectively. This causes a limited range and is the reason for the small strength of the weak force compared to the electromagnetic and strong force. Another characteristic of the weak force is the dependence on chirality. Chirality describes the direction of the spin of a particle relative to its momentum. The spin of a particle points in the direction of its momentum for right handed particles and in the opposite direction for left handed particles. The gauge boson of the weak force only couple to left handed particles and to right handed anti particles, which means that parity is maximally violated by the weak force \cite{wu}. \\
 
 \noindent The SM also contains at least one scalar boson ($J=0$), the Higgs boson, which was recently discovered at the LHC \cite{cms_higgsdiscov,atlas_higgsdiscov}. The Higgs boson has a mass of $125.09 \pm 0.24$\,GeV and is responsible for the particle masses. The underlying theory is shortly outlined in the next section.\\
 
@@ -141,7 +146,7 @@ with the Higgs field
 \phi=\frac{1}{\sqrt{2}}(\phi_1+i\phi_2)
 \end{equation}
 and arbitrary real parameters $\mu^2$ and $\lambda$. The Higgs potential is shown in Fig.~\ref{fig:theo:higgspot} for $\mu^2<0$.
-\begin{figure}[h]
+\begin{figure}
 	\centering
 	\includegraphics[width=0.75\textwidth]{plots/theoIntro/higgspot.png}
 	\caption[Higgs potential for $\mu^2<0$]{Higgs potential for $\mu^2<0$, taken from \cite{higgspot}. There is a local maximum at $\phi=0$ and a circle of absolute minima.}
@@ -151,7 +156,7 @@ In this case, the potential has a local maximum at $\phi=0$ and a circle of abso
 \begin{equation}
 \phi_0(\theta) = \sqrt{\frac{-\mu^2}{2\lambda}}e^{i\theta} \quad , \quad 0\geq \theta \geq 2\pi ~.
 \end{equation}
-Since the corresponding Lagrangian density is invariant under global phase transformations, the ground state can be arbitrarily chosen. as
+Since the corresponding Lagrangian density is invariant under global phase transformations, the ground state can be arbitrarily chosen as
 \begin{equation}
 \phi_0 = \frac{-\mu^2}{2\lambda}=\frac{1}{\sqrt{2}}v ~, \label{eq:theo:higgsexp}
 \end{equation}
@@ -182,7 +187,7 @@ e=\frac{gg'}{\sqrt{g^2+g'^2}} ~, \quad g=\frac{e}{\sin \theta_W} ~, \quad M_W=M_
 \end{equation}
 where $M_W$ and $M_Z$ denote the W and the Z mass, respectively, all effects of W and Z exchange can be described at tree level using the three parameters $e$, $\theta_W$ and $M_W$.\\
 
-\noindent This analysis focuses on the massive gauge boson of the electroweak theory and their self-interaction. The simplest form of gauge boson self-interaction of the $W^\pm$ and $Z$ bosons is the triple gauge coupling as portrayed in Fig.~\ref{fig:theo:tgc}. Neglecting C- and/or P-violating terms, the Lagrangian for this interaction is given by \cite{EFT}
+\noindent This analysis focuses on the massive gauge bosons of the electroweak theory and their self-interaction. The simplest form of gauge boson self-interaction between  the photon and the $W^\pm$ and $Z$ bosons is the triple gauge coupling as portrayed in Fig.~\ref{fig:theo:tgc}. Neglecting C- and/or P-violating terms, the Lagrangian for this interaction can be written as \cite{EFT}
 \begin{align}
 \mathcal{L} =& ig_{WWV}\Big( g_1^V(W_{\mu\nu}^+W^{-\mu} - W^{+\mu}W_{\mu\nu}^-)V^{\nu} + \kappa_VW_\mu^+W_\nu^-V^{\mu\nu}  + \frac{\lambda_V}{M_W^2}W_\mu^{\nu+}W_\nu^{-\rho}V_\rho^\mu  \Big) ~, \label{eq:theo:EWKlag}
 \end{align}
@@ -191,7 +196,7 @@ where $V=Z,\gamma$; $X_{\mu\nu}=\partial_\mu X_\nu -\partial_\nu X_\mu$ and $X=W
 g_1^Z = g_1^\gamma = \kappa_Z = \kappa_\gamma &= 1 ~, \\
 \lambda_Z = \lambda_\gamma &= 0 ~.
 \end{align}
-The effects of new physics on these couplings is described in the next section.
+Any physics that is not included in the SM can affect these coupling parameters. A detailed description of these effects can be found in the next section.
 \begin{figure}
 	\centering
 	\includegraphics[width=0.45\textwidth]{plots/theoIntro/feynmans/TGC_WW.pdf}
@@ -199,26 +204,26 @@ The effects of new physics on these couplings is described in the next section.
 	\label{fig:theo:tgc}
 \end{figure}
 
-\section{Anomalous Triple Gauge Couplings (aTGC)}
+\section{Anomalous Triple Gauge Couplings}
 \label{sec:aTGC}
 Although the SM has been confirmed to be self-consistent countless of times, there has been experimental prove that it is not a complete description of all fundamental interactions. All physics that is not included in the SM is called physics beyond the Standard Model~(BSM). An example of a phenomenon that is not explained by the SM is the baryon asymmetry after the Big Bang, where more matter than antimatter was created. The conditions necessary for this asymmetry to occur were formulated by Sakharov \cite{sakharov}. One of the conditions is the violation of the C and CP invariance. Although C and CP violation have been observed\footnote{C violation follows from the observation of P \cite{wu} and CP violation}\cite{CP} and are described by the SM, it is not sufficient to explain the baryon asymmetry. However, BSM physics might provide additional sources of CP violation.\\
 
-\noindent Another example of BSM physics is the so-called dark matter, which describes particles that only interact via gravitation and the weak force. An evidence for the existence of dark matter is given by the rotation speed of stars around the center of a galaxy. According to the Newtonian gravitation laws this speed is expected to increase with increasing distance from the bulk, where most of the galaxy's mass is centered. Beyond the bulk the rotation speeds are expected to decrease with increasing distance. However, the observed rotation curves show a constant rotation speed for stars beyond the galaxy bulk, as shown in Fig.~\ref{fig:theo:rotcurves} \cite{rotcurves}. This can be explained by additional mass with constant density in the galaxy, the so-called dark matter halo, which extends far beyond the galaxy.\\ 
+\noindent Another example of BSM physics is the so-called dark matter, which describes particles that only interact via gravitation and possibly the weak force. An evidence for the existence of dark matter is given by the rotation speed of stars around the center of a galaxy. According to the Newtonian gravitation laws this speed is expected to increase with increasing distance from the bulk, where most of the galaxy's mass is centred. Beyond the bulk the rotation speeds are expected to decrease with increasing distance. However, the observed rotation curves show a constant rotation speed for stars beyond the galaxy bulk, as shown in Fig.~\ref{fig:theo:rotcurves}. This can be explained by additional mass with constant density in the galaxy, the so-called dark matter halo, which extends far beyond the galaxy.\\ 
  
-\noindent An example for dark matter candidates are neutrinos, which pass all requirements of a dark matter particle. Neutrinos are assumed to be massless in the SM. However, by measuring atmospheric, solar and reactor neutrinos several experiments observed a strong mixing among the neutrino generations (e.g. \cite{nuoszi1,nuoszi2,nuoszi3,nuoszi4}). This is only possible if at least two of the neutrino mass eigenstates are unequal to zero, which contradicts the SM expectation. Current upper limits on the neutrino masses are too small \cite{numasses1,numasses2} to explain the observed rotation curves.\\
+\noindent An example for dark matter candidates are neutrinos, which pass all requirements of a dark matter particle. Neutrinos are assumed to be massless in the SM. However, by measuring atmospheric, solar and reactor neutrinos several experiments observed a strong mixing among the neutrino generations (e.g. \cite{nuoszi1,nuoszi2,nuoszi3,nuoszi4}). This is only possible if at least two of the neutrino mass eigenstates are unequal to zero, which contradicts the SM expectation. Additionally, right handed neutrinos and left handed anti neutrinos could exist, so-called sterile neutrinos \cite{sterilenu}. Sterile neutrinos do not couple to the weak force and can therefore only be created by oscillation. Howecer, current upper limits on the neutrino masses are too small \cite{numasses1,numasses2} to explain the observed rotation curves only using neutrinos.\\
 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.6\textwidth]{plots/theoIntro/rotcurvesfig.png}
-	\caption[Rotation curve of stars around the galaxy NGC 2198]{Rotation curve of stars around the galaxy NGC 2198. Shown are the measured rotation speeds of stars and gas clouds (dots) with a fitted function (straight line). Also shown are the components of the fitted function: visible matter (dashed line), gaseous matter (dotted line) and dark matter (dash-dotted line). In contrast to expectations, the rotation speeds stay constant at high distances, pointing to additional mass in the galaxy.}
+	\caption[Rotation curve of stars around the galaxy NGC 2198]{Rotation curve of stars around the galaxy NGC 2198 \cite{rotcurves}. Shown are the measured rotation speeds of stars and gas clouds (dots) with a fitted function (straight line). Also shown are the components of the fitted function: visible matter (dashed line), gaseous matter (dotted line) and dark matter (dash-dotted line). In contrast to expectations, the rotation speeds stay constant at high distances, pointing to additional mass in the galaxy.}
 	\label{fig:theo:rotcurves}
 \end{figure}
 
-\noindent There are several attempts of new theories describing dark matter or other BSM physics that introduce new, heavy particles (e.g. supersymmetry \cite{SUSY}). Other theories predict new spatial dimensions when attempting to include gravity to the SM \cite{xdimensions}. This analysis focuses on those theories that introduce a scale of the new physics $\Lambda$ that is much larger than the energy currently experimentally accessible. The scale $\Lambda$ either corresponds to the mass of the new particles or to the energy at which the new physics occurs. At low energies (i.e. energies lower than $\Lambda$), the new physics can influence the SM processes, like the self couplings of the electroweak bosons described in section~\ref{subsec:theo:EWK}. This results in new effective couplings called anomalous couplings and can be described by altering the values of the coupling parameters in the Lagrangian of the electroweak self interaction (equation~\ref{eq:theo:EWKlag}). This approach yields several problems. For example, the Lagrangian can be expanded by additional derivatives, which would only be suppressed by factors of $M_W^{-1}$. At energies above $M_W$, they would have to be taken into account, making the approach arbitrarily complex. Additionally, this Lagrangian leads to unitarity violation at high energies. These problems can be avoided by using the effective field theory approach (EFT), which provides a model-independent approach of describing BSM physics that is currently not in experimental reach \cite{EFT}. In this approach it is assumed that new physics exists at a scale $\Lambda$ which is much larger than the accessible energy. However, possible effects of new physics might affect processes at lower scales. These effects are described by integrating out the degrees of freedom of new heavy particles, leading to an effective Lagrangian with additional operators $\mathcal{O}^{(d)}$ of dimension $d\geq 5$
+\noindent There are several attempts of new theories describing dark matter or other BSM physics that introduce new, heavy particles (e.g. supersymmetry). Other theories predict new spatial dimensions when attempting to include gravity to the SM \cite{xdimensions}. This analysis focuses on those theories that introduce a scale of the new physics $\Lambda$ that is much larger than the energy currently experimentally accessible. The scale $\Lambda$ either corresponds to the mass of the new particles or to the energy at which the new physics occurs. At low energies (i.e. energies lower than $\Lambda$), the new physics can influence the SM processes, like the self couplings of the electroweak bosons described in section~\ref{subsec:theo:EWK}. This results in new effective couplings called anomalous couplings and can be described by altering the values of the coupling parameters in the Lagrangian of the electroweak self interaction (equation~\ref{eq:theo:EWKlag}). This approach yields several problems. For example, the Lagrangian can be expanded by additional derivatives, which would only be suppressed by factors of $M_W^{-1}$. At energies above $M_W$, they would have to be taken into account, making the approach arbitrarily complex. Additionally, this Lagrangian leads to ultraviolet divergences in loop calculations. These problems can be avoided by using the effective field theory approach (EFT), which provides a model-independent approach of describing BSM physics that is currently not in experimental reach \cite{EFT}. In this approach it is assumed that new physics exists at a scale $\Lambda$ which is much larger than the accessible energy. However, possible effects of new physics might affect processes at lower scales. These effects are described by integrating out the degrees of freedom of new physics, leading to an effective Lagrangian with additional operators $\mathcal{O}^{(d)}$ of dimension $d\geq 5$
 \begin{equation}
 \mathcal{L}_{\rm eff} = \mathcal{L}_0 + \sum_{n=1}^{\infty} \sum_i \frac{c_i^{(n)}}{\Lambda^{n}}\mathcal{O}_i^{(n+4)} ~, \label{eq:theo:operators}
 \end{equation}
-where $c_i$ parametrizes the coupling strength of the new physics. There is one Operator of dimension five which does not contribute to the signal process under consideration in this analysis. There are numerous dimensions six operators of which only five introduce anomalous triple gauge couplings. Two of them are not C- and/or P-conserving and are not considered in this analysis. This leaves three operators, which can be chosen according to \cite{EFTparam} as
+where $c_i$ parametrizes the coupling strength of the new physics. There is one operator of dimension five which does not contribute to the signal process under consideration in this analysis. There are numerous dimensions six operators of which only five introduce anomalous triple gauge couplings (aTGC). Two of them are not C- and/or P-conserving and are not considered in this analysis. This leaves three operators, which can be chosen according to \cite{EFTparam} as
 \begin{align}
 \mathcal{O}_{WWW} &= \rm{Tr}[W_{\mu\nu}W^{\nu\rho}W^\mu_\rho] ~, \\
 \mathcal{O}_{W} &=  (D_\mu\Phi)^\dagger W^{\mu\nu}(D_\nu\Phi) ~, \\
@@ -235,10 +240,12 @@ where $g$ denotes the weak coupling constant. $g_1^\gamma$ is fixed due to elect
 \begin{align}
 \frac{c_{WWW}}{\Lambda^2} ~, \quad \frac{c_W}{\Lambda^2} ~, \quad \frac{c_B}{\Lambda^2} ~.
 \end{align}
-The anomalous couplings introduced by these parameters add terms of the order $s^2/\Lambda^4$ to the diboson cross section \cite{EFT}, leading to an increased cross section at high center of mass energies. In Fig.~\ref{fig:theo:unitarity} the differential cross section for the SM WW process as well as the aTGC process corresponding to $\Tcwww = 1/(400 \, {\rm GeV})^{2}$ is shown in the invariant mass spectrum of the diboson system, which is equal to the scale of the process. Also shown is the unitarity bound, which is eventually violated by the aTGC process at high invariant masses. However, at this scale the approach is not valid anymore, since there is no justification to ignore the dimension eight operators in eq.~\ref{eq:theo:operators} at energies of the order of $\Lambda$. Arbitrarily many operators of even higher dimension would have to be taken into account, making the approach useless.
+The anomalous couplings introduced by these parameters add terms of the order $s^2/\Lambda^4$ to the diboson cross section \cite{EFT}, leading to an increased cross section at high center of mass energies. In Fig.~\ref{fig:theo:unitarity} the differential cross section for the SM W$^+$W$^-$ process as well as the aTGC process corresponding to $\Tcwww = 1/(400 \, {\rm GeV})^{2}$ is shown in the invariant mass spectrum of the diboson system, which is equal to the scale of the process. Also shown is the unitarity bound, which is eventually violated by the aTGC process at high invariant masses. However, at this scale the approach is not valid anymore, since there is no justification to ignore the dimension eight operators in eq.~\ref{eq:theo:operators} at energies of the order of $\Lambda$. Arbitrarily many operators of even higher dimension would have to be taken into account, making the approach useless.\\
 \begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{plots/theoIntro/unitarity.png}
 	\caption[Comparison of the differential cross section of the SM and aTGC WW production]{Comparison of the differential cross section of the SM and aTGC WW production for $\cwww=\frac{1}{(400\,{\rm GeV})}$. The cross section increases dominantly at high invariant masses. Also shown is the unitarity bound. The picture is taken from \cite{EFT}.}
 	\label{fig:theo:unitarity}
 \end{figure}
+
+\noindent In this analysis, the EFT approach is used to parametrize the effects of aTGCs. The aTGC parameters are used to describe deviations from the SM diboson production in a generic model. Different scenarios are analysed where either one or two aTGC parameters are unequal to zero.
