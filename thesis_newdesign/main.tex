@@ -1,0 +1,182 @@
+\documentclass[a4paper,12pt,twoside,DIVcalc,BCOR12.5mm,headsepline,titlepage,openright,final,english]{scrbook}
+
+
+\usepackage[german,english]{babel}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{siunitx}
+    \newcommand{\unit}[2]{\SI{#1}{#2}}
+\usepackage{tgheros} %Helveticaverschnitt
+\usepackage{helvet} 
+\usepackage{newcent}
+\usepackage{geometry}
+\usepackage{bookman}
+
+% remove in case no errors without it
+%\usepackage{morefloats}
+
+\usepackage[osf,sc]{mathpazo}
+\usepackage{courier}
+    \renewcommand{\sfdefault}{phv} % 
+    \renewcommand{\rmdefault}{pplx} % ---> Mathpazo Palatino (pplx)
+    \linespread{1.05}
+
+\geometry{a4paper}
+\usepackage{amsmath,amssymb,amstext}
+\usepackage{graphicx}
+\usepackage{floatrow}
+    \floatsetup[table]{capposition=top}
+\usepackage{multicol}
+\usepackage{multirow}
+%\usepackage{booktabs}
+\usepackage{xspace}
+%\usepackage{tabularx}
+%\usepackage{bbold}
+%\usepackage{cite}
+\usepackage[square,sort&compress,comma,numbers]{natbib}
+\usepackage[section,above]{placeins} % Keeps floats `in their place', preventing them from floating past a "\FloatBarrier" command into another section
+
+%\usepackage{dblfnote}
+%\usepackage{floatflt}
+\usepackage[headsepline]{scrpage2}
+    \pagestyle{scrheadings}
+ 
+\usepackage[subfigure]{tocloft} % subfigure option only if using subfigure package
+	\renewcommand{\cfttoctitlefont} % ToC title
+            {\usefont{T1}{phv}{b}{n}\selectfont\huge}
+% 	\renewcommand{\cftchapfont} % chapter titles
+%             {\boldmath\usefont{T1}{phv}{b}{n}\selectfont}
+% 	\renewcommand{\cftsecfont} % section titles
+%             {\usefont{T1}{pplx}{m}{n}\selectfont}
+% 	\renewcommand{\cftsubsecfont} % subsection titles
+%             {\usefont{T1}{pplx}{m}{n}\selectfont} 
+% 	\renewcommand{\cftchappagefont} % chapter page numbers
+%             {\usefont{T1}{pplx}{b}{n}\selectfont}
+% 	\renewcommand{\cftsecpagefont} % section page numbers
+%             {\cftsecfont} 
+% 	\renewcommand{\cftsubsecpagefont} % subsection page numbers
+%             {\cftsubsecfont} 
+ 
+ 
+%%%%%%%%%%%%%  
+% Table captions serifenlos
+%%%%%%%%%%%%%
+\usepackage{caption}
+
+\captionsetup{labelfont=bf,font={rm,footnotesize},format=plain}
+%%%%%%%%
+
+\usepackage{psfrag}
+\usepackage{verbatim}
+\usepackage{wrapfig}
+\usepackage{lineno}
+\usepackage{textcomp}
+\usepackage{cancel}
+\usepackage{upgreek}
+\usepackage{xcolor}
+%\usepackage{fixltx2e}
+%\usepackage{blindtext}
+%\usepackage{comment}	
+
+\usepackage{subfigure}
+%\usepackage{subcaption}
+\usepackage{nicefrac}
+\usepackage{multirow}
+\usepackage{slashed}
+
+\usepackage[normalem]{ulem}
+\usepackage{url}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+\usepackage[pdftex,
+    colorlinks=false,
+    %        urlcolor=rltblue,       % \href{...}{...} external (URL)
+    %        filecolor=rltgreen,     % \href{...} local file
+    %        linkcolor=rltblue,       % \ref{...} and \pageref{...}
+    pdftitle={},% FIXME
+    pdfborder={ 0 3 0.5 [3 3]},
+    pdfauthor={Kevin Fl\"oh},
+    %pdfsubject={pdfsubject},% FIXME
+    pdfkeywords={none},
+    hyperindex,
+    pdfpagemode=None,
+    bookmarksopen=true]{hyperref}
+
+
+\setcapindent{1em}  % Captions zu begin leicht eingerueckt
+    \setlength\parindent{0pt}
+\usepackage[activate=true,final,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype}
+\SetTracking{encoding={*}, shape=sc}{45}
+
+\hyphenation{ATLAS}
+
+%\newcommand{\vecd}[1]{\vec{#1}}
+%\newcommand{\vecv}[1]{\mathbf{#1}}
+
+
+\input{includes/shortcuts.tex}
+
+\long\def\symbolfootnote[#1]#2{\begingroup%
+\def\thefootnote{\fnsymbol{footnote}}\footnote[#1]{#2}\endgroup} 
+
+  \title{title}% FIXME
+  \author{Nils Faltermann}
+  \date{00.00.00}
+  
+\makeatletter
+\DeclareRobustCommand*{\bfseries}{%                                                                                                                                
+  \not@math@alphabet\bfseries\mathbf
+  \fontseries\bfdefault\selectfont
+  \boldmath
+}
+\makeatother
+
+
+\begin{document}
+
+\include{title_ger}
+\cleardoublepage
+
+\frontmatter
+
+%\include{intro_ger}
+%\cleardoublepage
+
+\include{title_eng}
+\cleardoublepage
+  
+%  \pagenumbering{roman}  
+\mainmatter
+
+%\include{0_intro_eng}
+\cleardoublepage
+
+\tableofcontents
+%\linenumbers
+
+\renewcommand{\arraystretch}{1.2}  
+ % \pagenumbering{arabic}   
+
+\include{sections/TheoIntro}
+\include{sections/ExperimentalSetup}
+\include{sections/EventReco}
+\include{sections/Signal}
+\include{sections/background}
+\include{sections/limits}
+\include{sections/conclusion}
+%  \appendix
+
+
+ 
+\listoftables
+\listoffigures
+
+\bibliographystyle{custom}
+
+\bibliography{thesis}
+\backmatter
+
+%\input{thx}
+ 
+\end{document}
