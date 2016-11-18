@@ -89,8 +89,8 @@ The third term in equation~\ref{eq:signal:xsec} depends on the sign of $c_i$, th
 
 \noindent The shape of the aTGC contribution is designed as a sum of the different contributions, which are given by the SM process, the quadratic dependence, the SM interference and the interference between different aTGC contributions (aTGC-aTGC-interference, introduced in section~\ref{subsec:signal:aTGCInt}). The normalization is taken from the scaling factor mentioned above, while the signal function is normalized to unity. The main contributions are the SM process and the quadratic dependence to the aTGC parameters. The SM contribution is modelled by a exponential function, while the quadratic aTGC term is proportional to the corresponding aTGC parameter squared. The quadratic contribution show a turn-on at $\MWV \approx 1$\,TeV, which is modelled by an error function. The signal function without aTGC-aTGC-interference is therefore given by
 \begin{align}
-F_{\rm aTGC} &= F_{\rm SM} + \sum_i \left( F_{c_i^2} + F_{c_i} \right) \\
-&= \frac{1}{A_N}\left[ N_{\rm SM} \cdot e^{-a_{SM}x} + \sum_i \left( N_{c_i,1}\cdot c_i^2 \cdot e^{-a_{i,1} x} \frac{1+\rm{Erf}\left(\frac{x-a_{o,i}}{a_{w,i}}\right)}{2} + N_{c_i,2}\cdot c_i \cdot e^{a_{i,2}x} \right) \right] ~,
+F_{\rm aTGC} =& F_{\rm SM} + \sum_i \left( F_{c_i^2} + F_{c_i} \right) \\
+=& \frac{N_{\rm SM}}{A_N} e^{-a_{SM}x} + \sum_i \left( \frac{N_{c_i,1}}{A_N} c_i^2 e^{-a_{i,1} x} \frac{1+\rm{Erf}\left(\frac{x-a_{o,i}}{a_{w,i}}\right)}{2} + \frac{N_{c_i,2}}{A_N} c_i e^{a_{i,2}x} \right)  ~,
 \label{eq:signal:sigfunc}
 \end{align}
 with the error function
