@@ -1,12 +1,11 @@
 \chapter{Theoretical Introduction}
 \label{chap::TheoreticalIntroduction}
+The Standard Model of particle physics (SM) summariyes the theories of elementary particles and their interactions. Since its development between 1960 and 1970, the fundamental paramters of the SM have been measured with ever increasing accuracy. Predictions made by the SM, like the existence of new particles, have been confirmed many times. With the detection of the top-quark in 1995 \cite{top_detection1,top_detection2}, the tau-neutrino in 2000 \cite{tau_nu_detection} and the Higgs boson in 2012 \cite{cms_higgsdiscov,atlas_higgsdiscov}, the last missing particles of the SM has been observed.\\
+
 The following chapter gives an introduction into the theoretical background relevant for this analysis. In the first section, the main properties of the Standard Model of particle physics is described. The second section focusses on physics beyond the Standard Model as well as an approach to describe these new physics via anomalous couplings, the so-called effective field theory approach. All derivations are taken from \cite{peskin,mandl} if not stated otherwise.
 
 \section{The Standard Model of Particle Physics}
-The Standard Model of particle physics (SM) describes the fundamental forces of nature and their interactions with elementary particles. It was developed in the late 1970s and combines the theory of the strong force, the electromagnetic force and the weak force into a consistent model, while gravity is not yet included. Each force is represented by a quantum field theory with the particles being excitations of quantum fields. The underlying symmetries of the interactions between particles are described by the symmetry groups SU(3)$\otimes$SU(2)$\otimes$U(1). According to Noether's theorem \cite{noether}, every symmetry leads to a conserved charge. In the SM, these charges are given by the electrical charge, the colour charge and the weak isospin. Demanding the formalisms to be gauge invariant leads to one or more gauge bosons for each force. The bosons couple to the charges and are the mediators of the interactions between particles. 
-
-
-With the recent detection of the Higgs boson in 2012 \cite{cms_higgsdiscov,atlas_higgsdiscov}, the last missing particle of the SM has been observed.\\
+The Standard Model of particle physics describes the fundamental forces of nature and their interactions with elementary particles. It combines the theory of the strong force, the electromagnetic force and the weak force into a consistent model, while gravity is not yet included. Each force is represented by a quantum field theory with the particles being excitations of quantum fields. The underlying symmetries of the interactions between particles are described by the symmetry groups SU(3)$\otimes$SU(2)$\otimes$U(1). According to Noether's theorem \cite{noether}, every symmetry leads to a conserved charge. In the SM, these charges are given by the electrical charge, the colour charge and the weak isospin. Demanding the formalisms to be gauge invariant leads to one or more gauge bosons for each force. The bosons couple to the charges and are the mediators of the interactions between particles.//
 
 \noindent The underlying formalism of the SM including particles and their interactions is based on quantum field theories. To understand the concept of quantum field theories, the Lagrangian formalism is needed, which was originally introduced to describe Newtonian mechanics. For every physical system a Lagrangian can be defined, which is given by
 \begin{equation}
@@ -48,17 +47,18 @@ This equation only describes free particles without any interactions. These are 
 \subsection{Fermions}
 A fermion is a particle with half-integer spin that therefore follows the Pauli exclusion principle \cite{pauli}, which states that two fermions with the same quantum number cannot exist in the same quantum state. The SM contains twelve elementary fermions with spin $J=1/2$. They are organized in two groups of six colour-neutral particles, the leptons, and six colour-charged particles, the quarks. They can be arranged in three generations, each containing one electrically charged massive lepton, one neutral massless lepton (neutrino), one up-type quark with an electrical charge of $2e/3$ and one down-type quark with an electrical charge of $-e/3$. For each of these particles there exists an anti-particle with the same quantum numbers but opposite electrical charge.\\
  
-\noindent The mass eigenstates of the quarks $u,d,c,s,t$ and $b$ are not the eigenstates of the weak interaction. New eigenstates of the weak interaction can be constructed from the mass eigenstates using the CKM-matrix \cite{CKM}, e.g.
-\begin{equation}
-\begin{pmatrix} d' \\ s' \\ b' \end{pmatrix} 
-= \begin{pmatrix}
-V_{ud} & V_{us} & V_{ub} \\
-V_{cd} & V_{cs} & V_{cb} \\
-V_{td} & V_{ts} & V_{tb}
-\end{pmatrix}
-\cdot \begin{pmatrix} d \\ s \\ b \end{pmatrix} \quad ~,
-\end{equation}
-where the entries of the CKM-matrix $V_{ij}$ describe the amount of mixing between the flavours. This mixing allows for quark decays between different generations. All observable hadronic particles consist either of three quarks of different colours (baryons) or of two quarks with one colour and anti-colour (mesons), leading to colour-neutral particles. The fact that there are no free colour-charged particles is called confinement. A summary of the fermions in the SM is shown in Tab.~\ref{tab:theo:fermions}.\\
+%\noindent The mass eigenstates of the quarks $u,d,c,s,t$ and $b$ are not the eigenstates of the weak interaction. New eigenstates of the weak interaction can be constructed from the mass eigenstates using the CKM-matrix \cite{CKM}, e.g.
+%\begin{equation}
+%\begin{pmatrix} d' \\ s' \\ b' \end{pmatrix} 
+%= \begin{pmatrix}
+%V_{ud} & V_{us} & V_{ub} \\
+%V_{cd} & V_{cs} & V_{cb} \\
+%V_{td} & V_{ts} & V_{tb}
+%\end{pmatrix}
+%\cdot \begin{pmatrix} d \\ s \\ b \end{pmatrix} \quad ~,
+%\end{equation}
+%where the entries of the CKM-matrix $V_{ij}$ describe the amount of mixing between the flavours. This mixing allows for quark decays between different generations. 
+All observable hadronic particles consist either of three quarks of different colours (baryons) or of two quarks with one colour and anti-colour (mesons), leading to colour-neutral particles. If two quarks are seperated far enough, the energy stored in gluon field of the strong interaction is sufficient to create a new quark-antiquark pair, leading to two colour-neutral hadrons. The fact that there no free colour-charged particles can be observed is called confinement. A summary of the fermions in the SM is shown in Tab.~\ref{tab:theo:fermions}.\\
 \begin{table}[]
 	\centering
 	\caption[Summary of the fermions in the Standard Model]{Summary of the fermions in the Standard Model. Each generation of fermions contains a lepton- and a quark-isospin-doublet. Only the quarks carry a colour charge of red (r), green (g) or blue (b). Neutrinos only carry an isospin and thus only interact via the weak force.}
@@ -97,7 +97,7 @@ where the entries of the CKM-matrix $V_{ij}$ describe the amount of mixing betwe
 	\hline
 	\end{tabular}
 \end{table}
-The three fundamental forces in the SM are mediated by bosons with spin $J=1$, the so-called vector bosons. These bosons arise from gauge symmetries inherent to the quantum field theories describing the interactions. As an example, the derivation of the photon is portrayed in this section. A summary of all vector boson can be found in Tab.~\ref{tab:theo:bosons}.\\
+The three fundamental forces in the SM are mediated by bosons with spin $J=1$, the so-called vector bosons. These bosons arise from gauge symmetries inherent to the quantum field theories describing the interactions. As an example, the derivation of the gauge boson of the electromagnetic interaction, the photon, is portrayed in this section. A summary of all vector boson can be found in Tab.~\ref{tab:theo:bosons}.\\
 
 \noindent The Lagrangian describing the fermions, i.e. the Dirac Lagrangian in equation~\ref{eq:theo:diraclag}, is required to be invariant under gauge transformations. Global gauge transformations, which transform the Dirac spinor according to
 \begin{equation}
@@ -211,7 +211,7 @@ Any physics that is not included in the SM can affect these coupling parameters.
 \label{sec:aTGC}
 Although the SM has been confirmed to be self-consistent countless of times, there has been experimental prove that it is not a complete description of all fundamental interactions. All physics that is not included in the SM is called physics beyond the Standard Model~(BSM). An example of a phenomenon that is not explained by the SM is the baryon asymmetry after the Big Bang, where more matter than antimatter was created. The conditions necessary for this asymmetry to occur were formulated by Sakharov \cite{sakharov}. One of the conditions is the violation of the C and CP invariance. Although C and CP violation have been observed\footnote{C violation follows from the observation of P \cite{wu} and CP violation}\cite{CP} and are described by the SM, it is not sufficient to explain the baryon asymmetry. However, BSM physics might provide additional sources of CP violation.\\
 
-\noindent Another example of BSM physics is the so-called dark matter, which describes particles that only interact via gravitation and possibly the weak force. An evidence for the existence of dark matter is given by the rotation speed of stars around the center of a galaxy. According to the Newtonian gravitation laws this speed is expected to increase with increasing distance from the bulk, where most of the galaxy's mass is centred. Beyond the bulk the rotation speeds are expected to decrease with increasing distance. However, the observed rotation curves show a constant rotation speed for stars beyond the galaxy bulk, as shown in Fig.~\ref{fig:theo:rotcurves}. This can be explained by additional mass with constant density in the galaxy, the so-called dark matter halo, which extends far beyond the galaxy.\\ 
+\noindent Another example of BSM physics is the so-called dark matter, which describes particles that only interact via gravitation and possibly the weak force. An evidence for the existence of dark matter is given by the rotation speed of stars around the center of a galaxy. According to the Newtonian gravitation laws this speed is expected to increase with increasing distance from the galaxy bulk, where most of the galaxy's mass is centred. Beyond the bulk the rotation speeds are expected to decrease with increasing distance. However, the observed rotation curves show a constant rotation speed for stars beyond the galaxy bulk, as shown in Fig.~\ref{fig:theo:rotcurves}. This can be explained by additional mass with constant density in the galaxy, the so-called dark matter halo, which extends far beyond the galaxy.\\ 
  
 \noindent An example for dark matter candidates are neutrinos, which pass all requirements of a dark matter particle. Neutrinos are assumed to be massless in the SM. However, by measuring atmospheric, solar and reactor neutrinos several experiments observed a strong mixing among the neutrino generations (e.g. \cite{nuoszi1,nuoszi2,nuoszi3,nuoszi4}). This is only possible if at least two of the neutrino mass eigenstates are unequal to zero, which contradicts the SM expectation. Additionally, right handed neutrinos and left handed anti neutrinos could exist, so-called sterile neutrinos \cite{sterilenu}. Sterile neutrinos do not couple to the weak force and can therefore only be created by oscillation. Howecer, current upper limits on the neutrino masses are too small \cite{numasses1,numasses2} to explain the observed rotation curves only using neutrinos.\\
 
@@ -232,7 +232,7 @@ where $c_i$ parametrizes the coupling strength of the new physics. There is one 
 \mathcal{O}_{W} &=  (D_\mu\Phi)^\dagger W^{\mu\nu}(D_\nu\Phi) ~, \\
 \mathcal{O}_{B} &= (D_\mu\Phi)^\dagger B^{\mu\nu}(D_\nu\Phi) ~.
 \end{align}
-Operators of dimension eight introduce anomalous quartic gauge couplings, but are suppressed by an additional factor of $\Lambda^{-2}$ and are therefore neglected. The dimension 6 operators affect the coupling parameters mentioned in section \ref{sec:aTGC} by introducing anomalous couplings
+Operators of higher dimension are suppressed by additional factors of $\Lambda^{-1}$ and are therefore neglected. The dimension 6 operators affect the coupling parameters mentioned in section \ref{sec:aTGC} by introducing anomalous couplings
 \begin{align}
 g_1^Z &= 1 + c_W\frac{M_Z^2}{2\Lambda^2} ~, \\
 \kappa_Z &= 1 + \left[ c_W - \sin^2\theta_W (c_W+c_B)\right] \frac{M_Z^2}{2\Lambda^2} ~, \\
@@ -251,4 +251,4 @@ The anomalous couplings introduced by these parameters add terms of the order $s
 	\label{fig:theo:unitarity}
 \end{figure}
 
-\noindent In this analysis, the EFT approach is used to parametrize the effects of aTGCs. The aTGC parameters are used to describe deviations from the SM diboson production in a generic model. Different scenarios are analysed where either one or two aTGC parameters are unequal to zero.
+\noindent In this analysis, the EFT approach is used to parametrize the effects of aTGCs. The three aTGC parameters are used to describe deviations from the SM diboson production in a generic model. Different scenarios are analysed where either one or two aTGC parameters are unequal to zero and limits on the parameter values are set..
