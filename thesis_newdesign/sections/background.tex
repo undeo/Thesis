@@ -1,59 +1,56 @@
 \chapter{Determination of the Background Distributions}
 \label{chap:bkg}
 
-There are several processes with the same or similar final states as the diboson process contributing to the overall background. A correct modelling of these process is essential for the final limit extraction. The main background contribution originates from W+jets production, where the W boson decays leptonically and the quark and gluon in the final state are falsely reconstructed as W or Z boson-jets. An example process is shown in Fig.~\ref{fig:bkg:fy_wjets1}. The second main contribution comes from top quark pair (\ttbar) production with one leptonically and one hadronically decaying real W-boson as shown in Fig.~\ref{fig:bkg:fy_ttbar}. Additionally, SM diboson production, which includes processes with and without triple gauge coupling (Fig.~\ref{fig:bkg:fy_WWtgc}-\ref{fig:bkg:fy_WZSM}), is taken into account as minor background. The last minor contribution comes from electroweak single top quark production (from now on called single top) in association with a W boson (Fig.~\ref{fig:bkg:fy_stoptw}) as well as in the $s$- (Fig.~\ref{fig:bkg:fy_stops}) and $t$-channel (Fig.~\ref{fig:bkg:fy_stopt}).\\
-\begin{figure}[]
+There are several processes with the same or similar final states as the diboson process contributing to the overall background. A correct modelling of these process is essential for the final limit extraction. The main background contribution originates from W+jets production, where the W boson decays leptonically and the quark and gluon in the final state are falsely reconstructed as W or Z boson-jets. An example process is shown in Fig.~\ref{fig:bkg:fy_wjets1}.
+The second main contribution comes from top quark pair (\ttbar) production with one leptonically and one hadronically decaying real W-boson as shown in Fig.~\ref{fig:bkg:fy_ttbar}. Additionally, SM diboson production, which includes processes with and without triple gauge coupling (Fig.~\ref{fig:bkg:fy_WWtgc}-\ref{fig:bkg:fy_WZSM}), is taken into account as minor background. The last minor contribution comes from electroweak single top quark production (from now on called single top) in association with a W boson (Fig.~\ref{fig:bkg:fy_stoptw}) as well as in the $s$- (Fig.~\ref{fig:bkg:fy_stops}) and $t$-channel (Fig.~\ref{fig:bkg:fy_stopt}).
+\begin{figure}[h!bt]
 	\centering
 	\subfigure[]{
-		\includegraphics[width=0.4\textwidth]{plots/bkg/feynmans/wjets1.pdf}
-		%\label{fig:bkg:fy_wjets1}
+		\includegraphics[width=0.4\textwidth]{../plots/bkg/feynmans/wjets1.pdf}
+		\label{fig:bkg:fy_wjets1}
 	}
 	\subfigure[]{
-		\includegraphics[width=0.4\textwidth]{plots/bkg/feynmans/ttbar.pdf}
+		\includegraphics[width=0.4\textwidth]{../plots/bkg/feynmans/ttbar.pdf}
 		\label{fig:bkg:fy_ttbar}
 	}
 	\caption[Feynman diagrams of the main background processes]{Feynman diagrams of the main background processes. The dominant background contribution is given by W+jets production with quark-gluon final state (a) where the resulting jet is misidentified as originating from a hadronically decaying W  or Z boson. The second main background process is given by top pair production (b) with a hadronically decaying real W boson.}
 \end{figure}
-\begin{figure}
+\newpage
+
+\begin{figure}[h!]
 	\centering
 	\subfigure[]{
-		\includegraphics[width=0.4\textwidth]{plots/bkg/feynmans/SMWW.pdf}
-%		\caption{}
+		\includegraphics[width=0.4\textwidth]{../plots/bkg/feynmans/SMWW.pdf}
 		\label{fig:bkg:fy_WWtgc}
 	}
 	\subfigure[]{
-		\includegraphics[width=0.4\textwidth]{plots/bkg/feynmans/SMWZ.pdf}
-		%\caption{}
+		\includegraphics[width=0.4\textwidth]{../plots/bkg/feynmans/SMWZ.pdf}
 		\label{fig:bkg:fy_WZtgc}
 	}
 	\subfigure[]{
-		\includegraphics[width=0.4\textwidth]{plots/bkg/feynmans/SMWW2.pdf}
-		%\caption{}
+		\includegraphics[width=0.4\textwidth]{../plots/bkg/feynmans/SMWW2.pdf}
 		\label{fig:bkg:fy_WWSM}
 	}
 	\subfigure[]{
-		\includegraphics[width=0.4\textwidth]{plots/bkg/feynmans/SMWZ2.pdf}
-		%\caption{}
+		\includegraphics[width=0.4\textwidth]{../plots/bkg/feynmans/SMWZ2.pdf}
 		\label{fig:bkg:fy_WZSM}
 	}
 	\subfigure[]{
-		\includegraphics[width=0.4\textwidth]{plots/bkg/feynmans/stoptW.pdf}
-		%\caption{}
+		\includegraphics[width=0.4\textwidth]{../plots/bkg/feynmans/stoptW.pdf}
 		\label{fig:bkg:fy_stoptw}
 	}
 	\subfigure[]{
-		\includegraphics[width=0.4\textwidth]{plots/bkg/feynmans/stops.pdf}
-%		\caption{}
+		\includegraphics[width=0.4\textwidth]{../plots/bkg/feynmans/stops.pdf}
 		\label{fig:bkg:fy_stops}
 	}
 	\subfigure[]{
 		\centering
-		\includegraphics[width=0.4\textwidth]{plots/bkg/feynmans/stopt.pdf}
-%		\caption{}
+		\includegraphics[width=0.4\textwidth]{../plots/bkg/feynmans/stopt.pdf}
 		\label{fig:bkg:fy_stopt}
 	}
 	\caption[Feynman diagrams of the minor background processes]{Feynman diagrams of the minor background processes. Additional background contributions that are taken into account are WW-/WZ-production with (a/b) and without (c/d) triple gauge coupling as well as single top production in association with a W boson (e), in the $s$-channel (f) and in the $t$-channel (g).}
 \end{figure}
+\newpage
 
 \noindent The background estimation strategy orientates on a previous diboson resonance search described in \cite{resonancepas} with minor modifications. The basic idea is to extract the normalizations of the main background contributions, the W+jets and \ttbar \ production, from a fit to the data in the jet mass spectrum of the hadronically decaying boson. A grooming algorithm is used to suppress jets coming from QCD events, the so-called pruning algorithm (section \ref{sec:pruning}), which leads to the new observable of the pruned jet mass, \Mpr . The shape of the W+jets production in the \MWV -spectrum, which is ultimately used for the limit extraction in chapter \ref{chap:LimitsonATGCs}, is extracted from the data in the sideband region ($\Mpr \in [40,65] \cap [105,150]$\,GeV) via the alpha-ratio-method, while the shapes of the \ttbar \ and single top contributions are taken from fits to the MC simulation. The shape of the SM diboson process is taken from the signal model with all aTGC-parameters set to zero (see section \ref{sec:NormalizationandShapeoftheaTGCContributions}).\\
 
@@ -92,14 +89,14 @@ F_{\rm WV}\left(x\right) &=  d_0 \cdot G(x,\mu_{\rm V},\sigma) + (1-d_0) \cdot G
 These functions are now fitted to the corresponding MC sample to obtain a template for each background contribution. The resulting fits are presented in Fig.~\ref{fig:bkg:mjMC} for both the electron and muon channel. The shown error bands are estimated by evaluating the fitted function 2000 times at 100 points with the function parameters varied according to their fit uncertainty. The error estimate at each point is then given as the 68\% quantile of the resulting function values.\\
 \begin{figure}
 	\centering
-		\includegraphics[width=0.47\textwidth]{plots/bkg/mj/WJets_mj_el_ErfExp_with_pull.pdf}
-		\includegraphics[width=0.47\textwidth]{plots/bkg/mj/WJets_mj_mu_ErfExp_with_pull.pdf}
-		\includegraphics[width=0.47\textwidth]{plots/bkg/mj/TTbar_mj_el_2Gaus_ErfExp_with_pull.pdf}
-		\includegraphics[width=0.47\textwidth]{plots/bkg/mj/TTbar_mj_mu_2Gaus_ErfExp_with_pull.pdf}
-		\includegraphics[width=0.47\textwidth]{plots/bkg/mj/STop_mj_el_ExpGaus_with_pull.pdf}
-		\includegraphics[width=0.47\textwidth]{plots/bkg/mj/STop_mj_mu_ExpGaus_with_pull.pdf}
-		\includegraphics[width=0.47\textwidth]{plots/bkg/mj/VV_mj_el_2_2Gaus_with_pull.pdf}
-		\includegraphics[width=0.47\textwidth]{plots/bkg/mj/VV_mj_mu_2_2Gaus_with_pull.pdf}
+		\includegraphics[width=0.47\textwidth]{../plots/bkg/mj/WJets_mj_el_ErfExp_with_pull.pdf}
+		\includegraphics[width=0.47\textwidth]{../plots/bkg/mj/WJets_mj_mu_ErfExp_with_pull.pdf}
+		\includegraphics[width=0.47\textwidth]{../plots/bkg/mj/TTbar_mj_el_2Gaus_ErfExp_with_pull.pdf}
+		\includegraphics[width=0.47\textwidth]{../plots/bkg/mj/TTbar_mj_mu_2Gaus_ErfExp_with_pull.pdf}
+		\includegraphics[width=0.47\textwidth]{../plots/bkg/mj/STop_mj_el_ExpGaus_with_pull.pdf}
+		\includegraphics[width=0.47\textwidth]{../plots/bkg/mj/STop_mj_mu_ExpGaus_with_pull.pdf}
+		\includegraphics[width=0.47\textwidth]{../plots/bkg/mj/VV_mj_el_2_2Gaus_with_pull.pdf}
+		\includegraphics[width=0.47\textwidth]{../plots/bkg/mj/VV_mj_mu_2_2Gaus_with_pull.pdf}
 	\caption[Background shapes in the pruned jet mass spectrum]{Background shapes in the pruned jet mass spectrum extracted from a fit to MC simulation in the electron (left) and muon channel (right). From top to bottom: W+jets, \ttbar \ , single top and diboson. The ratio plots show the difference of the data and the fitted function normalised to the data uncertainty.}
 	\label{fig:bkg:mjMC}
 \end{figure}
@@ -120,12 +117,12 @@ where $\sigma_{\rm W+jets}$ and $N_{\rm W+jets}$ are the uncertainty and normali
 \noindent The fit results as well as the resulting scale factors are summarized in table~\ref{tab:bkg:mjresults}. A comparison of the pre- and post-fit functions as well as the results using the alternative function are shown in Fig.~\ref{fig:bkg:mjdata}. The final uncertainty for the W+jets normalization used in the limit extraction is taken from the fits as shown in eq.~\ref{eq:bkg:wjetsunc}. For all other background contributions the uncertainty is derived in section \ref{sec:systematics}.
 \begin{figure}
 	\centering
-		\includegraphics[width=0.49\textwidth]{plots/bkg/mj/mj_prefit_el.pdf}		
-		\includegraphics[width=0.49\textwidth]{plots/bkg/mj/mj_prefit_mu.pdf}
-		\includegraphics[width=0.49\textwidth]{plots/bkg/mj/bkg_el_mj.pdf}
-		\includegraphics[width=0.49\textwidth]{plots/bkg/mj/bkg_mu_mj.pdf}	
-		\includegraphics[width=0.49\textwidth]{plots/bkg/mj/bkg_alt_el_mj.pdf}
-		\includegraphics[width=0.49\textwidth]{plots/bkg/mj/bkg_alt_mu_mj.pdf}
+		\includegraphics[width=0.49\textwidth]{../plots/bkg/mj/mj_prefit_el.pdf}		
+		\includegraphics[width=0.49\textwidth]{../plots/bkg/mj/mj_prefit_mu.pdf}
+		\includegraphics[width=0.49\textwidth]{../plots/bkg/mj/bkg_el_mj.pdf}
+		\includegraphics[width=0.49\textwidth]{../plots/bkg/mj/bkg_mu_mj.pdf}	
+		\includegraphics[width=0.49\textwidth]{../plots/bkg/mj/bkg_alt_el_mj.pdf}
+		\includegraphics[width=0.49\textwidth]{../plots/bkg/mj/bkg_alt_mu_mj.pdf}
 	\caption[Comparison of pre- and post-fit functions and the alternative function in the \Mpr -spectrum]{Comparison of pre- (top) and post-fit functions (middle) as well as the alternative function (bottom) in the \Mpr -spectrum in the electron (left) and muon channel (right). The fit is done in the whole \Mpr -spectrum ($\Mpr \in [40,150] $ GeV). The W+jets normalization as well as one shape parameter are freely floating while the \ttbar \ normalization is constraint according to its uncertainty and the diboson contribution is constraint by a factor of two to catch any  aTGC-induced events in the signal regions. The normalization of the single top contribution is fixed to its theoretically predicted cross section. The shown error bands contain statistical uncertainties only.}
 	\label{fig:bkg:mjdata}
 \end{figure}
@@ -207,8 +204,8 @@ F_{\rm W+jets}^{\rm alt}(x)=e^{-\frac{x}{a_5+a_6x}} \, .
 The resulting alpha-function is also plotted in Fig.~\ref{fig:bkg:mwvmc_alpha_mu} (d),(e) and is well covered by the 1-$\sigma$-band of the original function. Corresponding plots for the electron channel can be found in Fig.~\ref{fig:app:mwvmc_alpha_el}.\\
 \begin{figure}
 	\centering
-	\includegraphics[width=0.49\textwidth]{plots/bkg/mlvj/m_lvj_sb_lo_WJets0_xww_el__with_pull_log.pdf}
-	\includegraphics[width=0.49\textwidth]{plots/bkg/mlvj/m_lvj_sb_lo_WJets0_xww_mu__with_pull_log.pdf}
+	\includegraphics[width=0.49\textwidth]{../plots/bkg/mlvj/m_lvj_sb_lo_WJets0_xww_el__with_pull_log.pdf}
+	\includegraphics[width=0.49\textwidth]{../plots/bkg/mlvj/m_lvj_sb_lo_WJets0_xww_mu__with_pull_log.pdf}
 	\caption[Resulting background estimation in the \MWV -spectrum in the sideband region]{Resulting background estimation in the \MWV -spectrum in the sideband region for the electron (left) and muon channel (right). In this fit the shape of the W+jets production was extracted while all other shapes as well as the normalizations were fixed. The shown uncertainty includes statistical uncertainties only.}	
 	\label{fig:bkg:data_sb}
 \end{figure}
@@ -216,17 +213,17 @@ The resulting alpha-function is also plotted in Fig.~\ref{fig:bkg:mwvmc_alpha_mu
 	\centering
 	\subfigure[]{
 		\centering
-		\includegraphics[width=0.5\textwidth]{plots/bkg/mlvj/mu_WJets_mlvj_sb_loHPW_with_pull_log.pdf}		
+		\includegraphics[width=0.5\textwidth]{../plots/bkg/mlvj/mu_WJets_mlvj_sb_loHPW_with_pull_log.pdf}		
 		%\caption{}		
 	}
 	\subfigure[]{
-		\includegraphics[width=0.5\textwidth]{plots/bkg/mlvj/mu_WJets_mlvj_signal_regionHPW_with_pull_log.pdf}
-		\includegraphics[width=0.5\textwidth]{plots/bkg/mlvj/mu_WJets_mlvj_signal_regionHPZ_with_pull_log.pdf}	
+		\includegraphics[width=0.5\textwidth]{../plots/bkg/mlvj/mu_WJets_mlvj_signal_regionHPW_with_pull_log.pdf}
+		\includegraphics[width=0.5\textwidth]{../plots/bkg/mlvj/mu_WJets_mlvj_signal_regionHPZ_with_pull_log.pdf}	
 		%\caption{}
 	}
 	\subfigure[]{	
-		\includegraphics[width=0.5\textwidth]{plots/bkg/alpha/alpha_mu_HPW.pdf}
-		\includegraphics[width=0.5\textwidth]{plots/bkg/alpha/alpha_mu_HPZ.pdf}
+		\includegraphics[width=0.5\textwidth]{../plots/bkg/alpha/alpha_mu_HPW.pdf}
+		\includegraphics[width=0.5\textwidth]{../plots/bkg/alpha/alpha_mu_HPZ.pdf}
 		%\caption{}
 	}
 	\caption[Shape of W+jets production in the sideband and signal regions as well as the resulting alpha-function]{Shape of W+jets production in the sideband (a) and signal regions (b) in the muon channel for the WW- (left) and WZ-category (right) extracted from MC simulation. Also shown are the resulting alpha-functions (black line) in the muon channel (c) for the WW- (left) and WZ-category (right) with the one and two sigma error bands. The orange dashed line shows the result using a different parametrization. The left axis represents the values of the W+jets function in the signal and sideband region in arbitrary units while the right axis shows the values of the alpha-function.}
@@ -237,13 +234,13 @@ The resulting alpha-function is also plotted in Fig.~\ref{fig:bkg:mwvmc_alpha_mu
  \begin{figure}
 	\centering
 	\subfigure[]{
-		\includegraphics[width=0.5\textwidth]{plots/bkg/mlvj/WW_el_cwww.pdf}
-		\includegraphics[width=0.5\textwidth]{plots/bkg/mlvj/WZ_el_cwww.pdf}	
+		\includegraphics[width=0.5\textwidth]{../plots/bkg/mlvj/WW_el_cwww.pdf}
+		\includegraphics[width=0.5\textwidth]{../plots/bkg/mlvj/WZ_el_cwww.pdf}	
 		%\caption{}
 	}
 	\subfigure[]{
-		\includegraphics[width=0.5\textwidth]{plots/bkg/mlvj/WW_mu_cwww.pdf}
-		\includegraphics[width=0.5\textwidth]{plots/bkg/mlvj/WZ_mu_cwww.pdf}
+		\includegraphics[width=0.5\textwidth]{../plots/bkg/mlvj/WW_mu_cwww.pdf}
+		\includegraphics[width=0.5\textwidth]{../plots/bkg/mlvj/WZ_mu_cwww.pdf}
 		%\caption{}
 	}	
 	\caption[Final background estimation in the WW- and WZ-category for the electron and muon channel]{Final background estimation in the WW- (a) and WZ-category (b) for the electron (left) and muon channel (right) (taken from \cite{PAS}). The shape of the W+jets contribution is estimated by multiplying the shape extracted from the sideband data with the alpha-function extracted from MC simulation. The diboson contribution is taken from the signal model with all aTGC-parameters set to zero. The shown uncertainty includes the statistical uncertainties resulting from the fit and the systematic uncertainties that are derived in section~\ref{sec:systematics}.}

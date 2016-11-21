@@ -1,8 +1,7 @@
-\documentclass[a4paper,12pt,twoside,DIVcalc,BCOR12.5mm,headsepline,titlepage,openright,final,english]{scrbook}
-
+%\documentclass[a4paper,12pt,twoside,DIVcalc,BCOR12.5mm,headsepline,titlepage,openright,final,english]{scrbook}
+\documentclass[a4paper,12pt,twoside,DIV=15,BCOR=20mm,headsepline,titlepage=true,openright,final,english]{scrbook}
 
 \usepackage[german,english]{babel}
-
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{siunitx}
@@ -10,8 +9,10 @@
 \usepackage{tgheros} %Helveticaverschnitt
 \usepackage{helvet} 
 \usepackage{newcent}
-\usepackage{geometry}
+%\usepackage{geometry}
+	%\geometry{a4paper}
 \usepackage{bookman}
+\usepackage{wallpaper}
 
 % remove in case no errors without it
 %\usepackage{morefloats}
@@ -22,7 +23,7 @@
     \renewcommand{\rmdefault}{pplx} % ---> Mathpazo Palatino (pplx)
     \linespread{1.05}
 
-\geometry{a4paper}
+
 \usepackage{amsmath,amssymb,amstext}
 \usepackage{graphicx}
 \usepackage{floatrow}
@@ -45,18 +46,18 @@
 \usepackage[subfigure]{tocloft} % subfigure option only if using subfigure package
 	\renewcommand{\cfttoctitlefont} % ToC title
             {\usefont{T1}{phv}{b}{n}\selectfont\huge}
-% 	\renewcommand{\cftchapfont} % chapter titles
-%             {\boldmath\usefont{T1}{phv}{b}{n}\selectfont}
-% 	\renewcommand{\cftsecfont} % section titles
-%             {\usefont{T1}{pplx}{m}{n}\selectfont}
-% 	\renewcommand{\cftsubsecfont} % subsection titles
-%             {\usefont{T1}{pplx}{m}{n}\selectfont} 
-% 	\renewcommand{\cftchappagefont} % chapter page numbers
-%             {\usefont{T1}{pplx}{b}{n}\selectfont}
-% 	\renewcommand{\cftsecpagefont} % section page numbers
-%             {\cftsecfont} 
-% 	\renewcommand{\cftsubsecpagefont} % subsection page numbers
-%             {\cftsubsecfont} 
+ 	\renewcommand{\cftchapfont} % chapter titles
+             {\boldmath\usefont{T1}{phv}{b}{n}\selectfont}
+ 	\renewcommand{\cftsecfont} % section titles
+             {\usefont{T1}{pplx}{m}{n}\selectfont}
+ 	\renewcommand{\cftsubsecfont} % subsection titles
+             {\usefont{T1}{pplx}{m}{n}\selectfont} 
+ 	\renewcommand{\cftchappagefont} % chapter page numbers
+             {\usefont{T1}{pplx}{b}{n}\selectfont}
+ 	\renewcommand{\cftsecpagefont} % section page numbers
+             {\cftsecfont} 
+ 	\renewcommand{\cftsubsecpagefont} % subsection page numbers
+             {\cftsubsecfont} 
  
  
 %%%%%%%%%%%%%  
@@ -107,7 +108,7 @@
 \setcapindent{1em}  % Captions zu begin leicht eingerueckt
     \setlength\parindent{0pt}
 \usepackage[activate=true,final,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype}
-\SetTracking{encoding={*}, shape=sc}{45}
+	\SetTracking{encoding={*}, shape=sc}{45}
 
 \hyphenation{ATLAS}
 
@@ -121,7 +122,7 @@
 \def\thefootnote{\fnsymbol{footnote}}\footnote[#1]{#2}\endgroup} 
 
   \title{title}% FIXME
-  \author{Nils Faltermann}
+  \author{Christoph Renner}
   \date{00.00.00}
   
 \makeatletter
@@ -135,44 +136,45 @@
 
 \begin{document}
 
-\include{title_ger}
-\cleardoublepage
 
-\frontmatter
+%%%\include{title_ger}
+%%%\cleardoublepage
 
-%\include{intro_ger}
-%\cleardoublepage
+%%%\frontmatter
 
-\include{title_eng}
-\cleardoublepage
+%%%%\include{intro_ger}
+%%%%\cleardoublepage
+
+%%%\include{title_eng}
+%%%\cleardoublepage
   
 %  \pagenumbering{roman}  
 \mainmatter
 
-%\include{0_intro_eng}
-\cleardoublepage
+%%%\include{0_intro_eng}
+%%%\cleardoublepage
 
 \tableofcontents
-%\linenumbers
+\linenumbers
 
 \renewcommand{\arraystretch}{1.2}  
  % \pagenumbering{arabic}   
 
-\include{sections/TheoIntro}
-\include{sections/ExperimentalSetup}
+%%%\include{sections/TheoIntro}
+%%%\include{sections/ExperimentalSetup}
 \include{sections/EventReco}
-\include{sections/Signal}
-\include{sections/background}
-\include{sections/limits}
-\include{sections/conclusion}
+%%%\include{sections/Signal}
+%%%\include{sections/background}
+%%%\include{sections/limits}
+%%%\include{sections/conclusion}
 %  \appendix
 
 
  
-\listoftables
-\listoffigures
+%%%\listoftables
+%%%\listoffigures
 
-\bibliographystyle{custom}
+\bibliographystyle{custom2}
 
 \bibliography{thesis}
 \backmatter

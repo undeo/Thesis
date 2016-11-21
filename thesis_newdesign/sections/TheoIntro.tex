@@ -1,11 +1,11 @@
 \chapter{Theoretical Introduction}
 \label{chap::TheoreticalIntroduction}
-The Standard Model of particle physics (SM) summariyes the theories of elementary particles and their interactions. Since its development between 1960 and 1970, the fundamental paramters of the SM have been measured with ever increasing accuracy. Predictions made by the SM, like the existence of new particles, have been confirmed many times. With the detection of the top-quark in 1995 \cite{top_detection1,top_detection2}, the tau-neutrino in 2000 \cite{tau_nu_detection} and the Higgs boson in 2012 \cite{cms_higgsdiscov,atlas_higgsdiscov}, the last missing particles of the SM has been observed.\\
+The Standard Model of particle physics summarizes the theories of elementary particles and their interactions. Since its development between 1960 and 1970, the fundamental parameters of the Standard Model have been measured with ever increasing accuracy. Predictions made by the Standard Model, like the existence of new particles, have been confirmed many times. With the detection of the top-quark in 1995 \cite{top_detection1,top_detection2}, the tau-neutrino in 2000 \cite{tau_nu_detection} and the Higgs boson in 2012 \cite{cms_higgsdiscov,atlas_higgsdiscov}, the last missing particles of the SM has been observed.\\
 
 The following chapter gives an introduction into the theoretical background relevant for this analysis. In the first section, the main properties of the Standard Model of particle physics is described. The second section focusses on physics beyond the Standard Model as well as an approach to describe these new physics via anomalous couplings, the so-called effective field theory approach. All derivations are taken from \cite{peskin,mandl} if not stated otherwise.
 
 \section{The Standard Model of Particle Physics}
-The Standard Model of particle physics describes the fundamental forces of nature and their interactions with elementary particles. It combines the theory of the strong force, the electromagnetic force and the weak force into a consistent model, while gravity is not yet included. Each force is represented by a quantum field theory with the particles being excitations of quantum fields. The underlying symmetries of the interactions between particles are described by the symmetry groups SU(3)$\otimes$SU(2)$\otimes$U(1). According to Noether's theorem \cite{noether}, every symmetry leads to a conserved charge. In the SM, these charges are given by the electrical charge, the colour charge and the weak isospin. Demanding the formalisms to be gauge invariant leads to one or more gauge bosons for each force. The bosons couple to the charges and are the mediators of the interactions between particles.//
+The Standard Model of particle physics (SM) describes the fundamental forces of nature and their interactions with elementary particles. It combines the theory of the strong force, the electromagnetic force and the weak force into a consistent model, while gravity is not yet included. Each force is represented by a quantum field theory with the particles being excitations of quantum fields. The underlying symmetries of the interactions between particles are described by the symmetry groups SU(3)$\otimes$SU(2)$\otimes$U(1). According to Noether's theorem \cite{noether}, every symmetry leads to a conserved charge. In the SM, these charges are given by the electrical charge, the colour charge and the weak isospin. Demanding the formalisms to be gauge invariant leads to one or more gauge bosons for each force. The bosons couple to the charges and are the mediators of the interactions between particles.\\
 
 \noindent The underlying formalism of the SM including particles and their interactions is based on quantum field theories. To understand the concept of quantum field theories, the Lagrangian formalism is needed, which was originally introduced to describe Newtonian mechanics. For every physical system a Lagrangian can be defined, which is given by
 \begin{equation}
@@ -124,8 +124,8 @@ where the additional term describes the interaction of the fermion field $\psi$ 
 \noindent The bosons transporting the strong force are given by the gluons, which are massless and couple to the colour charge. The theory describing gluons and their interaction with colour-charged particles is called quantum chromodynamics (QCD). Gluons can be introduced similarly to the photons by requiring the QCD-Lagrangian to be locally gauge invariant. Since gluons themselves carry a colour and an anti-colour, they can couple to each other as shown in Fig.~\ref{fig:theo:gluoncoupling}. There are three colour charges (red, green and blue) leading to eight different gluons.\\
 \begin{figure}
 	\centering
-	\includegraphics[width=0.4\textwidth]{plots/theoIntro/feynmans/gluons.pdf}
-	\includegraphics[width=0.4\textwidth]{plots/theoIntro/feynmans/gluons2.pdf}
+	\includegraphics[width=0.4\textwidth]{../plots/theoIntro/feynmans/gluons.pdf}
+	\includegraphics[width=0.4\textwidth]{../plots/theoIntro/feynmans/gluons2.pdf}
 	\caption[Feynman diagram of gluon self-interaction at tree-level]{Feynman diagram of gluon self-interaction at tree-level.}
 	\label{fig:theo:gluoncoupling}
 \end{figure}
@@ -151,7 +151,7 @@ with the Higgs field
 and arbitrary real parameters $\mu^2$ and $\lambda$. The Higgs potential is shown in Fig.~\ref{fig:theo:higgspot} for $\mu^2<0$.
 \begin{figure}
 	\centering
-	\includegraphics[width=0.75\textwidth]{plots/theoIntro/higgspot.png}
+	\includegraphics[width=0.75\textwidth]{../plots/theoIntro/higgspot.png}
 	\caption[Higgs potential for $\mu^2<0$]{Higgs potential for $\mu^2<0$, taken from \cite{higgspot}. There is a local maximum at $\phi=0$ and a circle of absolute minima.}
 	\label{fig:theo:higgspot}
 \end{figure}
@@ -202,7 +202,7 @@ g_1^Z = g_1^\gamma = \kappa_Z = \kappa_\gamma &= 1 ~, \\
 Any physics that is not included in the SM can affect these coupling parameters. A detailed description of these effects can be found in the next section.
 \begin{figure}
 	\centering
-	\includegraphics[width=0.45\textwidth]{plots/theoIntro/feynmans/TGC_WW.pdf}
+	\includegraphics[width=0.45\textwidth]{../plots/theoIntro/feynmans/TGC_WW.pdf}
 	\caption[Feynman diagram of triple gauge coupling at tree level]{Feynman diagram of triple gauge coupling at tree level.}
 	\label{fig:theo:tgc}
 \end{figure}
@@ -217,7 +217,7 @@ Although the SM has been confirmed to be self-consistent countless of times, the
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.6\textwidth]{plots/theoIntro/rotcurvesfig.png}
+	\includegraphics[width=0.6\textwidth]{../plots/theoIntro/rotcurvesfig.png}
 	\caption[Rotation curve of stars around the galaxy NGC 2198]{Rotation curve of stars around the galaxy NGC 2198 \cite{rotcurves}. Shown are the measured rotation speeds of stars and gas clouds (dots) with a fitted function (straight line). Also shown are the components of the fitted function: visible matter (dashed line), gaseous matter (dotted line) and dark matter (dash-dotted line). In contrast to expectations, the rotation speeds stay constant at high distances, pointing to additional mass in the galaxy.}
 	\label{fig:theo:rotcurves}
 \end{figure}
@@ -246,7 +246,7 @@ where $g$ denotes the weak coupling constant. $g_1^\gamma$ is fixed due to elect
 The anomalous couplings introduced by these parameters add terms of the order $s^2/\Lambda^4$ to the diboson cross section \cite{EFT}, leading to an increased cross section at high center of mass energies. In Fig.~\ref{fig:theo:unitarity} the differential cross section for the SM W$^+$W$^-$ process as well as the aTGC process corresponding to $\Tcwww = 1/(400 \, {\rm GeV})^{2}$ is shown in the invariant mass spectrum of the diboson system, which is equal to the scale of the process. Also shown is the unitarity bound, which is eventually violated by the aTGC process at high invariant masses. However, at this scale the approach is not valid anymore, since there is no justification to ignore the dimension eight operators in eq.~\ref{eq:theo:operators} at energies of the order of $\Lambda$. Arbitrarily many operators of even higher dimension would have to be taken into account, making the approach useless.\\
 \begin{figure}
 	\centering
-	\includegraphics[width=\textwidth]{plots/theoIntro/unitarity.png}
+	\includegraphics[width=\textwidth]{../plots/theoIntro/unitarity.png}
 	\caption[Comparison of the differential cross section of the SM and aTGC WW production]{Comparison of the differential cross section of the SM and aTGC WW production for $\cwww=\frac{1}{(400\,{\rm GeV})}$. The cross section increases dominantly at high invariant masses. Also shown is the unitarity bound. The picture is taken from \cite{EFT}.}
 	\label{fig:theo:unitarity}
 \end{figure}
