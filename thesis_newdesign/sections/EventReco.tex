@@ -1,10 +1,13 @@
 \chapter{Event Reconstruction and Selection}
 \label{chap::EventReconstructionandSelection}
-A crucial point of every analysis in particle physics is the reconstruction of events from the signal provided by the particle detectors. The same reconstruction has to be applied to the simulated events to be able to make reliable predictions of the background processes. By applying cuts to the variables describing each event, the signal processes can be enhanced while suppressing background events,\\
+A crucial point of every analysis in particle physics is the reconstruction of events from the signals provided by the particle detectors. The same reconstruction has to be applied to the simulated events to be able to make reliable predictions of the background processes. By applying cuts to the variables describing each event, the signal processes can be enhanced while suppressing background events.\\
 
-\noindent In the first part of this chapter, the reconstruction methods and algorithms used in this analysis are described. Some techniques that are important especially for this analysis are portrayed in more detail. The second part of the chapter describes the event generators used for the event simulation, while the last part focusses on the event selection.
+
+\noindent In the first part of this chapter, the reconstruction methods and algorithms used in this analysis are described. Some techniques that are important especially for this analysis are portrayed in more detail. The second part of the chapter describes the event selection, while the last part focusses on the event generators used for the event simulation.
 \section{Reconstruction of Events}
-To be able to analyse the physical processes in the particle collissons measured by the CMS detector, the signals from the different subdetectors have to be interpreted. For that the CMS collaboration uses the Particle Flow (PF) algorithm \cite{PF}, which combines the information from different subdetectors to improve the quality of the reconstruction.
+To be able to analyse the physical processes in the particle collissons measured by the CMS detector, the signals from the different subdetectors have to be interpreted. For that the CMS collaboration uses the Particle Flow (PF) algorithm \cite{PF1,PF2}, which combines the information from different subdetectors to improve the quality of the reconstruction.\\
+
+\noindent In this analysis, high cuts on the transverse momentum of the bosons in the final state are applied. This results in
 \subsection{Particle Tracks}
 Particle tracks are reconstructed using the silicon tracker described in section~\ref{sec:tracker}.
 Charged particles propagating in a magnetic field move on helices.
@@ -16,27 +19,38 @@ Charged particles propagating in a magnetic field move on helices.
 ==charge
 ==trigger
 ==Efficiencies
+\subsection{Missing Transverse Energy}
+The neutrino produced in the semileptonic decay of the W boson leaves the detector without any interaction. However, some of its properties can be reconstructed using the laws of momentum and energy conservation. The two quarks participating in the collision are expected to have negligible transverse momentum. Therefore, the sum of the transverse momenta of all final state particles is expected to be zero. Any non-zero net momentum of the final state particle is assigned to the neutrino\footnote{In the relativistic limit the energy $E$ is equal to the momentum $p$ (assuming natural units, $c=\hbar=1$)}\cite{MET}
+\begin{equation}
+\MET \equiv -\sum_k p_{{\rm T},k} ~,
+\end{equation}
+where the sum is over all reconstructed particles. Since there is only one neutrino in each event, this \MET can be directly assigned to it. From the \MET together with the W mass constraint the longitudinal momentum of the neutrino is reconstructed \cite{PAS} via
+\begin{align}
+p_{z,\nu} &= \frac{\mu \cdot p_{z,{\rm lep}}}{p_{\rm T,lep}^2} \pm \sqrt{\frac{\mu^2 \cdot p_{z,{\rm lep}}^2}{p_{\rm T,lep}^4} - \frac{E_{\rm lep}^2 \cdot \MET^2 - \mu}{p_{\rm T,lep}^2}} ~, \\
+\mu &= \frac{M_W^2}{2} + \vec{p}_{\rm T,lep}\cdot \vec{\MET} ~,
+\end{align} 
+where $p_{z,{\rm lep}}$ and $p_{\rm T,lep}$ are the longitudinal  and transverse momentum of the lepton, respectively, and $E_{\rm lep}$ is its total energy. In case of a imaginary solution only the real part is used, while for two solutions the smaller one is used.
 \subsection{Reconstruction of Photons and Hadrons}
 \subsection{Jet Reconstruction and Jet-Substructure Algorithms}
 \label{sec:pruning}
 Quarks and gluons in the final state can not be directly detected since they are colour-charged. Due to gluon radiation and the splitting of gluons in quark-antiquark pairs, a shower of particle develops, a so-called jet. A jet is reconstructed using the entries in the hadronic calorimeter. There are different algorithms available for the reconstruction of jets, which can be divided into two categories. Cone-like algorithms fit cones with fixed radius to the calorimeter entries centred at the hardest particle (e.g. SISCone), while sequential algorithms combine particles depending on a distance parameter $d$ (e.g. anti-$k_{\rm T}$). Latter algorithms are used in this analysis, which is why they are described in more detail here.\\
 
-\noindent For sequential jet algorithms the distance between two particles $d_{ij}$ and the distance of a particle and the beam $d_{iB}$ are defined as
+\noindent For sequential jet reconstruction algorithms the distance between two particles $d_{ij}$ and the distance of a particle and the beam $d_{iB}$ are defined as
 \begin{align}
-d_{ij} &= \min(k_{{\rm T},i}^{2p},k_{{\rm T},j}^{2p})\frac{\Delta_{ij}^2}{R^2} ~, \\
+d_{ij} &= \min\left(k_{{\rm T},i}^{2p},k_{{\rm T},j}^{2p}\right)\frac{\Delta_{ij}^2}{R^2} ~, \\
 d_{iB} &= k_{{\rm T},i}^{2p} ~,
 \end{align}
 with
 \begin{equation}
 \Delta_{ij}^2 = (y_i-y_j)^2 + (\phi_i - \phi_j)^2 ~, \label{eq:reco:deltar}
 \end{equation}
-where $R$ denotes a fixed radius parameter, $k_{{\rm T},i}$ the transverse momentum, $y_i$ the rapidity and $\phi_i$ the azimuthal angle of particle $i$. The value of the parameter $p$ depends on the algorithm used. These distance parameters are estimated for all particle combinations. The two particles with the smallest $d_{ij}$ are then combined to a proto-jet, which is treated equally as particle in the next iterations. If the smallest distance happens to be a $d_{iB}$, the proto-jet $i$ is promoted to a jet and removed from the list of particles. This procedure is repeated until all particles have been assigned to a jet.\\
+where $R$ denotes a fixed size parameter, $k_{{\rm T},i}$ the transverse momentum, $y_i$ the rapidity and $\phi_i$ the azimuthal angle of particle $i$. The value of the parameter $p$ depends on the algorithm used. These distance parameters are estimated for all particle combinations. The two particles with the smallest $d_{ij}$ are then combined to a proto-jet, which is treated equally as particle in the next iterations. If the smallest distance happens to be a $d_{iB}$, the proto-jet $i$ is promoted to a jet and removed from the list of particles. This procedure is repeated until all particles have been assigned to a jet.\\
 
 \noindent For the Cambridge-Aachen algorithm (CA) $p=-1$ is used \cite{CA}. For this algorithm, the distances $d$ only depend on the spatial separation of the particles. This makes it useful for jet substructure methods, like the pruning algorithm described below.\\
 
 \noindent A value of $p=-1$ corresponds to the anti-$k_{\rm T}$ algorithm. All soft particles within a radius of $R$ around a hard particle are clustered with the hard particle before clustering among themselves. If the distance between two hard particles is smaller than $R$, the particle with higher $k_{\rm T}$ is prioritized. This leads to round, cone-like jets, where soft particles do not affect the shape.\\
 
-\noindent A comparison of the jet reconstruction of a simulated event with many soft particles is shown in Fig.~\ref{fig:eventreco:jet_reco}. As can be seen there, the anti-$k_{\rm T}$ produces cone-like jets that are circular in the $y$-$\phi$-plane. They are centred around the particles with high $p_{\rm T}$.
+\noindent A comparison of the jet reconstruction of a simulated event with many soft particles is shown in Fig.~\ref{fig:eventreco:jet_reco}. As can be seen there, the anti-$k_{\rm T}$ produces cone-like jets that are circular in the $y$-$\phi$-plane. They are centred around the particles with high $p_{\rm T}$.\\
 \begin{figure}
 	\centering
 	\subfigure[]{
@@ -49,48 +63,52 @@ where $R$ denotes a fixed radius parameter, $k_{{\rm T},i}$ the transverse momen
 	\label{fig:eventreco:jet_reco}
 \end{figure}
 
-\subsubsection*{Reconstruction of b-quark Jets}
-Jets resulting from b quarks can be differd from other jets. Due to the colour confinement they tend to form B mesons. Since the decay of b quarks into the lighter c and d quarks is suppressed by the CKM mechanism \cite{CKM}, they have a high mean life time of $\tau=1,6\cdot 10^{-12}$\,s \cite{PDG}. Before decaying and forming a jet, they travel a measurable distance away from the primary vertex, forming a secondary vertex (see Fig.~\ref{fig:reco:bjet}. In this analysis, the Combined Secondary Vertex (CSV) algorithm is used to identify b quark jets.
+\noindent A high $p_{\rm T}$ cut is applied to the hadronically decaying boson (see section~\ref{sec:eventselection}). The jets emerging from the two quarks in the final state are therefore overlapping. Instead of two distinct jets, only one so-called fat jet can be reconstructed. Therefore, two size parameters $R=0.4$ and $R=0.8$ are used for the anti-$k_{\rm T}$ algorithm, corresponding to AK4 and AK8 jets, respectively. The AK8 jet with highest transverse momentum is used as hadronic boson candidate while the AK4 jets are used to identify b quark jets. The substructure of the AK8 jet can be used to discriminate jets coming from QCD events. In this analysis, the $N$-subjettiness and the pruning algorithm are used, which are also described in this section.
+
+\subsubsection*{Reconstruction of b Quark Jets}
+Jets resulting from b quarks can be differed from other jets. Due to the colour confinement b quarks tend to form B mesons. Since their decay into the lighter c and d quarks is suppressed by the CKM mechanism \cite{CKM}, they have a high mean life time of $\tau=1,6\cdot 10^{-12}$\,s \cite{SMmasses}. Before decaying and forming a jet, they travel a measurable distance away from the primary vertex, forming a secondary vertex (see Fig.~\ref{fig:reco:bjet}). In this analysis, the Combined Secondary Vertex (CSV) algorithm \cite{CSV} is used to identify b quark jets. It makes use of different kinematic variables related to the secondary vertex, e.g. the invariant mass of charged particles or their rapidity as well as the impact parameters of tracks coming from the secondary vertex to construct a discriminating variable. Working points are defined as different cuts on the discriminating variable, resulting in different reconstruction efficiencies. In this analysis, the tight working point is used. Events are excluded from the analysis if they contain one or more AK4 jets that are identified as b quark jets. Additionally, the AK4 jet has to be in a distance of $\Delta R \geq 0.8$ with respect to the hadronic boson candidate to avoid the exclusion of WZ events with the Z decaying to b$\bar{\rm b}$.
 \begin{figure}
     \centering
-    \includegraphics[width=0.75\textwidth]{../plots/reco/bjet.png}
-    \caption[Illustration of a b quark jet]{Illustration of a b quark jet, taken from \cite{bjet}. The tracks of one of the jets do not point to the primary vertex but rather to a secondary one displaced by the impact paramter $d_0$.}
+    \includegraphics[width=0.5\textwidth]{../plots/reco/bjet.png}
+    \caption[Illustration of a b quark jet]{Illustration of a b quark jet, taken from \cite{bjet}. The tracks of one of the jets do not point to the primary vertex but rather to a secondary one displaced by the impact paramter $d_0$.}\
+    \label{fig:reco:bjet}
 \end{figure}
 
 \subsubsection*{$N$-Subjettiness}
-Particle jets arising from QCD events like W+jets production are expected to have a different substructure compared to jets from hadronically decaying boosted bosons. A variable with discrimination power between those jets is the N-Subjettiness \cite{nsubjettiness}. First, the jet is reclustered to $N$ subjets using a reconstruction algorithm. For $N$ reconstructed subjets the $N$-subjettiness is defined as
+Particle jets arising from QCD events like W+jets production are expected to have a different substructure compared to jets from hadronically decaying boosted bosons. A variable with discrimination power between those jets is the N-subjettiness \cite{nsubjettiness}. First, the jet is reclustered to $N$ subjets using a reconstruction algorithm. For $N$ reconstructed subjets the $N$-subjettiness is defined as
 \begin{align}
-\tau_N ^= \frac{1}{d_0} \sum_k p_{{\rm T},k} \min{\Delta_{1,k},\Delta_{2,k},\dots,\Delta_{N,k} ~, \\
+\tau_N &= \frac{1}{d_0} \sum_k p_{{\rm T},k} \min(\Delta_{1k},\Delta_{2k},\dots,\Delta_{Nk}) ~, \\
 d_0 &= \sum_k p_{{\rm T},k} R_0 ~,
 \end{align}
-where $k$ runs over all constituent particles of a given jet, $p_{{\rm T},k}$ is the transverse momentum of jet $k$ and the $\Delta_{ik}$ are defined in equation~\ref{eq:reco:deltar}. $\tau_N$ quantifies to what degree the jet can be regarded to as composed of $N$ subjets. Rather than applying a cut directly on $\tau_N$, the 2-1-subjettiness, which is defined as the ratio
+where $k$ runs over all constituent particles of a given jet, $p_{{\rm T},k}$ is the transverse momentum of jet $k$, $R_0$ is the jet radius used in the original reconstructions algorithm and the $\Delta_{ik}$ are defined in equation~\ref{eq:reco:deltar}. $\tau_N$ quantifies to what degree the jet can be regarded to as composed of $N$ subjets. Rather than applying a cut directly on $\tau_N$, the 2-1-subjettiness, which is defined as the ratio
 \begin{equation}
 \tau_{21}=\frac{\tau_2}{\tau_1} ~,
 \end{equation}
-is found to be a much more discriminating variable.
+is found to be a much more discriminating variable between heavy boson jets and jets emerging from gluons or single quarks.
 \subsubsection*{Pruning}
-Another way of discriminating jets from QCD events is the so-called pruning algorithm \cite{pruning}. 
+The so-called pruning algorithm is another way of discriminating jets from QCD events \cite{pruning}. It also reduces systematic effects of soft radiation emerging from e.g. the underlying event. The basic idea is to rerun the CA algorithm on the AK8 jets reconstructed with the anti-$k_{\rm T}$ algorithm. Before recombining particle $i$ and $j$ to a subjet $p$, the following conditions have to be met
+\begin{align}
+z = \frac{\min (p_{{\rm T}i},p_{{\rm T}j})}{p_{{\rm T}p}} &> z_{\rm cut} ~, \\
+\Delta_{ij} &< D_{\rm cut} ~.
+\end{align}
+If this is not the case, the merging is vetoed and the softer of the two particles is removed.
+\subsection{Reconstruction of the Diboson System}
+The main observable in this analysis is the invariant mass of the two boson, $M_{WV}$. It is obtained from the sum of the four-vectors of the hadronic and leptonic bosons. The hadronic boson candidate is taken as the AK8 jet with highest $p_{\rm T}$. The leptonic W candidate is reconstructed as the sum of the four-vectors of the lepton and neutrino. 
+\section{Event Selections}
+\label{sec:eventselection}
+Each event has to pass several selection criteria, which are applied in form of cuts on event variables. These cuts are specifically chosen to reduce the background contributions while enhancing the signal process. To reduce noise of the subdetectors, at least one well reconstructed collision vertex is required for each event.\\
 
-\subsection{Missing Transverse Energy}
-The neutrino produced in the semileptonic decay of the W boson leaves the detector without any interaction. However, some of its properties can be reconstructed using the laws of momentum and energy conservation. The two quarks participating in the collision are expected to have negligible transverse momentum. Therefore, the sum of the transverse momenta of all final state particles is expected to be zero. Any non-zero net momentum of the final state particle is assigned to the neutrino\footnote{In the relativistic limit the energy $E$ is equal to the momentum $p$ (assuming natural units, $c=\hbar=1$)}\cite{MET}
-\begin{equation}
-\MET \equiv -\sum_k p_{{\rm T},k} ~,
-\end{equation}
-where the sum is over all reconstructed particles. Since there is only one neutrino in each event, this \MET can be directly assigned to it.
-\subsection{Particle Flow Algorithm}
+\noindent Since the signal process contains one leptonically decaying W boson, each event is required to contain at least one electron (muon) with a transverse momentum of $p_{\rm T}>50$\,GeV (53\,GeV) that lies within $|\eta|<2.5$ (2.4). For the missing transverse energy a cut of $MET>80$\,GeV (40\,GeV) is applied. 
 \section{Event Simulation}
 \label{sec:MC}
 To be able to make reliable predictions about the events, precise simulation of the involved physical processes, like the scattering or the hadronization, as well as the detector response are needed. For this, different Monte Carlo event generators are used for the different processes relevant in this analysis.
 \dots \\
-The signal process is simulated in leading order using the \textsc{MadGraph\textunderscore aMC@NLO} event generator with the \textit{EWDim6} model\cite{madgraph}, which implements anomalous couplings based on the effective field theory (EFT) approach that is described in section~\ref{}. Different strenghts of the anomalous couplings are generated by reweighting the originally generated samples according to several working points specified in chapter~\ref{signal}.
+The signal process is simulated in leading order using the \textsc{MadGraph\textunderscore aMC@NLO} event generator with the \textit{EWDim6} model\cite{madgraph}, which implements anomalous couplings based on the effective field theory (EFT) approach that is described in section~\ref{}. Different strengths of the anomalous couplings are generated by reweighting the originally generated samples according to several working points specified in chapter~\ref{signal}.
 
 
 =={Data to MC corrections:}
 =={Pileup}
 =={Reconstruction Efficiencies}
 =={Jet Smearing}
-\section{Control Regions}
-\section{Event Selections}
-Each event has to pass several selection criteria, which are applied in form of cuts on event variables. These cuts are specifically chosen to reduce the background contributions while enhancing the signal process. To reduce noise of the subdetectors, at least one well reconstructed collision vertex is required for each event.\\
-
-\noindent Since the signal process contains one leptonically decaying W boson, each event is required to contain at least one electron (muon) with a transverse momentum of $p_{\rm T}>50$\,GeV (53\,GeV) that lies within $|\eta|<2.5$ (2.4). For the missing transverse energy a cut of $MET>80$\,GeV (40\,GeV) is applied. 
+=={control regions}
+The simulated samples are verified 

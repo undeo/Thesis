@@ -1,6 +1,6 @@
 \chapter{Theoretical Introduction}
 \label{chap::TheoreticalIntroduction}
-The Standard Model of particle physics summarizes the theories of elementary particles and their interactions. Since its development between 1960 and 1970, the fundamental parameters of the Standard Model have been measured with ever increasing accuracy. Predictions made by the Standard Model, like the existence of new particles, have been confirmed many times. With the detection of the top-quark in 1995 \cite{top_detection1,top_detection2}, the tau-neutrino in 2000 \cite{tau_nu_detection} and the Higgs boson in 2012 \cite{cms_higgsdiscov,atlas_higgsdiscov}, the last missing particles of the SM has been observed.\\
+The Standard Model of particle physics summarizes the theories of elementary particles and their interactions. Since its development between 1960 and 1970, the fundamental parameters of the Standard Model have been measured with ever increasing accuracy. Predictions made by the Standard Model, like the existence of new particles, have been confirmed many times. With the detection of the top-quark in 1995 \cite{top_detection1,top_detection2}, the tau-neutrino in 2000 \cite{tau_nu_detection} and the Higgs boson in 2012 \cite{cms_higgsdiscov,atlas_higgsdiscov}, the last missing particles of the SM have been observed.\\
 
 The following chapter gives an introduction into the theoretical background relevant for this analysis. In the first section, the main properties of the Standard Model of particle physics is described. The second section focusses on physics beyond the Standard Model as well as an approach to describe these new physics via anomalous couplings, the so-called effective field theory approach. All derivations are taken from \cite{peskin,mandl} if not stated otherwise.
 
@@ -38,7 +38,7 @@ Given the Lagrangian of a particle, this equation can be used to derived the cor
 \begin{equation}
 \mathcal{L}_{\rm Dirac}=i\hbar c \overline{\psi} \gamma^\mu \partial_\mu \psi -  mc^2\overline{\psi}\psi ~, \label{eq:theo:diraclag}
 \end{equation}
-with the gamma matrices $\gamma^\mu$, the Dirac-spinor $\psi$ and its Dirac adjoint $\overline{\psi}=\psi^\dagger \gamma^0$. Inserting this Lagrangian into equation~\ref{eq:theo:eullag} leads to the equation of motion for a particle with mass $m$ and spin $J=1/2$, the so-called Dirac equation
+with the gamma matrices $\gamma^\mu$, the Dirac-spinor $\psi$ and its Dirac adjoint $\overline{\psi}=\psi^\dagger \gamma^0$. Inserting this Lagrangian into eq.~\ref{eq:theo:eullag} leads to the equation of motion for a particle with mass $m$ and spin $J=1/2$, the so-called Dirac equation
 \begin{equation}
 \left(i\gamma^\mu\partial_\mu-m\right)\psi(x)=0 ~.
 \end{equation}
@@ -58,7 +58,7 @@ A fermion is a particle with half-integer spin that therefore follows the Pauli 
 %\cdot \begin{pmatrix} d \\ s \\ b \end{pmatrix} \quad ~,
 %\end{equation}
 %where the entries of the CKM-matrix $V_{ij}$ describe the amount of mixing between the flavours. This mixing allows for quark decays between different generations. 
-All observable hadronic particles consist either of three quarks of different colours (baryons) or of two quarks with one colour and anti-colour (mesons), leading to colour-neutral particles. If two quarks are seperated far enough, the energy stored in gluon field of the strong interaction is sufficient to create a new quark-antiquark pair, leading to two colour-neutral hadrons. The fact that there no free colour-charged particles can be observed is called confinement. A summary of the fermions in the SM is shown in Tab.~\ref{tab:theo:fermions}.\\
+All observable hadronic particles consist either of three quarks of different colours (baryons) or of two quarks with one colour and anti-colour (mesons), leading to colour-neutral particles. If two quarks are seperated far enough, the energy stored in gluon field of the strong interaction is sufficient to create a new quark-antiquark pair, leading to two colour-neutral hadrons. The fact that no free colour-charged particles can be observed is called confinement. A summary of the fermions in the SM is shown in Tab.~\ref{tab:theo:fermions}.\\
 \begin{table}[]
 	\centering
 	\caption[Summary of the fermions in the Standard Model]{Summary of the fermions in the Standard Model. Each generation of fermions contains a lepton- and a quark-isospin-doublet. Only the quarks carry a colour charge of red (r), green (g) or blue (b). Neutrinos only carry an isospin and thus only interact via the weak force.}
@@ -99,7 +99,7 @@ All observable hadronic particles consist either of three quarks of different co
 \end{table}
 The three fundamental forces in the SM are mediated by bosons with spin $J=1$, the so-called vector bosons. These bosons arise from gauge symmetries inherent to the quantum field theories describing the interactions. As an example, the derivation of the gauge boson of the electromagnetic interaction, the photon, is portrayed in this section. A summary of all vector boson can be found in Tab.~\ref{tab:theo:bosons}.\\
 
-\noindent The Lagrangian describing the fermions, i.e. the Dirac Lagrangian in equation~\ref{eq:theo:diraclag}, is required to be invariant under gauge transformations. Global gauge transformations, which transform the Dirac spinor according to
+\noindent The Lagrangian describing the fermions, i.e. the Dirac Lagrangian in eq.~\ref{eq:theo:diraclag}, is required to be invariant under gauge transformations. Global gauge transformations, which transform the Dirac spinor according to
 \begin{equation}
 \psi\rightarrow e^{i\theta}\psi ~,
 \end{equation}
@@ -115,7 +115,7 @@ Invariance can be restored by replacing the ordinary derivative with the covaria
 \begin{equation}
 \partial_\mu \rightarrow D_\mu = [\partial_\mu + ie\gamma_\mu(x)] ~,
 \end{equation}
-with the gauge field $\gamma_\mu$ representing the photon. The photon has to be massless to avoid additional mass terms, which would break the invariance of the Lagrangian. The new invariant Lagrangian is then given as
+with the gauge field $\gamma_\mu$ representing the photon. The photon has to be massless to avoid additional mass terms, which would again break the invariance of the Lagrangian. The new invariant Lagrangian is then given as
 \begin{equation}
 \mathcal{L} = \mathcal{L}_{\rm Dirac} - q\overline{\psi}\gamma^\mu\psi \gamma_\mu ~,
 \end{equation}
@@ -159,7 +159,7 @@ In this case, the potential has a local maximum at $\phi=0$ and a circle of abso
 \begin{equation}
 \phi_0(\theta) = \sqrt{\frac{-\mu^2}{2\lambda}}e^{i\theta} \quad , \quad 0\geq \theta \geq 2\pi ~.
 \end{equation}
-Since the corresponding Lagrangian density is invariant under global phase transformations, the ground state can be arbitrarily chosen as
+Since the corresponding Lagrangian density is invariant under global phase transformations, the phase $\theta$ can be arbitrarily chosen as $\theta=0$, leading to the ground state
 \begin{equation}
 \phi_0 = \frac{-\mu^2}{2\lambda}=\frac{1}{\sqrt{2}}v ~, \label{eq:theo:higgsexp}
 \end{equation}
@@ -167,12 +167,12 @@ with the vacuum expectation value of the Higgs field $v$. By choosing a ground s
 \begin{equation}
 D_\mu \phi = \left( \partial_\mu -igW_\mu^a\frac{\sigma^a}{2} - i\frac{1}{2}g'B_\mu \right)\phi ~,
 \end{equation}
-where $W_\mu^a$ denotes the three gauge bosons of SU(2)$_I$ and $B_\mu$ denotes the gauge boson of U(1)$_Y$. The two symmetry groups have two different coupling constants, namely $g$ and $g'$. Inserting this into the electroweak Lagrangian and evaluating it at the vacuum expectation value of the Higgs field (equation~\ref{eq:theo:higgsexp}) leads to three massive bosons
+where $W_\mu^a$ denotes the three gauge bosons of SU(2)$_I$ and $B_\mu$ denotes the gauge boson of U(1)$_Y$. The two symmetry groups have two different coupling constants, namely $g$ and $g'$. Inserting this into the electroweak Lagrangian and evaluating it at the vacuum expectation value of the Higgs field (eq.~\ref{eq:theo:higgsexp}) leads to three massive bosons
 \begin{align}
 W_\mu^\pm &= \frac{1}{\sqrt{2}}\left( W_\mu^1 \mp iW_\mu^2 \right) \\
 Z_\mu &= \frac{1}{\sqrt{g^2+g'^2}}\left( gW_\mu^3-g'B_\mu\right) \label{eq:theo:Z}
 \end{align}
-and one massless boson, which is orthogonal to the $Z_\mu^0$
+and one massless boson, which is orthogonal to the $Z_\mu$
 \begin{equation}
 \gamma_\mu = \frac{1}{\sqrt{g^2+g'^2}}\left( g'W_\mu^3 + gB_\mu \right) ~. \label{eq:theo:photon}
 \end{equation}
@@ -213,7 +213,7 @@ Although the SM has been confirmed to be self-consistent countless of times, the
 
 \noindent Another example of BSM physics is the so-called dark matter, which describes particles that only interact via gravitation and possibly the weak force. An evidence for the existence of dark matter is given by the rotation speed of stars around the center of a galaxy. According to the Newtonian gravitation laws this speed is expected to increase with increasing distance from the galaxy bulk, where most of the galaxy's mass is centred. Beyond the bulk the rotation speeds are expected to decrease with increasing distance. However, the observed rotation curves show a constant rotation speed for stars beyond the galaxy bulk, as shown in Fig.~\ref{fig:theo:rotcurves}. This can be explained by additional mass with constant density in the galaxy, the so-called dark matter halo, which extends far beyond the galaxy.\\ 
  
-\noindent An example for dark matter candidates are neutrinos, which pass all requirements of a dark matter particle. Neutrinos are assumed to be massless in the SM. However, by measuring atmospheric, solar and reactor neutrinos several experiments observed a strong mixing among the neutrino generations (e.g. \cite{nuoszi1,nuoszi2,nuoszi3,nuoszi4}). This is only possible if at least two of the neutrino mass eigenstates are unequal to zero, which contradicts the SM expectation. Additionally, right handed neutrinos and left handed anti neutrinos could exist, so-called sterile neutrinos \cite{sterilenu}. Sterile neutrinos do not couple to the weak force and can therefore only be created by oscillation. Howecer, current upper limits on the neutrino masses are too small \cite{numasses1,numasses2} to explain the observed rotation curves only using neutrinos.\\
+\noindent An example for dark matter candidates are neutrinos, which pass all requirements of a dark matter particle. Neutrinos are assumed to be massless in the SM. However, by measuring atmospheric, solar and reactor neutrinos several experiments observed a strong mixing among the neutrino generations (e.g. \cite{nuoszi1,nuoszi2,nuoszi3,nuoszi4}). This is only possible if at least two of the neutrino mass eigenstates are unequal to zero, which contradicts the SM expectation. Additionally, right handed neutrinos and left handed anti neutrinos could exist, so-called sterile neutrinos \cite{sterilenu}. Sterile neutrinos do not couple to the weak force and can therefore only be created by oscillation. Howecer, current upper limits on the neutrino masses are too small \cite{numasses1,numasses2} to explain the observed rotation curves using only neutrinos.\\
 
 \begin{figure}
 	\centering
@@ -222,13 +222,13 @@ Although the SM has been confirmed to be self-consistent countless of times, the
 	\label{fig:theo:rotcurves}
 \end{figure}
 
-\noindent There are several attempts of new theories describing dark matter or other BSM physics that introduce new, heavy particles (e.g. supersymmetry). Other theories predict new spatial dimensions when attempting to include gravity to the SM \cite{xdimensions}. This analysis focuses on those theories that introduce a scale of the new physics $\Lambda$ that is much larger than the energy currently experimentally accessible. The scale $\Lambda$ either corresponds to the mass of the new particles or to the energy at which the new physics occurs. At low energies (i.e. energies lower than $\Lambda$), the new physics can influence the SM processes, like the self couplings of the electroweak bosons described in section~\ref{subsec:theo:EWK}. This results in new effective couplings called anomalous couplings and can be described by altering the values of the coupling parameters in the Lagrangian of the electroweak self interaction (equation~\ref{eq:theo:EWKlag}). This approach yields several problems. For example, the Lagrangian can be expanded by additional derivatives, which would only be suppressed by factors of $M_W^{-1}$. At energies above $M_W$, they would have to be taken into account, making the approach arbitrarily complex. Additionally, this Lagrangian leads to ultraviolet divergences in loop calculations. These problems can be avoided by using the effective field theory approach (EFT), which provides a model-independent approach of describing BSM physics that is currently not in experimental reach \cite{EFT}. In this approach it is assumed that new physics exists at a scale $\Lambda$ which is much larger than the accessible energy. However, possible effects of new physics might affect processes at lower scales. These effects are described by integrating out the degrees of freedom of new physics, leading to an effective Lagrangian with additional operators $\mathcal{O}^{(d)}$ of dimension $d\geq 5$
+\noindent There are several attempts of new theories describing dark matter or other BSM physics that introduce new, heavy particles (e.g. supersymmetry). Other theories predict new spatial dimensions when attempting to include gravity to the SM \cite{xdimensions}. This analysis focuses on those theories that introduce a scale of the new physics $\Lambda$ that is much larger than the energy currently experimentally accessible. The scale $\Lambda$ either corresponds to the mass of the new particles or to the energy at which the new physics occurs. At low energies (i.e. energies lower than $\Lambda$), the new physics can influence the SM processes, like the self couplings of the electroweak bosons described in section~\ref{subsec:theo:EWK}. This results in new effective couplings called anomalous couplings and can be described by altering the values of the coupling parameters in the Lagrangian of the electroweak self interaction (eq.~\ref{eq:theo:EWKlag}). This approach yields several problems. For example, the Lagrangian can be expanded by additional derivatives, which would only be suppressed by factors of $M_W^{-1}$. At energies above $M_W$, they would have to be taken into account, making the approach arbitrarily complex. Additionally, this Lagrangian leads to ultraviolet divergences in loop calculations. These problems can be avoided by using the effective field theory approach (EFT), which provides a model-independent approach of describing BSM physics that is currently not in experimental reach \cite{EFT}. In this approach it is assumed that new physics exists at a scale $\Lambda$ which is much larger than the accessible energy. However, possible effects of new physics might affect processes at lower scales. These effects are described by integrating out the degrees of freedom of new physics, leading to an effective Lagrangian with additional operators $\mathcal{O}^{(d)}$ of dimension $d\geq 5$
 \begin{equation}
 \mathcal{L}_{\rm eff} = \mathcal{L}_0 + \sum_{n=1}^{\infty} \sum_i \frac{c_i^{(n)}}{\Lambda^{n}}\mathcal{O}_i^{(n+4)} ~, \label{eq:theo:operators}
 \end{equation}
-where $c_i$ parametrizes the coupling strength of the new physics. There is one operator of dimension five which does not contribute to the signal process under consideration in this analysis. There are numerous dimensions six operators of which only five introduce anomalous triple gauge couplings (aTGC). Two of them are not C- and/or P-conserving and are not considered in this analysis. This leaves three operators, which can be chosen according to \cite{EFTparam} as
+where $c_i$ parametrizes the coupling strength of the new physics. There is one operator of dimension five which does not contribute to the signal process under consideration in this analysis. There are numerous dimensions six operators of which only five introduce anomalous triple gauge couplings (aTGC). Two of them are not C- and/or P-conserving and are therefore neglected. This leaves three operators, which can be chosen according to \cite{EFTparam} as
 \begin{align}
-\mathcal{O}_{WWW} &= \rm{Tr}[W_{\mu\nu}W^{\nu\rho}W^\mu_\rho] ~, \\
+\mathcal{O}_{WWW} &= {\rm Tr}[W_{\mu\nu}W^{\nu\rho}W^\mu_\rho] ~, \\
 \mathcal{O}_{W} &=  (D_\mu\Phi)^\dagger W^{\mu\nu}(D_\nu\Phi) ~, \\
 \mathcal{O}_{B} &= (D_\mu\Phi)^\dagger B^{\mu\nu}(D_\nu\Phi) ~.
 \end{align}
@@ -243,7 +243,7 @@ where $g$ denotes the weak coupling constant. $g_1^\gamma$ is fixed due to elect
 \begin{align}
 \frac{c_{WWW}}{\Lambda^2} ~, \quad \frac{c_W}{\Lambda^2} ~, \quad \frac{c_B}{\Lambda^2} ~.
 \end{align}
-The anomalous couplings introduced by these parameters add terms of the order $s^2/\Lambda^4$ to the diboson cross section \cite{EFT}, leading to an increased cross section at high center of mass energies. In Fig.~\ref{fig:theo:unitarity} the differential cross section for the SM W$^+$W$^-$ process as well as the aTGC process corresponding to $\Tcwww = 1/(400 \, {\rm GeV})^{2}$ is shown in the invariant mass spectrum of the diboson system, which is equal to the scale of the process. Also shown is the unitarity bound, which is eventually violated by the aTGC process at high invariant masses. However, at this scale the approach is not valid anymore, since there is no justification to ignore the dimension eight operators in eq.~\ref{eq:theo:operators} at energies of the order of $\Lambda$. Arbitrarily many operators of even higher dimension would have to be taken into account, making the approach useless.\\
+The anomalous couplings introduced by these parameters add terms of the order $s^2/\Lambda^4$ to the diboson cross section \cite{EFT}, leading to an increased cross section at high center of mass energies. In Fig.~\ref{fig:theo:unitarity} the differential cross section for the SM W$^+$W$^-$ process as well as the aTGC process corresponding to $\Tcwww = 1/(400 \, {\rm GeV})^{2}$ is shown in the invariant mass spectrum of the diboson system, which is equal to the scale of the process. Also shown is the unitarity bound, which is eventually violated by the aTGC process at high invariant masses. However, at this scale the approach is not valid anymore, since there is no justification to ignore the higher dimension operators in eq.~\ref{eq:theo:operators} at energies of the order of $\Lambda$. Arbitrarily many operators of even higher dimension would have to be taken into account, making the approach useless.\\
 \begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{../plots/theoIntro/unitarity.png}

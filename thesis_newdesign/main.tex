@@ -110,7 +110,9 @@
 \usepackage[activate=true,final,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype}
 	\SetTracking{encoding={*}, shape=sc}{45}
 
-\hyphenation{ATLAS}
+%\hyphenation{ATLAS}
+\hyphenation{N-sub-jet-ti-ness}
+
 
 %\newcommand{\vecd}[1]{\vec{#1}}
 %\newcommand{\vecv}[1]{\mathbf{#1}}
@@ -137,42 +139,42 @@
 \begin{document}
 
 
-%%%\include{title_ger}
-%%%\cleardoublepage
+\include{title_ger}
+\cleardoublepage
 
-%%%\frontmatter
+\frontmatter
 
-%%%%\include{intro_ger}
-%%%%\cleardoublepage
+\include{intro_ger}
+\cleardoublepage
 
-%%%\include{title_eng}
-%%%\cleardoublepage
+\include{title_eng}
+\cleardoublepage
   
-%  \pagenumbering{roman}  
+\pagenumbering{roman}  
 \mainmatter
 
-%%%\include{0_intro_eng}
-%%%\cleardoublepage
+\include{0_intro_eng}
+\cleardoublepage
 
 \tableofcontents
 \linenumbers
 
 \renewcommand{\arraystretch}{1.2}  
- % \pagenumbering{arabic}   
+\pagenumbering{arabic}   
 
-%%%\include{sections/TheoIntro}
-%%%\include{sections/ExperimentalSetup}
+\include{sections/TheoIntro}
+\include{sections/ExperimentalSetup}
 \include{sections/EventReco}
-%%%\include{sections/Signal}
-%%%\include{sections/background}
-%%%\include{sections/limits}
-%%%\include{sections/conclusion}
-%  \appendix
+\include{sections/Signal}
+\include{sections/background}
+\include{sections/limits}
+\include{sections/conclusion}
+%%%\appendix
 
 
  
-%%%\listoftables
-%%%\listoffigures
+\listoftables
+\listoffigures
 
 \bibliographystyle{custom2}
 
