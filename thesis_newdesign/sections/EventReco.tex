@@ -2,17 +2,18 @@
 \label{chap::EventReconstructionandSelection}
 A crucial point of every analysis in particle physics is the reconstruction of events from the signals provided by the particle detectors. The same reconstruction has to be applied to the simulated events to be able to make reliable predictions of the background processes. By applying cuts to the variables describing each event, the signal processes can be enhanced while suppressing background events.\\
 
-
 \noindent In the first part of this chapter, the reconstruction methods and algorithms used in this analysis are described. Some techniques that are important especially for this analysis are portrayed in more detail. The second part of the chapter describes the event selection, while the last part focusses on the event generators used for the event simulation.
 \section{Reconstruction of Events}
 To be able to analyse the physical processes in the particle collissons measured by the CMS detector, the signals from the different subdetectors have to be interpreted. For that the CMS collaboration uses the Particle Flow (PF) algorithm \cite{PF1,PF2}, which combines the information from different subdetectors to improve the quality of the reconstruction.\\
 
 \noindent In this analysis, high cuts on the transverse momentum of the bosons in the final state are applied. This results in
 \subsection{Particle Tracks}
-Particle tracks are reconstructed using the silicon tracker described in section~\ref{sec:tracker}.
-Charged particles propagating in a magnetic field move on helices.
+Particle tracks are reconstructed using the silicon tracker and the muon system described in chapter~\ref{chap:expsetup}. Charged particles propagating through the magnetic field of the solenoid move on helices, leading to bent trajectories. They leave energy deposits inside the tracker, so-called hits, which are used to reconstruct the tracks. From the curvature of the tracks the momentum as well as the charge of particles are determined. The particle tracks are also used for the identification of b quarks as described in section~\ref{sec:jetreco}.//
+
+\noindent The algorithm used for the reconstruction of particle tracks is the Combinatorial Track Finder (CTF) \cite{ctf1,ctf2}. First, track candidates are seeded from two or three hits close to the beam pipe in different layers of the tracker. These are then used in the Combinatorial Kalman filter method \cite{kalman} to add more hits to the track candidate. For each added hit a $\chi^2$ test is performed to see if it is compatible with the track predicted by the seeded hits. With each added hit the track prediction is updated, taking into account effects of scattering or energy losses. This fit procedure is performed parallel for many track candidates. If hits are assigned two more than one track, the track with less quality, i.e. the ones with fewer compatible hits or lower $\chi^2$ values, are rejected. As a final step, the remaining track candidates are refitted to all respective hits to further improve the measurement of the track parameters.
 
 \subsection{Vertex Reconstruction}
+From the reconstructed particle tracks the collision vertices can be determined. Since there are multiple collisions in each proton bunch crossing, this is important to reduce the effects of the pileup. 
 \subsection{Reconstruction of Lepton Candidates}
 ==trace in tracker
 ==energy in ecal
@@ -32,6 +33,7 @@ p_{z,\nu} &= \frac{\mu \cdot p_{z,{\rm lep}}}{p_{\rm T,lep}^2} \pm \sqrt{\frac{\
 where $p_{z,{\rm lep}}$ and $p_{\rm T,lep}$ are the longitudinal  and transverse momentum of the lepton, respectively, and $E_{\rm lep}$ is its total energy. In case of a imaginary solution only the real part is used, while for two solutions the smaller one is used.
 \subsection{Reconstruction of Photons and Hadrons}
 \subsection{Jet Reconstruction and Jet-Substructure Algorithms}
+\label{sec:jetreco}
 \label{sec:pruning}
 Quarks and gluons in the final state can not be directly detected since they are colour-charged. Due to gluon radiation and the splitting of gluons in quark-antiquark pairs, a shower of particle develops, a so-called jet. A jet is reconstructed using the entries in the hadronic calorimeter. There are different algorithms available for the reconstruction of jets, which can be divided into two categories. Cone-like algorithms fit cones with fixed radius to the calorimeter entries centred at the hardest particle (e.g. SISCone), while sequential algorithms combine particles depending on a distance parameter $d$ (e.g. anti-$k_{\rm T}$). Latter algorithms are used in this analysis, which is why they are described in more detail here.\\
 
