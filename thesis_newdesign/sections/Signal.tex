@@ -161,7 +161,7 @@ The available simulated signal samples with complete detector simulation only co
 Interference effects between different aTGC contributions have to be taken into account for scenarios where more than one aTGC parameter is unequal to zero. The cross section for a scenario with two non-zero aTGC parameters can be derived similarly to equation~\ref{eq:signal:xsec} by squaring the sum of amplitudes
 \begin{align}
 \sigma \propto A_{\rm aTGC}^2 &= \left( A_{\rm SM} + c_i A_{c_i} + c_j A_{c_j} \right)^2 \\
-&= A_{\rm SM}^2 + c_i^2 A_{c_i}^2 + c_j^2 A_{c_j}^2 + 2c_i A_{\rm SM} A_{c_i} + 2c_j A_{\rm SM} A_{c_j} + 2c_ic_jA_{c_i}A_{c_j} ~. \label{eq:signal:xsecint}
+&= A_{\rm SM}^2 + c_i^2 A_{c_i}^2 + c_j^2 A_{c_j}^2 + 2A_{\rm SM}\left( c_iA_{c_i} + c_jA_{c_j}\right) + 2c_ic_jA_{c_i}A_{c_j} ~. \label{eq:signal:xsecint}
 \end{align}
 The last term in equation~\ref{eq:signal:xsecint} corresponds to the interference between $c_i$ and $c_j$. These effect are introduced to the signal model by adding additional exponential functions proportional to two different aTGC parameters to the signal function in equation~\ref{eq:signal:sigfunc}
 \begin{align}

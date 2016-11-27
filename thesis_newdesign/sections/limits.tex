@@ -18,7 +18,7 @@ L(\theta) = \prod_{i=1}^n f(x_i,\theta) ~.
 \end{equation}
 It is expected to yield high values for parameters values $\theta$ close to the true ones. The maximum likelihood estimators $\hat{\theta}$ are given by the parameter values that maximize the likelihood function
 \begin{equation}
-\left. \frac{\partial L}{\partial \theta} \right| _{\theta=\hat{\theta}} = 0 ~.
+\left. \frac{\partial L}{\partial \theta_i} \right| _{\theta_i=\hat{\theta_i}} = 0 ~.
 \label{eq:limits:1stderivlikelihood}
 \end{equation}
 
@@ -239,16 +239,42 @@ with the W boson mass $M_W$, the Z boson mass $M_Z$, the weak coupling constant 
 	}		
 	\caption[Two-dimensional delta-log-likelihood distributions for the three combinations of aTGC parameters in the vertex parametrization]{Two-dimensional delta-log-likelihood distributions for $\lambda_Z$-$\Delta\kappa_Z$ (a), $\lambda_Z$-$\Delta g_1^Z$ (b) and $\Delta\kappa_Z$-$\Delta g_1^Z$ (c). Shown are the expected distributions (dashed lines) for the 68\% (blue), 95\% (green) and 99\% C.L. (red) as well as the observed distribution (black line).}
 	\label{fig:limits:2dlimitsvertex}	
+	\label{fig:limits:compare}
 \end{figure}
 
 \begin{figure}
     \centering
-    \includegraphics[width=\textwidth]{../plots/limits/compare.pdf}
-    \caption[Comparison of the limits on the aTGC parameters in vertex parametrization with previous results]{Comparison of the limits on the aTGC parameters in vertex parametrization with previous results. The limits taken in this analysis are highlighted in yellow. As can be seen here, the limits are comparable with the previous ones, despite the comparatively small used dataset.}
+    \includegraphics[width=0.9\textwidth]{../plots/results/compare.pdf}
+    \caption[Comparison of the limits on the aTGC parameters in vertex parametrization with previous results]{Comparison of the limits on the aTGC parameters in vertex parametrization with previous results, adapted from \cite{limits_compare}. Shown are the results of analyses by the CMS (red) and ATLAS collaboration (blue) as well as combined limits by LEP (black) and D0 (green). The limits taken in this analysis are highlighted in yellow. As can be seen here, the limits are comparable with the previous ones, despite the comparatively small used dataset.}
 \end{figure}
 
 \section{Additional Verification of the Limit Setting Procedure}
 \label{sec:limits:atgcint}
+\subsubsection*{Two-dimensional Limits without aTGC-Interference}
+\begin{figure}
+	\centering
+	\subfigure[]{
+		\includegraphics[width=0.5\textwidth]{../plots/results/ccw_cb_2dlimit_deltaNLL.pdf}
+	}%
+	\subfigure[]{
+		\includegraphics[width=0.5\textwidth]{../plots/results/ccw_cb_2dlimit_deltaNLL_noatgcint.pdf}
+	}
+	\caption[Comparison of the two-dimensional limits for \Tccw -\Tcb \ with and without the aTGC interference]{Comparison of the two-dimensional limits for \Tccw -\Tcb \ with (a) and without (b) the aTGC interference. The interference causes the contours to slightly shift clockwise.}
+	\label{fig:limits:noatgcint}
+\end{figure}
+The effects of the interfenrence between different aTGC contributions can be illustrated in terms of a simple counting experiment with two aTGC parameters $c_1$ and $c_2$, neglecting the SM contribution. The number of observed events $N_{\rm obs}$ is then given by
+\begin{equation}
+N_{\rm obs} = \left( c_1A_1 + c_2A_2 \right)^2 = c_1^2A_1^2 + c_2^2A_2^2 + c_1c_2A_1A_2 ~,
+\end{equation}
+where $A_1$ and $A_2$ denote the contributions of the two parameters $c_1$ and $c_2$, respectively. The term describing the interference between the two parameters can be eliminated by a rotation
+\begin{eqnarray}
+c_1'A_1' &=& c_1A_1\cos \alpha + c_2A_2\sin \alpha \\
+c_2'A_2' &=& -c_1A_1\sin \alpha + c_2A_2\cos \alpha
+\end{eqnarray}
+around the angle $\alpha$, which can be interpreted as the strength of the interference. This causes the two-dimensional $\Delta NLL$ contours to be rotated depending on
+the size of $\alpha$. The interference effects between the different aTGC contributions are found to be comparatively small (see Tab.~\ref{tab:signal:relcoef}) and only lead to a visible rotation for the \Tccw - \Tcb -limits. In Fig.~\ref{fig:limits:noatgcint} the limits for \Tccw -\Tcb \ are shown with and without the aTGC interference.
+
+
 \subsubsection*{Merging the WW- and WZ-category}
 
 In the two-dimensional limits the different sensitivities of the aTGC parameters in the two regions are expected to affect the shape of the resulting limits. This motivated the division of the signal region into a low- and high-mass region (see section~\ref{sec:wwwzregs}). Roughly equal sensitivities in both regions for both parameters (i.e. for the two-dimensional \Tcwww -\Tccw -limits) lead to elliptical limits. In the hypothetical case of two parameters that each only contribute to one of the regions the contours of the $\Delta NLL$ distribution would take the shape of a rectangle. This is partly realised in the limits including \Tcb \ , which only has a small contribution to the WZ-category, leading to a contour shape intermediate between an ellipse and a rectangle.\\
@@ -268,28 +294,4 @@ In the two-dimensional limits the different sensitivities of the aTGC parameters
 	}		
 	\caption[Two-dimensional delta-log-likelihood distributions for the three combinations of aTGC parameters without division of the signal region]{Two-dimensional delta-log-likelihood distributions for \Tcwww -\Tccw \ (a), \Tcwww -\Tcb \ (b) and \Tccw -\Tcb\ (c) without division of the signal region. Shown are the expected distributions (dashed lines) for the 68\% (blue), 95\% (green) and 99\% C.L. (red) as well as the observed distribution (black line).}
 	\label{fig:limits:2dlimits_nocat}	
-\end{figure}
-\subsubsection*{Two-dimensional Limits without aTGC-Interference}
-The effects of the interfenrence between different aTGC contributions can be illustrated in terms of a simple counting experiment with two aTGC parameters $c_1$ and $c_2$, neglecting the SM contribution. The number of observed events $N_{\rm obs}$ is then given by
-\begin{equation}
-N_{\rm obs} = \left( c_1A_1 + c_2A_2 \right)^2 = c_1^2A_1^2 + c_2^2A_2^2 + c_1c_2A_1A_2 ~,
-\end{equation}
-where $A_1$ and $A_2$ denote the contributions of the two parameters $c_1$ and $c_2$, respectively. The term describing the interference between the two parameters can be eliminated by a rotation
-\begin{eqnarray}
-c_1'A_1' &=& c_1A_1\cos \alpha + c_2A_2\sin \alpha \\
-c_2'A_2' &=& -c_1A_1\sin \alpha + c_2A_2\cos \alpha
-\end{eqnarray}
-around the angle $\alpha$, which can be interpreted as the strength of the interference. This causes the two-dimensional $\Delta NLL$ contours to be rotated depending on
-the size of $\alpha$. The interference effects between the different aTGC contributions are found to be comparatively small (see Tab.~\ref{tab:signal:relcoef}) and only lead to a visible rotation for the \Tccw - \Tcb -limits. In Fig.~\ref{fig:limits:noatgcint} the limits for \Tccw -\Tcb \ are shown with and without the aTGC interference.
-
-\begin{figure}
-	\centering
-	\subfigure[]{
-		\includegraphics[width=0.5\textwidth]{../plots/results/ccw_cb_2dlimit_deltaNLL.pdf}
-	}%
-	\subfigure[]{
-		\includegraphics[width=0.5\textwidth]{../plots/results/ccw_cb_2dlimit_deltaNLL_noatgcint.pdf}
-	}
-	\caption[Comparison of the two-dimensional limits for \Tccw -\Tcb \ with and without the aTGC interference]{Comparison of the two-dimensional limits for \Tccw -\Tcb \ with (a) and without (b) the aTGC interference. The interference causes the contours to slightly shift clockwise.}
-	\label{fig:limits:noatgcint}
 \end{figure}
