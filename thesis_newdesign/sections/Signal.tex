@@ -1,6 +1,6 @@
 \chapter{Modelling of the Signal Process}
 \label{chap:signal}
-The effects of anomalous triple gauge couplings (Fig.~\ref{fig:signal:fy_atgc}) on the diboson production can be described by an analytical model using the aTGC parameters introduced in section~\ref{sec:aTGC}. The deviation of the signal model used in this analysis is presented in this chapter. First, the division of the signal region into a WW- and a WZ-enriched region is motivated based on the different kinematics of the two signal processes. After that the extraction of the normalization and shape of the signal process are described. Finally, a cross check on the signal modelling is presented.
+The effects of anomalous triple gauge couplings (Fig.~\ref{fig:signal:fy_atgc}) on the diboson production can be described by an analytical model using the aTGC parameters introduced in section~\ref{sec:aTGC}. The deviation of the signal model used in this analysis is presented in this chapter. First, the division of the signal region into a WW- and a WZ-enriched region is motivated based on the different kinematics of the two signal processes. After that the extraction of the normalization and shape of the signal process are described. Finally, a cross check on the signal modelling is presented.\\
 \begin{figure}
 	\centering
 	\subfigure[]{
@@ -13,7 +13,7 @@ The effects of anomalous triple gauge couplings (Fig.~\ref{fig:signal:fy_atgc}) 
 	\label{fig:signal:fy_atgc}
 \end{figure}
 
-For each aTGC parameter two working points are defined at about the expected sensitivity of the analysis (table~\ref{tab:signal:aTGCpoints}). The MC samples for these working points are obtained by reweighting the originally created samples.
+\noindent The signal process is simulated in leading order using the \textsc{MadGraph\textunderscore aMC@NLO} event generator with the \textit{EWDim6} model, which implements anomalous couplings based on the effective field theory (EFT) approach that is described in section~\ref{}. For each aTGC parameter two working points are defined at about the expected sensitivity of the analysis (table~\ref{tab:signal:aTGCpoints}). The MC samples for these working points are obtained by reweighting the originally created samples.
 \begin{table}
 	\centering
 	\caption[aTGC working points]{aTGC parameter values in TeV$^{-2}$ to which the signal MC sample has been reweighted.}
@@ -29,7 +29,6 @@ For each aTGC parameter two working points are defined at about the expected sen
 	\hline
 	\end{tabular}
 \end{table}
-
 
 \section{Division of the Signal Region into WW- and WZ-enriched Regions}
 The signal process under consideration contains both WW and WZ events, which are expected to have a peaking distribution in the \Mpr -spectrum at the W or Z boson mass, respectively. Due to the limited resolution of the hadronic calorimeter, those two peaks cannot be easily distinguished. However, if the signal region is divided into a low-mass ($\Mpr \in [65,85]\,{\rm GeV}$, WW-category) and a high-mass region ($\Mpr \in [85,105]\,{\rm GeV}$, WZ-category), their compositions differ significantly, as can be seen in Fig.~\ref{fig:signal:wwwz_comp}. While the low-mass-region contains most of the WW-events and some WZ-events with low \Mpr \ , the high-mass-region contains most of the WZ-events and some WW-events with high \Mpr .\\
