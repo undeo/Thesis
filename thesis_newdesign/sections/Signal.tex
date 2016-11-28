@@ -13,14 +13,15 @@ The effects of anomalous triple gauge couplings (Fig.~\ref{fig:signal:fy_atgc}) 
 	\label{fig:signal:fy_atgc}
 \end{figure}
 
-\noindent The signal process is simulated in leading order using the \textsc{MadGraph\textunderscore aMC@NLO} event generator with the \textit{EWDim6} model, which implements anomalous couplings based on the effective field theory (EFT) approach that is described in section~\ref{}. For each aTGC parameter two working points are defined at about the expected sensitivity of the analysis (table~\ref{tab:signal:aTGCpoints}). The MC samples for these working points are obtained by reweighting the originally created samples.
+\noindent The signal process is simulated in leading order using the \textsc{MadGraph\textunderscore aMC@NLO} event generator with the \textit{EWDim6} model, which implements anomalous couplings based on the effective field theory (EFT) approach that is described in section~\ref{sec:aTGC}. For each aTGC parameter two working points are defined at about the expected sensitivity of the analysis (table~\ref{tab:signal:aTGCpoints}). The simulation samples for these working points are obtained by reweighting the originally generated samples.
 \begin{table}
 	\centering
-	\caption[aTGC working points]{aTGC parameter values in TeV$^{-2}$ to which the signal MC sample has been reweighted.}
+	\caption[aTGC working points]{aTGC parameter values to which the simulated signal sample has been reweighted.}
 	\label{tab:signal:aTGCpoints}
 	\begin{tabular}{cccc}
 	\hline
 	\# & \Tcwww & \Tccw & \Tcb \\
+	\ & (TeV$^{-2}$) & (TeV$^{-2}$) & (TeV$^{-2}$)\\
 	\hline
 	1,2 &  $\pm 12$ & 0 & 0\\
 	3,4 & 0 &  $\pm 20$ & 0\\
@@ -33,7 +34,7 @@ The effects of anomalous triple gauge couplings (Fig.~\ref{fig:signal:fy_atgc}) 
 \section{Division of the Signal Region into WW- and WZ-enriched Regions}
 The signal process under consideration contains both WW and WZ events, which are expected to have a peaking distribution in the \Mpr -spectrum at the W or Z boson mass, respectively. Due to the limited resolution of the hadronic calorimeter, those two peaks cannot be easily distinguished. However, if the signal region is divided into a low-mass ($\Mpr \in [65,85]\,{\rm GeV}$, WW-category) and a high-mass region ($\Mpr \in [85,105]\,{\rm GeV}$, WZ-category), their compositions differ significantly, as can be seen in Fig.~\ref{fig:signal:wwwz_comp}. While the low-mass-region contains most of the WW-events and some WZ-events with low \Mpr \ , the high-mass-region contains most of the WZ-events and some WW-events with high \Mpr .\\
 
-\noindent The division of the signal region provides some sensitivity to different aTGC scenarios. Two of the aTGC parameters, \Tcwww \ and \Tccw , both enhance the WW and WZ production. However, \Tcb \ almost exclusively contributes to WW events, as can be seen in Fig.~\ref{fig:signal:wwwz_comp_cb}. This allows to distinguish two scenarios. In the first one, only \Tcb \ is unequal to zero, which would result in a larger enhancement in the WW-category than in the WZ-category. This would lead to looser one-dimensional limits in the WW-category. In the second scenario, only \Tcwww \ and/or \Tccw \ are unequal to zero, leading to roughly similar limits in both categories. The effect on the two-dimensional limits is described in detail in section~\ref{sec:2dlims}.\\
+\noindent The division of the signal region provides some sensitivity to different aTGC scenarios. Two of the aTGC parameters, \Tcwww \ and \Tccw , enhance both the WW and WZ production. However, \Tcb \ almost exclusively contributes to WW events, as can be seen in Fig.~\ref{fig:signal:wwwz_comp_cb}. This allows to distinguish two scenarios. In the first one, only \Tcb \ is unequal to zero, which would result in a larger enhancement in the WW-category than in the WZ-category. This would lead to looser one-dimensional limits in the WW-category. In the second scenario, only \Tcwww \ and/or \Tccw \ are unequal to zero, leading to roughly similar limits in both categories. The effect on the two-dimensional limits is described in detail in section~\ref{sec:2dlims}.\\
 \begin{figure}
 	\centering
 	\subfigure[]{
@@ -60,7 +61,7 @@ The signal process under consideration contains both WW and WZ events, which are
 The signal function is given by an analytical function depending on the three aTGC parameters. This allows for different scenarios where either one, two or three aTGC parameters are unequal to zero. The signal model can also be easily reparametrized to the vertex parametrization used by previous analyses (see section~\ref{sec:vertex}). It is designed to describe the SM diboson process if all aTGC three parameters are set to zero. For each channel (WW- and WZ-category in both electron and muon channel) a separate signal function is defined. In this section the modelling of the signal function is described in detail.
 
 \subsection*{Normalization}
-The final normalization of the SM diboson process is estimated by its theoretically predicted cross section \cite{WWxsec,WZxsec}. The normalization of the aTGC contribution is then obtained by applying a scaling factor that is extracted from the simulated LO signal sample reweighted to the corresponding aTGC parameter values. Since the event yields scale quadratically in the aTGC parameters, the scaling factor is defined as
+The final normalizations of the SM diboson processes are estimated by their theoretically predicted cross sections \cite{WWxsec,WZxsec}. The normalization of the aTGC contribution is then obtained by applying a scaling factor that is extracted from the simulated LO signal sample reweighted to the corresponding aTGC parameter values. Since the event yields scale quadratically in the aTGC parameters, the scaling factor is defined as
 \begin{equation}
 S_{\rm aTGC} = 1 + \left[ \Delta f_1\left(\cwww\right) + \Delta f_2\left(\ccw\right) + \Delta f_3\left(\cb\right) \right] ~,
 \end{equation}
@@ -72,7 +73,7 @@ f_i(x) &= a_i + b_i x + d_i x^2 ~. \label{eq:signal:scale}
 The functions $f_i(x)$ describe the relative increase in event yields for each aTGC parameter with $f_i(0)=1$. This definition ensures $S_{\rm aTGC}=1$ for the SM case. The parameters of these functions are extracted from fits to the aTGC yields normalized to the SM yields for the different working points as shown in Fig.~\ref{fig:signal:atgcyields_mu} for the muon channel\footnote{All plots shown in this section correspond to the WW-category in the muon channel. Analogous plots for the other channels can be found in the appendix.}. As can be seen here, the yields for positive and negative aTGC parameter values differ for two of the aTGC parameters, which is caused by interference effects between the aTGC and the SM contribution. This can be illustrated by looking at the cross section of the aTGC process, which is computed by adding the amplitudes $A_i$ and squaring \cite{EFT}, resulting in
 \begin{align}
 \sigma \propto A_{\rm aTGC}^2 &= \left( A_{\rm SM} + c_i A_{c_i} \right)^2 \\
-&= A_{\rm SM}^2 + c_i^2  A_{c_i}^2 + c_i  A_{\rm SM} A_{c_i} ~. \label{eq:signal:xsec} 
+&= A_{\rm SM}^2 + c_i^2  A_{c_i}^2 + 2c_i  A_{\rm SM} A_{c_i} ~. \label{eq:signal:xsec} 
 \end{align}
 The third term in equation~\ref{eq:signal:xsec} depends on the sign of $c_i$, thus leading to different event yields. This is taken into account by the linear terms in equation~\ref{eq:signal:scale}.
 \begin{figure}
@@ -88,7 +89,7 @@ The third term in equation~\ref{eq:signal:xsec} depends on the sign of $c_i$, th
 \end{figure}
 
 \subsection*{Shape}
-The shape of the aTGC contribution is designed as a sum of the different contributions, namely the SM process, the quadratic dependence, the SM interference and the interference between different aTGC contributions (aTGC-aTGC-interference, introduced in section~\ref{subsec:signal:aTGCInt}). The normalization is taken from the scaling factor mentioned above, while the signal function is normalized to unity. The main contributions are the SM process and the quadratic dependence to the aTGC parameters. Both contributions are modelled by an exponential function, while the quadratic aTGC term is additionally proportional to the square of the corresponding aTGC parameter. The quadratic contributions show a turn-on at $\MWV \approx 1$\,TeV, which is modelled by an error function. The signal function without aTGC-aTGC-interference is therefore given by
+The shape of the aTGC contribution is designed as sum of the different contributions, namely the SM process, the quadratic dependence, the SM interference and the interference between different aTGC contributions (aTGC-aTGC-interference, introduced in section~\ref{subsec:signal:aTGCInt}). The normalization is taken from the scaling factor mentioned above, while the signal function is normalized to unity. The main contributions are the SM process and the quadratic dependence to the aTGC parameters. Both contributions are modelled by an exponential function, while the quadratic aTGC term is additionally proportional to the square of the corresponding aTGC parameter. The quadratic contributions show a turn-on at $\MWV \approx 1$\,TeV, which is modelled by an error function. The signal function without aTGC-aTGC-interference is therefore given by
 \begin{align}
 F_{\rm aTGC} =& F_{\rm SM} + \sum_i \left( F_{c_i^2} + F_{c_i} \right) \\
 =& \frac{N_{\rm SM}}{A_N} e^{-a_{SM}x} + \sum_i \left( \frac{N_{c_i,1}}{A_N} c_i^2 e^{-a_{i,1} x} \frac{1+\rm{Erf}\left(\frac{x-a_{o,i}}{a_{w,i}}\right)}{2} + \frac{N_{c_i,2}}{A_N} c_i e^{a_{i,2}x} \right)  ~,
@@ -96,7 +97,7 @@ F_{\rm aTGC} =& F_{\rm SM} + \sum_i \left( F_{c_i^2} + F_{c_i} \right) \\
 \end{align}
 with the error function
 \begin{equation}
-\rm{Erf}(x) = \frac{2}{\sqrt{\pi}}\int_0^x \! e^{-t^2}{\rm dt} ~,
+{\rm Erf}(x) = \frac{2}{\sqrt{\pi}}\int_0^x \! e^{-t^2}{\rm dt} ~,
 \end{equation}
 the global normalization
 \begin{equation}
@@ -107,7 +108,7 @@ and the aTGC parameters, which are normalized to the corresponding working point
 \begin{equation}
 c_1 = \frac{1}{12}\cwww ~ , \quad c_2 = \frac{1}{20}\ccw ~ , \quad c_3 = \frac{1}{60}\cb ~.
 \end{equation}
-The coefficient of the SM contribution is given by the SM yield. The coefficient of the quadratic term is given by the difference of the average aTGC yield (for the positive $N_{c_i}^{+}$ and negative working point $N_{c_i}^{-}$) and the SM yield
+The coefficient of the SM contribution $N_{\rm SM}$ is given by the SM yield. The coefficient of the quadratic term is given by the difference of the average aTGC yield (for the positive $N_{c_i}^{+}$ and negative working point $N_{c_i}^{-}$) and the SM yield
 \begin{equation}
 N_{c_i,1} = \frac{N_{c_i}^{+}+N_{c_i}^{-}}{2}-N_{\rm SM} ~,
 \label{eq:signal:n1}
@@ -117,9 +118,9 @@ while the coefficient of the SM interference term describes the difference of th
 N_{c_i,2} = \frac{N_{c_i}^{+}-N_{c_i}^{-}}{2} ~.
 \label{eq:signal:n2}
 \end{equation}
-To simplify the signal model, small contributions are neglected, i.e. the error function for \Tcb \ in the WZ-category and the SM interference term for \Tcwww \ in both categories. This leaves a total of ten parameters that have to be extracted from fits to the MC simulation in the \MWV -spectrum.\\
+To simplify the signal model, small contributions are neglected, i.e. the error function for \Tcb \ in the WZ-category and the SM interference term for \Tcwww \ in both categories. This leaves a total of ten parameters that have to be extracted from fits to the simulated signal samples in the \MWV -spectrum.\\
 
-\noindent The slope of the exponential describing the SM contribution is extracted by fitting the signal model with all aTGC parameters set to zero to the corresponding MC sample. The fit results are shown in Fig.~\ref{fig:signal:WW_mu_sig} for the WW-category in the muon channel. The slope of the SM interference contribution is extracted from a fit of a exponential function to the difference of the MC samples for the positive and negative working point. The fit result is shown in Fig.~\ref{fig:signal:sm_int_WW_mu}.\\
+\noindent The slope of the exponential describing the SM contribution is extracted by fitting the signal model with all aTGC parameters set to zero to the corresponding simulated sample. The fit results are shown in Fig.~\ref{fig:signal:WW_mu_sig} for the WW-category in the muon channel. The slope of the SM interference contribution is extracted from a fit of a exponential function to the difference of the simulation for the positive and negative working point. The fit result is shown in Fig.~\ref{fig:signal:sm_int_WW_mu}.\\
 \begin{figure}
 	\centering
 	\subfigure[]{
@@ -132,7 +133,7 @@ To simplify the signal model, small contributions are neglected, i.e. the error 
 	\label{fig:signal:sm_int_WW_mu}
 \end{figure}
 
-\noindent The remaining slope parameters as well as the parameters of the error functions are obtained by fitting the signal model to the MC signal sample corresponding to the positive working point with the slope of the SM contribution and the SM interference fixed. The choice of the sign of the working point is arbitrary since the differences are covered by the SM interference term. To be able to extract the parameters of the error function describing the turn-on effects the fit range is extended to $\MWV \in [600,3500]$\,GeV.
+\noindent The remaining slope parameters as well as the parameters of the error functions are obtained by fitting the signal model to the simulated signal sample corresponding to the positive working point with the slope of the SM contribution and the SM interference fixed. The choice of the sign of the working point used in the fit is arbitrary since the differences are covered by the SM interference term. To be able to extract the parameters of the error function describing the turn-on effects the fit range is extended to $\MWV \in [600,3500]$\,GeV.
 
 \begin{figure}
 	\centering
@@ -149,15 +150,15 @@ To simplify the signal model, small contributions are neglected, i.e. the error 
 
 %\section{Interference with the Standard Model Process}
 \section{Generator Level Studies}
-The available MC sample with complete detector simulation only contains the aTGC working points mentioned in table~\ref{tab:signal:aTGCpoints}. To be able to model interference effects between different aTGC contributions, samples with two aTGC parameters set to non-zero values are needed. Therefore, the MC generation is redone for a total of 150 new working points using the same configuration as in the original sample generation described in section~\ref{sec:MC}, leaving out the complete detector simulation. This includes small aTGC parameter values, where the interference with the SM process is expected to be most visible. This allows to verify the modelling of the SM interference effects.\\
+The available simulated signal samples with complete detector simulation only contain the aTGC working points mentioned in table~\ref{tab:signal:aTGCpoints}. To be able to model interference effects between different aTGC contributions, samples with two aTGC parameters set to non-zero values are needed. Therefore, the sample generation is redone for a total of 150 new working points using the same configuration as in the original sample generation described in section~\ref{sec:MC}, leaving out the complete detector simulation. The new working points include small aTGC parameter values, where the interference with the SM process is expected to be most visible. This allows to verify the modelling of the SM interference effects (see section~\ref{sec:SMint}).\\
 
-\noindent Without the detector simulation, the pruning algorithm cannot be applied and the pruned jet mass cannot be used to separate the WW- and WZ-category. Therefore, the WW and WZ MC samples are treated separately. The results for the two samples are then combined according to the relative composition of WW/WZ events in the WW- and WZ-category.  
+\noindent Without the detector simulation, the pruning algorithm cannot be applied and the pruned jet mass cannot be used to separate the WW- and WZ-category. Therefore, the WW and WZ samples are treated separately. The results for the two samples are then combined according to the relative composition of WW/WZ events in the WW- and WZ-category.  
 \subsection{Interference Between Different Anomalous Triple Gauge Coupling Contributions}
 \label{subsec:signal:aTGCInt}
-Interference effects between different aTGC contributions have to be taken into account for scenarios where more than one aTGC parameter is unequal to zero. The cross section for a scenario with two non-zero aTGC parameters can be derived similarly to equation~\ref{eq:signal:xsec}
+Interference effects between different aTGC contributions have to be taken into account for scenarios where more than one aTGC parameter is unequal to zero. The cross section for a scenario with two non-zero aTGC parameters can be derived similarly to equation~\ref{eq:signal:xsec} by squaring the sum of amplitudes
 \begin{align}
 \sigma \propto A_{\rm aTGC}^2 &= \left( A_{\rm SM} + c_i A_{c_i} + c_j A_{c_j} \right)^2 \\
-&= A_{\rm SM}^2 + c_i^2 A_{c_i}^2 + c_j^2 A_{c_j}^2 + 2c_i A_{\rm SM} A_{c_i} + 2c_j A_{\rm SM} A_{c_j} + 4c_ic_jA_{c_i}A_{c_j} ~. \label{eq:signal:xsecint}
+&= A_{\rm SM}^2 + c_i^2 A_{c_i}^2 + c_j^2 A_{c_j}^2 + 2c_i A_{\rm SM} A_{c_i} + 2c_j A_{\rm SM} A_{c_j} + 2c_ic_jA_{c_i}A_{c_j} ~. \label{eq:signal:xsecint}
 \end{align}
 The last term in equation~\ref{eq:signal:xsecint} corresponds to the interference between $c_i$ and $c_j$. These effect are introduced to the signal model by adding additional exponential functions proportional to two different aTGC parameters to the signal function in equation~\ref{eq:signal:sigfunc}
 \begin{align}
@@ -171,7 +172,7 @@ where $N_{c_i+,c_j+}^{gen}$ denotes the event yield for two aTGC parameters set 
 \begin{equation}
 A_N = N_{\rm SM} + \sum_i \left( N_{c_i,1}\cdot c_i^2 + N_{c_i,2}\cdot c_i \right) + \sum_{i,j}^{i \neq j} N_{c_i,c_j} \cdot c_i \cdot c_j ~. 
 \end{equation}
-The shape parameters $a_{ij}$ are extracted from fits to the MC samples on generator level. A sample containing only the contribution of the aTGC interference is obtained by first taking the difference of a sample with two aTGC parameters set to their positive values (e.g. $MC_{c_{W} =20}^{c_{B} =60}$) and a sample with one positive and one negative value (e.g. $MC_{c_{W}=-20}^{c_{B} =60}$). This difference still includes the interference with the SM process for the parameter that changes its sign. This contribution is also subtracted. For the interference between \Tccw \ and \Tcb \ this leads to
+The shape parameters $a_{ij}$ are extracted from fits to the simulated samples on generator level. A sample containing only the contribution of the aTGC interference is obtained by first taking the difference of a sample with two aTGC parameters set to their positive values (e.g. $MC_{c_{W} =20}^{c_{B} =60}$) and a sample with one positive and one negative value (e.g. $MC_{c_{W}=-20}^{c_{B} =60}$). This difference still includes the interference with the SM process for the parameter that changes its sign. This contribution is also subtracted. For the interference between \Tccw \ and \Tcb \ this leads to
 \begin{equation}
 MC_{c_{W}}^{c_{B}} = \left( MC_{c_{W} =20}^{c_{B} =60}-MC_{c_{W}=-20}^{c_{B} =60} \right) - \left( MC_{c_{W}=20}^{c_B=0}-MC_{c_{W}=-20}^{c_B=0} \right) ~.
 \end{equation}
@@ -194,11 +195,10 @@ The relative contribution to the signal function , which is given by the normali
 The contribution of the interference between \Tcwww \ and \Tcb \ is found to be less than 1\% throughout the channels, which is why it is neglected for the further analysis. 
 The other contributions are taken into account as small corrections relevant for the two-dimensional limits.
 \subsection{Standard Model Interference at Low Anomalous Triple Gauge Coupling Parameter Values}
+\label{sec:SMint}
 The additionally generated samples are used to verify the treatment of the SM interference effect at low aTGC parameter values. As mentioned in section~\ref{sec:aTGC}, the cross section of the aTGC increases with increasing energy. The SM interference, however, is constant, thus having larger effects at low energies (i.e. low values of \MWV).\\
 
-\noindent To verify the signal model, the different contributions are extracted as described in section~\ref{sec:NormalizationandShapeoftheaTGCContributions} from the MC samples on generator level. Then the signal model is compared to the MC samples for the additional aTGC parameter values. The result for WZ events in the muon channel, where the effects of the SM interference are most visible, is shown in Fig.~\ref{fig:signal:smintverif_WZ_mu}. As can be seen there, the signal model describes the MC simulation well even for low aTGC parameter values at low invariant masses.
-%Only the SM sample (shown in black) and the sample with the highest aTGC value ($\Tccw = \pm 20$\,TeV$^{-2}$ or $\Tcb = \pm 60$\,TeV$^{-2}$, respectively, shown in blue) are used in the fit to extract the signal model. The other shown MC samples correspond to the additionally generated aTGC points while the  grey lines indicate the signal model with the aTGC parameter increasing in steps of 1\,TeV$^{-2}$.
-
+\noindent To verify the signal model, the different contributions are extracted as described in section~\ref{sec:NormalizationandShapeoftheaTGCContributions} from the simulated samples on generator level. Then the signal model is compared to the samples for the additional aTGC parameter values. The result for WZ events in the muon channel, where the effects of the SM interference are most visible, is shown in Fig.~\ref{fig:signal:smintverif_WZ_mu}. Only the SM sample (shown in black) and the sample with the highest aTGC value ($\Tccw = \pm 20$\,TeV$^{-2}$ or $\Tcb = \pm 60$\,TeV$^{-2}$, respectively, shown in blue) are used in the fit to extract the signal model. The other shown samples correspond to the additionally generated aTGC points while the  grey lines indicate the signal model with the aTGC parameter increasing in steps of 1\,TeV$^{-2}$. As can be seen there, the signal model describes the simulation well even for low aTGC parameter values at low invariant masses.
 
 \begin{figure}[bh!]
 	\centering
@@ -208,6 +208,6 @@ The additionally generated samples are used to verify the treatment of the SM in
 	\subfigure[]{
 		\includegraphics[width=0.75\textwidth]{../plots/signal/ccw_SMint_neg_WZ_mu.pdf}
 	}
-	\caption[Comparison of the MC samples on generator level for different values of \Tccw \ in the muon channel]{Comparison of the MC samples on generator level for different values of \Tccw in the muon channel. The black and blue lines show the SM and the $\Tccw = \pm 20$\,TeV$^{-2}$ case, respectively, which were used for the signal model extraction. Shown in cyan and green are $\Tccw = \pm 3.5$\,TeV$^{-2}$ and $\Tccw = \pm 10$\,TeV$^{-2}$, while the grey lines show the signal model for increasing $\Tccw$ in steps of 1\,TeV$^{-2}$.}
+	\caption[Comparison of the simulated samples on generator level for different values of \Tccw \ in the muon channel]{Comparison of the simulated samples on generator level for different values of \Tccw in the muon channel. The black and blue lines show the SM and the $\Tccw = \pm 20$\,TeV$^{-2}$ case, respectively, which were used for the signal model extraction. Shown in cyan and green are $\Tccw = \pm 3.5$\,TeV$^{-2}$ and $\Tccw = \pm 10$\,TeV$^{-2}$, while the grey lines show the signal model for increasing $\Tccw$ in steps of 1\,TeV$^{-2}$.}
 	\label{fig:signal:smintverif_WZ_mu}
 \end{figure}
