@@ -3,7 +3,7 @@
 
 There are several processes with the same or similar final states as the diboson process contributing to the overall background. A correct modelling of these process is essential for the final limit extraction. The main background contribution originates from W+jets production, where the W boson decays leptonically and the quark and gluon in the final state are falsely reconstructed as W or Z boson-jets. An example process is shown in Fig.~\ref{fig:bkg:fy_wjets1}.
 The second main contribution comes from top quark pair (\ttbar) production with one leptonically and one hadronically decaying real W-boson as shown in Fig.~\ref{fig:bkg:fy_ttbar}. Additionally, SM diboson production, which includes processes with and without triple gauge coupling (Fig.~\ref{fig:bkg:fy_WWtgc}-\ref{fig:bkg:fy_WZSM}), is taken into account as minor background. The last minor contribution comes from electroweak single top quark production (from now on called single top) in association with a W boson (Fig.~\ref{fig:bkg:fy_stoptw}) as well as in the $s$- (Fig.~\ref{fig:bkg:fy_stops}) and $t$-channel (Fig.~\ref{fig:bkg:fy_stopt}).\\
-\begin{figure}[h!bt]
+\begin{figure}[]
 	\centering
 	\subfigure[]{
 		\includegraphics[width=0.4\textwidth]{../plots/bkg/feynmans/wjets1.pdf}
@@ -16,7 +16,7 @@ The second main contribution comes from top quark pair (\ttbar) production with 
 	\caption[Feynman diagrams of the main background processes]{Feynman diagrams of the main background processes. The dominant background contribution is given by W+jets production with quark-gluon final state (a) where the resulting jet is misidentified as originating from a hadronically decaying W  or Z boson. The second main background process is given by top pair production (b) with a hadronically decaying real W boson.}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[]
 	\centering
 	\subfigure[]{
 		\includegraphics[width=0.4\textwidth]{../plots/bkg/feynmans/SMWW.pdf}
@@ -59,14 +59,14 @@ The second main contribution comes from top quark pair (\ttbar) production with 
 	%\resizebox{\columnwidth}{!}{
 	\begin{tabular}{cc}
             \hline
-            Background Process & Event Generator \\
+            Background Process & Event Generator & Order\\
             \hline
-            W+jets & \textsc{MadGraph\textunderscore aMC@NLO} in LO\\
-            \ttbar & \textsc{Powheg} in NLO\\
-            Single top $s$-/$t$-channel & \textsc{MadGraph\textunderscore aMC@NLO} in NLO\\
-            Single top tW-channel & \textsc{Powheg} in NLO \\
-            WW & \textsc{Powheg} in NLO \\
-            WZ & \textsc{MadGraph\textunderscore aMC@NLO} in NLO \\
+            W+jets & \textsc{MadGraph\textunderscore aMC@NLO} & LO\\
+            \ttbar & \textsc{Powheg} & NLO\\
+            Single top $s$-/$t$-channel & \textsc{MadGraph\textunderscore aMC@NLO} & NLO\\
+            Single top tW-channel & \textsc{Powheg} & NLO \\
+            WW & \textsc{Powheg} & NLO \\
+            WZ & \textsc{MadGraph\textunderscore aMC@NLO} & NLO \\
             \hline
 	\end{tabular}
 	%}
