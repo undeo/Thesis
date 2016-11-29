@@ -2,7 +2,7 @@
 \label{chap:bkg}
 
 There are several processes with the same or similar final states as the diboson process contributing to the overall background. A correct modelling of these process is essential for the final limit extraction. The main background contribution originates from W+jets production, where the W boson decays leptonically and the quark and gluon in the final state are falsely reconstructed as W or Z boson-jets. An example process is shown in Fig.~\ref{fig:bkg:fy_wjets1}.
-The second main contribution comes from top quark pair (\ttbar) production with one leptonically and one hadronically decaying real W-boson as shown in Fig.~\ref{fig:bkg:fy_ttbar}. Additionally, SM diboson production, which includes processes with and without triple gauge coupling (Fig.~\ref{fig:bkg:fy_WWtgc}-\ref{fig:bkg:fy_WZSM}), is taken into account as minor background. The last minor contribution comes from electroweak single top quark production (from now on called single top) in association with a W boson (Fig.~\ref{fig:bkg:fy_stoptw}) as well as in the $s$- (Fig.~\ref{fig:bkg:fy_stops}) and $t$-channel (Fig.~\ref{fig:bkg:fy_stopt}).
+The second main contribution comes from top quark pair (\ttbar) production with one leptonically and one hadronically decaying real W-boson as shown in Fig.~\ref{fig:bkg:fy_ttbar}. Additionally, SM diboson production, which includes processes with and without triple gauge coupling (Fig.~\ref{fig:bkg:fy_WWtgc}-\ref{fig:bkg:fy_WZSM}), is taken into account as minor background. The last minor contribution comes from electroweak single top quark production (from now on called single top) in association with a W boson (Fig.~\ref{fig:bkg:fy_stoptw}) as well as in the $s$- (Fig.~\ref{fig:bkg:fy_stops}) and $t$-channel (Fig.~\ref{fig:bkg:fy_stopt}).\\
 \begin{figure}[h!bt]
 	\centering
 	\subfigure[]{
@@ -15,7 +15,6 @@ The second main contribution comes from top quark pair (\ttbar) production with 
 	}
 	\caption[Feynman diagrams of the main background processes]{Feynman diagrams of the main background processes. The dominant background contribution is given by W+jets production with quark-gluon final state (a) where the resulting jet is misidentified as originating from a hadronically decaying W  or Z boson. The second main background process is given by top pair production (b) with a hadronically decaying real W boson.}
 \end{figure}
-\newpage
 
 \begin{figure}[h!]
 	\centering
@@ -50,9 +49,28 @@ The second main contribution comes from top quark pair (\ttbar) production with 
 	}
 	\caption[Feynman diagrams of the minor background processes]{Feynman diagrams of the minor background processes. Additional background contributions that are taken into account are WW-/WZ-production with (a/b) and without (c/d) triple gauge coupling as well as single top production in association with a W boson (e), in the $s$-channel (f) and in the $t$-channel (g).}
 \end{figure}
-\newpage
 
-\noindent The background estimation strategy orientates on a previous diboson resonance search described in \cite{resonancepas} with minor modifications. The basic idea is to extract the normalizations of the main background contributions, the W+jets and \ttbar \ production, from a fit to the data in the jet mass spectrum of the hadronically decaying boson. A grooming algorithm is used to suppress jets coming from QCD events, the so-called pruning algorithm (section \ref{sec:jetreco}), which leads to the new observable of the pruned jet mass, \Mpr . The shape of the W+jets production in the \MWV -spectrum, which is ultimately used for the limit extraction in chapter \ref{chap:LimitsonATGCs}, is extracted from the data in the sideband region ($\Mpr \in [40,65] \cap [105,150]$\,GeV) via the alpha-ratio-method, while the shapes of the \ttbar \ and single top contributions are taken from fits to the MC simulation. The shape of the SM diboson process is taken from the signal model with all aTGC-parameters set to zero (see section \ref{sec:NormalizationandShapeoftheaTGCContributions}).\\
+\noindent The background estimation strategy orientates on a previous diboson resonance search described in \cite{resonancepas} with minor modifications. The basic idea is to extract the normalizations of the main background contributions, the W+jets and \ttbar \ production, from a fit to the data in the jet mass spectrum of the hadronically decaying boson. A grooming algorithm is used to suppress jets coming from QCD events, the so-called pruning algorithm (section \ref{sec:jetreco}), which leads to the new observable of the pruned jet mass, \Mpr . The shape of the W+jets production in the \MWV -spectrum, which is ultimately used for the limit extraction in chapter \ref{chap:LimitsonATGCs}, is extracted from the data in the sideband region ($\Mpr \in [40,65] \cap [105,150]$\,GeV) via the alpha-ratio-method, while the shapes of the \ttbar \ and single top contributions are taken from fits to the simulated samples. In Tab.~\ref{tab:bkg:mcgens} a summary of the Monte Carlo event generators used for the simulation of different background contributions can be found. The shape of the SM diboson process is taken from the signal model with all aTGC-parameters set to zero (see section \ref{sec:NormalizationandShapeoftheaTGCContributions}).\\
+
+\begin{table}
+	\centering
+	\caption[Summary of the Monte Carlo event generators used for the simulation of the background contributions]{Summary of the Monte Carlo event generators used for the simulation of the background contributions.}
+	\label{tab:bkg:mcgems}
+	%\resizebox{\columnwidth}{!}{
+	\begin{tabular}{cc}
+            \hline
+            Background Process & Event Generator \\
+            \hline
+            W+jets & \textsc{MadGraph\textunderscore aMC@NLO} in LO\\
+            \ttbar & \textsc{Powheg} in NLO\\
+            Single top $s$-/$t$-channel & \textsc{MadGraph\textunderscore aMC@NLO} in NLO\\
+            Single top tW-channel & \textsc{Powheg} in NLO \\
+            WW & \textsc{Powheg} in NLO \\
+            WZ & \textsc{MadGraph\textunderscore aMC@NLO} in NLO \\
+            \hline
+	\end{tabular}
+	%}
+\end{table}
 
 \noindent In this chapter, the analysis strategy for the determination of the background contributions is illustrated. First, the procedure of extracting the background normalizations from the \Mpr -spectrum is described. Then the extraction of the background shapes in the \MWV -spectrum and the final background estimations for the sideband and signal region using the alpha-ratio-method are presented.
 

@@ -102,7 +102,7 @@ is found to be a much more discriminating variable between heavy boson jets and 
     \label{fig:reco:nsubjet}
 \end{figure}
 \subsubsection*{Pruning}
-The so-called pruning algorithm is another way of discriminating jets from QCD events by removing soft and wide-angle radiation that emerges from e.g. the underlying event  \cite{pruning}. The basic idea is to rerun the CA algorithm on the AK8 jets reconstructed with the anti-$k_{\rm T}$ algorithm. Since the CA algorithm is used, only the spatial substructure is taken into account.  Before recombining particle $i$ and $j$ to a subjet $p$, the following conditions have to be met
+The so-called pruning algorithm \cite{pruning} is another way of discriminating jets from QCD events by removing soft and wide-angle radiation that emerges from e.g. the underlying event. The basic idea is to rerun the CA algorithm on the AK8 jets reconstructed with the anti-$k_{\rm T}$ algorithm. Since the CA algorithm is used, only the spatial substructure is taken into account.  Before recombining particle $i$ and $j$ to a subjet $p$, the following conditions have to be met
 \begin{align}
 z = \frac{\min (p_{{\rm T}i},p_{{\rm T}j})}{p_{{\rm T}p}} &> z_{\rm cut} ~, \\
 \Delta_{ij} &< D_{\rm cut} = \frac{2r_{\rm cut}M_j}{p_{\rm T}} ~,
@@ -116,7 +116,7 @@ where $M_j$ denotes the mass and $p_{\rm T}$ the transverse momentum of the orig
 	\subfigure[]{
 		\includegraphics[width=0.45\textwidth]{../plots/reco/ttbar_UE.pdf}
 	}
-	\caption[Comparison of the pruned and unpruned jet masses for simulated top quark decays with and without the underlying event]{Comparison of the unpruned (a) and pruned jet masses (b) for simulated top quark decays with (straight line) and without the underlying event (dashed line). The unpruned jet mass gets shifted to higher masses, while for the pruned jet mass the underlying event hardly affects the resulting distribution.}
+	\caption[Comparison of the pruned and unpruned jet masses for simulated top quark decays with and without the underlying event]{Comparison of the unpruned (a) and pruned jet masses (b) for simulated top quark decays with (straight line) and without the underlying event (dashed line), taken from \cite{pruning}. The unpruned jet mass gets shifted to higher masses, while for the pruned jet mass the underlying event hardly affects the resulting distribution.}
 	\label{fig:reco:pruning}
 \end{figure}
 \subsection{Reconstruction of the Diboson System}
@@ -132,7 +132,7 @@ Each event has to pass several selection criteria, which are applied in form of 
 
 \section{Event Simulation}
 \label{sec:MC}
-To be able to make reliable predictions about the events, precise simulation of the involved physical processes, like the scattering or the hadronization, as well as the detector response are needed. For this, different Monte Carlo event generators are used for the different processes relevant in this analysis. The event simulation can be seperated into several parts as shown in Fig.~\ref{fig:reco:simparts}. Starting from the parton distribution functions, which describe the distribution of enery between the partons of the colliding protons, the hard scattering process is calculated. Then, the parton shower and the hadroniyation, including the decay of the final state partices, is simulated. In this section, the different event generators are shortly described. More detailed information can be found in the cited documents.\\
+To be able to make reliable predictions about the measured particle collisions, precise simulation of the involved physical processes, like the scattering or the hadronization, as well as the detector response are needed. For this, different Monte Carlo event generators are used for the different processes relevant in this analysis. The event simulation can be seperated into several parts as shown in Fig.~\ref{fig:reco:simparts}. Starting from the parton distribution functions, which describe the distribution of enery between the partons of the colliding protons, the hard scattering process is calculated. Then, the parton shower and the hadronization, including the decay of the final state particles, is simulated. In this section, the different event generators are shortly described. More detailed information can be found in the cited documents.\\
 \begin{figure}
     \centering
     \includegraphics[width=0.75\textwidth]{../plots/reco/simparts.pdf}
@@ -143,18 +143,14 @@ To be able to make reliable predictions about the events, precise simulation of 
 \subsection*{\textsc{MadGraph}}
 \textsc{MadGraph} \cite{madgraph} is a Python-based event generator capable of simulating all SM processes as well as any arbitrary user-defined process at leading order. Tree-level amplitudes are calculated by generating all relevant Feynman diagrams and the phase space of a given process. Corresponding events and cross sections can then be generated using the \textsc{MadEvent} package. Parton showering as well as hadronization are not implemented and have to be performed using \textsc{Pythia}, which is described below.
 \subsection*{\textsc{MadGraph\textunderscore aMC@NLO}}
-The \textsc{MadGraph\textunderscore aMC@NLO} event generator is a combination of the \textsc{MadGraph} and \textsc{MC@NLO} event generators that allows for next to leading order (NLO) simulations \cite{madgraphamc}. It can also be used as parton shower generator. In this case the double-counting of events that are added both by the NLO and the parton shower algorithm has to be taken into account. This can lead to negative event weights.
+The \textsc{MadGraph\textunderscore aMC@NLO} event generator is a combination of the \textsc{MadGraph} and \textsc{MC@NLO} event generators that allows for next to leading order (NLO) simulations \cite{madgraphamc}. When running a parton shower generator the double-counting of events that are added both by the NLO and the parton shower algorithm has to be taken into account. The additional events are effectively removed by the \textsc{MC@NLO} matching algorithm by introducing negative events weights. This can cause statistical problems in phase space regions where only a few events are expected.
 \subsection*{\textsc{Powheg}}
-The Positive Weight Hardest Emission Generator or \textsc{Powheg} is a matrix element generator at NLO. Since 
+The Positive Weight Hardest Emission Generator or \textsc{Powheg} is a matrix element generator at NLO. Using the so-called Powheg method, the matrix element generator always produces the hardest radiation of the event. The parton shower generator that is used afterwards is then restricted to produce only softer radiation, so no negative events weights need to be intrduced.
 \subsection*{\textsc{Pythia}}
 \textsc{Pythia} \cite{pythia} is a mulit-purpose event generator that includes parton showering and hadronization based on the Lund string model. Since it only supports LO calculations for the hard scattering processes it is mostly used in combination with \textsc{Madgraph} or \textsc{Powheg} only providing the parton shower and hadronization.
 \subsection*{\textsc{Geant4}}
-To be able to compare the simulated events with the measured data, the particle interaction with the detector material has to be simulated. This is done using \textsc{Geant4} \cite{geant4}, which is a toolkit capable of simulating particles propagating through matter. Effects like scattering, the emission of bremsstrahlung or ionization are included. 
+To be able to compare the simulated events with the measured data, the particle interaction with the detector material has to be simulated. This is done using \textsc{Geant4} \cite{geant4}, which is a toolkit capable of simulating particles propagating through matter. Effects like scattering, the emission of bremsstrahlung or ionization are included.\\
 
-=={Data to MC corrections:}
-=={Pileup}
-=={Reconstruction Efficiencies}
-=={Jet Smearing}\\
 \noindent The simulated samples for the background contributions are verified by comparing them with the data in two control regions. For the \ttbar \ control region the same cuts as stated in section~\ref{sec:eventselection} are applied, but at least one AK4 jet has to be identified as b quark jet. The agreement of simulation and data is verified using several observables. The resulting plots for the two observables used in this analysis (\Mpr \ and \MWV) are shown in Fig.~\ref{fig:reco:control}, while all other plots can be found in \cite{PAS}.\\
 
 \noindent The W+jets control region (refered to as sideband region in the background estimation in chapter~\ref{chap:bkg}) is defined in the pruned jet mass spectrum as 40\,GeV$<\Mpr<$65\,GeV and 105\,GeV$<\Mpr<$150\,GeV, while all other cuts are applied as mentioned above. This region is signal depleted and dominated by the W+jets production. Again, a good agreement is found in all observables.
