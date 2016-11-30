@@ -56,7 +56,6 @@ The second main contribution comes from top quark pair (\ttbar) production with 
 	\centering
 	\caption[Summary of the Monte Carlo event generators used for the simulation of the background contributions]{Summary of the Monte Carlo event generators used for the simulation of the background contributions.}
 	\label{tab:bkg:mcgems}
-	%\resizebox{\columnwidth}{!}{
 	\begin{tabular}{ccc}
             \hline
             Background Process & Event Generator & Order\\
@@ -69,7 +68,6 @@ The second main contribution comes from top quark pair (\ttbar) production with 
             WZ & \textsc{MadGraph\textunderscore aMC@NLO} & NLO \\
             \hline
 	\end{tabular}
-	%}
 \end{table}
 
 \noindent In this chapter, the analysis strategy for the determination of the background contributions is illustrated. First, the procedure of extracting the background normalizations from the \Mpr -spectrum is described. Then the extraction of the background shapes in the \MWV -spectrum and the final background estimations for the sideband and signal region using the alpha-ratio-method are presented.
@@ -232,17 +230,14 @@ The resulting alpha-function is also plotted in Fig.~\ref{fig:bkg:mwvmc_alpha_mu
 	\subfigure[]{
 		\centering
 		\includegraphics[width=0.5\textwidth]{../plots/bkg/mlvj/mu_WJets_mlvj_sb_loHPW_with_pull_log.pdf}		
-		%\caption{}		
 	}
 	\subfigure[]{
 		\includegraphics[width=0.5\textwidth]{../plots/bkg/mlvj/mu_WJets_mlvj_signal_regionHPW_with_pull_log.pdf}
 		\includegraphics[width=0.5\textwidth]{../plots/bkg/mlvj/mu_WJets_mlvj_signal_regionHPZ_with_pull_log.pdf}	
-		%\caption{}
 	}
 	\subfigure[]{	
 		\includegraphics[width=0.5\textwidth]{../plots/bkg/alpha/alpha_mu_HPW.pdf}
 		\includegraphics[width=0.5\textwidth]{../plots/bkg/alpha/alpha_mu_HPZ.pdf}
-		%\caption{}
 	}
 	\caption[Shape of W+jets production in the sideband and signal regions as well as the resulting alpha-function]{Shape of W+jets production in the sideband (a) and signal regions (b) in the muon channel for the WW- (left) and WZ-category (right) extracted from MC simulation. Also shown are the resulting alpha-functions (black line) in the muon channel (c) for the WW- (left) and WZ-category (right) with the one and two sigma error bands. The orange dashed line shows the result using a different parametrization. The left axis represents the values of the W+jets function in the signal and sideband region in arbitrary units while the right axis shows the values of the alpha-function.}
 	\label{fig:bkg:mwvmc_alpha_mu}
@@ -254,12 +249,10 @@ The resulting alpha-function is also plotted in Fig.~\ref{fig:bkg:mwvmc_alpha_mu
 	\subfigure[]{
 		\includegraphics[width=0.5\textwidth]{../plots/bkg/mlvj/WW_el_cwww.pdf}
 		\includegraphics[width=0.5\textwidth]{../plots/bkg/mlvj/WZ_el_cwww.pdf}	
-		%\caption{}
 	}
 	\subfigure[]{
 		\includegraphics[width=0.5\textwidth]{../plots/bkg/mlvj/WW_mu_cwww.pdf}
 		\includegraphics[width=0.5\textwidth]{../plots/bkg/mlvj/WZ_mu_cwww.pdf}
-		%\caption{}
 	}	
 	\caption[Final background estimation in the WW- and WZ-category for the electron and muon channel]{Final background estimation in the WW- (a) and WZ-category (b) for the electron (left) and muon channel (right) (taken from \cite{PAS}). The shape of the W+jets contribution is estimated by multiplying the shape extracted from the sideband data with the alpha-function extracted from MC simulation. The diboson contribution is taken from the signal model with all aTGC-parameters set to zero. The shown uncertainty includes the statistical uncertainties resulting from the fit and the systematic uncertainties that are derived in section~\ref{sec:systematics}.}
 	\label{fig:bkg:mwv_final}
