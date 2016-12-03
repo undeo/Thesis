@@ -2,12 +2,12 @@
 \label{chap:expsetup}
 To be able to perform searches for new physics, particle collision at highest scales have to be analysed. The most advanced particle accelerator up to date is the Large Hadron Collider (LHC), which currently operates at a center of mass energy of $\sqrt{s}= 13$\,TeV. The particle collisions are recorded with four detectors, each maintained and operated by a different collaboration. The efforts of thousands of people working either at maintaining the accelerator and detectors or analysing the data have led to an improved understanding of the SM, most prominently with the discovery of a Higgs-like boson in 2012 \cite{cms_higgsdiscov,atlas_higgsdiscov}. The next goal of the LHC is to find proof of new physics that is not yet included in the SM, for which evidence has already been found (section~\ref{sec:aTGC}).\\
 
-\noindent The following chapter outlines the Large Hadron Collider and the Compact Muon Solenoid, which provided the data used in this analysis. All information about the LHC are taken from \cite{lhc_machine}, while the information about CMS are taken from \cite{CMS_design}, if not stated otherwise.
+\noindent The following chapter outlines the Large Hadron Collider and the Compact Muon Solenoid, which provided the data used in this analysis. All information about the LHC are taken from \cite{lhc_machine}, while the information about CMS are taken from \cite{CMS_design,strip_fig}, if not stated otherwise.
 
 \section{The Large Hadron Collider}
 The Large Hadron Collider is a synchrotron collider located in Geneva, Switzerland, at the European Organization for Nuclear Research (CERN). It is built 100\,m below the surface inside the tunnel of its predecessor, the Large Electron Positron Collider (LEP), and has a circumference of 26.7\,km. In contrast to LEP, in the LHC protons are accelerated. Two separate beam lines are needed for the LHC to accelerate protons in opposite directions. It started operating in 2010 at a center of mass energy of $\sqrt{s}=7$\,TeV. After several improvements were installed in a shut down period, it restarted operating at $\sqrt{s}=13$\,TeV, which is slightly below its design energy of 14\,TeV. The LHC has a seconed operation mode, where heavy ions are collided. Although the single nuclei of the ions have a smaller center of mass energy than in the proton-proton mode, heavy ion collision might give insight on different physical aspects, like the quark-gluon plasma.\\
 
-\noindent Each of the proton beams is divided into 2808 bunches with a bunch spacing of 25\,ns. Before a proton beam can be inserted into the beam lines it has to be pre-accelerated by several smaller accelerators, as can be seen in Fig.~\ref{fig:expsetup:lhc}. To finally reach the current peak center of mass energy of 13\,TeV, a superconducting cavity system operating at 400\,MHz is used. With this setup a luminosity of the order of $10^{34}\,\rm{cm}^2\rm{s}^{-1}$ is reached, resulting in an average of more than 21 collisions per bunch crossing. This so-called pileup is an additional challenge for analysing the data, where particles from additional collisions have to be removed from the main event.\\
+\noindent Each of the proton beams is divided into 2808 bunches with a bunch spacing of 25\,ns. Before a proton beam can be inserted into the beam lines it has to be pre-accelerated by several smaller accelerators, as can be seen in Fig.~\ref{fig:expsetup:lhc}. To finally reach the current peak center of mass energy of 13\,TeV, a superconducting cavity system operating at 400\,MHz is used. With this setup a luminosity of the order of $10^{34}\,\rm{cm}^2\rm{s}^{-1}$ is reached, resulting in an average of 25 collisions per bunch crossing. This so-called pileup is an additional challenge for analysing the data, where particles from additional collisions have to be removed from the main event.\\
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=\textwidth]{../plots/expsetup/lhc.pdf}
@@ -17,7 +17,9 @@ The Large Hadron Collider is a synchrotron collider located in Geneva, Switzerla
 
 \noindent An ultra high vacuum is needed inside the beam lines to avoid scattering on gas molecules. A total of 1232 dipol magnets are used to keep the particle beams on their track. These magnets are given by superconducting coils cooled down to 2\,K using liquid helium, providing a magnetic field of up to 8.33\,T. Additionaly, 392 quadrupole magnets are installed to keep the beam focused. Higher order perturbations and are corrected for with sextupole, octupole and decapole magnets.\\
 
-\noindent There are eight collision points along the beam with a detector positioned at four of them. The LHCb detector is a forward detector designed for high precision measurements in the bottom and charm quark physics \cite{LHCB}. The ALICE detector is specialized on heavy ion collisions \cite{ALICE}. The two multi purpose detectors CMS (Compact Muon Solenoid) and ATLAS (A Toridal LHC Apparatus) were designed for the search of the Higgs boson, searches for new physics and the measurement of SM properties.
+\noindent There are eight collision points along the beam with a detector positioned at four of them. The LHCb detector is a forward detector designed for high precision measurements in the bottom and charm quark physics \cite{LHCB}. The ALICE detector is specialized on heavy ion collisions \cite{ALICE}. The two multi purpose detectors CMS (Compact Muon Solenoid) and ATLAS (A Toridal LHC Apparatus) were designed for the search of the Higgs boson, searches for new physics and the measurement of SM properties.\\
+
+\noindent [FUTURE PLANS?]
 
 \section{The Compact Muon Solenoid Experiment}
 The CMS detector is one of two multi-purpose detectors at the LHC. It provided the data used in this analysis. With a length of 21.6\,m and a diameter of 14.6\,m it is not the tallest but the heaviest detector at the LHC, weighing 12.5\,t.
@@ -37,22 +39,29 @@ where $E$ denotes the particle energy and $p_z$ the particle momentum in beam di
 \begin{equation}
 \eta = -\ln \left( \tan \frac{\theta}{2} \right) ~,
 \end{equation}
-with the angle $\theta$.
+with the angle $\theta$. Another used coordinate is the radius $r$, which is given as the distance from the beamline.
 \subsection*{Silicon Tracker}
 To be able to reconstruct the collision vertices and estimate the charge and momentum of the produced particles, their tracks have to be reconstructed. Therefore, the tracking system is built closely around the interaction point, consisting of a pixel and a strip detector. Charged particles propagating through the semiconducting pixels and strips of the tracker create electron-hole pairs. They are accelerated by an applied voltage, leading to measurable electric signals. The particle tracks can be reconstructed from the hits in different pixels or strips using the reconstruction algorithms described in section~\ref{sec:trackreco}.\\
 
-\noindent A good resolution in the track reconstruction is essential for the collision vertex reconstruction. Therefore, closest to the interaction point, where the particle flux is highest, silicon pixels are used. They provide the needed granularity to resolve the high amount of events expected due to pileup. Each pixel has a size of 100x150\,$\upmu$m$^2$, leading to a spatial resolution of 10\,$\upmu$m for the $r$-$\phi$-measurement and 20\,$\upmu$m for the $z$-measurement. They are arranged in a barrel of three layers with two end cap discs on each side, as shown in Fig.~\ref{fig:expsetup:pixel}. 
-
-\noindent A silicon strip detector is installed at 
-
+\noindent A good resolution in the track reconstruction is essential for the collision vertex reconstruction, especially for the identificatioin of secondary vertices used in the reconstruction of b quarks. Therefore, closest to the interaction point, where the particle flux is highest, the silicon pixel detector consisting of around 65 million pixels is used. It provides the needed granularity to resolve the high amount of events expected due to the average of 25 collision per bunch crossing. Each pixel has a size of 100x150\,$\upmu$m$^2$, leading to a spatial resolution of 10\,$\upmu$m for the $r$-$\phi$-measurement and 20\,$\upmu$m for the $z$-measurement. They are arranged in a barrel of three layers with two end cap discs on each side, as shown in Fig.~\ref{fig:expsetup:pixel}. 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.6\textwidth]{../plots/expsetup/pixel.png}
 	\caption[Schematic view of the CMS pixel detector]{Schematic view of the CMS pixel detector, taken from \cite{CMS_design}. It consists of three layers in the barrel region (green) and two endcaps on each side.}
 	\label{fig:expsetup:pixel}
 \end{figure}
+\noindent Due to the decreased particle flux in the region around the pixel detector, a silicon strip detector provides a sufficient resolution. It also consists of a barrel and two end caps, which are divided into two parts each: the Tracker Inner Barrel (TIB), the Tracker Outer Barrel (TOB), the Tracker Inner Discs (TID) and the Tracker End Caps (TEC) as illustrated in Fig.~\ref{fig:expsetup:strip}. The modules of the first two layers of the TIB and the TID as well as three of the TEC rings are arranged with an angle to each other, providing stereo measurement in the $r$-$\phi$ and $y$ direction. A resolution of 23-52\,$\upmu$m is reached both in the $r$-$\phi$ and $y$ diretion.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.6\textwidth]{../plots/expsetup/strip.pdf}
+    \caption[Schematic view of the silicon tracker system]{Schematic view of the silicon tracker system in the $r$-$z$ plane, taken from \cite{strip_fig}. The black dot in the middle indicates the location of the interaction point. It is surrounded by the pixel detector (PIXEL) and the barrels of the strip detector (TIB and TOB). Further in $z$ direction are the endcaps (TID and TEC).}
+    \label{fig:expsetup:strip}
+\end{figure}
+
 \subsection*{Electromagnetic Calorimeter}
-To identify electrons, positrons and photons the electromagnetic calorimeter is built around the tracker. Electrons and positrons deposit their energy through emission of bremsstrahlung and scattering, while photons produce electron-positron-pairs. The hereby produced lower-energetic secondary particles again interact with the calorimeter, resulting in a particle shower. By measuring the energy of these particle showers, the energy of the primary particles can be estimated. 
+To identify electrons, positrons and photons the electromagnetic calorimeter is built around the tracker. Electrons and positrons deposit their energy in the calorimeter through emission of bremsstrahlung and scattering, while photons produce electron-positron-pairs. The hereby produced lower-energetic secondary particles again interact with the calorimeter, resulting in a particle shower. By measuring the energy of these particle showers using scintillators, the energy of the primary particles can be reconstructed.\\
+
+\noindent The electromagnetic calorimeter of the CMS detector consists of 75848 lead tungstate (PbWO$_4$) crystals arranged in a barrel region and two endcaps as shown in Fig.~\ref{fig:expsetup:ecal}. Lead tungstate crystals have a short radiation length of $X_0=0.89$\,cm and are radiation hard. They are used both as absorber and scintillator, allowing for a very compact design. Due to their relatively low scintillation light yield avalanche and vacuum photodiodes are needed to increase the sensitivity. 
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{../plots/expsetup/ecal.pdf}
@@ -62,7 +71,6 @@ To identify electrons, positrons and photons the electromagnetic calorimeter is 
 \subsection*{Hadron Calorimeter}
 \subsection*{Muon System}
 Due to their high mass compared to electrons, muons do not emit as much bremsstrahlung and therefore do not shower up in the electromagnetic calorimeter. Therefore, they reach the muon systems in the outermost layers of the CMS detector, which consist of three different gaseous detectors arranged as shown in Fig.~\ref{fig:expsetup:muonsys}. In the barrel region ($|\eta|<1.2$) 250 drift tube chambers organized in 4 layers are used. The endcap regions are covered by cathode strip chambers
-
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{../plots/expsetup/muonsys.pdf}
