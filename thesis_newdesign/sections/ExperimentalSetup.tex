@@ -61,7 +61,7 @@ To be able to reconstruct the collision vertices and estimate the charge and mom
 \subsection*{Electromagnetic Calorimeter}
 To identify electrons, positrons and photons the electromagnetic calorimeter is built around the tracker. Electrons and positrons deposit their energy in the calorimeter through emission of bremsstrahlung and scattering, while photons produce electron-positron-pairs. The hereby produced lower-energetic secondary particles again interact with the calorimeter, resulting in a particle shower. By measuring the energy of these particle showers using scintillators, the energy of the primary particles can be reconstructed.\\
 
-\noindent The electromagnetic calorimeter of the CMS detector consists of 75848 lead tungstate (PbWO$_4$) crystals arranged in a barrel region and two endcaps as shown in Fig.~\ref{fig:expsetup:ecal}. Lead tungstate crystals have a short radiation length of $X_0=0.89$\,cm and are radiation hard. They are used both as absorber and scintillator, allowing for a very compact design. Due to their relatively low scintillation light yield avalanche and vacuum photodiodes are needed to increase the sensitivity. 
+\noindent The electromagnetic calorimeter of the CMS detector consists of 75848 lead tungstate (PbWO$_4$) crystals arranged in a barrel region and two endcaps as shown in Fig.~\ref{fig:expsetup:ecal}. Lead tungstate crystals have a short radiation length of $X_0=0.89$\,cm and are radiation hard. They are used both as absorber and scintillator, allowing for a very compact design. Due to their relatively low scintillation light yield amplifzing photodiodes are needed to increase the sensitivity. In the barrel region, avalanche photodiodes are installed, while in the endcap vacuum photodiodes are used. A preshower detector is installed in front of the endcaps to be able to distinguish photons originating from actual collisions and phtoton coming from the decay of $\phi^0$ mesons. It consists of two planes of silicon strip detectors lying behind a lead absorber.
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{../plots/expsetup/ecal.pdf}
@@ -69,6 +69,11 @@ To identify electrons, positrons and photons the electromagnetic calorimeter is 
     \label{fig:expsetup:ecal}
 \end{figure}
 \subsection*{Hadron Calorimeter}
+Due to their relatively high mass, baryons and mesons do not emit a significant amount of bremsstrahlung and can therfore not be detected in the electromagnetic calorimeter. However, they also create particle showers induced by inelastic scatterings with the detector material. Since QCD interactions are involved, also neutral hadrons can be detected.\\
+
+\noindent The hadron calorimeter consists of alternating layers of brass as absorber material and plastic scintillators. They are arranged in four different sections as shown in Fig.~\ref{fig:expsetup:hcal}. The Hadron Barrel (HB) and the Hadron Forward (HF) are both located inside the superconducting coil with the HB covering $|\eta|<1.4$ and the HF covering $1.3<|\eta|<3.0$. 
+Outside the coil the Hadron Outer (HO) and the Hadron Endcap (HE) detector are located, increasing the 
+
 \subsection*{Muon System}
 Due to their high mass compared to electrons, muons do not emit as much bremsstrahlung and therefore do not shower up in the electromagnetic calorimeter. Therefore, they reach the muon systems in the outermost layers of the CMS detector, which consist of three different gaseous detectors arranged as shown in Fig.~\ref{fig:expsetup:muonsys}. In the barrel region ($|\eta|<1.2$) 250 drift tube chambers organized in 4 layers are used. The endcap regions are covered by cathode strip chambers
 \begin{figure}
@@ -78,4 +83,5 @@ Due to their high mass compared to electrons, muons do not emit as much bremsstr
     \label{fig:expsetup:muonsys}
 \end{figure}
 \subsection*{Trigger System}
+The collision rate of 40\,MHz (corresponding to a bunch crossing interval of 25\,ns) makes it impossible to extract and store every event. Since the interesting physical processes are expected to occur at much lower rates, most of the events are considered as background. Therefore, a pre-selection of events is performed using two levels of the trigger system, the Level 1 hardware trigger (L1) and the software-implemented High Level Trigger (HLT), effectively reducing event rate by a factor of $10^6$.
 \subsection*{Computing}
