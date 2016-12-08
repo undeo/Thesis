@@ -1,20 +1,50 @@
 \chapter{Limits on Anomalous Triple Gauge Couplings}
 \label{chap:LimitsonATGCs}
-This chapter presents the results of the analysis. Using the signal model described in section~\ref{chap:signal} and the background estimation from section~\ref{chap:bkg}, limits on the three aTGC parameters introduced in section~\ref{sec:aTGC} are estimated. Different scenarios where either one or two aTGC parameters are unequal to zero are studied. Additionally, the limits are computed in the vertex parametrization, which was used in previous analyses (e.g. \cite{aTGC1,aTGC2}).
+
+
+In this chapter, the reults of the analysis are presented. Using the signal model described in section~\ref{chap:signal} and the background estimation from section~\ref{chap:bkg}, limits on the three aTGC parameters introduced in section~\ref{sec:aTGC} are estimated. Different scenarios where either one or two aTGC parameters are unequal to zero are studied. Additionally, the limits are computed in the vertex parametrization, which was used in previous analyses (e.g. \cite{aTGC1,aTGC2}).
+
+
 \section{Limit Setting Procedure}
-The limits on the aTGC parameters are ultimately estimated by performing a unbinned maximum likelihood fit
+The limits on the aTGC parameters are ultimately estimated by performing an unbinned maximum likelihood fit. In this section, the concept of the maximum likelihood estimation as method to compare an analytical model with measured data is presented. 
 \subsection{Maximum Likelihood Estimation}
+[likelihood definition]\\
+[log likelihood]\\
+[profiling]\\
 \subsection{Confidence Intervals}
+\subsection{Limit Setting Procedure}
+For this, a limit setting tool \cite{combine} created for the combination of the different channels of the Higgs measurement \cite{higgs_comb} is used. It is capable of estimating and combining the likelihood function of several channels depending on one or more paramters of interest (POI), taking into account nuisance parameters by profiling them as explained in section~\ref{subsec:maxlikeest}. The so-called best fit point is estimated by minimizing the likelihood function with respect to the POIs
+[expected limits for sensitivity]
+
 \section{Systematic Uncertainties}
 \label{sec:systematics}
+[list + short description]
 \subsection{Uncertainties on the Slope Parameters}
 \label{sec:uncslopesig}
-The uncertainties on the slope parameters of the signal function were not estimated as part of this thesis but rather in the context of a soon to be published PhD thesis \cite{IVAN}.
+The uncertainties on the slope parameters of the signal function were not estimated as part of this thesis but rather in the context of a soon to be published PhD thesis \cite{IVAN}.\\
+
+\noindent The un
+[uncertainties only for norms]
+[also impact on slopes]
+[extract as in section signal with MC $\pm$1sigma]
+[results]
+[high uncert for cb -> JEC]
+
+
 \section{One-Dimensional Limits}
-One-dimensional limits are computed by performing a scan over one of the aTGC parameters while keeping the remaining two set to zero. For each scanned point the profiled likelihood is computed. Then, the delta-log-likelihood is formed, which is given by the difference of the likelihood of each point and the best fit point. The best fit point is the parameter value that maximizes the likelihood.  
+One-dimensional limits are computed by performing a scan over one of the aTGC parameters while keeping the remaining two set to zero. For each scanned point the profiled logarithmic likelihood is computed.
+[profiling of uncertainties]
+Then, the delta-log-likelihood is formed, which is given by the difference of the likelihood of each point and the best fit point. The best fit point is the parameter value that maximizes the likelihood. 
+
+
 \section{Two-Dimensional Limits}
 \label{sec:2dlims}
 \dots \\
-\noindent In the two-dimensional limits the different sensitivities of the aTGC parameters in the two regions are expected to affect the shape of the resulting limits. If the sensitivities are roughly equal in both regions for both parameters (i.e. for the two-dimensional \Tcwww -\Tccw -limits), 
+\noindent In the two-dimensional limits the different sensitivities of the aTGC parameters in the two regions are expected to affect the shape of the resulting limits. This motivated the division of the signal region into a low- and high-mass region (see section~\ref{sec:wwwzregs}. If the sensitivities are roughly equal in both regions for both parameters (i.e. for the two-dimensional \Tcwww -\Tccw -limits), 
+
+
 \section{Limits in Vertex Parametrization}
 \label{sec:vertex}
+
+
+\section{Additional Verification of the Limit Setting Procedure}
