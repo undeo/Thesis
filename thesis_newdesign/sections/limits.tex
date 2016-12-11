@@ -14,14 +14,16 @@ The limits on the aTGC parameters are ultimately estimated by performing an unbi
 \subsection{Confidence Intervals}
 \subsection{Limit Setting Procedure}
 
-For this, a limit setting tool \cite{combine} created for the combination of the different channels of the Higgs measurement \cite{higgs_comb} is used. It is capable of estimating and combining the likelihood function of several channels depending on one or more paramters of interest (POI), taking into account nuisance parameters by profiling them as explained in section~\ref{subsec:maxlikeest}. The so-called best fit point is estimated by minimizing the likelihood function with respect to the POIs
+For this, a limit setting tool \cite{combine} created for the combination of the different channels of the Higgs measurement \cite{higgs_comb} is used. It is capable of estimating and combining the likelihood function of several channels depending on one or more paramters of interest (POI), taking into account nuisance parameters by profiling them as explained in section~\ref{subsec:maxlikeest}. A scan over the POIs is performed, evaluating the likelihood for each POI value.
+The limits are ultimately extracted from the delta-log-likelihood distributions, which is defined as the difference of the likelihood for a given POI value and the likelihood for the best fit point. The best fit point is estimated by minimizing the likelihood function with respect to the POIs. 
 [expected limits for sensitivity]
 
 \section{Systematic Uncertainties}
 \label{sec:systematics}
-There are several sources of systematic uncertainties arising from the event reconstructino that effect the resulting event yield. These uncertainties are included in the likelihood functions as nuisance parameters, taking into account correlations between the channels. In the following the considered systematic uncertainties are shortly described. They were evaluated in the context of the corresponding physics analysis \cite{PAS} and are summarized in Tab.~\ref{tab:limits:systs}. These uncertainties are not applied to the W+jets background contribution since it is directly extracted from data.
+There are several sources of systematic uncertainties arising from the event reconstructino that effect the resulting event yield. These uncertainties are included in the likelihood functions as nuisance parameters, taking into account correlations between the channels. In the following the considered systematic uncertainties are shortly described. They were evaluated in the context of the corresponding physics analysis \cite{PAS} and are summarized in Tab.~\ref{tab:limits:systs}. These uncertainties are not applied to the W+jets background contribution since its uncertaintiy is directly extracted from data in the background extraction.
+\subsection*{Uncertainties on the Normalizations}
 \begin{itemize}
-\item Lumiosity\\
+\item Luminosity\\
 The simulated background samples as well as the signal sample are initially normalized according to the integrated luminosity of the used data sample. The uncertainty of the luminosity measurement of $2.3$\% is included as nuisance parameter correlated between all channels.
 \item b quark reconstruction\\
 To account for the efficiency in identifying jets coming from b quark decays \cite{bquarkuncert} an uncertainty is applied on the \ttbar \ and the WZ contribution. The uncertainty resulting from misidentifying jets as originating from b quarks is found to be negligible.
@@ -30,12 +32,13 @@ To account for the efficiency in identifying jets coming from b quark decays \ci
 \item N-subjettiness\\
 \item Lepton energy scale and resolution\\
 \item Missing transverse energy\\
+
 \item Parton distribution functions\\
 \item $Q^2$\\
 \end{itemize}
 \begin{table}
     \centering
-    \caption[Summary of the estimated systematic uncertainties on the normalizations]{Summary of the estimated systematic uncertainties on the normalizations, values taken from \cite{PAS}}
+    \caption[Summary of the estimated systematic uncertainties on the normalizations]{Summary of the estimated systematic uncertainties on the normalizations in \%, values taken from \cite{PAS}}
     \resizebox{0.95\columnwidth}{!}
     {%
     \begin{tabular}{lrrrrrrrrrr}
@@ -55,9 +58,10 @@ To account for the efficiency in identifying jets coming from b quark decays \ci
     \end{tabular}
     }
 \end{table}
-\subsection*{Uncertainties on the Normalizations}
+
 \subsection*{Uncertainties on the Slope Parameters}
 \label{sec:uncslopesig}
+
 The uncertainties on the slope parameters of the signal function were not estimated as part of this thesis but rather in the context of a soon to be published PhD thesis \cite{IVAN}.\\
 
 \noindent The un
@@ -82,8 +86,9 @@ Then, the delta-log-likelihood is formed, which is given by the difference of th
 
 \section{Limits in Vertex Parametrization}
 \label{sec:vertex}
+Describing the effects of anomalous couplings with aTGC parameters using the effective field theory approach is a novel way of 
 
 
 \section{Additional Verification of the Limit Setting Procedure}
 [one signal category]
-[]
+[??]
