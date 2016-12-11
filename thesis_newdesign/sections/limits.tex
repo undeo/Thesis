@@ -6,20 +6,32 @@ In this chapter, the reults of the analysis are presented. Using the signal mode
 
 
 \section{Limit Setting Procedure}
-The limits on the aTGC parameters are ultimately estimated by performing an unbinned maximum likelihood fit to compare the background and signal model with the observed data. In this section, the concept of the maximum likelihood estimation as method to compare an analytical model with measured data is presented. 
+The limits on the aTGC parameters are ultimately estimated by performing an unbinned maximum likelihood fit to compare the background and signal model with the observed data, taking into account uncertainties as nuisance parameters. The likelihood is estimated depending on the aTGC parameters. The resulting distributions are used to extract limits on the aTGC parameters at 95\% Confidence Level (C.L.). In the first part of this section, the concept of the maximum likelihood estimation as method to compare an analytical model with measured data as well as confidence intervalls is presented, while in the second part the final procedure of setting the limits is outlined.
 \subsection{Maximum Likelihood Estimation}
 [likelihood definition]
 [log likelihood]
 [profiling]
 \subsection{Confidence Intervals}
 \subsection{Limit Setting Procedure}
+
 For this, a limit setting tool \cite{combine} created for the combination of the different channels of the Higgs measurement \cite{higgs_comb} is used. It is capable of estimating and combining the likelihood function of several channels depending on one or more paramters of interest (POI), taking into account nuisance parameters by profiling them as explained in section~\ref{subsec:maxlikeest}. The so-called best fit point is estimated by minimizing the likelihood function with respect to the POIs
 [expected limits for sensitivity]
 
 \section{Systematic Uncertainties}
 \label{sec:systematics}
-[list + short description]
-\subsection{Uncertainties on the Slope Parameters}
+There are several sources of systematic uncertainties arising from the event reconstructino that effect the resulting event yield. These uncertainties are included in the likelihood functions as nuisance parameters, taking into account correlations between the channels. In the following the considered systematic uncertainties are shortly described. These uncertainties are not applied to the W+jets background contribution since it is directly extracted from data.
+\begin{itemize}
+\item Lumiosity\\
+The simulated background samples as well as the signal sample are initially normalized according to the integrated luminosity of the used data sample. The uncertainty of the luminosity measurement of $2.3$\% is included as nuisance parameter correlated between all channels.
+\item b-taggin and mistagging\\
+\item Jet energy scale\\
+\item lepton energy scale and resolution\\
+\item Missing transverse energy\\
+\item Parton distribution functions\\
+\item $Q^2$\\
+\end{itemize}
+\subsection*{Uncertainties on the Normalizations}
+\subsection*{Uncertainties on the Slope Parameters}
 \label{sec:uncslopesig}
 The uncertainties on the slope parameters of the signal function were not estimated as part of this thesis but rather in the context of a soon to be published PhD thesis \cite{IVAN}.\\
 
