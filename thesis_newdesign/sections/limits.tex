@@ -2,7 +2,7 @@
 \label{chap:LimitsonATGCs}
 
 
-In this chapter, the reults of the analysis are presented. Using the signal model described in chapter~\ref{chap:signal} and the background estimation from chapter~\ref{chap:bkg}, limits on the three aTGC parameters introduced in section~\ref{sec:aTGC} are estimated. Different scenarios where either one or two aTGC parameters are unequal to zero are studied. Additionally, the limits are computed in the vertex parametrization, which was used in previous analyses (e.g. \cite{aTGC1,aTGC2}).
+In this chapter, the results of the analysis are presented. Using the signal model described in chapter~\ref{chap:signal} and the background estimation from chapter~\ref{chap:bkg}, limits on the three aTGC parameters are estimated. Different scenarios where either one or two aTGC parameters are unequal to zero are studied. Additionally, the limits are computed in the vertex parametrization, which was used in previous analyses (e.g. \cite{aTGC1,aTGC2}).
 
 
 \section{Limit Setting Procedure}
@@ -19,17 +19,41 @@ For this, a limit setting tool \cite{combine} created for the combination of the
 
 \section{Systematic Uncertainties}
 \label{sec:systematics}
-There are several sources of systematic uncertainties arising from the event reconstructino that effect the resulting event yield. These uncertainties are included in the likelihood functions as nuisance parameters, taking into account correlations between the channels. In the following the considered systematic uncertainties are shortly described. These uncertainties are not applied to the W+jets background contribution since it is directly extracted from data.
+There are several sources of systematic uncertainties arising from the event reconstructino that effect the resulting event yield. These uncertainties are included in the likelihood functions as nuisance parameters, taking into account correlations between the channels. In the following the considered systematic uncertainties are shortly described. They were evaluated in the context of the corresponding physics analysis \cite{PAS} and are summarized in Tab.~\ref{tab:limits:systs}. These uncertainties are not applied to the W+jets background contribution since it is directly extracted from data.
 \begin{itemize}
 \item Lumiosity\\
 The simulated background samples as well as the signal sample are initially normalized according to the integrated luminosity of the used data sample. The uncertainty of the luminosity measurement of $2.3$\% is included as nuisance parameter correlated between all channels.
-\item b-taggin and mistagging\\
+\item b quark reconstruction\\
+To account for the efficiency in identifying jets coming from b quark decays \cite{bquarkuncert} an uncertainty is applied on the \ttbar \ and the WZ contribution. The uncertainty resulting from misidentifying jets as originating from b quarks is found to be negligible.
 \item Jet energy scale\\
-\item lepton energy scale and resolution\\
+
+\item N-subjettiness\\
+\item Lepton energy scale and resolution\\
 \item Missing transverse energy\\
 \item Parton distribution functions\\
 \item $Q^2$\\
 \end{itemize}
+\begin{table}
+    \centering
+    \caption[Summary of the estimated systematic uncertainties on the normalizations]{Summary of the estimated systematic uncertainties on the normalizations, values taken from \cite{PAS}}
+    \begin{tabular}{lrrrrrrrrrr}
+    \hline
+    process     & jet en.       & b-tag     & $\tau_{21}$       & lep. en.      & lep. ID      & \MET      & lumi      & PDF       & scale     & total \\
+    \hline
+               & \multicolun{10}{c}{electron channel} \\
+    \hline
+    \ttbar      & 2.8           & 0.8      & 12              & <0.5         & 1.0          & 0.5        & 2.7       & 2.5         & 19       & 23\\
+    diboson     & 2.4           & <0.5     & 12              & 0.6          & 1.0          & 0.6        & 2.7       & 2.5         & 6.0       & 14\\
+    Single Top  & 1.6           & <0.5     & 12              & 0.5          & 1.0          & 1.2        & 2.7       & 0.3         & 2.0       & 13\\
+    \hline
+               & \multicolun{10}{c}{muon channel} \\
+    \hline
+    \ttbar      & 2.6           & 0.8      & 12              & 1.6          & 3.2          & <0.5       & 2.7       & 2.6         & 19       & 23\\
+    diboson     & 2.3           & <0.5     & 12              & 1.7          & 3.9          & <0.5       & 2.7       & 2.3         & 6.0       & 15\\
+    Single Top  & 0.6           & <0.5     & 12              & 1.9          & 3.6          & 0.5        & 2.7       & <0.5        & 1.9       & 13\\
+    \hline
+    \end{tabular}
+\end{table}
 \subsection*{Uncertainties on the Normalizations}
 \subsection*{Uncertainties on the Slope Parameters}
 \label{sec:uncslopesig}
