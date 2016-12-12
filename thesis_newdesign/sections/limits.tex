@@ -6,16 +6,26 @@ In this chapter, the results of the analysis are presented. Using the signal mod
 
 
 \section{Limit Setting Procedure}
-The limits on the aTGC parameters are ultimately estimated by performing an unbinned maximum likelihood fit to compare the background and signal model with the observed data, taking into account uncertainties as nuisance parameters. The likelihood is estimated depending on the aTGC parameters. The resulting distributions are used to extract limits on the aTGC parameters at 95\% Confidence Level (C.L.). In the first part of this section, the concept of the maximum likelihood estimation as method to compare an analytical model with measured data as well as confidence intervalls is presented, while in the second part the final procedure of setting the limits is outlined.
+The limits on the aTGC parameters are ultimately estimated by performing an unbinned maximum likelihood fit to compare the background and signal model with the observed data, taking into account uncertainties as nuisance parameters. The likelihood is estimated as function depending on the aTGC parameters. The resulting distributions are used to extract limits on the aTGC parameters at 95\% Confidence Level (C.L.). In the first part of this section, the concept of the maximum likelihood estimation as method to compare an analytical model with measured data as well as confidence intervals is presented, while in the second part the final procedure of setting the limits is outlined.
 \subsection{Maximum Likelihood Estimation}
+\label{subsec:maxlikeest}
 [likelihood definition]
 [log likelihood]
 [profiling]
 \subsection{Confidence Intervals}
+[definition][extraction from max likelihood]
 \subsection{Limit Setting Procedure}
+The limits on the aTGC parameters are estimated by comparing the background prediction with the observed data in the WW- and WZ-category for the electron and muon channel. The expected event yields for the different background contributions as well as 
 
-For this, a limit setting tool \cite{combine} created for the combination of the different channels of the Higgs measurement \cite{higgs_comb} is used. It is capable of estimating and combining the likelihood function of several channels depending on one or more paramters of interest (POI), taking into account nuisance parameters by profiling them as explained in section~\ref{subsec:maxlikeest}. A scan over the POIs is performed, evaluating the likelihood for each POI value.
-The limits are ultimately extracted from the delta-log-likelihood distributions, which is defined as the difference of the likelihood for a given POI value and the likelihood for the best fit point. The best fit point is estimated by minimizing the likelihood function with respect to the POIs. 
+
+For this, a limit setting tool created for the combination of the Higgs measurements of CMS and ATLAS \cite{combine} is used. It is capable of estimating and combining the likelihood function of several channels depending on one or more paramters of interest (POI), taking into account uncertainties and their correlations as nuisance parameters  by profiling them as explained in section~\ref{subsec:maxlikeest}. A scan over the POIs is performed, evaluating the likelihood for each POI value.
+The limits are ultimately extracted from the delta-log-likelihood distributions, which is defined as the difference of the likelihood for a given POI value and the likelihood for the best fit point. The best fit point is estimated by minimizing the likelihood function with respect to the POIs.\\
+
+\noindent The likelihood function for a single channel and a single POI $c_i$ is given by
+\begin{equation}
+\mathcal{L} = \frac{1}{k} \left( S(c_i)\cdot f_{\rm aTGC}(c_i) + B \cdot f_{\rm bkg} \right) e^{S(c_i) + B} ~,
+\end{equation}
+where $k$ denotes the total number of observed events, $S(c_i)$ the expected signal yield depending on the POI $c_i$, $f_{\rm aTGC}(c_i)$ and $f_{\rm bkg}$ the probability density function describing the signal and the background processes, respectively, and $B$ the expected background event yield.
 [expected limits for sensitivity]
 
 \section{Systematic Uncertainties}
@@ -24,12 +34,13 @@ There are several sources of systematic uncertainties arising from the event rec
 \subsection*{Uncertainties on the Normalizations}
 \begin{itemize}
 \item Luminosity\\
-The simulated background samples as well as the signal sample are initially normalized according to the integrated luminosity of the used data sample. The uncertainty of the luminosity measurement of $2.3$\% is included as nuisance parameter correlated between all channels.
+The simulated background samples as well as the signal sample are initially normalized according to the integrated luminosity of the used data sample. The uncertainty of the luminosity measurement of $2.7$\% is included as nuisance parameter correlated between all channels.
 \item b quark reconstruction\\
-To account for the efficiency in identifying jets coming from b quark decays \cite{bquarkuncert} an uncertainty is applied on the \ttbar \ and the WZ contribution. The uncertainty resulting from misidentifying jets as originating from b quarks is found to be negligible.
+To account for the efficiency in identifying jets coming from b quark decays \cite{CSV2} an uncertainty is applied on the \ttbar \ and the WZ contribution. The uncertainty resulting from misidentifying jets as originating from b quarks is found to be negligible.
 \item Jet energy scale\\
 
-\item N-subjettiness\\
+\item N-subjettiness cut efficiency\\
+To account for the efficiency 
 \item Lepton energy scale and resolution\\
 \item Missing transverse energy\\
 
@@ -38,7 +49,8 @@ To account for the efficiency in identifying jets coming from b quark decays \ci
 \end{itemize}
 \begin{table}
     \centering
-    \caption[Summary of the estimated systematic uncertainties on the normalizations]{Summary of the estimated systematic uncertainties on the normalizations in \%, values taken from \cite{PAS}}
+    \caption[Summary of the estimated systematic uncertainties on the normalizations]{Summary of the estimated systematic uncertainties on the normalizations in \%, values taken from \cite{PAS}. Shown are the applied uncertainties corresponding to jet energy scale (jet en.), b quark reconstruction efficiency (b-tag), N-subjettiness cut efficiency ($\tau_{21}$), lepton energy scale (lep. en.), lepton ID [??] (lep. ID), missing transverse energy (\MET), luminosity (lumi), parton distribution functions (PDF) and $Q^2$ (scale).}
+    \label{tab:limits:systs}
     \resizebox{0.95\columnwidth}{!}
     {%
     \begin{tabular}{lrrrrrrrrrr}
@@ -77,17 +89,59 @@ One-dimensional limits are computed by performing a scan over one of the aTGC pa
 [profiling of uncertainties]
 Then, the delta-log-likelihood is formed, which is given by the difference of the likelihood of each point and the best fit point. The best fit point is the parameter value that maximizes the likelihood. 
 
+\begin{figure}
+	\centering
+	\subfigure[]{
+		\includegraphics[width=0.6\textwidth]{../plots/results/1dlimit_cwww.pdf}
+	}
+	\subfigure[]{
+		\includegraphics[width=0.6\textwidth]{../plots/results/1dlimit_ccw.pdf}
+	}
+	\subfigure[]{
+		\includegraphics[width=0.6\textwidth]{../plots/results/1dlimit_cb.pdf}
+	}		
+	\caption[Delta-log-likelihood distributions for the three aTGC parameters]{Delta-log-likelihood distributions for \Tcwww \ (a), \Tccw \ (b) and \Tcb \ (c). Shown are the expected (blue) and observed distributions (black). The intersection of the black horizontal dashed line and the expected or observed distribution corresponds to the 95\% C.L., indicated by the vertical blue and black lines for the expected and observed limit, respectively.}
+	\label{fig:limits:1dlimits}
+\end{figure}
 
 \section{Two-Dimensional Limits}
 \label{sec:2dlims}
 \dots \\
 \noindent In the two-dimensional limits the different sensitivities of the aTGC parameters in the two regions are expected to affect the shape of the resulting limits. This motivated the division of the signal region into a low- and high-mass region (see section~\ref{sec:wwwzregs}. If the sensitivities are roughly equal in both regions for both parameters (i.e. for the two-dimensional \Tcwww -\Tccw -limits), 
 
+\begin{figure}
+	\centering
+	\subfigure[]{
+		\includegraphics[width=0.5\textwidth]{../plots/results/cwww_ccw_2dlimit_deltaNLL.pdf}
+	}%
+	\subfigure[]{
+		\includegraphics[width=0.5\textwidth]{../plots/results/cwww_cb_2dlimit_deltaNLL.pdf}
+	}
+	\subfigure[]{
+		\includegraphics[width=0.5\textwidth]{../plots/results/ccw_cb_2dlimit_deltaNLL.pdf}
+	}		
+	\caption[Two-dimensional delta-log-likelihood distributions for the three combinations of aTGC parameters]{Two-dimensional delta-log-likelihood distributions for \Tcwww -\Tccw \ (a), \Tcwww -\Tcb \ (b) and \Tccw -\Tcb\ (c). Shown are the expected distributions (dashed lines) for the 68\% (blue), 95\% (green) and 99\% C.L. (red) as well as the observed distribution (black line).}
+	\label{fig:limits:2dlimits}	
+\end{figure}
 
 \section{Limits in Vertex Parametrization}
 \label{sec:vertex}
 Describing the effects of anomalous couplings with aTGC parameters using the effective field theory approach is a novel way of 
 
+\begin{figure}
+	\centering
+	\subfigure[]{
+		\includegraphics[width=0.5\textwidth]{../plots/results/lZ_dkz_2dlimit_deltaNLL.pdf}
+	}%
+	\subfigure[]{
+		\includegraphics[width=0.5\textwidth]{../plots/results/lZ_dg1z_2dlimit_deltaNLL.pdf}
+	}
+	\subfigure[]{
+		\includegraphics[width=0.5\textwidth]{../plots/results/dkz_dg1z_2dlimit_deltaNLL.pdf}
+	}		
+	\caption[Two-dimensional delta-log-likelihood distributions for the three combinations of aTGC parameters in the vertex parametrization]{Two-dimensional delta-log-likelihood distributions for $\lambda_Z$-$\Delta\kappa_Z$ (a), $\lambda_Z$-$\Delta g_1^Z$ (b) and $\Delta\kappa_Z$-$\Delta g_1^Z$ (c). Shown are the expected distributions (dashed lines) for the 68\% (blue), 95\% (green) and 99\% C.L. (red) as well as the observed distribution (black line).}
+	\label{fig:limits:2dlimitsvertex}	
+\end{figure}
 
 \section{Additional Verification of the Limit Setting Procedure}
 [one signal category]
