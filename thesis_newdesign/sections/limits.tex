@@ -1,21 +1,27 @@
 \chapter{Limits on Anomalous Triple Gauge Couplings}
 \label{chap:LimitsonATGCs}
 
-
-In this chapter, the results of the analysis are presented. Using the signal model described in chapter~\ref{chap:signal} and the background estimation from chapter~\ref{chap:bkg}, limits on the three aTGC parameters are estimated. Different scenarios where either one or two aTGC parameters are unequal to zero are studied. Additionally, the limits are computed in the vertex parametrization, which was used in previous analyses (e.g. \cite{aTGC1,aTGC2}).
-
+In this chapter, the results of the analysis are presented. Using the signal model described in chapter~\ref{chap:signal} and the background estimation from chapter~\ref{chap:bkg}, limits on the three aTGC parameters are estimated. Different scenarios where either one or two aTGC parameters are unequal to zero are studied. Additionally, the limits are computed in the vertex parametrization that was used in previous analyses (e.g. \cite{aTGC1,aTGC2}).
 
 \section{Limit Setting Procedure}
-The limits on the aTGC parameters are ultimately estimated by performing an unbinned maximum likelihood fit to compare the background and signal model with the observed data, taking into account uncertainties as nuisance parameters. The likelihood is estimated as function depending on the aTGC parameters. The resulting distributions are used to extract limits on the aTGC parameters at 95\% Confidence Level (C.L.). In the first part of this section, the concept of the maximum likelihood estimation as method to compare an analytical model with measured data as well as confidence intervals are presented, while in the second part the final procedure of setting the limits is outlined.
+The limits on the aTGC parameters are ultimately estimated by performing an unbinned maximum likelihood fit to compare the background and signal model with the observed data, taking into account uncertainties as nuisance parameters. The likelihood is estimated as function depending on the aTGC parameters. The resulting distributions are used to extract limits on the aTGC parameters at 95\% Confidence Level (C.L.). In the first part of this section, the concept of the maximum likelihood estimation as method to compare an analytical model with measured data as well as the extraction of confidence intervals from a likelihood distribution are presented, while in the second part the final procedure of setting the limits is outlined.
 \subsection{Maximum Likelihood Estimation}
 \label{subsec:maxlikeest}
-Given $n$ observables $x_i$ that are distributed according to a probability density function (pdf) $f(x_i,\mathbf{\theta})$ with a set of parameters $\mathbf{\theta}=(\theta_1,\dots,\theta_m)$, the probability for measuring the $x_i$ in the interval $[x_i,x_i+{\rm d}x_i]$ is given by
+Given a measured data sample $x_1,\dots,x_n$ of a observable $x$ that is distributed according to a probability density function (pdf) $f(x_i,\boldsymbol{\theta})$ with a set of parameters $\boldsymbol{\theta}=(\theta_1,\dots,\theta_m)$, the joint pdf for measuring the $x_i$ is given by
 \begin{equation}
-p(x_i,\theta) = L(\mathbf{\theta}) {/rm d}x_i ~,
+123
 \end{equation}
-with the likelihood function $L(\mathbf{\theta})$, which is defined as
+
+Given $n$ measurements $x_i$ of a observables $x$ that are distributed according to a probability density function (pdf) $f(x_i,\boldsymbol{\theta})$ with a set of parameters $\boldsymbol{\theta}=(\theta_1,\dots,\theta_m)$, the probability for measuring $\nu$ events is given 
+
+
+the $x_i$ in the interval $[x_i,x_i+{\rm d}x_i]$ is given by
 \begin{equation}
-L(\mathbf{\theta}) = \prod_{i=1}^{n} f(x_i,\theta) ~.
+p(x_i,\boldsymbol{\theta}) = L(\boldsymbol{\theta}) {\rm d}x_i ~,
+\end{equation}
+with the likelihood function $L(\boldsymbol{\theta})$, which is defined as
+\begin{equation}
+L(\boldsymbol{\theta}) = \prod_{i=1}^{n} f(x_i,\boldsymbol{\theta}) ~.
 \end{equation}
 The likelihood function has a maximum at those parameter values $\hat{\theta}$ 
 
@@ -23,59 +29,63 @@ The likelihood function has a maximum at those parameter values $\hat{\theta}$
 [log likelihood]
 [profiling]
 \subsection{Confidence Intervals}
+A confidence interval is an alternative way of reporting statistical errors on a measurement. If the measurement of a parameter $c$ was repeated many times, a confidence interval $[a,b]$ would include the true value of $c$ in a fraction $1-\alpha-\beta$ of the experiments, where $\alpha$ and $\beta$ are the probabilities of measuring a value lower than $a$ or higher than $b$, respectively.
 [definition][extraction from max likelihood]
 \subsection{Limit Setting Procedure}
-The limits on the aTGC parameters are estimated by comparing the background prediction with the observed data in the WW- and WZ-category for the electron and muon channel. The expected event yields for the different background contributions as well as 
+\label{subsec:limsetproc}
+The limits on the aTGC parameters are estimated by comparing the background prediction with the observed data in the WW- and WZ-category for the electron and muon channel. For this, a limit setting tool created for the combination of the Higgs measurements of CMS and ATLAS \cite{combine} is used. It is capable of estimating and combining the likelihood function of several channels depending on one or more parameters of interest (POI), taking into account uncertainties and their correlations as nuisance parameters. A scan over the POIs is performed, evaluating the likelihood for each POI value (or each set of POI values in case of two-dimensional limits) by minimizing it with respect to the nuisance parameters. The limits are ultimately extracted from the delta-log-likelihood distributions, which is defined as the difference of the logarithmic likelihood for a given POI value and the logarithmic likelihood for the best fit point. The best fit point is estimated by minimizing the likelihood function with respect to the POIs and the nuisance parameters simultaneously.\\
 
-
-For this, a limit setting tool created for the combination of the Higgs measurements of CMS and ATLAS \cite{combine} is used. It is capable of estimating and combining the likelihood function of several channels depending on one or more paramters of interest (POI), taking into account uncertainties and their correlations as nuisance parameters  by profiling them as explained in section~\ref{subsec:maxlikeest}. A scan over the POIs is performed, evaluating the likelihood for each POI value.
-The limits are ultimately extracted from the delta-log-likelihood distributions, which is defined as the difference of the likelihood for a given POI value and the likelihood for the best fit point. The best fit point is estimated by minimizing the likelihood function with respect to the POIs.\\
-
-\noindent The likelihood function for a single channel and a single POI $c_i$ is given by
+\noindent The likelihood function for a single channel and one or more POIs $\boldsymbol{c}$ is given by
 \begin{equation}
-\mathcal{L} = \frac{1}{k} \left( S(c_i)\cdot f_{\rm aTGC}(c_i) + B \cdot f_{\rm bkg} \right) e^{S(c_i) + B} ~,
+\mathcal{L} = \frac{1}{k} \left( S(\boldsymbol{c})\cdot f_{\rm aTGC}(\boldsymbol{c}) + B \cdot f_{\rm bkg} \right) e^{S(\boldsymbol{c}) + B} \cdot \rho(\boldsymbol{\theta})~,
 \end{equation}
-where $k$ denotes the total number of observed events, $S(c_i)$ the expected signal yield depending on the POI $c_i$, $f_{\rm aTGC}(c_i)$ and $f_{\rm bkg}$ the probability density function describing the signal and the background processes, respectively, and $B$ the expected background event yield.
+where $k$ denotes the total number of observed events, $S(c_i)$ the expected signal yield depending on the POI $c_i$, and $B$ the expected background event yield. $f_{\rm aTGC}(c_i)$ and $f_{\rm bkg}$ are given by the pdfs describing the signal and the background processes, respectively, while  $\rho(\boldsymbol{\theta})$ is the pdf describing the set of systematic uncertainties $\boldsymbol{\theta}$.
+
+
 [expected limits for sensitivity]
 
 \section{Systematic Uncertainties}
 \label{sec:systematics}
-There are several sources of systematic uncertainties arising from the event reconstruction that effect the resulting event yield. These uncertainties are included in the likelihood functions as nuisance parameters, taking into account correlations between the channels. In the following the considered systematic uncertainties are shortly described. They were evaluated in the context of the corresponding physics analysis \cite{PAS} and are summarized in Tab.~\ref{tab:limits:systs}. These uncertainties are not applied to the W+jets background contribution since its uncertaintiy is directly extracted from data in the background extraction.
+There are several sources of systematic uncertainties arising from the event reconstruction that effect the resulting event yields and the shapes of the background and signal distributions.  In the following section the considered systematic uncertainties are shortly described. They were evaluated in the context of the corresponding physics analysis \cite{PAS} and are summarized in Tab.~\ref{tab:limits:systs}. These uncertainties are not applied to the W+jets background contribution since its uncertainty is directly extracted from the measured data in the background extraction.
 \subsection*{Uncertainties on the Normalizations}
+These uncertainties are included in the likelihood functions as nuisance parameters, taking into account correlations between the channels.
 \begin{itemize}
 \item Luminosity\\
 The simulated background samples as well as the signal sample are initially normalized according to the integrated luminosity of the used data sample. The uncertainty of the luminosity measurement of $2.7$\% is included as nuisance parameter correlated between all channels.
 \item b quark reconstruction\\
 To account for the efficiency in identifying jets coming from b quark decays \cite{CSV2} an uncertainty is applied on the \ttbar \ and the WZ contribution. The uncertainty resulting from misidentifying jets as originating from b quarks is found to be negligible.
 \item Jet energy scale\\
-
+The effects of varying the jet energy scale on the normalizations of the different processes is propagated as additional uncertainty, correlated between all channels.
 \item N-subjettiness cut efficiency\\
-To account for the efficiency 
-\item Lepton energy scale and resolution\\
-\item Missing transverse energy\\
+To account for the efficiency of the cut on the N-subjettiness $\tau_{21}$ a correlated uncertainty of 12\% on all processes containing hadronic boson decays is applied. For the single top production this uncertainty is not applied to the $t$- and $s$-channel processes, since here the hadronic boson candidate is given by a jet originating from a gluon or light quark.
+\item Lepton energy scale, energy resolution and efficiency\\
 
+\item Missing transverse energy\\
+Unclustered energy deposits in the detector that are not assigned to any particle can be falsely assigned to the \MET . From this an uncertainty is estimated and propagated to the normalizations. 
 \item Parton distribution functions (PDF)\\
-\item $Q^2$\\
+The PDFs that describe the energy distribution between the partons of the protons are empirically determined. The uncertainty of the corresponding measurement is evaluated and added as uncertainty.
+\item Renormalization and factorization scale\\
+The theoretical cross section calculated up to a certain order of perturbation. To avoid divergencies, a new scale $Q^2$ is introduced. The effects of increasing or decreasing $Q^2$ by a factor of 2 are estimated for the different background contributions and added as uncertainty.  
 \end{itemize}
 \begin{table}
     \centering
-    \caption[Summary of the estimated systematic uncertainties on the normalizations]{Summary of the estimated systematic uncertainties on the normalizations in \%, values taken from \cite{PAS}. Shown are the applied uncertainties corresponding to jet energy scale (JES), b quark reconstruction efficiency (b-tag), N-subjettiness cut efficiency ($\tau_{21}$ eff.), lepton energy scale (lep. en.), lepton ID [??] (lep. ID), missing transverse energy (\MET), luminosity (lumi), parton distribution functions (PDF) and $Q^2$ (scale).}
+    \caption[Summary of the estimated systematic uncertainties on the normalizations]{Summary of the estimated systematic uncertainties on the normalizations in \%, values taken from \cite{PAS}. Shown are the applied uncertainties corresponding to jet energy scale (JES), b quark reconstruction efficiency (b-tag), N-subjettiness cut efficiency ($\tau_{21}$ eff.), lepton energy scale (lep. en.), lepton efficiency (lep. eff.), missing transverse energy (\MET), luminosity (lumi), parton distribution functions (PDF) and renormalization and factorization scale (scale).}
     \label{tab:limits:systs}
     \resizebox{0.95\columnwidth}{!}
     {%
     \begin{tabular}{lrrrrrrrrrr}
     \hline
-    process     & JES      & b-tag     & $\tau_{21}$ eff.      & lep. en.      & lep. ID      & \MET      & lumi      & PDF       & scale     & total \\
+    process     & JES      & b-tag     & $\tau_{21}$ eff.      & lep. en.      & lep. eff.      & \MET      & lumi      & PDF       & scale     & total \\
     \hline
-               & \multicolumn{10}{c}{electron channel} \\
+    \multicolumn{11}{c}{electron channel} \\
     \ttbar      & 2.8           & 0.8      & 12              & <0.5         & 1.0          & 0.5        & 2.7       & 2.5         & 19       & 23\\
     diboson     & 2.4           & <0.5     & 12              & 0.6          & 1.0          & 0.6        & 2.7       & 2.5         & 6.0       & 14\\
-    Single Top  & 1.6           & <0.5     & 12              & 0.5          & 1.0          & 1.2        & 2.7       & 0.3         & 2.0       & 13\\
+    single top  & 1.6           & <0.5     & 12              & 0.5          & 1.0          & 1.2        & 2.7       & 0.3         & 2.0       & 13\\
     \hline
-               & \multicolumn{10}{c}{muon channel} \\
+    \multicolumn{11}{c}{muon channel} \\
     \ttbar      & 2.6           & 0.8      & 12              & 1.6          & 3.2          & <0.5       & 2.7       & 2.6         & 19       & 23\\
     diboson     & 2.3           & <0.5     & 12              & 1.7          & 3.9          & <0.5       & 2.7       & 2.3         & 6.0       & 15\\
-    Single Top  & 0.6           & <0.5     & 12              & 1.9          & 3.6          & 0.5        & 2.7       & <0.5        & 1.9       & 13\\
+    single top  & 0.6           & <0.5     & 12              & 1.9          & 3.6          & 0.5        & 2.7       & <0.5        & 1.9       & 13\\
     \hline
     \end{tabular}
     }
@@ -83,18 +93,35 @@ To account for the efficiency
 
 \subsection*{Uncertainties on the Slope Parameters}
 \label{sec:uncslopesig}
-[UNCERTAINTIES SHAPE PARAMETERS BACKGROUND?? $\ttbar \cdot 4 \eq 2$? ]
+
 The uncertainties mentioned above do also affect the shape of the signal distribution. 
 The uncertainties on the slope parameters of the signal function were not estimated as part of this thesis but rather in the context of a soon to be published PhD thesis \cite{IVAN}.\\
 
-\noindent To estimate the effect of the systematic uncertainties on the values of the slope parameters of the signal function, the parameter extraction is redone as described in chapter~\ref{chap:signal}. For the sake of simplicity, the interference terms in equation~\ref{eq:signal:sigfunc} are neglected, leading to three slope parameters $a_\cwww$,$a_\ccw$ and $a_\cb$. For each systematic uncertainty, a new signal sample is created by varying the source of the uncertainty. The uncertainties on the slope parameters are evaluated as difference between the nominal parameter values and the values from the varied samples. The resulting uncertainties are dominated by the contributions from the PDF as well as renormalization and factorization scale, while in the WZ-category $a_\cb$ is dominated by the contribution corresponding to the jet enrgy scale (JES). This is caused by the fact that \Tcb \ mostly contributes to the WW-category. A variation in the JES leads to migration between the two categories, thus affecting the resulting shape.
+\noindent To estimate the effect of the systematic uncertainties on the values of the slope parameters of the signal function, the parameter extraction is redone as described in chapter~\ref{chap:signal}. For the sake of simplicity, the interference terms in equation~\ref{eq:signal:sigfunc} are neglected, leading to three slope parameters $a_{c_{WWW}}$, $a_{c_W}$ and $a_{c_B}$. For each systematic uncertainty, a new signal sample is created by varying the source of the uncertainty. The uncertainties on the slope parameters are evaluated as difference between the nominal parameter values and the values from the varied samples. The resulting uncertainties are dominated by the contributions from the PDF as well as renormalization and factorization scale, while in the WZ-category $a_{c_B}$ is dominated by the contribution corresponding to the jet energy scale (JES). This is caused by the fact that \Tcb \ mostly contributes to the WW-category. A variation in the JES leads to migration between the two categories, thus affecting the resulting shape.\\
 
-\noindent The final uncertainty on the slope parameters is estimated by adding the different contributions in quadrature, leading to an uncertainty of 5\% that is applied to all signal shape parameters except for the one corresponding to \Tcb \ , for which an uncertainty of 15\% is applied.
+\noindent The final uncertainty on the slope parameters is estimated by adding the different contributions in quadrature, leading to an uncertainty of 5\% that is applied to all signal shape parameters except for the one corresponding to \Tcb \ , for which an uncertainty of 15\% is applied.\\
+
+\noindent The uncertainty on the parameters describing the shape of the main background contribution, given by W+jets production, is taken from the fit result of the background extraction in section~\ref{sec:shapewjets}. To account for possible different parametrizations of the W+jets distribution (e.g. the alternative function given in equation~\ref{eq:bkg:altfunc}), the uncertainties are increased by a factor of $\sqrt{2}$. For the second largest background contribution, given by \ttbar \ production, the parametric fit uncertainties are also included in the limit extraction. Since the effects of the systematic uncertainties mentioned above are not explicitly evaluated, the fit uncertainty is artificially increased by a factor of 2.
+
 
 \section{One-Dimensional Limits}
-One-dimensional limits are computed by performing a scan over one of the aTGC parameters while keeping the remaining two set to zero. For each scanned point the profiled logarithmic likelihood is computed.
-[profiling of uncertainties]
-Then, the delta-log-likelihood is formed, which is given by the difference of the likelihood of each point and the best fit point. The best fit point is the parameter value that maximizes the likelihood. 
+One-dimensional limits are computed by performing a scan over one of the aTGC parameters while keeping the remaining two set to zero. For each scanned point the delta-log-likelihood ($\Delta NNL$) is computed as described in section~\ref{subsec:limsetproc} to obtain expected and observed limits at 95\% C.L., which are extracted from the $\Delta NLL$ contribution at $\Delta NLL=1,92$. The resulting expected and observed limits are summarized in Tab.~\ref{tab:limits:1dlimits} for the three aTGC parameters. The $\Delta NLL$ distributions are shown in Fig.~\ref{fig:limits:1dlimits}.
+
+\begin{table}
+	\centering
+	\caption[Expected and observed limits at 95\% C.L. on single anomalous couplings]{Expected and observed limits at 95\% C.L. on single anomalous couplings (other couplings set to zero).}
+	\label{tab:limits:1dlimits}
+	\begin{tabular}{ccccc}
+	\hline
+	\multirow{2}{*}{aTGC}              &     \multicolumn{3}{c}{expected limit} & observed limit\\
+	& 68\% C.L. & 95\% C.L. & 99\% C.L. & 95\% C.L.\\
+	\hline
+	$\frac{c_{WWW}}{\Lambda ^2}$~(TeV$^{-2}$) & [-6.51 , 6.49] & [-8.73 , 8.70] & [-9.97 , 9.94] & [-9.46 , 9.42] \\
+	$\frac{c_{W}}{\Lambda ^2}$~(TeV$^{-2}$)   & [-8,8 , 8.1] & [-11.7 , 11.1] & [-13.3 , 12.8] & [-12.6 , 12.0] \\
+	$\frac{c_{B}}{\Lambda ^2}$~(TeV$^{-2}$)   & [-40.5 , 38.7] & [-54.9 , 53.3] & [-63.2 , 61.7] & [-56.1 , 55.4] \\
+	\hline
+	\end{tabular}
+\end{table}
 
 
 [1sigma around exp. limit green, 2 sigma yellow band?]
@@ -109,7 +136,7 @@ Then, the delta-log-likelihood is formed, which is given by the difference of th
 	\subfigure[]{
 		\includegraphics[width=0.6\textwidth]{../plots/results/1dlimit_cb.pdf}
 	}		
-	\caption[Delta-log-likelihood distributions for the three aTGC parameters]{Delta-log-likelihood distributions for \Tcwww \ (a), \Tccw \ (b) and \Tcb \ (c). Shown are the expected (blue) and observed distributions (black). The intersection of the black horizontal dashed line and the expected or observed distribution corresponds to the 95\% C.L., indicated by the vertical blue and black lines for the expected and observed limit, respectively.}
+	\caption[Delta-log-likelihood distributions for the three aTGC parameters]{$\Delta NNL$ distributions for \Tcwww \ (a), \Tccw \ (b) and \Tcb \ (c). Shown are the expected (blue) and observed distributions (black). The intersection of the black horizontal dashed line and the expected or observed distribution corresponds to the 95\% C.L., indicated by the vertical blue and black lines for the expected and observed limit, respectively.}
 	\label{fig:limits:1dlimits}
 \end{figure}
 
@@ -135,11 +162,27 @@ Then, the delta-log-likelihood is formed, which is given by the difference of th
 
 \section{Limits in Vertex Parametrization}
 \label{sec:vertex}
-Describing the effects of anomalous couplings with aTGC parameters using the effective field theory approach is a novel way of analysing triple gague couplings. Previous analyses used the vertex parametrization, where the aTGC are described by the couplings in the SM Lagrangian given in equation~\ref{eq:theo:tgclag}. The limits resulting from these analyses cannot be simply converted to the EFT parametrization. However, the generic signal model introduced in chapter~\ref{chap:signal} can be transformed via
+Describing the effects of anomalous couplings with aTGC parameters using the effective field theory approach is a novel way of analysing triple gauge couplings. Previous analyses used the vertex parametrization, where the aTGC are described by the couplings in the SM Lagrangian given in equation~\ref{eq:theo:EWKlag}. The limits resulting from these analyses cannot be simply converted to the EFT parametrization. However, the generic signal model introduced in chapter~\ref{chap:signal} can be transformed via
 \begin{align}
-~,
+123~,
 \end{align}
-which allows for the extraction of the limits in terms of $\lambda_Z$, $\Delta \kappa_Z$ and $\Delta g_1^Z$. The results for the one-dimensional limits are summarized in Tab.~\ref{tab:limits:1dlimitsvertex}, while the two-simensional limits are shown in Fig.~\ref{fig:limits:2dlimitsvertex}. A comparison with the previous limits using data taken at a center of mass energy of 7\,TeV is shown in Fig.~\ref{fig:limits:compare}. As can be seen there, the limits extracted in this analysis are competitive to the previous ones, despite using a comparitively small dataset of 2.3\,fb$^{-1}$.
+which allows for the extraction of the limits in terms of $\lambda_Z$, $\Delta \kappa_Z$ and $\Delta g_1^Z$. The results for the one-dimensional limits are summarized in Tab.~\ref{tab:limits:1dlimitsvertex}, while the two-dimensional limits are shown in Fig.~\ref{fig:limits:2dlimitsvertex}. A comparison with the previous limits using data taken at a center of mass energy of 7\,TeV is shown in Fig.~\ref{fig:limits:compare}. As can be seen there, the limits extracted in this analysis are competitive to the previous ones, despite using a comparatively small dataset of 2.3\,fb$^{-1}$.
+
+\begin{table}
+	\centering
+	\caption[Expected and observed limits at 95\% C.L. on single anomalous couplings in the vertex parametrization]{Expected and observed limits at 95\% C.L. on single anomalous couplings in the vertex parametrization (other couplings set to zero).}
+	\label{tab:limits:1dlimits_vertex}
+	\begin{tabular}{ccccc}
+	\hline
+	\multirow{2}{*}{aTGC}              &     \multicolumn{3}{c}{expected limit} & observed limit\\
+	& 68\% C.L. & 95\% C.L. & 99\% C.L. & 95\% C.L.\\
+	\hline
+	$\lambda$ & [-0.027 , 0.027] & [-0.036 , 0.036] & [-0.041 , 0.041] & [-0.039 , 0.039] \\
+	$\Delta g_1^Z$   & [-0.048 , 0.046] & [-0.066 , 0.064] & [-0.075 , 0.074] & [-0.067 , 0.066] \\
+	$\Delta\kappa_Z$   & [-0.028 , 0.029] & [-0.038 , 0.040] & [-0.045 , 0.046] & [-0.040 , 0.041] \\
+	\hline
+	\end{tabular}
+\end{table}
 
 \begin{figure}
 	\centering
@@ -158,4 +201,18 @@ which allows for the extraction of the limits in terms of $\lambda_Z$, $\Delta \
 
 \section{Additional Verification of the Limit Setting Procedure}
 [one signal category]
-[??]
+
+\begin{figure}
+	\centering
+	\subfigure[]{
+		\includegraphics[width=0.5\textwidth]{../plots/results/cwww_ccw_2dlimit_deltaNLL_WV.pdf}
+	}%
+	\subfigure[]{
+		\includegraphics[width=0.5\textwidth]{../plots/results/cwww_cb_2dlimit_deltaNLL_WV.pdf}
+	}
+	\subfigure[]{
+		\includegraphics[width=0.5\textwidth]{../plots/results/ccw_cb_2dlimit_deltaNLL_WV.pdf}
+	}		
+	\caption[Two-dimensional delta-log-likelihood distributions for the three combinations of aTGC parameters without division of the signal region]{Two-dimensional delta-log-likelihood distributions for \Tcwww -\Tccw \ (a), \Tcwww -\Tcb \ (b) and \Tccw -\Tcb\ (c) without division of the signal region. Shown are the expected distributions (dashed lines) for the 68\% (blue), 95\% (green) and 99\% C.L. (red) as well as the observed distribution (black line).}
+	\label{fig:limits:2dlimits_nocat}	
+\end{figure}

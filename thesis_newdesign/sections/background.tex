@@ -204,7 +204,7 @@ F_{\rm diboson}^{\rm SR}(x) = e^{d_1x+\frac{d_2}{x}} \, .
 The resulting plots are also shown in the appendix in Fig.~\ref{fig:app:mwv_sig_minor_WW} for the WW-category and in Fig.~\ref{fig:app:mwv_sig_minor_WZ} for the WZ-category. Since the \ttbar -production is one of the main background contributions, the fit uncertainties on the shape parameters in eq. \ref{eq:bkg:ttbarshape} that result from the fit are propagated to the final signal extraction. Uncertainties on the diboson shape parameters are estimated in section~\ref{sec:uncslopesig}.
 
 \subsection{Shape of the W+jets Production}
-
+\label{sec:shapewjets}
 The largest background contribution relevant for this analysis is the W+jets production. Since the used simulated sample is only generated in leading order, its shape is extracted with a data driven method using the data in the sideband region and the alpha-ratio-method described in section \ref{sec:AlphaRatioMethod}. First, the alpha-function has to be determined. Therefore, a fit to the simulated samples in the sideband and signal regions is done. For both regions the same functional form is used
 \begin{align}
 F_{\rm W+jets}^{\rm SB}(x)=e^{a_1x+\frac{a_2}{x}} \, , \\
@@ -217,6 +217,7 @@ The corresponding alpha-function is given by the ratio of these functions
 The results of the fit to the simulated sample in the sideband for the muon channel is shown in Fig.~\ref{fig:bkg:mwvmc_alpha_mu} (a), while the result for the WW- and WZ-category are shown in Fig.~\ref{fig:bkg:mwvmc_alpha_mu} (b),(c) and the corresponding alpha-functions are shown in Fig.~\ref{fig:bkg:mwvmc_alpha_mu} (d),(e). Similarly to the fit of the W+jets distribution in the \Mpr -spectrum, the parametrization of the shape is rather ambiguous. Therefore, the fit is redone using a different functional form (for SR and SB) given by
 \begin{equation}
 F_{\rm W+jets}^{\rm alt}(x)=e^{-\frac{x}{a_5+a_6x}} \, .
+\label{eq:bkg:altfunc}
 \end{equation}
 The resulting alpha-function is also plotted in Fig.~\ref{fig:bkg:mwvmc_alpha_mu} (d),(e) and is well covered by the 1-$\sigma$-band of the original function. Corresponding plots for the electron channel can be found in Fig.~\ref{fig:app:mwvmc_alpha_el}.\\
 \begin{figure}
@@ -244,7 +245,7 @@ The resulting alpha-function is also plotted in Fig.~\ref{fig:bkg:mwvmc_alpha_mu
 	\label{fig:bkg:mwvmc_alpha_mu}
 \end{figure}	
 
-\noindent For the fit to the data in the sideband region, all normalizations are fixed to the values extracted from the \Mpr -spectrum, as well as the shapes of the minor backgrounds and the \ttbar -production. The only floating parameters are the shape parameters of the function describing the W+jets shape (eq. \ref{eq:bkg:wjetssig}). The resulting shapes in the sideband region for both the electron and muon channel are shown in Fig.~\ref{fig:bkg:data_sb}. The shape of the W+jets production in the signal regions is now obtained by multiplying the shape in the sideband region with the corresponding alpha-function. Due to the lack of events in the sideband region at high invariant masses a cut of $\MWV > 3.5$\,TeV is applied to ensure a data driven background estimation. \MWV \ is equal to the hard scale of the signal process. By applying a cut to this variable , a lower reference point for the scale of the new physics $\Lambda$ ($\gg3.5$\,TeV) is obtained. The final background prediction in the signal regions is shown in Fig.~\ref{fig:bkg:mwv_final}. The diboson contribution is taken as the signal function given in chapter~\ref{chap:signal} with all aTGC-parameters set to zero. Also shown is the signal model for $\Tcwww = 12$\,TeV$^{-2}$, which significantly increases the event yield hat high invariant masses.
+\noindent For the fit to the data in the sideband region, all normalizations are fixed to the values extracted from the \Mpr -spectrum, as well as the shapes of the minor backgrounds and the \ttbar -production. The only floating parameters are the shape parameters of the function describing the W+jets shape (eq. \ref{eq:bkg:wjetssig}). The resulting shapes in the sideband region for both the electron and muon channel are shown in Fig.~\ref{fig:bkg:data_sb}. The shape of the W+jets production in the signal regions is now obtained by multiplying the shape in the sideband region with the corresponding alpha-function. Due to the lack of events in the sideband region at high invariant masses a cut of $\MWV > 3.5$\,TeV is applied to ensure a data driven background estimation. \MWV \ is equal to the hard scale of the signal process. By applying a cut to this variable , a lower reference point for the scale of the new physics $\Lambda$ ($\gg3.5$\,TeV) is obtained. The final background prediction in the signal regions is shown in Fig.~\ref{fig:bkg:mwv_final}. The diboson contribution is taken as the signal function given in chapter~\ref{chap:signal} with all aTGC-parameters set to zero. Also shown is the signal model for $\Tcwww = 12$\,TeV$^{-2}$, which significantly increases the event yield at high invariant masses.
  \begin{figure}
 	\centering
 	\subfigure[]{
