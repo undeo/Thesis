@@ -20,7 +20,6 @@ It is expected to yield high values for parameters values $\theta$ close to the 
 \left. \frac{\partial L}{\partial \theta} \right| _{\theta=\hat{\theta}} = 0 ~.
 \end{equation}
 
-
 Instead of maximizing $L$ it is conventional to minimize $-L$. It is also convenient to use the logarithm of the likelihood function, which allows to add different likelihoods instead of multiplying them. In the following, $L$ refers to the logarithmic likelihood.
 
 \subsection{Confidence Intervals}
@@ -49,7 +48,8 @@ The limits on the aTGC parameters are estimated by comparing the background pred
 \begin{equation}
 \mathcal{L} = \frac{1}{k} \left( S(\boldsymbol{c})\cdot f_{\rm aTGC}(\boldsymbol{c}) + B \cdot f_{\rm bkg} \right) e^{S(\boldsymbol{c}) + B} \cdot \rho(\boldsymbol{\theta})~,
 \end{equation}
-where $k$ denotes the total number of observed events, $S(\boldsymbol{c})$ the expected signal yield depending on the POI $\boldsymbol{c}$, and $B$ the expected background event yield. $f_{\rm aTGC}(\boldsymbol{c})$ and $f_{\rm bkg}$ are given by the pdfs describing the signal and the background processes, respectively, while  $\rho(\boldsymbol{\theta})$ is the pdf describing the set of systematic uncertainties $\boldsymbol{\theta}$.\\
+where $k$ denotes the total number of observed events, $S(\boldsymbol{c})$ the expected signal yield depending on the POI $\boldsymbol{c}$, and $B$ the expected background event yield. $f_{\rm aTGC}(\boldsymbol{c})$ and $f_{\rm bkg}$ are given by the pdfs describing the signal and the background processes, respectively, while  $\rho(\boldsymbol{\theta})$ is the pdf describing the set of uncertainties $\boldsymbol{\theta}$. There are two kinds of uncertainties implemented as nuisance parameters $\boldsymbol{\theta}$. Uncertainties on the normalizations of the different contributions are implemented as log-normal distributions [???]
+Uncertainties affecting the slope parameters of the background and signal estimation are implemented by adding a Gaussian term centred at the nominal parameter values and a width corresponding to the uncertainty. \\
 
 Expected limits are obtained by creating a pseudo-dataset using only the background contributions.
 
@@ -61,7 +61,7 @@ Expected limits are obtained by creating a pseudo-dataset using only the backgro
 There are several sources of systematic uncertainties arising from the event reconstruction that affect the resulting event yields and the shapes of the background and signal distributions. In the following section the considered systematic uncertainties are shortly described. They were not evaluated in the context of this thesis but rather in the corresponding physics analysis \cite{PAS}. These uncertainties are not applied to the W+jets background contribution since its uncertainty is directly extracted from the measured data in the background extraction.
 
 \subsection*{Uncertainties on the Normalizations}
-In this section the different sources  of systematic uncertainties are outlined. The resulting uncertainties on the normalizations are included in the likelihood functions as nuisance parameters, taking into account correlations between the channels. They are summarized in Tab.~\ref{tab:limits:systs}. As can be seen there, the \ttbar \ contribution is dominated by the uncertainty resulting from the renormalization and factorization scale, while the single top and diboson contributions are dominated by the $\tau_{21}$ cut efficiency. 
+In this section the different sources  of systematic uncertainties are outlined. The resulting uncertainties on the normalizations are included in the likelihood functions as nuisance parameters, taking into account correlations between the channels. They are summarized in Tab.~\ref{tab:limits:systs}. As can be seen there, the \ttbar \ contribution is dominated by the uncertainty resulting from the renormalization and factorization scale, while the single top and diboson contributions are dominated by the $\tau_{21}$ cut efficiency.
 \subsubsection*{Luminosity}
 The simulated background samples as well as the signal sample are initially normalized according to the integrated luminosity of the used data sample. The uncertainty of the luminosity measurement of $2.7$\% is included as nuisance parameter correlated between all channels.
 \subsubsection*{b quark reconstruction}
@@ -77,7 +77,7 @@ Unclustered energy deposits in the detector that are not assigned to any particl
 \subsubsection*{Parton distribution functions (PDF)}
 The PDFs that describe the energy distribution between the partons of the protons are empirically determined. The uncertainty of the corresponding measurement is evaluated and added as uncertainty.
 \subsubsection*{Renormalization and factorization scale}
-The theoretical cross section calculated up to a certain order of perturbation. To avoid divergencies, a new scale $Q^2$ is introduced. The effects of increasing or decreasing $Q^2$ by a factor of 2 are estimated for the different background contributions and added as uncertainty.  
+The theoretical cross section calculated up to a certain order of perturbation. To avoid divergencies, a new scale $Q^2$ is introduced. The effects of increasing or decreasing $Q^2$ by a factor of 2 are estimated for the different background contributions and added as uncertainty. 
 
 \begin{table}
     \centering
@@ -102,8 +102,6 @@ The theoretical cross section calculated up to a certain order of perturbation. 
     \end{tabular}
     }
 \end{table}
-
-
 
 \subsection*{Uncertainties on the Slope Parameters}
 \label{sec:uncslopesig}
@@ -181,9 +179,11 @@ The limits at 95\% C.L. on the three aTGC parameters are extracted from the $\De
 
 \section{Two-Dimensional Limits}
 \label{sec:2dlims}
-The extraction of two-dimensional limits is performed similarly to the one-dimensional ones, except only one aTGC parameter is set to zero. This leads to a two-dimensional $\Delta NLL$ distribution. Limits at 95\% C.L. are extracted as two-dimensional contours in the $\Delta NLL$ distribution at $\Delta NLL=5.99$.\\
+The extraction of two-dimensional limits is performed similarly to the one-dimensional ones, except only one aTGC parameter is set to zero. This leads to a two-dimensional $\Delta NLL$ distribution. Limits at 95\% C.L. are extracted as two-dimensional contours in the $\Delta NLL$ distribution. Due to the additional degree of  at $\Delta NLL=5.99$.\\
 
-\noindent In the two-dimensional limits the different sensitivities of the aTGC parameters in the two regions are expected to affect the shape of the resulting limits. This motivated the division of the signal region into a low- and high-mass region (see section~\ref{sec:wwwzregs}. Roughly equal sensitivities in both regions for both parameters (i.e. for the two-dimensional \Tcwww -\Tccw -limits) lead to elliptical limits. 
+\noindent In the two-dimensional limits the different sensitivities of the aTGC parameters in the two regions are expected to affect the shape of the resulting limits. This motivated the division of the signal region into a low- and high-mass region (see section~\ref{sec:wwwzregs}. Roughly equal sensitivities in both regions for both parameters (i.e. for the two-dimensional \Tcwww -\Tccw -limits) lead to elliptical limits. In the hypothetical case of two parameters that each only contribute to one of the regions the contours of the $\Delta NLL$ distribution would take the shape of a rectangle. This is partly realised in the limits including \Tcb \ , which only has a small contribution to the WZ-category, leading to a contour shape intermediate between an ellipse and a rectangle.\\
+
+\noindent Another effect on the shapes of two-dimensional limits are the interfenrence effects between the different aTGC contributions introduced in section~\ref{}, which causes the contours to be slightly rotated counterclockwise. This is described in more detail in section~\ref{}.
 
 \begin{figure}
 	\centering
@@ -258,3 +258,9 @@ with the W boson mass $M_W$, the Z boson mass $M_Z$, the weak coupling constant 
 	\caption[Two-dimensional delta-log-likelihood distributions for the three combinations of aTGC parameters without division of the signal region]{Two-dimensional delta-log-likelihood distributions for \Tcwww -\Tccw \ (a), \Tcwww -\Tcb \ (b) and \Tccw -\Tcb\ (c) without division of the signal region. Shown are the expected distributions (dashed lines) for the 68\% (blue), 95\% (green) and 99\% C.L. (red) as well as the observed distribution (black line).}
 	\label{fig:limits:2dlimits_nocat}	
 \end{figure}
+
+\subsubsection*{Two-dimensional Limits without aTGC-Interference}
+The effects of the interfenrence between different aTGC contributions can be illustrated in terms of a simple counting experiment with two aTGC parameters $c_1$ and $c_2$, neglecting interference with the SM contribution. The number of observed events $N_{\rm obs}$ is then given by
+\begin{equation}
+N_{\rm obs} = A_{\rm SM} + c_1^2A_1^2 + c_2^2A_2^2 + c_1c_2A_1A_2 ~.
+\end{equation}
