@@ -1,7 +1,8 @@
 \chapter{Limits on Anomalous Triple Gauge Couplings}
 \label{chap:LimitsonATGCs}
+The main focus of this thesis lays on setting limits on the aTGC parameters in a model independent way using the effective field theory approach. Hereby the assumption was made that any new physics that may lead to anomalous couplings only exists at a scale $\Lambda$ that is much larger than the center of mass energy of the analysed collisions. By only considering events with $\MWV<3.5$\,TeV, a lower reference point for $\Lambda$ is obtained. The analysis corresponding to this thesis \cite{PAS} is the first analysis on aTGCs by the CMS collaboration that uses data taken at a center of mass energy of 13\,TeV. The used data were recorded in 2015 by the CMS detector and correspond to an integrated luminosity of 2.3\,fb$^{-1}$.\\
 
-In this chapter, the results of the analysis are presented. Using the signal model described in chapter~\ref{chap:signal} and the background estimation from chapter~\ref{chap:bkg}, limits on the three aTGC parameters are estimated. Different scenarios where either one or two aTGC parameters are unequal to zero are studied. Additionally, the limits are computed in the vertex parametrization that was used in previous analyses (e.g. \cite{aTGC1,aTGC2}).
+\noindent In this chapter, the results of the analysis are presented. Using the signal model described in chapter~\ref{chap:signal} and the background estimation from chapter~\ref{chap:bkg}, limits on the three aTGC parameters are estimated. Different scenarios where either one or two aTGC parameters are unequal to zero are studied. Additionally, the limits are computed in the vertex parametrization that was used in previous analyses (e.g. \cite{aTGC1,aTGC2}) to be able to set in in comparison with recent results.
 
 \section{Limit Setting Procedure}
 The limits on the aTGC parameters are ultimately estimated by performing an unbinned maximum likelihood fit to compare the background and signal model with the observed data, taking into account uncertainties as nuisance parameters. The likelihood is estimated as function depending on the aTGC parameters. The resulting distributions are used to extract limits on the aTGC parameters at 95\% Confidence Level (C.L.). In the first part of this section, the concept of the maximum likelihood estimation as method to compare an analytical model with measured data as well as the extraction of confidence intervals from a likelihood distribution are presented, while in the second part the final procedure of setting the limits is outlined.
@@ -26,12 +27,12 @@ Instead of maximizing $L$ it is conventional to minimize $-L$. It is also conven
 \subsection{Confidence Intervals}
 A confidence interval is an alternative way of reporting statistical errors on a measurement. If the measurement of a parameter $c$ was repeated many times, a confidence interval $[a,b]$ would include the true value of $c$ in a fraction $1-\alpha-\beta$ of the experiments, where $\alpha$ and $\beta$ are the probabilities of measuring a value lower than $a$ or higher than $b$, respectively.\\
 
-Confidence intervals can be directly extracted from the logarithmic likelihood function $L(\theta)$ by expanding it in a Taylor series about the maximum likelihood estimate $\hat{\theta}$ \cite{cowan}
+Confidence intervals can be directly extracted from the logarithmic likelihood function $L(\theta)$. Therefore, it is expanded it in a Taylor series about the maximum likelihood estimate $\hat{\theta}$ \cite{cowan}
 \begin{equation}
 L(\theta) = L(\hat{\theta}) + \left. \frac{\partial L}{\partial \theta}\right|_{\theta=\hat{\theta}}(\theta-\hat{\theta}) + \frac{1}{2}\left.\frac{\partial^2L}{\partial \theta^2}\right|_{\theta=\hat{\theta}}(\theta-\hat{\theta})^2 + \mathcal{O}\left((\theta-\hat{\theta})^3\right) ~.
 \label{eq:limits:liketaylor}
 \end{equation}
-The first derivative of the likelihood vanishes at $\hat{\theta}$ (equation~\ref{eq:limits:1stderivlikelihood}). Using the Cram\'{e}r-Rao-bound and neglecting terms of higher order leads to
+The first derivative of the likelihood vanishes at $\hat{\theta}$ (equation~\ref{eq:limits:1stderivlikelihood}). Using the Cram\'{e}r-Rao-bound and neglecting terms of higher order leads to \cite{cowan}
 \begin{equation}
 L(\hat{\theta}\pm N\sigma) = L_{\rm max} - \frac{N^2}{2} 
 \end{equation}
@@ -43,7 +44,7 @@ with the confidence interval $[c,d]$. The confidence level depends on the value 
 
 \subsection{Limit Setting Procedure}
 \label{subsec:limsetproc}
-The limits on the aTGC parameters are estimated by comparing the background prediction with the observed data in the WW- and WZ-category for the electron and muon channel. For this, a limit setting tool created for the combination of the Higgs measurements of CMS and ATLAS \cite{combine} is used. It is capable of estimating and combining the likelihood function of several channels depending on one or more parameters of interest (POI), taking into account uncertainties and their correlations as nuisance parameters. A scan over the POIs is performed, evaluating the likelihood for each POI value (or each set of POI values in case of two-dimensional limits) by maximizing it with respect to the nuisance parameters. The limits are ultimately extracted from the delta-log-likelihood distributions, which is defined as the difference of the logarithmic likelihood for a given POI value and the logarithmic likelihood for the best fit point. The best fit point is estimated by maximizing the likelihood function with respect to the POIs and the nuisance parameters simultaneously.\\
+The limits on the aTGC parameters are estimated by comparing the background and signal prediction with the observed data in the WW- and WZ-category for the electron and muon channel. For this, a limit setting tool created for the combination of the Higgs measurements of CMS and ATLAS \cite{combine} is used. It is capable of estimating and combining the likelihood functions of several channels depending on one or more parameters of interest (POI), taking into account uncertainties and their correlations as nuisance parameters. A scan over the POIs is performed, evaluating the likelihood for each POI value (or each set of POI values in case of two-dimensional limits) by maximizing it with respect to the nuisance parameters. The limits are ultimately extracted from the delta-log-likelihood distributions, which is defined as the difference of the logarithmic likelihood for a given POI value and the logarithmic likelihood for the best fit point. The best fit point is estimated by maximizing the likelihood function with respect to the POIs and the nuisance parameters simultaneously.\\
 
 \noindent The likelihood function for a single channel and a single POI $c$ is given by
 \begin{equation}
@@ -79,7 +80,7 @@ Unclustered energy deposits in the detector that are not assigned to any particl
 \subsubsection*{Parton distribution functions (PDF)}
 The PDFs that describe the energy distribution between the partons of the protons are empirically determined. The uncertainty of the corresponding measurement is evaluated and added as uncertainty.
 \subsubsection*{Renormalization and factorization scale}
-The theoretical cross section calculated up to a certain order of perturbation. To avoid divergencies, a new scale $Q^2$ is introduced. The effects of increasing or decreasing $Q^2$ by a factor of 2 are estimated for the different background contributions and added as uncertainty. 
+The theoretical cross section of the different considered processes are calculated only up to a certain order of perturbation (leading order or next-to-leading order). Neglecting the higher order terms introduces divergencies that can be avoided by introducing a new scale $Q^2$. The effects of increasing or decreasing $Q^2$ by a factor of 2 are estimated for the different background contributions and added as uncertainty. 
 
 \begin{table}
     \centering
@@ -108,9 +109,9 @@ The theoretical cross section calculated up to a certain order of perturbation. 
 \subsection*{Uncertainties on the Slope Parameters}
 \label{sec:uncslopesig}
 
-The uncertainties mentioned above do also affect the shape of the signal distribution. The uncertainties on the slope parameters of the signal function were also not estimated as part of this thesis but taken from \cite{PAS}.\\
+The uncertainties mentioned above do also affect the shape of the signal distribution. These effects are propagated to the limit estimation as uncertainties on the signal slope parameters. They were also not estimated as part of this thesis but taken from \cite{PAS}.\\
 
-\noindent To estimate the effect of the systematic uncertainties on the values of the slope parameters of the signal function, the parameter extraction is redone as described in chapter~\ref{chap:signal}. For the sake of simplicity, the interference terms in equation~\ref{eq:signal:sigfunc} are neglected, leading to three slope parameters $a_{c_{WWW}}$, $a_{c_W}$ and $a_{c_B}$. For each systematic uncertainty, a new signal sample is created by varying the source of the uncertainty. The uncertainties on the slope parameters are evaluated as difference between the nominal parameter values and the values from the varied samples. The resulting uncertainties are dominated by the contributions from the PDF as well as renormalization and factorization scale, while in the WZ-category $a_{c_B}$ is dominated by the contribution corresponding to the jet energy scale (JES). This is caused by the fact that \Tcb \ mostly contributes to the WW-category. A variation in the JES leads to migration between the two categories, thus affecting the resulting shape.\\
+\noindent To estimate the effect of the systematic uncertainties on the values of the slope parameters of the signal function, the parameter extraction is redone as described in chapter~\ref{chap:signal}. For the sake of simplicity, the interference terms in equation~\ref{eq:signal:sigfunc} are neglected, leading to three slope parameters $a_{c_{WWW}}$, $a_{c_W}$ and $a_{c_B}$. For each systematic uncertainty, a new signal sample is created by varying the source of the uncertainty. The uncertainties on the slope parameters are evaluated as difference between the nominal parameter values and the values extracted from the varied samples. The resulting uncertainties are dominated by the contributions from the PDF as well as renormalization and factorization scale, while in the WZ-category the uncertainty on $a_{c_B}$ is dominated by the contribution corresponding to the jet energy scale (JES). This is caused by the fact that \Tcb \ mostly contributes to the WW-category. A variation in the JES leads to migration between the two categories, thus affecting the resulting shape.\\
 
 \noindent The final uncertainty on the slope parameters is estimated by adding the different contributions in quadrature, leading to an uncertainty of 5\% that is applied to all signal shape parameters except for the one corresponding to \Tcb \ , for which an uncertainty of 15\% is applied.\\
 
@@ -145,8 +146,7 @@ The uncertainties mentioned above do also affect the shape of the signal distrib
 
 One-dimensional limits are computed by performing a scan over one of the aTGC parameters while keeping the remaining two set to zero. For each scanned point the delta-log-likelihood ($\Delta NNL$) is computed as described in section~\ref{subsec:limsetproc}, combining the WW- and WZ-category in both the electron and muon channel. The final background and signal normalizations in each channel together with the applied uncertainties are summarized in Tab.~\ref{tab:limits:bkgnorms}.\\
 
-The limits at 95\% C.L. on the three aTGC parameters are extracted from the $\Delta NLL$ contribution at $\Delta NLL=1.92$. For the expected limits a pseudo-dataset was generated. The resulting expected and observed limits are summarized in Tab.~\ref{tab:limits:1dlimits}. The $\Delta NLL$ distributions are shown in Fig.~\ref{fig:limits:1dlimits}. As can be seen there, the observed limits at 95\% C.L. are not as strict as the expected ones. This is caused by an overfluctuation in the data, i.e. more events than expected are observed in all channels. However, the sensitivity of this analysis is not driven by the total event yield which is not significantly affected by the anomalous couplings. It rather comes from events at high invariant masses where the difference between signal and background is expected to be highest. The fact that the limits for \Tcb \ are closer to the expectation than the ones for \Tcwww \ and \Tccw \ indicates that there is an overfluctuation of high-mass events in the WZ-category, where the sensitivity to \Tcb \ is comparatively low. However, the observed limits are still within the $\pm 1\sigma$-environment of the expected limits, which can be approximated by the limits at 68\% and 99\% C.L.
-
+\noindent The limits at 95\% C.L. on the three aTGC parameters are extracted from the $\Delta NLL$ contribution at $\Delta NLL=1.92$. For the expected limits a pseudo-dataset was generated. The resulting expected and observed limits are summarized in Tab.~\ref{tab:limits:1dlimits}. The $\Delta NLL$ distributions are shown in Fig.~\ref{fig:limits:1dlimits}. The limits are found to be slightly asymmetric, which is caused by sign-sensitive terms in the signal function in equation~\ref{eq:signal:sigfunc}, representing the interference of the aTGC with the SM process. The observed limits at 95\% C.L. are not as strict as the expected ones. This is can be explained by an overfluctuation in the data, i.e. more events than expected are observed. However, the sensitivity of this analysis is not driven by the total event yield, which is not significantly affected by the anomalous couplings. It rather comes from events at high invariant masses where the difference between signal and background is expected to be highest. The fact that the limits for \Tcb \ are closer to the expectation than the ones for \Tcwww \ and \Tccw \ indicates that there is an overfluctuation of high-mass events in the WZ-category, where the sensitivity to \Tcb \ is comparatively low. However, the observed limits are still within the $\pm 1\sigma$-environment of the expected limits, which can be approximated by the limits at 68\% and 99\% C.L., thus no evidence of anomalous couplings has been found. A comparison of the limits with the results of previous analzses can be found in section~\ref{sec:vertex}.\\
 
 \begin{table}
 	\centering
@@ -158,7 +158,7 @@ The limits at 95\% C.L. on the three aTGC parameters are extracted from the $\De
 	& 68\% C.L. & 95\% C.L. & 99\% C.L. & 95\% C.L.\\
 	\hline
 	$\frac{c_{WWW}}{\Lambda ^2}$~(TeV$^{-2}$) & [-6.51 , 6.49] & [-8.73 , 8.70] & [-9.97 , 9.94] & [-9.46 , 9.42] \\
-	$\frac{c_{W}}{\Lambda ^2}$~(TeV$^{-2}$)   & [-8,8 , 8.1]   & [-11.7 , 11.1] & [-13.3 , 12.8] & [-12.6 , 12.0] \\
+	$\frac{c_{W}}{\Lambda ^2}$~(TeV$^{-2}$)   & [-8.8 , 8.1]   & [-11.7 , 11.1] & [-13.3 , 12.8] & [-12.6 , 12.0] \\
 	$\frac{c_{B}}{\Lambda ^2}$~(TeV$^{-2}$)   & [-40.5 , 38.7] & [-54.9 , 53.3] & [-63.2 , 61.7] & [-56.1 , 55.4] \\
 	\hline
 	\end{tabular}
@@ -167,13 +167,13 @@ The limits at 95\% C.L. on the three aTGC parameters are extracted from the $\De
 \begin{figure}
 	\centering
 	\subfigure[]{
-		\includegraphics[width=0.6\textwidth]{../plots/results/1dlimit_cwww.pdf}
+		\includegraphics[width=0.59\textwidth]{../plots/results/1dlimit_cwww.pdf}
 	}
 	\subfigure[]{
-		\includegraphics[width=0.6\textwidth]{../plots/results/1dlimit_ccw.pdf}
+		\includegraphics[width=0.59\textwidth]{../plots/results/1dlimit_ccw.pdf}
 	}
 	\subfigure[]{
-		\includegraphics[width=0.6\textwidth]{../plots/results/1dlimit_cb.pdf}
+		\includegraphics[width=0.59\textwidth]{../plots/results/1dlimit_cb.pdf}
 	}		
 	\caption[Delta-log-likelihood distributions for the three aTGC parameters]{$\Delta NNL$ distributions for \Tcwww \ (a), \Tccw \ (b) and \Tcb \ (c). Shown are the expected (blue) and observed distributions (black). The intersection of the black horizontal dashed line and the expected or observed distribution corresponds to the 95\% C.L., indicated by the vertical blue and black dashed lines for the expected and observed limit, respectively. Also shown is the $\pm 1\sigma$-environment around the expected limit (shaded area).}
 	\label{fig:limits:1dlimits}
@@ -181,11 +181,12 @@ The limits at 95\% C.L. on the three aTGC parameters are extracted from the $\De
 
 \section{Two-Dimensional Limits}
 \label{sec:2dlims}
-The extraction of two-dimensional limits is performed similarly to the one-dimensional ones, except only one aTGC parameter is set to zero. This leads to a two-dimensional $\Delta NLL$ distribution. Limits at 95\% C.L. are extracted as two-dimensional contours in the $\Delta NLL$ distribution. Due to the additional degree of  at $\Delta NLL=5.99$.\\
+The extraction of two-dimensional limits is performed similarly to the one-dimensional ones, except only one aTGC parameter is set to zero. This leads to a two-dimensional $\Delta NLL$ distribution. Limits at 95\% C.L. are extracted as two-dimensional contours in the $\Delta NLL$ distribution as shown in Fig.~\ref{fig:limits:2dlimits}.\\
 
-\noindent The $\Delta NLL$-contour for limits involving \Tcb \ are found to be non-elliptical. This is caused by the division of the signal region into the WW- and WZ-category. Another effect on the shapes of two-dimensional limits are the interfenrence effects between the different aTGC contributions introduced in section~\ref{}, which causes the contours to be slightly rotated counterclockwise. These effects are described in more detail in section~\ref{sec:limits:atgcint}.\\
+\noindent Similarly to the one-dimensional case, the observed two-dimensional limits are not as strict as the expected ones but still within the $\pm 1\sigma$-environment, which again can be approximated by the contours at 68\% and 99\% C.L.\\
 
-\noindent The observed two-dimensional limits are not as strict as the expected ones but still within the $\pm 1\sigma$-environment, which again can be approximated by the contours at 68\% and 99\% C.L.
+\noindent The $\Delta NLL$-contour for limits involving \Tcb \ are found to be non-elliptical. This is caused by the different sensitivities of the aTGC parameters to the WW- and WZ-category and is described in more detail in section~\ref{subsec:limits:atgcint}. Another effect on the shapes of two-dimensional limits are the interfenrence effects between the different aTGC contributions that were introduced in section~\ref{subsec:signal:aTGCInt}, which causes the contours to be slightly rotated counterclockwise. These effects are also described in more detail in section~\ref{sec:limits:atgcint}.\\
+
 \begin{figure}
 	\centering
 	\subfigure[]{
@@ -209,7 +210,7 @@ Describing the effects of anomalous couplings with aTGC parameters using the eff
 \ccw  &= \frac{2}{M_Z^2}\Delta g_1^Z ~, \\
 \cb   &= \frac{2}{\tan^2\theta_W M_Z^2}\Delta g_1^Z - \frac{2}{\sin^2\theta_W M_Z^2}\Delta\kappa_Z ~,
 \end{align}
-with the W boson mass $M_W$, the Z boson mass $M_Z$, the weak coupling constant $g$ and the Weinberg angle $\theta_W$. This allows for the extraction of the limits in terms of $\lambda_Z$, $\Delta \kappa_Z$ and $\Delta g_1^Z$. The results for the one-dimensional limits are summarized in Tab.~\ref{tab:limits:1dlimits_vertex}, while the two-dimensional limits are shown in Fig.~\ref{fig:limits:2dlimitsvertex}. A comparison with the previous limits using data taken at a center of mass energy of 7\,TeV is shown in Fig.~\ref{fig:limits:compare}. As can be seen there, the limits extracted in this analysis are competitive to the previous ones, despite using a comparatively small dataset of 2.3\,fb$^{-1}$.
+with the W boson mass $M_W$, the Z boson mass $M_Z$, the weak coupling constant $g$ and the Weinberg angle $\theta_W$. This allows for the extraction of the limits in terms of $\lambda_Z$, $\Delta \kappa_Z$ and $\Delta g_1^Z$. The results for the one-dimensional limits are summarized in Tab.~\ref{tab:limits:1dlimits_vertex}, while the two-dimensional limits are shown in Fig.~\ref{fig:limits:2dlimitsvertex}. A comparison with the previous limits using data taken at a center of mass energy of 7\,TeV is shown in Fig.~\ref{fig:limits:compare}. As can be seen there, the limits extracted in this analysis are competitive to the previous ones, despite using a comparatively small dataset of 2.3\,fb$^{-1}$. Running this analysis on the dataset coming available at the end of 2016, which corresponds to ??\,fb$^{-1}$, is expected to significantly improve the limits.
 
 \begin{table}
 	\centering
@@ -240,6 +241,12 @@ with the W boson mass $M_W$, the Z boson mass $M_Z$, the weak coupling constant 
 	}		
 	\caption[Two-dimensional delta-log-likelihood distributions for the three combinations of aTGC parameters in the vertex parametrization]{Two-dimensional delta-log-likelihood distributions for $\lambda_Z$-$\Delta\kappa_Z$ (a), $\lambda_Z$-$\Delta g_1^Z$ (b) and $\Delta\kappa_Z$-$\Delta g_1^Z$ (c). Shown are the expected distributions (dashed lines) for the 68\% (blue), 95\% (green) and 99\% C.L. (red) as well as the observed distribution (black line).}
 	\label{fig:limits:2dlimitsvertex}	
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{../plots/limits/compare.pdf}
+    \caption[Comparison of the limits on the aTGC parameters in vertex parametrization with previous results]{Comparison of the limits on the aTGC parameters in vertex parametrization with previous results. The limits taken in this analysis are highlighted in yellow. As can be seen here, the limits are comparable with the previous ones, despite the comparatively small used dataset.}
 \end{figure}
 
 \section{Additional Verification of the Limit Setting Procedure}
@@ -277,7 +284,7 @@ c_1'A_1' &=& c_1A_1\cos \alpha + c_2A_2\sin \alpha \\
 c_2'A_2' &=& -c_1A_1\sin \alpha + c_2A_2\cos \alpha
 \end{eqnarray}
 around the angle $\alpha$, which can be interpreted as the strength of the interference. This causes the two-dimensional $\Delta NLL$ contours to be rotated depending on
-the size of $\alpha$. Since the interference effects between the different aTGC contributions are found to be comparatively small, the rotation is only visible for the \Tccw - \Tcb -limits. In Fig.~\ref{fig:limits:noatgcint} the limits for \Tccw -\Tcb \ are shown with and without the aTGC interference.
+the size of $\alpha$. The interference effects between the different aTGC contributions are found to be comparatively small (see Tab.~\ref{tab:signal:relcoef}) and only lead to a visible rotation for the \Tccw - \Tcb -limits. In Fig.~\ref{fig:limits:noatgcint} the limits for \Tccw -\Tcb \ are shown with and without the aTGC interference.
 
 \begin{figure}
 	\centering
