@@ -2,7 +2,7 @@
 \label{chap::TheoreticalIntroduction}
 The Standard Model of particle physics summarizes the theories of elementary particles and their interactions. Since its development between 1960 and 1970, the fundamental parameters of the Standard Model have been measured with ever increasing accuracy. Predictions made by the Standard Model, like the existence of new particles, have been confirmed many times. With the detection of the top quark in 1995 \cite{top_detection1,top_detection2}, the tau neutrino in 2000 \cite{tau_nu_detection} and the Higgs boson in 2012 \cite{cms_higgsdiscov,atlas_higgsdiscov}, the last missing particles of the SM have been observed.\\
 
-The following chapter gives an introduction into the theoretical background relevant for this analysis. In the first section, the main properties of the Standard Model of particle physics is described. The second section focusses on physics beyond the Standard Model as well as an approach to describe these new physics via anomalous couplings, the so-called effective field theory approach. All derivations are taken from \cite{peskin,mandl} if not stated otherwise.
+The following chapter gives an introduction into the theoretical background relevant for this analysis. In the first section, the main properties of the Standard Model of particle physics is described. The second section focuses on physics beyond the Standard Model as well as an approach to describe these new physics via anomalous couplings, the so-called effective field theory approach. All derivations are taken from \cite{peskin,mandl} if not stated otherwise.
 
 \section{The Standard Model of Particle Physics}
 The Standard Model of particle physics (SM) describes the fundamental forces of nature and their interactions with elementary particles. It combines the theory of the strong force, the electromagnetic force and the weak force into a consistent model, while gravity is not yet included. Each force is represented by a quantum field theory with the particles being excitations of quantum fields. The underlying symmetries of the interactions between particles are described by the symmetry groups SU(3)$\otimes$SU(2)$\otimes$U(1). According to Noether's theorem \cite{noether}, every symmetry leads to a conserved charge. In the SM, these charges are given by the electrical charge, the colour charge and the weak isospin. Demanding the formalisms to be gauge invariant leads to one or more gauge bosons for each force. The bosons couple to the charges and are the mediators of the interactions between particles.\\
@@ -34,7 +34,7 @@ with the four dimensional spacetime coordinates $x^\mu = (x^0,x^1,x^2,x^3)$, $x^
 \begin{equation}
 \frac{\partial}{\partial x^\mu} \left( \frac{\partial \mathcal{L}}{\frac{\partial \Phi}{\partial x^\mu}} \right) - \frac{\partial \mathcal{L}}{\partial \Phi} = 0 ~. \label{eq:theo:eullag}
 \end{equation}
-Given the Lagrangian of a particle, this equation can be used to derive the corresponding equation of motion. For example, the Dirac-Lagrangian describing a particle of mass $m$ and spin $J=1/2$ is given by
+Given the Lagrangian of a field, this equation can be used to derive the equation of motion for the corresponding particle. For example, the Dirac-Lagrangian describing a particle of mass $m$ and spin $J=1/2$ is given by
 \begin{equation}
 \mathcal{L}_{\rm Dirac}=i\hbar c \overline{\psi} \gamma^\mu \partial_\mu \psi -  mc^2\overline{\psi}\psi ~, \label{eq:theo:diraclag}
 \end{equation}
@@ -68,7 +68,7 @@ All observable hadronic particles consist either of three quarks of different co
 	{%
 	\begin{tabular}{crclrclrclccc}
 	\hline
-	& \multicolumn{9}{c}{Generation} & Electric & Colour &  weak \\
+	& \multicolumn{9}{c}{Generation} & Electric & Colour &  Weak \\
 	& \multicolumn{3}{c}{I} & \multicolumn{3}{c}{II} & \multicolumn{3}{c}{II} & Charge ($e$) & Charge &  Isospin ($\hbar$) \\
 	\hline
 	\multirow{2}{*}{quarks} & \multirow{2}{*}{$\Big($} & $u$ & \multirow{2}{*}{$\Big)$} & \multirow{2}{*}{$\Big($} & $c$ & \multirow{2}{*}{$\Big)$} & \multirow{2}{*}{$\Big($} & $t$ & \multirow{2}{*}{$\Big)$} & +2/3 & r,g,b & +1/2 \\  
@@ -85,18 +85,22 @@ All observable hadronic particles consist either of three quarks of different co
 \label{subsec:theo:bosons}
 \begin{table}[b]
 	\centering
-	\caption[Summary of the gauge bosons in the Standard Model]{Summary of the gauge bosons in the Standard Model. The values for the mass and charge of the photon are upper limits and are, as well as the other given masses, taken from \cite{SMmasses}.}
+	\caption[Summary of the gauge bosons in the Standard Model]{Summary of the gauge bosons and their properties in the Standard Model. The upper limit on the gluon mass is taken from \cite{gluonmass}, while all other values are taken from \cite{SMmasses}.}
 	\label{tab:theo:bosons}
-	\begin{tabular}{cccc}
+	\resizebox{\columnwidth}{!}
+    {%
+	\begin{tabular}{cccccc}
 	\hline
-	Boson & Interaction & Electric Charge $(e)$ & Mass (GeV/$c^2$) \\
+	Boson & Interaction & Electric     & Colour  & Weak & Mass (GeV/$c^2$) \\
+		  &             & Charge $(e)$ & Charge & Isospin $(\hbar)$    & \\
 	\hline
-	$\gamma$ & electromagnetic & $<10^{-35}$ & $<10^{-27}$ \\
-	gluon & strong & - & - \\
-	Z & \multirow{2}{*}{weak} & - & $91.1876 \pm 0.0021$ \\
-	W$^\pm$ & & $\pm 1$ & $80.385 \pm 0.015$ \\
+	$\gamma$ & electromagnetic & - & - &$0,\pm 1$ & $<10^{-27}$ \\
+	gluon & strong & - & r,b,g & - & $<10^{-3}$\\
+	Z & \multirow{2}{*}{weak} & - & - & 1 & $91.1876 \pm 0.0021$ \\
+	W$^\pm$ & & $\pm 1$ & - & $\pm 1$ & $80.385 \pm 0.015$ \\
 	\hline
 	\end{tabular}
+	}
 \end{table}
 The three fundamental forces in the SM are mediated by bosons with spin $J=1$, the so-called vector bosons. These bosons arise from gauge symmetries inherent to the quantum field theories describing the interactions. As an example, the derivation of the gauge boson of the electromagnetic interaction, the photon, is portrayed in this section. A summary of all vector boson can be found in Tab.~\ref{tab:theo:bosons}.\\
 
@@ -104,7 +108,7 @@ The three fundamental forces in the SM are mediated by bosons with spin $J=1$, t
 \begin{equation}
 \psi\rightarrow e^{i\theta}\psi ~,
 \end{equation}
-where $\theta$ is a arbitrary real phase factor, trivially leave the equations of motion resulting from the Lagrangian unchanged and lead to conservation of the electrical charge. Due to causality, the Lagrangian is also required to be invariant under local gauge transformations, which can be written as
+where $\theta$ is a arbitrary real phase factor, trivially leave the equations of motion resulting from the Lagrangian unchanged and lead to conservation of the electrical charge. The Lagrangian is also required to be invariant under local gauge transformations, which can be written as
 \begin{equation}
 \psi\rightarrow e^{ie\theta(x)}\psi
 \end{equation} 
@@ -114,15 +118,15 @@ with the charge $e$. This transformation alters the Dirac Lagrangian
 \end{equation}
 Invariance can be restored by replacing the ordinary derivative with the covariant derivative
 \begin{equation}
-\partial_\mu \rightarrow D_\mu = [\partial_\mu + ie\gamma_\mu(x)] ~,
+\partial_\mu \rightarrow D_\mu = [\partial_\mu + ieA_\mu(x)] ~,
 \end{equation}
-with the gauge field $\gamma_\mu$ representing the photon. The photon has to be massless to avoid additional mass terms, which would again break the invariance of the Lagrangian. The new invariant Lagrangian is then given as
+with the gauge field $A_\mu$ representing the photon. The photon has to be massless to avoid additional mass terms, which would again break the invariance of the Lagrangian. The new invariant Lagrangian is then given as
 \begin{equation}
-\mathcal{L} = \mathcal{L}_{\rm Dirac} - q\overline{\psi}\gamma^\mu\psi \gamma_\mu ~,
+\mathcal{L} = \mathcal{L}_{\rm Dirac} - q\overline{\psi}\gamma^\mu\psi A_\mu ~,
 \end{equation}
-where the additional term describes the interaction of the fermion field $\psi$ with the photon field $\gamma_\mu$.\\
+where the additional term describes the interaction of the fermion field $\psi$ with the photon field $A_\mu$.\\
 
-\noindent The bosons transporting the strong force are given by the gluons, which are massless and couple to the colour charge. The theory describing gluons and their interaction with colour-charged particles is called quantum chromodynamics (QCD). Gluons can be introduced similarly to the photons by requiring the QCD-Lagrangian to be locally gauge invariant. Since gluons themselves carry a colour and an anti-colour, they can couple to each other as shown in Fig.~\ref{fig:theo:gluoncoupling}. There are three colour charges (red, green and blue) leading to eight different gluons.\\
+\noindent The bosons transporting the strong force are given by the gluons, which are massless and couple to the colour charge. The theory describing gluons and their interaction with colour-charged particles is called quantum chromodynamics (QCD). Gluons can be introduced similarly to the photons by requiring the QCD-Lagrangian to be locally gauge invariant. QCD is described by the non-abelian symmetry group SU(3), leading to self-interactions of the gluons (Fig.~\ref{fig:theo:gluoncoupling}). Gluons themselves carry a colour and an anti-colour. There are three colour charges (red, green and blue) leading to eight different gluons.\\
 \begin{figure}
 	\centering
 	\includegraphics[width=0.4\textwidth]{../plots/theoIntro/feynmans/gluons.pdf}
@@ -131,7 +135,7 @@ where the additional term describes the interaction of the fermion field $\psi$ 
 	\label{fig:theo:gluoncoupling}
 \end{figure}
 
-\noindent For the weak force there are two different interactions. The neutral current interaction is mediated by the Z boson and describes non-flavour-changing processes. The Z boson has a mass of $M_Z=91.1876 \pm 0.0021$\,GeV \cite{SMmasses} and carries no electric charge. The charged current interactions are relayed by the W$^\pm$ bosons, which carry an electric charge of $\pm e$. These interactions can change the quark or lepton flavours. The W boson has a mass of $80.385 \pm 0.015$\,GeV \cite{SMmasses}. Since both the Z and the W boson are massive, they have a non-zero decay width leading to a limited mean life time of $\tau_Z=2.6\cdot 10^{-25}$\,s and $\tau_W=3.2\cdot 10^{-25}$\,s, respectively. This causes a limited range and is the reason for the small strength of the weak force compared to the electromagnetic and strong force. Another characteristic of the weak force is the dependence on chirality. Chirality describes the direction of the spin of a particle relative to its momentum. The spin of a particle points in the direction of its momentum for right handed particles and in the opposite direction for left handed particles. The gauge boson of the weak force only couple to left handed particles and to right handed anti particles, which means that parity is maximally violated by the weak force \cite{wu}. \\
+\noindent For the weak force there are two different interactions. The neutral current interaction is mediated by the Z boson and describes non-flavour-changing processes. The Z boson has a mass of $M_Z=91.1876 \pm 0.0021$\,GeV \cite{SMmasses} and carries no electric charge. The charged current interactions are relayed by the W$^\pm$ bosons, which carry an electric charge of $\pm e$. These interactions can change the quark or lepton flavours. The W boson has a mass of $80.385 \pm 0.015$\,GeV \cite{SMmasses}. The fact that both the Z and the W boson are massive causes a limited range and is the reason for the small strength of the weak force compared to the electromagnetic and strong force. Another characteristic of the weak force is the dependence on chirality. Chirality describes the direction of the spin of a particle relative to its momentum. The spin of a particle points in the direction of its momentum for right handed particles and in the opposite direction for left handed particles. The gauge boson of the weak force only couple to left handed particles and to right handed anti particles, which means that parity is maximally violated by the weak force \cite{wu}. Similarly to WCD, the weak force is described by a non-abelian symmetry group given by SU(2). This allows for self-interaction of the gauge bosons.\\
 
 \noindent The SM also contains at least one scalar boson ($J=0$), the Higgs boson, which was recently discovered at the LHC \cite{cms_higgsdiscov,atlas_higgsdiscov}. The Higgs boson has a mass of $125.09 \pm 0.24$\,GeV and is responsible for the particle masses. The underlying theory is shortly outlined in the next section.\\
 
@@ -164,7 +168,7 @@ Since the corresponding Lagrangian density is invariant under global phase trans
 \begin{equation}
 \phi_0 = \frac{-\mu^2}{2\lambda}=\frac{1}{\sqrt{2}}v ~, \label{eq:theo:higgsexp}
 \end{equation}
-with the vacuum expectation value of the Higgs field $v$. By choosing a ground state, the symmetry SU(2)$_I\otimes$U(1)$_Y$ is broken. Similarly to the deviation of the photon, the covariant derivative is defined as
+with the vacuum expectation value of the Higgs field $v$. By choosing a ground state, the symmetry SU(2)$_I\otimes$U(1)$_Y$ is broken. Similarly to the derivation of the photon, the covariant derivative is defined as
 \begin{equation}
 D_\mu \phi = \left( \partial_\mu -igW_\mu^a\frac{\sigma^a}{2} - i\frac{1}{2}g'B_\mu \right)\phi ~,
 \end{equation}
@@ -200,6 +204,7 @@ where $V=Z,\gamma$; $X_{\mu\nu}=\partial_\mu X_\nu -\partial_\nu X_\mu$ and $X=W
 g_1^Z = g_1^\gamma = \kappa_Z = \kappa_\gamma &= 1 ~, \\
 \lambda_Z = \lambda_\gamma &= 0 ~.
 \end{align}
+There are no triple gauge couplings between three neutral gauge bosons.
 Any physics that is not included in the SM can affect these coupling parameters. A detailed description of these effects can be found in the next section.
 \begin{figure}
 	\centering
@@ -210,9 +215,9 @@ Any physics that is not included in the SM can affect these coupling parameters.
 
 \section{Anomalous Triple Gauge Couplings}
 \label{sec:aTGC}
-Although the SM has been confirmed to be self-consistent countless of times, there has been experimental proof that it is not a complete description of all fundamental interactions. All physics that is not included in the SM is called physics beyond the Standard Model~(BSM). An example of a phenomenon that is not explained by the SM is the baryon asymmetry after the Big Bang, where more matter than antimatter was created. The conditions necessary for this asymmetry to occur were formulated by Sakharov \cite{sakharov}. One of the conditions is the violation of the C and CP invariance. Although C and CP violation have been observed\footnote{C violation follows from the observation of P \cite{wu} and CP violation}\cite{CP} and are described by the SM, it is not sufficient to explain the baryon asymmetry. However, BSM physics might provide additional sources of CP violation.\\
+Although the SM has been confirmed to be self-consistent countless of times, there has been experimental evidence that it is not a complete description of all fundamental interactions. All physics that is not included in the SM is called physics beyond the Standard Model~(BSM). An example of a phenomenon that is not explained by the SM is the baryon asymmetry after the Big Bang, where more matter than antimatter was created. The conditions necessary for this asymmetry to occur were formulated by Sakharov \cite{sakharov}. One of the conditions is the violation of the C and CP invariance. Although C and CP violation have been observed\footnote{C violation follows from the observation of P \cite{wu} and CP violation}\cite{CP} and are described by the SM, it is not sufficient to explain the baryon asymmetry. However, BSM physics might provide additional sources of CP violation.\\
 
-\noindent Another example of BSM physics is the so-called dark matter, which describes particles that only interact via gravitation and possibly the weak force. An evidence for the existence of dark matter is given by the rotation velocity of stars around the center of a galaxy. According to the Newtonian gravitation laws this velocity is expected to increase inside the galaxy bulk with increasing distance from the galactic center, where most of the galaxy's mass is centred. Beyond the bulk the rotation velocities are expected to decrease with increasing distance. However, the observed rotation curves show a constant rotation velocity for stars and gas beyond the galaxy bulk, as shown in Fig.~\ref{fig:theo:rotcurves}. This can be explained by additional mass with constant density in the galaxy, the so-called dark matter halo, which extends far beyond the galaxy.\\ 
+\noindent Another example of BSM physics is the so-called dark matter, which describes particles that only interact via gravitation and possibly the weak force. Evidence for the existence of dark matter is given by the rotation velocity of stars around the center of a galaxy. According to the Newtonian gravitation laws this velocity is expected to increase inside the galaxy bulk with increasing distance from the galactic center, where most of the galaxy's mass is centred. Beyond the bulk the rotation velocities are expected to decrease with increasing distance. However, the observed rotation curves show a constant rotation velocity for stars and gas beyond the galaxy bulk, as shown in Fig.~\ref{fig:theo:rotcurves}. This can be explained by additional mass with constant density in the galaxy, the so-called dark matter halo, which extends far beyond the galaxy.\\ 
  
 \begin{figure}
 	\centering

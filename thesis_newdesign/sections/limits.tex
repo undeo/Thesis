@@ -1,6 +1,6 @@
 \chapter{Limits on Anomalous Triple Gauge Couplings}
 \label{chap:LimitsonATGCs}
-The main focus of this thesis lays on setting limits on the aTGC parameters in a model independent way using the effective field theory approach. Hereby the assumption was made that any new physics that may lead to anomalous couplings only exists at a scale $\Lambda$ that is much larger than the center of mass energy of the analysed collisions. By only considering events with $\MWV<3.5$\,TeV, a lower reference point for $\Lambda$ is obtained. The analysis corresponding to this thesis \cite{PAS} is the first analysis on aTGCs by the CMS collaboration that uses data taken at a center of mass energy of 13\,TeV. The used data were recorded in 2015 by the CMS detector and correspond to an integrated luminosity of 2.3\,fb$^{-1}$.\\
+The main focus of this thesis lays on searching for aTGCs in a model independent way using the effective field theory approach. Hereby the assumption was made that any new physics that may lead to anomalous couplings only exists at a scale $\Lambda$ that is much larger than the center of mass energy of the analysed collisions. By only considering events with $\MWV<3.5$\,TeV, a lower reference point for $\Lambda$ is obtained. The analysis corresponding to this thesis \cite{PAS} is the first analysis on aTGCs by the CMS collaboration that uses data taken at a center of mass energy of 13\,TeV.\\
 
 \noindent In this chapter, the results of the analysis are presented. Using the signal model described in chapter~\ref{chap:signal} and the background estimation from chapter~\ref{chap:bkg}, limits on the three aTGC parameters are estimated. Different scenarios where either one or two aTGC parameters are unequal to zero are studied. Additionally, the limits are computed in the vertex parametrization that was used in previous analyses (e.g. \cite{aTGC1,aTGC2}) to be able to set them in comparison with recent results.
 
@@ -27,7 +27,7 @@ Instead of maximizing $L$ it is convenient to minimize $-L$. It is also conventi
 \subsection{Confidence Intervals}
 A confidence interval is an alternative way of reporting statistical errors on a measurement. If the measurement of a parameter $c$ was repeated many times, a confidence interval $[a,b]$ would include the true value of $c$ in a fraction $1-\alpha-\beta$ of the experiments, where $\alpha$ and $\beta$ are the probabilities of measuring a value lower than $a$ or higher than $b$, respectively.\\
 
-Confidence intervals can be directly extracted from the logarithmic likelihood function $L(\theta)$. Therefore, it is expanded it in a Taylor series about the maximum likelihood estimate $\hat{\theta}$ \cite{cowan}
+Confidence intervals can be directly extracted from the logarithmic likelihood function $L(\theta)$. It is expanded it in a Taylor series about the maximum likelihood estimate $\hat{\theta}$ \cite{cowan}
 \begin{equation}
 L(\theta) = L(\hat{\theta}) + \left. \frac{\partial L}{\partial \theta}\right|_{\theta=\hat{\theta}}(\theta-\hat{\theta}) + \frac{1}{2}\left.\frac{\partial^2L}{\partial \theta^2}\right|_{\theta=\hat{\theta}}(\theta-\hat{\theta})^2 + \mathcal{O}\left((\theta-\hat{\theta})^3\right) ~.
 \label{eq:limits:liketaylor}
@@ -40,7 +40,7 @@ in case of a Gaussian likelihood function. For non-Gaussian likelihood functions
 \begin{equation}
 L(\hat{\theta}_{-c}^{+d}) = L_{\rm max} - \frac{N^2}{2}
 \end{equation}
-with the confidence interval $[c,d]$. The confidence level depends on the value of $N$, with $N=1.92$ corresponding to a 95\% C.L.
+with the confidence interval $[c,d]$. The confidence level depends on the value of $N$, with $N=1.92$ corresponding to a 95\% C.L. \cite{cowan}.
 
 \subsection{Limit Setting Procedure}
 \label{subsec:limsetproc}
@@ -48,9 +48,13 @@ The limits on the aTGC parameters are estimated by comparing the background and 
 
 \noindent The likelihood function for a single channel and a single POI $c$ is given by
 \begin{equation}
-\mathcal{L} = \frac{1}{k} \left( S(c)\cdot f_{\rm aTGC}(c) + B \cdot f_{\rm bkg} \right) e^{S(c) + B} \cdot \rho(\theta)~,
+\mathcal{L} = \prod_{i=1}^k  \frac{1}{S(c)+B} \left(S(c)\cdot f_{\rm aTGC}(c,x_i) + B\cdot f_{\rm bkg}(x_i) 	\right) \cdot {\rm Poisson}(k,S(c)+B) \cdot \rho(\theta)~,
 \end{equation}
-where $k$ denotes the total number of observed events, $S(c)$ the expected signal yield depending on the POI $c$, and $B$ the expected background event yield. $f_{\rm aTGC}(c)$ and $f_{\rm bkg}$ are given by the pdfs describing the signal and the background processes, respectively, while  $\rho(\theta)$ describes the set of uncertainties $\theta$. In this analysis, the signal yield $S(c)$ and the signal pdf $f_{\rm aTGC}(c)$ depend both on $c$ and $c^2$, according to the signal yield and shape introduced in chapter~\ref{chap:signal}.\\
+where $k$ denotes the total number of observed events, $S(c)$ the expected signal yield depending on the POI $c$, and $B$ the expected background event yield. $f_{\rm aTGC}(c)$ and $f_{\rm bkg}$ are given by the normalized pdfs describing the signal and the background processes, respectively, with the measured values of the observable $x_i$ (in this analysis given by \MWV). ${\rm Poisson}(k,S(c)+B)$ is the probability to observe $k$ events with an expectation of $S(c)+B$
+\begin{equation}
+{\rm Poisson}(k,\lambda) = \frac{\lambda^k e^{-\lambda}}{k!} ~.
+\end{equation}
+$\rho(\theta)$ describes the constraint given by the set of uncertainties $\theta$. In this analysis, the signal yield $S(c)$ and the signal pdf $f_{\rm aTGC}(c)$ depend both on $c$ and $c^2$, according to the signal yield and shape introduced in chapter~\ref{chap:signal}.\\
 
 \noindent There are two kinds of uncertainties implemented as nuisance parameters $\theta$. Uncertainties on the normalizations of the different contributions are implemented as multiplicative parameters constrained by log-normal distributions. Uncertainties affecting the slope parameters of the background and signal estimations are implemented by adding a Gaussian term for each parameter, centred at the nominal parameter value and having a width corresponding to the parameter uncertainty.\\
 
@@ -64,11 +68,11 @@ There are several sources of systematic uncertainties arising from the event rec
 \subsection*{Uncertainties on the Normalizations}
 In this section the different sources  of systematic uncertainties are outlined. The resulting uncertainties on the normalizations are included in the likelihood functions as nuisance parameters, taking into account correlations between the channels. They are summarized in Tab.~\ref{tab:limits:systs}. As can be seen there, the \ttbar \ contribution is dominated by the uncertainty resulting from the renormalization and factorization scale, while the single top and diboson contributions are dominated by the $\tau_{21}$ cut efficiency.
 \subsubsection*{Luminosity}
-The simulated background samples as well as the signal sample are initially normalized according to the integrated luminosity of the used data sample. The uncertainty of the luminosity measurement of $2.7$\% is included as nuisance parameter correlated between all channels.
+The simulated background samples as well as the signal sample are initially normalized according to the integrated luminosity of the used data sample. The uncertainty of the luminosity measurement of $2.7$\% \cite{lumi} is included as nuisance parameter correlated between all channels.
 \subsubsection*{b quark reconstruction}
 To account for the efficiency in identifying jets coming from b quark decays \cite{CSV2} an uncertainty is applied on the \ttbar \ and the WZ contribution. The uncertainty resulting from misidentifying jets as originating from b quarks is found to be negligible.
 \subsubsection*{Jet energy scale}
-The effects of varying the jet energy scale on the normalizations of the different processes is propagated as additional uncertainty, correlated between all channels.
+The effects of varying the jet energy scale on the normalizations of the different processes is propagated as additional uncertainty, correlated between all channels. This includes possible effects of the jet energy scale on \MET .
 \subsubsection*{N-subjettiness cut efficiency}
 To account for the efficiency of the cut on the N-subjettiness $\tau_{21}$ a correlated uncertainty of 12\% on all processes containing hadronic boson decays is applied. For the single top production this uncertainty is not applied to the $t$- and $s$-channel processes, since here the hadronic boson candidate is given by a jet originating from a gluon or light quark.
 \subsubsection*{Lepton energy scale, energy resolution and efficiency}
@@ -76,7 +80,7 @@ The effects of the lepton energy scale, the resolution of the energy reconstruct
 \subsubsection*{Missing transverse energy}
 Unclustered energy deposits in the detector that are not assigned to any particle can be falsely assigned to the \MET . From this an uncertainty is estimated and propagated to the normalizations. 
 \subsubsection*{Parton distribution functions (PDF)}
-The PDFs that describe the energy distribution between the partons of the protons are empirically determined. The uncertainty of the corresponding measurement is evaluated and added as uncertainty.
+The PDFs that describe the energy distribution between the partons of the protons are empirically determined \cite{pdf4lhc}. The uncertainty of the corresponding measurement is evaluated and added as uncertainty.
 \subsubsection*{Renormalization and factorization scale}
 The theoretical cross section of the different considered processes are calculated only up to a certain order of perturbation (leading order or next-to-leading order). Neglecting the higher order terms introduces divergencies that can be avoided by introducing a new scale $Q^2$. The effects of increasing or decreasing $Q^2$ by a factor of 2 are estimated for the different background contributions and added as uncertainty. 
 
@@ -144,7 +148,7 @@ The uncertainties mentioned above do also affect the shape of the signal distrib
 
 One-dimensional limits are computed by performing a scan over one of the aTGC parameters while keeping the remaining two set to zero. For each scanned point the delta-log-likelihood ($\Delta NNL$) is computed as described in section~\ref{subsec:limsetproc}, combining the WW- and WZ-category in both the electron and muon channel. The final background and signal normalizations in each channel together with the applied uncertainties are summarized in Tab.~\ref{tab:limits:bkgnorms}.\\
 
-\noindent The limits at 95\% C.L. on the three aTGC parameters are extracted from the $\Delta NLL$ contribution at $\Delta NLL=1.92$. For the expected limits a pseudo-dataset was generated under the assumption af a vanishing signal contribution, i.e. all aTGC parameters were set to zero. The resulting expected and observed limits are summarized in Tab.~\ref{tab:limits:1dlimits}. The $\Delta NLL$ distributions are shown in Fig.~\ref{fig:limits:1dlimits}. The limits are found to be slightly asymmetric, which is caused by sign-sensitive terms in the signal function in equation~\ref{eq:signal:sigfunc}, representing the interference of the aTGC with the SM process. The observed limits at 95\% C.L. are not as strict as the expected ones. This is can be explained by an overfluctuation in the data, i.e. more events than expected are observed. However, the sensitivity of this analysis is not driven by the total event yield, which is not significantly affected by the anomalous couplings. It rather comes from events at high invariant masses where the difference between signal and background is expected to be highest. The fact that the limits for \Tcb \ are closer to the expectation than the ones for \Tcwww \ and \Tccw \ indicates that there is an overfluctuation of high-mass events in the WZ-category, where the sensitivity to \Tcb \ is comparatively low. However, the observed limits are still within the $\pm 1\sigma$-environment of the expected limits, which can be approximated by the limits at 68\% and 99\% C.L., thus no evidence of anomalous couplings has been found. A comparison of the limits with the results of previous analyses can be found in section~\ref{sec:vertex}.\\
+\noindent The limits at 95\% C.L. on the three aTGC parameters are extracted as the aTGC parameter values where $\Delta NLL=1.92$ \cite{cowan}. For the expected limits a pseudo-dataset is generated under the assumption of a vanishing signal contribution, i.e. all aTGC parameters are set to zero. The resulting expected and observed limits are summarized in Tab.~\ref{tab:limits:1dlimits}. The $\Delta NLL$ distributions are shown in Fig.~\ref{fig:limits:1dlimits}. The limits are found to be slightly asymmetric, which is caused by sign-sensitive terms in the signal function in equation~\ref{eq:signal:sigfunc}, representing the interference of the aTGC with the SM process. The observed limits at 95\% C.L. are not as strict as the expected ones. This is can be explained by an overfluctuation in the data, i.e. more events than expected are observed. However, the sensitivity of this analysis is not driven by the total event yield, which is not significantly affected by the anomalous couplings. It rather comes from events at high invariant masses where the difference between signal and background is expected to be highest. The fact that the limits for \Tcb \ are closer to the expectation than the ones for \Tcwww \ and \Tccw \ indicates that there is an overfluctuation of high-mass events in the WZ-category, where the sensitivity to \Tcb \ is comparatively low. However, the observed limits are still within the $\pm 1\sigma$-environment of the expected limits, which can be approximated by the limits at 68\% and 99\% C.L., thus no evidence of anomalous couplings has been found. A comparison of the limits with the results of previous analyses can be found in section~\ref{sec:vertex}.\\
 
 \begin{table}
 	\centering
@@ -183,7 +187,7 @@ The extraction of two-dimensional limits is performed similarly to the one-dimen
 
 \noindent Similarly to the one-dimensional case, the observed two-dimensional limits are not as strict as the expected ones but still within the $\pm 1\sigma$-environment, which again can be approximated by the contours at 68\% and 99\% C.L.\\
 
-\noindent The $\Delta NLL$-contour for limits involving \Tcb \ are found to be non-elliptical. This is caused by the different sensitivities of the aTGC parameters to the WW- and WZ-category and is described in more detail in section~\ref{sec:limits:atgcint}. Another effect on the shapes of two-dimensional limits are the interfenrence effects between the different aTGC contributions that were introduced in section~\ref{subsec:signal:aTGCInt}, which causes the contours to be slightly rotated counterclockwise. These effects are also described in more detail in section~\ref{sec:limits:atgcint}.
+\noindent The $\Delta NLL$-contour for limits involving \Tcb \ are found to be non-elliptical. This is caused by the different sensitivities of the aTGC parameters to the WW- and WZ-category and is described in more detail in section~\ref{sec:limits:atgcint}. Another effect on the shapes of two-dimensional limits are the interference effects between the different aTGC contributions that were introduced in section~\ref{subsec:signal:aTGCInt}, which causes the contours to be slightly rotated counterclockwise. These effects are also described in more detail in section~\ref{sec:limits:atgcint}.
 
 \begin{figure}
 	\centering

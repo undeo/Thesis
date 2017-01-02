@@ -1,7 +1,7 @@
 \chapter{Determination of the Background Distributions}
 \label{chap:bkg}
 
-There are several processes with the same or similar final states as the diboson process contributing to the overall background. A correct modelling of these process is essential for the final limit extraction. The main background contribution originates from W+jets production, where the W boson decays leptonically and the quark and gluon in the final state are falsely reconstructed as W or Z boson-jets. An example process is shown in Fig.~\ref{fig:bkg:fy_wjets1}.
+There are several processes with the same or similar final states as the diboson process contributing to the overall background. A correct modelling of these process is essential for the final limit extraction. The main background contribution originates from W+jets production, where the W boson decays leptonically and the quark or gluon in the final state are falsely reconstructed as W or Z boson-jets. An example process is shown in Fig.~\ref{fig:bkg:fy_wjets1}.
 The second main contribution comes from top quark pair (\ttbar) production with one leptonically and one hadronically decaying real W-boson as shown in Fig.~\ref{fig:bkg:fy_ttbar}. Additionally, SM diboson production, which includes processes with and without triple gauge coupling (Fig.~\ref{fig:bkg:fy_WWtgc}-\ref{fig:bkg:fy_WZSM}), is taken into account as minor background. The last minor contribution comes from electroweak single top quark production (from now on called single top) in association with a W boson (Fig.~\ref{fig:bkg:fy_stoptw}) as well as in the $s$- (Fig.~\ref{fig:bkg:fy_stops}) and $t$-channel (Fig.~\ref{fig:bkg:fy_stopt}).\\
 \begin{figure}[h!]
 	\centering
@@ -103,7 +103,7 @@ F_{\rm WV}\left(x\right) &=  d_0 \cdot G(x,\mu_{\rm V},\sigma) + (1-d_0) \cdot G
 %d_0 \cdot G(x,\mu_{\rm Z},\sigma) + (1-d_0) \cdot G(x,\mu_{\rm Z}+\Delta_\mu,\sigma\cdot\Delta_\sigma)
 %\right) ~ , ~ d_0 \in [0,1] ~ . 
 %\end{align}
-These functions are now fitted to the corresponding MC sample to obtain a template for each background contribution. The resulting fits are presented in Fig.~\ref{fig:bkg:mjMC} for both the electron and muon channel. The shown error bands are estimated by evaluating the fitted function 2000 times at 100 points with the function parameters varied according to their fit uncertainty. The error estimate at each point is then given as the 68\% quantile of the resulting function values.\\
+These functions are now fitted to the corresponding MC sample to obtain a template for each background contribution. The resulting fits are presented in Fig.~\ref{fig:bkg:mjMC} for both the electron and muon channel. The shown error bands are estimated by evaluating the fitted function 2000 times at 100 points with the function parameters varied according to their fit uncertainty, taking into account correlations between the parameters via the covariance matrix. The error estimate at each point is then given as the 68\% quantile of the resulting function values.\\
 \begin{figure}
 	\centering
 		\includegraphics[width=0.47\textwidth]{../plots/bkg/mj/WJets_mj_el_ErfExp_with_pull.pdf}
@@ -118,7 +118,7 @@ These functions are now fitted to the corresponding MC sample to obtain a templa
 	\label{fig:bkg:mjMC}
 \end{figure}
 
-\noindent Keeping the shape parameters fixed, these templates are fitted to the data in the whole \Mpr -spectrum ($\Mpr \in [40,150]\,{\rm GeV}$) with the single top normalization fixed. The W+jets normalization is kept freely floating while the normalization of the \ttbar \ contribution is floating with a Gaussian constraint corresponding to its uncertainty described in section~\ref{sec:systematics}. Additionally, one of the W+jets shape parameters ($a_0$) is allowed to float. Since the fitted region includes the signal region, any events arising from anomalous couplings would be absorbed into the background estimation. To avoid that, the diboson distribution is allowed to float within a factor of two to catch any possible aTGC events. For the final limit extraction the diboson contribution is normalised to its cross section.\\
+\noindent Keeping the shape parameters fixed, these templates are fitted to the data in the whole \Mpr -spectrum ($\Mpr \in [40,150]\,{\rm GeV}$) with the single top normalization fixed. The W+jets normalization is kept freely floating while the normalization of the \ttbar \ contribution is floating with a Gaussian constraint corresponding to its uncertainty described in section~\ref{sec:systematics}. Additionally, one of the W+jets shape parameters ($a_0$) is allowed to float. Since the fitted region includes the signal region, any events arising from anomalous couplings would be absorbed into the background estimation. To avoid that, the diboson distribution is allowed to float within a factor of two to catch any possible aTGC events. For the final limit extraction the diboson contribution is normalised to its theoretically predicted cross section.\\
 
 \noindent To counter any bias from the choice of parametrization of the W+jets background, the fit is redone using a different functional form given by
 \begin{equation}

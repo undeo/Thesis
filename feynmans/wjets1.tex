@@ -9,22 +9,19 @@
 \fmfframe(0,1)(1,1){
 \begin{fmfgraph*}(8,6)
 	\fmfleft{i_gl,i_q}
-	\fmfright{o_q2,o_q1,o_nu,o_lep}
+	\fmfright{o_q,o_nu,o_lep}
 	\fmf{quark}{i_q,gl1}
 	\fmf{boson,label=$W^+$}{gl1,W}
 		\fmf{fermion}{W,o_nu}
 		\fmf{fermion}{o_lep,W}		
 	\fmf{quark}{gl1,gl2}
-	\fmf{gluon}{i_gl,gl2}
-	\fmf{quark,label=$q'$}{gl2,glsplit}
-		\fmf{gluon}{o_q1,glsplit}
-		\fmf{quark}{glsplit,o_q2}	
+	\fmf{gluon,tension=1.33}{i_gl,gl2}
+	\fmf{quark}{gl2,o_q}
 	\fmflabel{$q$}{i_q}
 	\fmflabel{$g$}{i_gl}
 	\fmflabel{$\ell^+$}{o_lep}
 	\fmflabel{$\nu$}{o_nu}
-	\fmflabel{$q'$}{o_q2}
-	\fmflabel{$g$}{o_q1}
+	\fmflabel{$q'$}{o_q}
 \end{fmfgraph*}
 }
 \end{fmffile}
