@@ -58,7 +58,7 @@ $\rho(\theta)$ describes the constraint given by the set of uncertainties $\thet
 
 \noindent There are two kinds of uncertainties implemented as nuisance parameters $\theta$. Uncertainties on the normalizations of the different contributions are implemented as multiplicative parameters constrained by log-normal distributions. Uncertainties affecting the slope parameters of the background and signal estimations are implemented by adding a Gaussian term for each parameter, centred at the nominal parameter value and having a width corresponding to the parameter uncertainty.\\
 
-\noindent To be able to interpret the limits extracted from the observed data, they have to be compared with the expected limits that would result in the case of a vanishing signal contribution. Therefore, a pseudo-dataset is generated using only the pdfs describing the background distributions. Expected limits are then extracted as described above.
+\noindent The consistency of the analysis is verified by comparing the observed limits with the expected limits that would result in the case of a vanishing signal contribution. Therefore, a pseudo-dataset is generated using only the pdfs describing the background distributions. Expected limits are then extracted as described above.
 
 
 \section{Systematic Uncertainties}
@@ -183,7 +183,7 @@ One-dimensional limits are computed by performing a scan over one of the aTGC pa
 
 \section{Two-Dimensional Limits}
 \label{sec:2dlims}
-The extraction of two-dimensional limits is performed similarly to the one-dimensional ones, except only one aTGC parameter is set to zero. This leads to a two-dimensional $\Delta NLL$ distribution. Limits at 95\% C.L. are extracted as two-dimensional contours in the $\Delta NLL$ distribution as shown in Fig.~\ref{fig:limits:2dlimits}.\\
+The extraction of two-dimensional limits is performed similarly to the one-dimensional ones, except only one aTGC parameter is set to zero. This leads to a two-dimensional $\Delta NLL$ distribution. Limits at 95\% C.L. are extracted as two-dimensional contours in the $\Delta NLL$ distribution at $\Delta NLL=5.99$ \cite{cowan} as shown in Fig.~\ref{fig:limits:2dlimits}.\\
 
 \noindent Similarly to the one-dimensional case, the observed two-dimensional limits are not as strict as the expected ones but still within the $\pm 1\sigma$-environment, which again can be approximated by the contours at 68\% and 99\% C.L.\\
 
@@ -212,7 +212,7 @@ Describing the effects of anomalous couplings with aTGC parameters using the eff
 \ccw  &= \frac{2}{M_Z^2}\Delta g_1^Z ~, \\
 \cb   &= \frac{2}{\tan^2\theta_W M_Z^2}\Delta g_1^Z - \frac{2}{\sin^2\theta_W M_Z^2}\Delta\kappa_Z ~,
 \end{align}
-with the W boson mass $M_W$, the Z boson mass $M_Z$, the weak coupling constant $g$ and the Weinberg angle $\theta_W$. This allows for the extraction of the limits in terms of $\lambda_Z$, $\Delta \kappa_Z$ and $\Delta g_1^Z$. The results for the one-dimensional limits are summarized in Tab.~\ref{tab:limits:1dlimits_vertex}, while the two-dimensional limits are shown in Fig.~\ref{fig:limits:2dlimitsvertex}. A comparison with the previous limits using data taken at a center of mass energy of 7\,TeV is shown in Fig.~\ref{fig:limits:compare}. As can be seen there, the limits extracted in this analysis are competitive to the previous ones, despite using a comparatively small dataset of 2.3\,fb$^{-1}$. Running this analysis on the dataset coming available at the end of 2016, which corresponds to $38.27$\,fb$^{-1}$, is expected to significantly improve the limits.
+with the W boson mass $M_W$, the Z boson mass $M_Z$, the weak coupling constant $g$ and the Weinberg angle $\theta_W$. This allows for the extraction of the limits in terms of $\lambda_Z$, $\Delta \kappa_Z$ and $\Delta g_1^Z$. The results for the one-dimensional limits are summarized in Tab.~\ref{tab:limits:1dlimits_vertex}, while the two-dimensional limits are shown in Fig.~\ref{fig:limits:2dlimitsvertex}. A comparison with the previous limits using data taken at a center of mass energy of 7\,TeV is shown in Fig.~\ref{fig:limits:compare}. As can be seen there, the limits extracted in this analysis are competitive to the previous ones, despite using a comparatively small dataset of 2.3\,fb$^{-1}$. Running this analysis on the dataset coming available at the end of 2016, which corresponds to more than $36$\,fb$^{-1}$, is expected to significantly improve the limits.
 
 \begin{table}
 	\centering
@@ -268,7 +268,7 @@ with the W boson mass $M_W$, the Z boson mass $M_Z$, the weak coupling constant 
 \end{figure}
 The effects of the interfenrence between different aTGC contributions can be illustrated in terms of a simple counting experiment with two aTGC parameters $c_1$ and $c_2$, neglecting the SM contribution. The number of observed events $N_{\rm obs}$ is then given by
 \begin{equation}
-N_{\rm obs} = \left( c_1A_1 + c_2A_2 \right)^2 = c_1^2A_1^2 + c_2^2A_2^2 + c_1c_2A_1A_2 ~,
+N_{\rm obs} = \left| c_1A_1 + c_2A_2 \right|^2 = c_1^2|A_1|^2 + c_2^2|A_2|^2 + c_1c_2|A_1||A_2|\cos \varphi_{12} ~,
 \end{equation}
 where $A_1$ and $A_2$ denote the contributions of the two parameters $c_1$ and $c_2$, respectively. The term describing the interference between the two parameters can be eliminated by a rotation
 \begin{eqnarray}

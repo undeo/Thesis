@@ -13,7 +13,7 @@ The effects of anomalous triple gauge couplings (Fig.~\ref{fig:signal:fy_atgc}) 
 	\label{fig:signal:fy_atgc}
 \end{figure}
 
-\noindent The signal process is simulated in leading order using the \textsc{MadGraph\textunderscore aMC@NLO} event generator with the \textit{EWDim6} model, which implements anomalous couplings based on the effective field theory (EFT) approach that is described in section~\ref{sec:aTGC}. For each aTGC parameter two working points are defined at about the expected sensitivity of the analysis (table~\ref{tab:signal:aTGCpoints}). The simulation samples for these working points are obtained by reweighting the originally generated samples.
+\noindent The signal process is simulated in leading order using the event generator \textsc{MadGraph\textunderscore aMC@NLO} with the \textit{EWDim6} model \cite{EFT}, which implements anomalous couplings based on the effective field theory (EFT) approach that is described in section~\ref{sec:aTGC}. For each aTGC parameter two working points are defined at about the expected sensitivity of the analysis (table~\ref{tab:signal:aTGCpoints}). The simulation samples for these working points are obtained by reweighting the originally generated samples.
 \begin{table}
 	\centering
 	\caption[aTGC working points]{aTGC parameter values to which the simulated signal sample has been reweighted.}
@@ -62,21 +62,29 @@ The signal process under consideration contains both WW and WZ events, which are
 The signal function is given by an analytical function depending on the three aTGC parameters. This allows for different scenarios where either one, two or three aTGC parameters are unequal to zero. The signal model can also be easily reparametrized to the vertex parametrization used by previous analyses (see section~\ref{sec:vertex}). It is designed to describe the SM diboson process if all three aTGC parameters are set to zero. For each channel (WW- and WZ-category in both electron and muon channel) a separate signal function is defined. In this section the modelling of the signal function is described in detail.
 
 \subsection*{Normalization}
-The final normalizations of the SM diboson processes are estimated by their theoretically predicted cross sections \cite{WWxsec,WZxsec}. The normalization of the aTGC contribution is then obtained by applying a scaling factor that is extracted from the simulated LO signal sample reweighted to the corresponding aTGC parameter values. Since the event yields scale quadratically in the aTGC parameters, the scaling factor is defined as
+The final normalizations of the SM diboson processes are estimated by their theoretically predicted cross sections \cite{WWxsec,WZxsec}. The normalization of the aTGC contribution is then obtained by applying a scaling factor that is extracted from the simulated LO signal sample reweighted to the corresponding aTGC parameter values. The event yields scale quadratically in the aTGC parameters. This can be illustrated by looking at the cross section of the aTGC process, which is computed by adding the complex amplitudes of the SM $A_{\rm SM}$ and the aTGC process $A_{\rm aTGC}$ and squaring \cite{EFT}, resulting in
+\begin{align}
+\sigma \propto \left| A_{\rm aTGC}\right|^2 &= \left| A_{\rm SM} + c_i A_{c_i} \right|^2 \\
+&= |A_{\rm SM}|^2 + c_i^2  |A_{c_i}|^2 + 2c_i  |A_{\rm SM}| |A_{c_i}|\cos \varphi_i ~. \label{eq:signal:xsec} 
+\end{align}
+The third term in equation~\ref{eq:signal:xsec} depends on the sign of $c_i$, thus leading to different event yields. It described the interference effect between the aTGC and SM process.
+
+
+Since the event yields scale quadratically in the aTGC parameters, the scaling factor is defined as
 \begin{equation}
-S_{\rm aTGC} = 1 + \left[ \Delta f_1\left(\cwww\right) + \Delta f_2\left(\ccw\right) + \Delta f_3\left(\cb\right) \right] ~,
+S_{\rm aTGC} = 1 + \left[ f_1\left(\cwww\right) + f_2\left(\ccw\right) + f_3\left(\cb\right) \right] ~,
 \end{equation}
-where the $\Delta f_i(x)$ are given by
+where the $f_i(x)$ are given by
 \begin{align}
-\Delta f_i(x) &= f_i(x)-1 ~, \\
-f_i(x) &= a_i + b_i x + d_i x^2 ~. \label{eq:signal:scale}
+f_i(x) &= b_i x + d_i x^2 ~. \label{eq:signal:scale}
 \end{align}
-The functions $f_i(x)$ describe the relative increase in event yields for each aTGC parameter with $f_i(0)=1$. This definition ensures $S_{\rm aTGC}=1$ for the SM case. The parameters of these functions are extracted from fits to the aTGC yields normalized to the SM yields for the different working points as shown in Fig.~\ref{fig:signal:atgcyields_mu} for the muon channel\footnote{All distributions shown in this section correspond to the muon channel. Analogous illustrations for the other channels can be found in the Appendix.}. As can be seen here, the yields for positive and negative aTGC parameter values differ for two of the aTGC parameters, which is caused by interference effects between the aTGC and the SM contribution. This can be illustrated by looking at the cross section of the aTGC process, which is computed by adding the amplitudes $A_i$ and squaring \cite{EFT}, resulting in
-\begin{align}
-\sigma \propto A_{\rm aTGC}^2 &= \left( A_{\rm SM} + c_i A_{c_i} \right)^2 \\
-&= A_{\rm SM}^2 + c_i^2  A_{c_i}^2 + 2c_i  A_{\rm SM} A_{c_i} ~. \label{eq:signal:xsec} 
-\end{align}
-The third term in equation~\ref{eq:signal:xsec} depends on the sign of $c_i$, thus leading to different event yields. This is taken into account by the linear terms in equation~\ref{eq:signal:scale}.
+The functions $f_i(x)$ describe the relative increase in event yields for each aTGC parameter with $f_i(0)=0$. This definition ensures $S_{\rm aTGC}=1$ for the SM case. The parameters of these functions are extracted from fits to the aTGC yields normalized to the SM yields for the different working points as shown in Fig.~\ref{fig:signal:atgcyields_mu} for the muon channel\footnote{All distributions shown in this section correspond to the muon channel. Analogous illustrations for the other channels can be found in the Appendix.}. As can be seen here, the yields for positive and negative aTGC parameter values differ for two of the aTGC parameters, which is caused by interference effects between the aTGC and the SM contribution. 
+
+
+
+
+
+
 \begin{figure}
 	\centering
 		\includegraphics[width=0.49\textwidth]{../plots/signal/yields_cwww_WW_mu.pdf}
@@ -160,8 +168,10 @@ The available simulated signal samples with complete detector simulation only co
 \label{subsec:signal:aTGCInt}
 Interference effects between different aTGC contributions have to be taken into account for scenarios where more than one aTGC parameter is unequal to zero. The cross section for a scenario with two non-zero aTGC parameters can be derived similarly to equation~\ref{eq:signal:xsec} by squaring the sum of amplitudes
 \begin{align}
-\sigma \propto A_{\rm aTGC}^2 &= \left( A_{\rm SM} + c_i A_{c_i} + c_j A_{c_j} \right)^2 \\
-&= A_{\rm SM}^2 + c_i^2 A_{c_i}^2 + c_j^2 A_{c_j}^2 + 2A_{\rm SM}\left( c_iA_{c_i} + c_jA_{c_j}\right) + 2c_ic_jA_{c_i}A_{c_j} ~. \label{eq:signal:xsecint}
+\sigma \propto& |A_{\rm aTGC}|^2 \\
+=& \left| A_{\rm SM} + c_i A_{c_i} + c_j A_{c_j} \right|^2 \\
+=& |A_{\rm SM}|^2 + c_i^2 |A_{c_i}|^2 + c_j^2 |A_{c_j}|^2 + 2|A_{\rm SM}|\left( c_i|A_{c_i}|\cos \varphi_i + c_j|A_{c_j}|\cos \varphi_j\right) \nonumber \\
+&+ 2c_ic_j|A_{c_i}||A_{c_j}|\cos \varphi_{ij} ~. \label{eq:signal:xsecint}
 \end{align}
 The last term in equation~\ref{eq:signal:xsecint} corresponds to the interference between $c_i$ and $c_j$. These effect are introduced to the signal model by adding additional exponential functions proportional to two different aTGC parameters to the signal function in equation~\ref{eq:signal:sigfunc}
 \begin{align}
@@ -199,7 +209,7 @@ The contribution of the interference between \Tcwww \ and \Tcb \ is found to be 
 The other contributions are taken into account as small corrections relevant for the two-dimensional limits.
 \subsection{Standard Model Interference at Low Anomalous Triple Gauge Coupling Parameter Values}
 \label{sec:SMint}
-The additionally generated samples are used to verify the treatment of the SM interference effect at low aTGC parameter values. As mentioned in section~\ref{sec:aTGC}, the cross section of the aTGC increases with increasing energy. The SM interference, however, is constant, thus having larger effects at low energies (i.e. low values of \MWV).\\
+The additionally generated samples are used to verify the treatment of the SM interference effect at low aTGC parameter values. As mentioned in section~\ref{sec:aTGC}, the aTGC contribution increases the cross section of the diboson production compared to the SM process at increasing energy. The SM interference, however, is constant, thus having larger effects at low energies (i.e. low values of \MWV).\\
 
 \noindent To verify the signal model, the different contributions are extracted as described in section~\ref{sec:NormalizationandShapeoftheaTGCContributions} from the simulated samples on generator level. Then the signal model is compared to the samples for the additional aTGC parameter values. The result for WZ events, where the effects of the SM interference are most visible, is shown in the muon channel in Fig.~\ref{fig:signal:smintverif_WZ_mu}. Only the SM sample (shown in black) and the sample with the highest aTGC value ($\Tccw = \pm 20$\,TeV$^{-2}$ or $\Tcb = \pm 60$\,TeV$^{-2}$, respectively, shown in blue) are used in the fit to extract the signal model. The other shown samples correspond to the additionally generated aTGC points while the  grey lines indicate the signal model with the aTGC parameter increasing in steps of 1\,TeV$^{-2}$. As can be seen there, the signal model describes the simulation well even for low aTGC parameter values at low invariant masses.
 
