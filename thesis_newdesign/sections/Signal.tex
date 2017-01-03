@@ -90,10 +90,10 @@ The third term in equation~\ref{eq:signal:xsec} depends on the sign of $c_i$, th
 \end{figure}
 
 \subsection*{Shape}
-The shape of the aTGC contribution is designed as sum of the different contributions, namely the SM process, the quadratic dependence, the SM interference and the interference between different aTGC contributions (aTGC-aTGC-interference, introduced in section~\ref{subsec:signal:aTGCInt}). The normalization is taken from the scaling factor mentioned above, while the signal function is normalized to unity. The main contributions are the SM process and the quadratic dependence to the aTGC parameters. Both contributions are modelled by an exponential function, while the quadratic aTGC term is additionally proportional to the square of the corresponding aTGC parameter. The quadratic contributions show a turn-on at $\MWV \approx 1$\,TeV, which is modelled by an error function. The signal function without aTGC-aTGC-interference is therefore given by
+The shape of the aTGC contribution is designed as sum of the different contributions, namely the SM process, the quadratic dependence, the SM interference and the interference between different aTGC contributions (aTGC-aTGC-interference, introduced in section~\ref{subsec:signal:aTGCInt}). The normalization is taken from the scaling factor mentioned above, while the signal function is normalized to unity. The main contributions are the SM process and the quadratic dependence to the aTGC parameters. Both contributions are modelled by an exponential function, with the quadratic aTGC term being proportional to the square of the corresponding aTGC parameter. The quadratic contributions show a turn-on at $\MWV \approx 1$\,TeV, which is modelled by an error function. The signal function without aTGC-aTGC-interference is therefore given by
 \begin{align}
 F_{\rm aTGC} =& F_{\rm SM} + \sum_i \left( F_{c_i^2} + F_{c_i} \right) \\
-=& \frac{N_{\rm SM}}{A_N} e^{-a_{SM}x} + \sum_i \left( \frac{N_{c_i,1}}{A_N} c_i^2 e^{-a_{i,1} x} \frac{1+\rm{Erf}\left(\frac{x-a_{o,i}}{a_{w,i}}\right)}{2} + \frac{N_{c_i,2}}{A_N} c_i e^{a_{i,2}x} \right)  ~,
+=& \frac{N_{\rm SM}}{A_N} e^{-a_{SM}x} + \sum_i \left( \frac{N_{c_i,1}}{A_N} c_i^2 e^{-a_{i,1} x} \frac{1+\rm{Erf}\left(\frac{x-a_{o,i}}{a_{w,i}}\right)}{2} + \frac{N_{c_i,2}}{A_N} c_i e^{-a_{i,2}x} \right)  ~,
 \label{eq:signal:sigfunc}
 \end{align}
 with the error function
