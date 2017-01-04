@@ -67,10 +67,7 @@ The final normalizations of the SM diboson processes are estimated by their theo
 \sigma \propto \left| A_{\rm aTGC}\right|^2 &= \left| A_{\rm SM} + c_i A_{c_i} \right|^2 \\
 &= |A_{\rm SM}|^2 + c_i^2  |A_{c_i}|^2 + 2c_i  |A_{\rm SM}| |A_{c_i}|\cos \varphi_i ~. \label{eq:signal:xsec} 
 \end{align}
-The third term in equation~\ref{eq:signal:xsec} depends on the sign of $c_i$, thus leading to different event yields. It described the interference effect between the aTGC and SM process.
-
-
-Since the event yields scale quadratically in the aTGC parameters, the scaling factor is defined as
+The third term in equation~\ref{eq:signal:xsec} depends on the sign of $c_i$, thus leading to different event yields. It describes the interference effect between the aTGC and SM process. The normalization of the aTGC contribution is applied via a scaling factor that is defined as
 \begin{equation}
 S_{\rm aTGC} = 1 + \left[ f_1\left(\cwww\right) + f_2\left(\ccw\right) + f_3\left(\cb\right) \right] ~,
 \end{equation}
@@ -78,12 +75,7 @@ where the $f_i(x)$ are given by
 \begin{align}
 f_i(x) &= b_i x + d_i x^2 ~. \label{eq:signal:scale}
 \end{align}
-The functions $f_i(x)$ describe the relative increase in event yields for each aTGC parameter with $f_i(0)=0$. This definition ensures $S_{\rm aTGC}=1$ for the SM case. The parameters of these functions are extracted from fits to the aTGC yields normalized to the SM yields for the different working points as shown in Fig.~\ref{fig:signal:atgcyields_mu} for the muon channel\footnote{All distributions shown in this section correspond to the muon channel. Analogous illustrations for the other channels can be found in the Appendix.}. As can be seen here, the yields for positive and negative aTGC parameter values differ for two of the aTGC parameters, which is caused by interference effects between the aTGC and the SM contribution. 
-
-
-
-
-
+The functions $f_i(x)$ describe the relative increase in event yields for each aTGC parameter with $f_i(0)=0$. This definition ensures $S_{\rm aTGC}=1$ for the SM case. The parameters of these functions are extracted from fits to the aTGC yields normalized to the SM yields for the different working points as shown in Fig.~\ref{fig:signal:atgcyields_mu} for the muon channel\footnote{All distributions shown in this section correspond to the muon channel. Analogous illustrations for the other channels can be found in the Appendix.}. As can be seen here, the yields for positive and negative aTGC parameter values differ for two of the aTGC parameters, which is caused by interference effects between the aTGC and the SM contribution.
 
 \begin{figure}
 	\centering
@@ -98,10 +90,19 @@ The functions $f_i(x)$ describe the relative increase in event yields for each a
 \end{figure}
 
 \subsection*{Shape}
-The shape of the aTGC contribution is designed as sum of the different contributions, namely the SM process, the quadratic dependence, the SM interference and the interference between different aTGC contributions (aTGC-aTGC-interference, introduced in section~\ref{subsec:signal:aTGCInt}). The normalization is taken from the scaling factor mentioned above, while the signal function is normalized to unity. The main contributions are the SM process and the quadratic dependence to the aTGC parameters. Both contributions are modelled by an exponential function, with the quadratic aTGC term being proportional to the square of the corresponding aTGC parameter. The quadratic contributions show a turn-on at $\MWV \approx 1$\,TeV, which is modelled by an error function. The signal function without aTGC-aTGC-interference is therefore given by
+The shape of the aTGC contribution is designed as sum of the different contributions. The normalization is taken from the scaling factor mentioned above, while the signal function is normalized to unity. The signal function consists of several parts and is finally given by
+\begin{equation}
+F_{\rm Signal} = \frac{1}{A_N} \left( F_{\rm SM} + F_{\rm aTGC} + F_{\rm SM int} + F_{\rm aTGC int} \right) ~,
+\end{equation}
+with the global normalization
+\begin{equation}
+A_N = N_{\rm SM} + \sum_i \left( N_{c_i,1}\cdot c_i^2 + N_{c_i,2}\cdot c_i \right) + \sum_{i,j}^{i \neq j} N_{c_i,c_j} \cdot c_i \cdot c_j ~.
+\end{equation}
+The first terms in these equations corresponds to the SM contribution. The second terms describe the main aTGC contribution, while the third term represents the interference effects of the SM with the aTGC process. The last terms describe the interference effects between different aTGC contributions. These equations will be motivated in this section, with the interference between aTGC contributions being introduced in section~\ref{subsec:signal:aTGCInt}.\\
+
+The main contributions are the SM process and the quadratic dependence to the aTGC parameters. Both contributions are modelled by an exponential function, with the quadratic aTGC term being proportional to the square of the corresponding aTGC parameter. The quadratic contributions show a turn-on at $\MWV \approx 1$\,TeV, which is modelled by an error function. The signal function without aTGC-aTGC-interference is therefore given by
 \begin{align}
-F_{\rm aTGC} =& F_{\rm SM} + \sum_i \left( F_{c_i^2} + F_{c_i} \right) \\
-=& \frac{N_{\rm SM}}{A_N} e^{-a_{SM}x} + \sum_i \left( \frac{N_{c_i,1}}{A_N} c_i^2 e^{-a_{i,1} x} \frac{1+\rm{Erf}\left(\frac{x-a_{o,i}}{a_{w,i}}\right)}{2} + \frac{N_{c_i,2}}{A_N} c_i e^{-a_{i,2}x} \right)  ~,
+F_{\rm aTGC} =& \frac{N_{\rm SM}}{A_N} e^{-a_{SM}x} + \sum_i \left( \frac{N_{c_i,1}}{A_N} c_i^2 e^{-a_{i,1} x} \frac{1+\rm{Erf}\left(\frac{x-a_{o,i}}{a_{w,i}}\right)}{2} + \frac{N_{c_i,2}}{A_N} c_i e^{-a_{i,2}x} \right)  ~,
 \label{eq:signal:sigfunc}
 \end{align}
 with the error function
