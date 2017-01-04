@@ -62,7 +62,7 @@ The signal process under consideration contains both WW and WZ events, which are
 The signal function is given by an analytical function depending on the three aTGC parameters. This allows for different scenarios where either one, two or three aTGC parameters are unequal to zero. The signal model can also be easily reparametrized to the vertex parametrization used by previous analyses (see section~\ref{sec:vertex}). It is designed to describe the SM diboson process if all three aTGC parameters are set to zero. For each channel (WW- and WZ-category in both electron and muon channel) a separate signal function is defined. In this section the modelling of the signal function is described in detail.
 
 \subsection*{Normalization}
-The final normalizations of the SM diboson processes are estimated by their theoretically predicted cross sections \cite{WWxsec,WZxsec}. The normalization of the aTGC contribution is then obtained by applying a scaling factor that is extracted from the simulated LO signal sample reweighted to the corresponding aTGC parameter values. The event yields scale quadratically in the aTGC parameters. This can be illustrated by looking at the cross section of the aTGC process, which is computed by adding the complex amplitudes of the SM $A_{\rm SM}$ and the aTGC process $A_{\rm aTGC}$ and squaring \cite{EFT}, resulting in
+The final normalizations of the SM diboson processes are estimated by their theoretically predicted cross sections \cite{WWxsec,WZxsec}. The normalization of the aTGC contribution is then obtained by applying a scaling factor that is extracted from the simulated LO signal sample reweighted to the corresponding aTGC parameter values. The event yields scale quadratically in the aTGC parameters. This can be illustrated by looking at the cross section of the aTGC process, which is computed by adding the complex amplitudes of the different contributions, given by the SM $A_{\rm SM}$ and the aTGC process $A_{\rm aTGC}$, and squaring \cite{EFT}, resulting in
 \begin{align}
 \sigma \propto \left| A_{\rm aTGC}\right|^2 &= \left| A_{\rm SM} + c_i A_{c_i} \right|^2 \\
 &= |A_{\rm SM}|^2 + c_i^2  |A_{c_i}|^2 + 2c_i  |A_{\rm SM}| |A_{c_i}|\cos \varphi_i ~. \label{eq:signal:xsec} 
@@ -90,7 +90,7 @@ The functions $f_i(x)$ describe the relative increase in event yields for each a
 \end{figure}
 
 \subsection*{Shape}
-The shape of the aTGC contribution is designed as sum of the different contributions. The normalization is taken from the scaling factor mentioned above, while the signal function is normalized to unity. The signal function consists of several parts and is finally given by
+The shape of the aTGC contribution is designed as sum of the different contributions. The normalization is taken from the scaling factor mentioned above, while the signal function is normalized to unity. The signal function consists of several parts and is ultimately given by
 \begin{equation}
 F_{\rm Signal} = \frac{1}{A_N} \left( F_{\rm SM} + F_{\rm aTGC} + F_{\rm SM int} + F_{\rm aTGC int} \right) ~,
 \end{equation}
@@ -102,7 +102,7 @@ The first terms in these equations corresponds to the SM contribution. The secon
 
 The main contributions are the SM process and the quadratic dependence to the aTGC parameters. Both contributions are modelled by an exponential function, with the quadratic aTGC term being proportional to the square of the corresponding aTGC parameter. The quadratic contributions show a turn-on at $\MWV \approx 1$\,TeV, which is modelled by an error function. The signal function without aTGC-aTGC-interference is therefore given by
 \begin{align}
-F_{\rm aTGC} =& \frac{N_{\rm SM}}{A_N} e^{-a_{SM}x} + \sum_i \left( \frac{N_{c_i,1}}{A_N} c_i^2 e^{-a_{i,1} x} \frac{1+\rm{Erf}\left(\frac{x-a_{o,i}}{a_{w,i}}\right)}{2} + \frac{N_{c_i,2}}{A_N} c_i e^{-a_{i,2}x} \right)  ~,
+F =& \frac{N_{\rm SM}}{A_N} e^{-a_{SM}x} + \sum_i \left( \frac{N_{c_i,1}}{A_N} c_i^2 e^{-a_{i,1} x} \frac{1+\rm{Erf}\left(\frac{x-a_{o,i}}{a_{w,i}}\right)}{2} + \frac{N_{c_i,2}}{A_N} c_i e^{-a_{i,2}x} \right)  ~,
 \label{eq:signal:sigfunc}
 \end{align}
 with the error function
@@ -118,17 +118,6 @@ and the aTGC parameters, which are normalized to the corresponding working point
 \begin{equation}
 c_1 = \frac{1}{12}\cwww ~ , \quad c_2 = \frac{1}{20}\ccw ~ , \quad c_3 = \frac{1}{60}\cb ~.
 \end{equation}
-The coefficient of the SM contribution $N_{\rm SM}$ is given by the SM yield. The coefficient of the quadratic term is given by the difference of the average aTGC yield (for the positive $N_{c_i}^{+}$ and negative working point $N_{c_i}^{-}$) and the SM yield
-\begin{equation}
-N_{c_i,1} = \frac{N_{c_i}^{+}+N_{c_i}^{-}}{2}-N_{\rm SM} ~,
-\label{eq:signal:n1}
-\end{equation}
-while the coefficient of the SM interference term describes the difference of the positive and negative working point
-\begin{equation}
-N_{c_i,2} = \frac{N_{c_i}^{+}-N_{c_i}^{-}}{2} ~.
-\label{eq:signal:n2}
-\end{equation}
-To simplify the signal model, small contributions are neglected, i.e. the error function for \Tcb \ in the WZ-category and the SM interference term for \Tcwww \ in both categories. This leaves a total of ten parameters that have to be extracted from fits to the simulated signal samples in the \MWV -spectrum. The slope of the exponential describing the SM contribution is extracted by fitting the signal model with all aTGC parameters set to zero to the corresponding simulated sample. The slope of the SM interference contribution is extracted from a fit of a exponential function to the difference of the simulation for the positive and negative working point. The fit result is shown in Fig.~\ref{fig:signal:sm_int_WW_mu} for \Tccw. Corresponding results for \Tcb \ as well as for the remaining channels can be found in Fig.\ref{fig:app:SMint}.\\
 \begin{figure}
 	\centering
 	%\subfigure[]{
@@ -140,6 +129,18 @@ To simplify the signal model, small contributions are neglected, i.e. the error 
 	\caption[Fit results for the interference with the SM in the WW-category, muon channel]{Fit results for the interference with the SM in the WW-category, muon channel, for \Tccw . Shown is the difference of the simulated samples for the positive and negative working points as well as the fitted function (red line).}
 	\label{fig:signal:sm_int_WW_mu}
 \end{figure}
+The coefficient of the SM contribution $N_{\rm SM}$ is given by the SM yield. The coefficient of the quadratic term is given by the difference of the average aTGC yield (for the positive $N_{c_i}^{+}$ and negative working point $N_{c_i}^{-}$) and the SM yield
+\begin{equation}
+N_{c_i,1} = \frac{N_{c_i}^{+}+N_{c_i}^{-}}{2}-N_{\rm SM} ~,
+\label{eq:signal:n1}
+\end{equation}
+while the coefficient of the SM interference term describes the difference of the positive and negative working point
+\begin{equation}
+N_{c_i,2} = \frac{N_{c_i}^{+}-N_{c_i}^{-}}{2} ~.
+\label{eq:signal:n2}
+\end{equation}
+To simplify the signal model, small contributions are neglected, i.e. the error function for \Tcb \ in the WZ-category and the SM interference term for \Tcwww \ in both categories. This leaves a total of ten parameters that have to be extracted from fits to the simulated signal samples in the \MWV -spectrum. The slope of the exponential describing the SM contribution is extracted by fitting the signal model with all aTGC parameters set to zero to the corresponding simulated sample. The slope of the SM interference contribution is extracted from a fit of a exponential function to the difference of the simulation for the positive and negative working point. The fit result is shown in Fig.~\ref{fig:signal:sm_int_WW_mu} for \Tccw. Corresponding results for \Tcb \ as well as for the remaining channels can be found in Fig.\ref{fig:app:SMint}.\\
+
 
 \noindent The remaining slope parameters as well as the parameters of the error functions are obtained by fitting the signal model to the simulated signal sample corresponding to the positive working point with the slope of the SM contribution and the SM interference fixed. The choice of the sign of the working point used in the fit is arbitrary since the differences are covered by the SM interference term. To be able to extract the parameters of the error function describing the turn-on effects the fit range is extended to $\MWV \in [600,3500]$\,GeV. The fit results are shown in Fig.~\ref{fig:signal:WW_mu_sig} for the WW-category in the muon channel.
 
@@ -182,11 +183,7 @@ N_{c_i,c_j} =& N_{c_i+,c_j+}^{gen} - (N_{SM} + N_{c_i,1} + N_{c_i,2} + N_{c_j,1}
 	&+ \frac{N_{c_j}^{MC^+}+N_{c_j}^{MC^-}}{2}-N_{SM} + \frac{N_{c_j}^{MC^+}-N_{c_j}^{MC^-}}{2} \Bigg) \nonumber \\ 
 	=&(N_{c_i+,c_j+}^{gen}+N_{SM})-(N_{c_i}^{MC^+}+N_{c_j}^{MC+}) ~. 
 \end{align}
-where $N_{c_i+,c_j+}^{gen}$ denotes the event yield for two aTGC parameters set to their positive working point extracted on generator level. $N_{c_i,1}$ and $N_{c_i,2}$ are defined in equation~\ref{eq:signal:n1} and \ref{eq:signal:n2}, respectively. The global normalization $A_N$ in equation~\ref{eq:signal:globnorm} has to be extended accordingly
-\begin{equation}
-A_N = N_{\rm SM} + \sum_i \left( N_{c_i,1}\cdot c_i^2 + N_{c_i,2}\cdot c_i \right) + \sum_{i,j}^{i \neq j} N_{c_i,c_j} \cdot c_i \cdot c_j ~. 
-\end{equation}
-The shape parameters $a_{ij}$ are extracted from fits to the simulated samples on generator level. A sample containing only the contribution of the aTGC interference is obtained by first taking the difference of a sample with two aTGC parameters set to their positive values (e.g. $MC_{c_{W} =20}^{c_{B} =60}$) and a sample with one positive and one negative value (e.g. $MC_{c_{W}=-20}^{c_{B} =60}$). This difference still includes the interference with the SM process for the parameter that changes its sign. This contribution is also subtracted. For the interference between \Tccw \ and \Tcb \ this leads to
+where $N_{c_i+,c_j+}^{gen}$ denotes the event yield for two aTGC parameters set to their positive working point extracted on generator level. $N_{c_i,1}$ and $N_{c_i,2}$ are defined in equation~\ref{eq:signal:n1} and \ref{eq:signal:n2}, respectively. The shape parameters $a_{ij}$ are extracted from fits to the simulated samples on generator level. A sample containing only the contribution of the aTGC interference is obtained by first taking the difference of a sample with two aTGC parameters set to their positive values (e.g. $MC_{c_{W} =20}^{c_{B} =60}$) and a sample with one positive and one negative value (e.g. $MC_{c_{W}=-20}^{c_{B} =60}$). This difference still includes the interference with the SM process for the parameter that changes its sign. This contribution is also subtracted. For the interference between \Tccw \ and \Tcb \ this leads to
 \begin{equation}
 MC_{c_{W}}^{c_{B}} = \left( MC_{c_{W} =20}^{c_{B} =60}-MC_{c_{W}=-20}^{c_{B} =60} \right) - \left( MC_{c_{W}=20}^{c_B=0}-MC_{c_{W}=-20}^{c_B=0} \right) ~.
 \end{equation}

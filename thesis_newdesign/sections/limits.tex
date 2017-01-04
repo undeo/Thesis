@@ -8,21 +8,16 @@ The main focus of this thesis lays on searching for aTGCs in a model independent
 The limits on the aTGC parameters are ultimately estimated by performing an unbinned maximum likelihood fit to compare the background and signal model with the observed data, taking into account uncertainties as nuisance parameters. The likelihood is estimated as function depending on the aTGC parameters. The resulting distributions are used to extract limits on the aTGC parameters at 95\% Confidence Level (C.L.). In the first part of this section, the concept of the maximum likelihood estimation as method to compare an analytical model with measured data as well as the extraction of confidence intervals from a likelihood distribution are presented, while in the second part the final procedure of setting the limits is outlined.
 \subsection{Maximum Likelihood Estimation}
 \label{subsec:maxlikeest}
-Given a data sample $x_1,\dots,x_n$ of a observable $x$ that is distributed according to a probability density function (pdf) $f(x_i,\theta)$ with a set of parameters $\theta=(\theta_1,\dots,\theta_m)$, the joint pdf for measuring the $x_i$ is given by \cite{cowan}
+Given a data sample $x_1,\dots,x_n$ of a observable $x$ that is distributed according to a probability density function (pdf) $f(x,\theta^{\rm T})$ with a set of true parameters $\theta^{\rm T}=(\theta_1^{\rm T},\dots,\theta_m^{\rm T})$, the corresponding likelihood-function is given by \cite{cowan}
 \begin{equation}
-p(x_i,\theta) = \prod_{i=1}^n f(x_i,\theta) ~.
+L(\theta) = \prod_{i=1}^n f(x_i,\theta) ~,
 \end{equation}
-The so called likelihood function is defined as the joint pdf with the $x_i$ fixed
-\begin{equation}
-L(\theta) = \prod_{i=1}^n f(x_i,\theta) ~.
-\end{equation}
-It is expected to yield high values for parameters values $\theta$ close to the true ones. The maximum likelihood estimators $\hat{\theta}$ are given by the parameter values that maximize the likelihood function
+with a set of estimated parameters $\theta$. Here it is assumed that the $x_i$ are fixed to the observed values. The likelihood-function is expected to yield high values for parameters values $\theta$ that describe the measured $x_i$ well, i.e. they are close to the true values $\theta^{\rm T}$. The maximum likelihood estimators $\hat{\theta}$ are given by the parameter values that maximize the likelihood function
 \begin{equation}
 \left. \frac{\partial L}{\partial \theta_i} \right| _{\theta_i=\hat{\theta_i}} = 0 ~.
 \label{eq:limits:1stderivlikelihood}
 \end{equation}
-
-Instead of maximizing $L$ it is convenient to minimize $-L$. It is also conventional to use the logarithm of the likelihood function, which allows to add different likelihoods instead of multiplying them. In the following, $L$ refers to the logarithmic likelihood.
+It can be shown that the maximum likelihood estimator $\hat{\theta}$ is invariant under transformations and is a consistent, efficient and (in the case of large sample sizes) unbiased estimator for $\theta^{\rm T}$ \cite{cowan}. Instead of maximizing $L$ it is convenient to minimize $-L$. It is also conventional to use the logarithm of the likelihood function, which allows to add different likelihoods instead of multiplying them. In the following, $L$ refers to the logarithmic likelihood. In this work, $\theta$ contains the parameters of interest, given by the aTGC parameters, as well as nuisance parameters, given by the systematic uncertainties to be taken into account. To quantify the compatibility of the measurement with the SM, confidence intervals are estimated as described in the next section.
 
 \subsection{Confidence Intervals}
 A confidence interval is an alternative way of reporting statistical errors on a measurement. If the measurement of a parameter $c$ was repeated many times, a confidence interval $[a,b]$ would include the true value of $c$ in a fraction $1-\alpha-\beta$ of the experiments, where $\alpha$ and $\beta$ are the probabilities of measuring a value lower than $a$ or higher than $b$, respectively.\\
@@ -119,7 +114,7 @@ The uncertainties mentioned above do also affect the shape of the signal distrib
 
 \noindent The uncertainty on the parameters describing the shape of the main background contribution, given by W+jets production, is taken from the fit result of the background extraction in section~\ref{sec:shapewjets}. To account for possible different parametrizations of the W+jets distribution (e.g. the alternative function given in equation~\ref{eq:bkg:altfunc}), the uncertainties are increased by a factor of $\sqrt{2}$. For the second largest background contribution, given by \ttbar \ production, the parametric fit uncertainties are also included in the limit extraction. Since the effects of the systematic uncertainties mentioned above are not explicitly evaluated, the fit uncertainty is artificially increased by a factor of 2.
 
-
+\newpage
 \section{One-Dimensional Limits}
 \begin{table}
 	\centering
@@ -146,7 +141,7 @@ The uncertainties mentioned above do also affect the shape of the signal distrib
 	\end{tabular}
 \end{table}
 
-One-dimensional limits are computed by performing a scan over one of the aTGC parameters while keeping the remaining two set to zero. For each scanned point the delta-log-likelihood ($\Delta NNL$) is computed as described in section~\ref{subsec:limsetproc}, combining the WW- and WZ-category in both the electron and muon channel. The final background and signal normalizations in each channel together with the applied uncertainties are summarized in Tab.~\ref{tab:limits:bkgnorms}.\\
+One-dimensional limits are computed by performing a scan over one of the aTGC parameters while keeping the remaining two set to zero. For each scanned point the delta-log-likelihood ($\Delta NNL$) is computed as described in section~\ref{subsec:limsetproc}, combining the WW- and WZ-category in both the electron and muon channel. The final background and signal normalizations in each channel together with the applied uncertainties and the observed data are summarized in Tab.~\ref{tab:limits:bkgnorms}.\\
 
 \noindent The limits at 95\% C.L. on the three aTGC parameters are extracted as the aTGC parameter values where $\Delta NLL=1.92$ \cite{cowan}. For the expected limits a pseudo-dataset is generated under the assumption of a vanishing signal contribution, i.e. all aTGC parameters are set to zero. The resulting expected and observed limits are summarized in Tab.~\ref{tab:limits:1dlimits}. The $\Delta NLL$ distributions are shown in Fig.~\ref{fig:limits:1dlimits}. The limits are found to be slightly asymmetric, which is caused by sign-sensitive terms in the signal function in equation~\ref{eq:signal:sigfunc}, representing the interference of the aTGC with the SM process. The observed limits at 95\% C.L. are not as strict as the expected ones. This is can be explained by an overfluctuation in the data, i.e. more events than expected are observed. However, the sensitivity of this analysis is not driven by the total event yield, which is not significantly affected by the anomalous couplings. It rather comes from events at high invariant masses where the difference between signal and background is expected to be highest. The fact that the limits for \Tcb \ are closer to the expectation than the ones for \Tcwww \ and \Tccw \ indicates that there is an overfluctuation of high-mass events in the WZ-category, where the sensitivity to \Tcb \ is comparatively low. However, the observed limits are still within the $\pm 1\sigma$-environment of the expected limits, which can be approximated by the limits at 68\% and 99\% C.L., thus no evidence of anomalous couplings has been found. A comparison of the limits with the results of previous analyses can be found in section~\ref{sec:vertex}.\\
 

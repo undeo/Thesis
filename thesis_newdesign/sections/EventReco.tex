@@ -71,7 +71,7 @@ These distance parameters are estimated for all particle combinations. The two p
 	\label{fig:eventreco:jet_reco}
 \end{figure}
 
-\noindent The momentum of the jet candidates is estimated as the sum the four-vectors of all particles in the jet. The mass of the jet is obtained by squaring its four-vector. For simulated events the resulting momenta are found to be within 5 to 10\,\% of the true particle momenta. Due to particles from pileup events that are falsely reconstructed as part of the jets an offset correction is applied. The energy correction is validated with in situ measurements in dijet and photon + jet events \cite{jetcorrection}.\\
+\noindent The momentum of the jet candidates is estimated as the sum the four-vectors of all particles in the jet. The mass of the jet is obtained by squaring its four-vector. For simulated events the resulting momenta are found to be within 5 to 10\,\% of the true particle momenta. Due to particles from pileup events that are falsely reconstructed as part of the jets an offset correction is applied. The energy correction is validated with in situ measurements in dijet and photon + jet events~\cite{jetcorrection}.\\
 
 \noindent A high $p_{\rm T}$ cut is applied to the hadronically decaying boson (see section~\ref{sec:eventselection}). The jets emerging from the two quarks in the final state are therefore overlapping. Instead of two distinct jets, only one so-called fat jet can be reconstructed. Therefore, two size parameters $R=0.4$ and $R=0.8$ are used for the anti-$k_{\rm T}$ algorithm, corresponding to AK4 and AK8 jets, respectively. The AK8 jet with the highest transverse momentum is used as hadronic boson candidate. The AK4 jets are used for the identification of b quark jets, which are used to supress background contributions coming from top quark pair productin. The substructure of the AK8 jet is used to discriminate jets coming from QCD events. In this analysis, the $N$-subjettiness and the pruning algorithm are used, which are also described in this section.
 
@@ -158,7 +158,11 @@ To be able to compare the simulated events with the measured data, the particle 
 \subsection*{Control Regions for the Simulated Events}
 The simulated samples for the background contributions are verified by comparing them with the data in two control regions. For the \ttbar \ control region the same cuts as stated in section~\ref{sec:eventselection} are applied, but at least one AK4 jet has to be identified as b quark jet, leading to an enhancement of the \ttbar \ contribution. The agreement of simulation and data is verified using several observables. The resulting plots for the two observables used in this analysis (\Mpr \ and \MWV) are shown in Fig.~\ref{fig:reco:control}, while all other plots can be found in \cite{PAS}.\\
 
-\noindent The W+jets control region (referred to as sideband region in the background estimation in chapter~\ref{chap:bkg}) is defined in the pruned jet mass spectrum as 40\,GeV$<\Mpr<$65\,GeV and 105\,GeV$<\Mpr<$150\,GeV, while all other cuts are applied as mentioned in section~\ref{sec:eventselection}. This region is signal depleted and dominated by the W+jets production. Again, a good agreement is found in all observables.
+\noindent The W+jets control region (referred to as sideband region in the background estimation in chapter~\ref{chap:bkg}) is defined in the pruned jet mass spectrum as 
+\begin{equation}
+40\,{\rm GeV}<\Mpr<65\,{\rm GeV} ~\cap~ 105\,{\rm GeV}<\Mpr<150\,{\rm GeV} ~, 
+\end{equation}
+while all other cuts are applied as mentioned in section~\ref{sec:eventselection}. This region is signal depleted and dominated by the W+jets production. Again, a good agreement is found in all observables.
 
 \begin{figure}
 	\centering
